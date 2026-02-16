@@ -1,0 +1,12 @@
+[project]
+name = "karo-docs"
+version = "1.0.0"
+description = "Documentation for the karo-stack project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "zensical>=0.0.23",
+]
