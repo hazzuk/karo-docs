@@ -1,0 +1,5 @@
+---
+icon: jellyfin
+---
+
+# Jellyfin
