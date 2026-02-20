@@ -2,7 +2,7 @@
 
 site_name = "karo-docs"
 
-site_description = "Documentation for the karo-stack project."
+site_description = "The karo-stack project wiki."
 
 site_author = "hazzuk"
 
