@@ -213,6 +213,7 @@ new = "Recently added"
 # html
 [project.markdown_extensions.attr_list] # add html/css to markdown lines
 [project.markdown_extensions.md_in_html] # write markdown inbetween html
+[project.markdown_extensions.pymdownx.blocks.caption] # add captions markdown blocks
 
 # call-outs (admonitions)
 [project.markdown_extensions.admonition]
