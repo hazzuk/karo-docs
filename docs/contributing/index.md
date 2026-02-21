@@ -1,10 +1,7 @@
----
-icon: lucide/pencil-ruler
----
 
 # Contributing
 
-A full guide for new contributions will come later. For now, this section contains important notes for existing maintainers.
+A full guide for new contributions will come later. For now, this section contains useful notes for existing maintainers.
 
 ## Documentation
 
