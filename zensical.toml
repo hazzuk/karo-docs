@@ -16,17 +16,40 @@ repo_name = "hazzuk/karo-stack"
 
 repo_url = "https://github.com/hazzuk/karo-stack"
 
-# Zensical supports both implicit navigation and explicitly defined navigation.
-# If you decide not to define a navigation here then Zensical will simply
-# derive the navigation structure from the directory structure of your
-# "docs_dir". The definition below demonstrates how a navigation structure
-# can be defined using TOML syntax.
-#
-# Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+    "index.md",
+    { "Get started" = [
+        "get-started/requirements.md",
+        "get-started/intro.md",
+        "get-started/repo.md",
+        "get-started/server.md",
+    ] },
+    { "Usage" = [
+        "usage/justfile.md",
+    ] },
+    { "Stacks" = [
+        { "Core" = [
+            "stacks/core/traefik.md",
+            "stacks/core/pocket-id.md",
+        ] },
+        { "Extra" = [
+            "stacks/extra/glance.md",
+            "stacks/extra/gluetun.md",
+            "stacks/extra/godns.md",
+            "stacks/extra/jellyfin.md",
+            "stacks/extra/ntfy.md",
+            "stacks/extra/prowlarr.md",
+            "stacks/extra/qbittorrent.md",
+            "stacks/extra/radarr.md",
+            "stacks/extra/seerr.md",
+            "stacks/extra/sonarr.md",
+            "stacks/extra/whoami.md",
+        ] },
+    ] },
+    { "Contributing" = [
+        "contributing/index.md",
+    ] },
+]
 
 [project.theme]
 
@@ -248,7 +271,8 @@ alternate_style = true
 [project.markdown_extensions.pymdownx.emoji]
 emoji_index = "zensical.extensions.emoji.twemoji"
 emoji_generator = "zensical.extensions.emoji.to_svg"
-options.custom_icons = ["overrides/.icons"] # custom icons directory
+# custom icons directory
+options.custom_icons = ["overrides/.icons"]
 
 # lists
 [project.markdown_extensions.pymdownx.tasklist]
