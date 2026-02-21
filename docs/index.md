@@ -7,9 +7,9 @@ icon: lucide/house
 
 **An open-source toolkit to create a declarative Linux homeserver.**
 
-[![GitHub Release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag)](https://github.com/hazzuk/karo-stack/releases)
-[![License](https://img.shields.io/github/license/hazzuk/karo-stack.svg)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
-[![GitHub repo size](https://img.shields.io/github/repo-size/hazzuk/karo-stack)](https://github.com/hazzuk/karo-stack)
+[![GitHub Release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag&cacheSeconds=7200)](https://github.com/hazzuk/karo-stack/releases)
+[![License](https://img.shields.io/github/license/hazzuk/karo-stack.svg?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
+[![GitHub repo size](https://img.shields.io/github/repo-size/hazzuk/karo-stack?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack)
 
 ## About
 
