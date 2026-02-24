@@ -25,7 +25,7 @@ nav = [
         "get-started/server.md",
     ] },
     { "Usage" = [
-        "usage/justfile.md",
+        "usage/just.md",
     ] },
     { "Stacks" = [
         { "Core" = [

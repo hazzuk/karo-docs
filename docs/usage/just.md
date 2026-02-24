@@ -2,7 +2,7 @@
 icon: lucide/file-terminal
 ---
 
-# justfile
+# just
 
 The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands. Commands are called recipes, which are stored in a file called `justfile`. `just` can be invoked from any subdirectory, not just the repository's root directory, which contains the `justfile`.
 
