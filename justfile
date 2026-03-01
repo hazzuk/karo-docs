@@ -14,3 +14,7 @@ serve:
 # Build the site
 build:
     uv run zensical build
+
+# Upgrade Zensical
+upgrade version:
+    uv lock --upgrade-package zensical=={{version}}
