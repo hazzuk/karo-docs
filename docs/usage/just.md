@@ -21,7 +21,7 @@ just preseed-server
 
 !!! note
 
-    This is the only recipe that is intended to be used before the Debian server has been installed. You would run this command from another computer with port `8000` open. Clone your repositories and use a `Bash` terminal. Make sure you and have `git`, `just` and `python` installed on your system.
+    This is the only recipe that is intended to be used before the Debian server has been installed. You would run this command from another computer with port `8000` open. Clone your repositories and use a `Bash` terminal. Make sure you and have `git`, `just` and `python` installed on your system. See [this guide](../get-started/preseed/#automatic-setup-advanced).
 
 ### Server setup
 
