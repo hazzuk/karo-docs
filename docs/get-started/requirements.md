@@ -6,12 +6,12 @@ icon: lucide/clipboard-check
 
 You'll need the following before starting:
 
-- Server hardware
+- Home server hardware
 - Desktop or laptop to configure the server
 - Bootable USB drive
 - Registered domain (ideally using [Cloudflare's DNS](https://developers.cloudflare.com/dns/nameservers/update-nameservers/))
 - GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
-- Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/))
+- Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
 
 ## Recommended knowledge
 
@@ -38,7 +38,7 @@ It's highly recommended to have a basic understanding of the following topics:
 
 !!! warning
 
-    If you are using an AMD Zen 2 (Ryzen 3000) processor or older, you might encounter [issues with the processor power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). To fix this, a kernel parameter needs to be added via the GRUB boot loader.
+    If you are using an AMD Zen 2 (Ryzen 3000) processor or older, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). To fix this, a kernel parameter needs to be added via the GRUB boot loader.
 
     ```sh
     sudo micro /etc/default/grub
