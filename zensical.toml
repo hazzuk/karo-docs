@@ -21,8 +21,21 @@ nav = [
     { "Get started" = [
         "get-started/requirements.md",
         "get-started/intro.md",
-        "get-started/repo.md",
-        "get-started/server.md",
+        { "Preparation" = [
+            "get-started/ssh.md",
+        ] },
+        { "Installation" = [
+            "get-started/preseed.md",
+            "get-started/install.md"
+        ] },
+        { "Configuration" = [
+            "get-started/repos.md",
+            "get-started/inventory.md",
+            "get-started/vault.md",
+        ] },
+        { "Setup" = [
+            "get-started/ansible.md",
+        ] },
     ] },
     { "Usage" = [
         "usage/just.md",
@@ -254,6 +267,11 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.superfences] # nest code/content blocks
 [project.markdown_extensions.pymdownx.tabbed] # content tabs
 alternate_style = true
+
+# anchor links
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
 
 # data tables
 [project.markdown_extensions.tables]
