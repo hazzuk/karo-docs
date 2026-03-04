@@ -35,6 +35,7 @@ nav = [
         ] },
         { "Setup" = [
             "get-started/ansible.md",
+            "get-started/git.md",
         ] },
     ] },
     { "Usage" = [
