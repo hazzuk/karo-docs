@@ -35,7 +35,11 @@ With the password setup, it's time to create your vault. You can use the followi
 just setup-vault homeserver
 ```
 
-An example `vault.yml` file:
+Copy the example below into your `vault.yml` file, then edit any values that require changes.
+
+!!! tip
+
+    Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 
 ```yaml
 # homeserver
@@ -44,18 +48,29 @@ An example `vault.yml` file:
 
 ---
 
-karo_compose_public_domain: <domain>.<tld>
-karo_compose_private_domain: <subdomain>.<domain>.<tld>
+# karo-git
 
-karo_compose_traefik_acme_staging_enabled: true
-karo_compose_traefik_acme_staging_ca_server_url: "https://acme-staging-v02.api.letsencrypt.org/directory"
+karo_git_user_email: git@example.com
+karo_git_user_name: username
+karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..."
 
-karo_compose_traefik_acme_email: cert@<domain>.<tld>
-karo_compose_traefik_acme_zone_api_token: "<api_token>"
-karo_compose_traefik_acme_dns_api_token: "<api_token>"
-karo_compose_traefik_acme_ca_server_url: "https://acme-v02.api.letsencrypt.org/directory"
+# karo-nftables
 
-karo_compose_traefik_dashboard_enabled: true
+# ports 80 (tcp) and 443 (tcp/udp) are already accepted
+# karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
+# karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
+
+# karo-ssh
+
+# this port will be accepted in nftables
+# karo_ssh_port: 22
+
+# karo-compose
+
+karo_compose_public_domain: example.com
+karo_compose_private_domain: int.example.com
+
+# add stack variables here
 # ...
 
 ```
