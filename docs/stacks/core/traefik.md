@@ -13,12 +13,20 @@ icon: traefik
 
 </div>
 
+## Tinyauth
+
+> Authentication middleware
+
 <div class="grid cards" markdown>
 
 - :simple-github: [steveiliop56/tinyauth](https://github.com/steveiliop56/tinyauth)
 - :lucide-container: [ghcr.io/steveiliop56/tinyauth](https://github.com/steveiliop56/tinyauth/pkgs/container/tinyauth)
 
 </div>
+
+## CetusGuard
+
+> Docker socket proxy
 
 <div class="grid cards" markdown>
 

@@ -14,6 +14,10 @@ icon: qbittorrent
 
 </div>
 
+## qui
+
+> qBittorrent web UI
+
 <div class="grid cards" markdown>
 
 - :simple-github: [autobrr/qui](https://github.com/autobrr/qui)
