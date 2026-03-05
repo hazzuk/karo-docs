@@ -38,7 +38,6 @@ The fork will be your version of the karo-stack codebase. Whereas `inventory` wi
     1. Disable `Releases`, `Packages` and `Deployments`
     1. Next, go to the repo's `⚙️ Settings` tab
     1. Under the `Features` section, disable `Issues` and `Projects`
-    
 
 ## Clone the repos
 
@@ -48,4 +47,3 @@ Connected to your server via SSH, run the following commands to clone your two r
 git clone git@github.com:<username>/karo-stack.git /srv/stack
 git clone git@github.com:<username>/inventory.git /srv/stack/inventory
 ```
-    

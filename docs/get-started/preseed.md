@@ -16,7 +16,6 @@ The easiest way for the Debian installer to access your preseed file is by hosti
 
 One important change needs to be made to your preseed file. Which is adding your public SSH key. From this, the Debian installer will be able to automatically insert your key, into the SSH `authorized_keys` file on the server. Making first time authentication over SSH fast and secure.
 
-
 === "Manual setup"
 
     1. Download the [latest preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/d-i/trixie/preseed.cfg) from the karo-stack GitHub repo
@@ -33,8 +32,6 @@ One important change needs to be made to your preseed file. Which is adding your
             - Don't set a password.
 
     1. Note down the URL for the **raw** text file, to later provide the Debian installer
-
-
 
 === "Automatic setup (advanced)"
 
@@ -53,7 +50,6 @@ One important change needs to be made to your preseed file. Which is adding your
         - Git
         - Python
         - [just](https://just.systems/man/en/packages.html)
-
 
     ### Setup
 
