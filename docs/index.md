@@ -11,6 +11,8 @@ icon: lucide/house
 [![License](https://img.shields.io/github/license/hazzuk/karo-stack.svg?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
 [![GitHub repo size](https://img.shields.io/github/repo-size/hazzuk/karo-stack?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack)
 
+:pocket-id: :traefik: :glance: :gluetun: :jellyfin: :ntfy: :prowlarr: :radarr: :seerr: :sonarr:
+
 ## About
 
 The karo-stack was created to provide a middle ground for managing a self-hosted setup. Somewhere between manually installing Docker on a bare bones server. And using an all-encompassing, abstracted solution like Proxmox or Unraid.
