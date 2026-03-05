@@ -38,9 +38,6 @@ nav = [
             "get-started/git.md",
         ] },
     ] },
-    { "Usage" = [
-        "usage/just.md",
-    ] },
     { "Stacks" = [
         { "Core" = [
             "stacks/core/traefik.md",
@@ -59,6 +56,9 @@ nav = [
             "stacks/extra/sonarr.md",
             "stacks/extra/whoami.md",
         ] },
+    ] },
+    { "Usage" = [
+        "usage/just.md",
     ] },
     { "Contributing" = [
         "contributing/index.md",
