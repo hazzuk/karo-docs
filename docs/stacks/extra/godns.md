@@ -23,3 +23,17 @@ karo_compose_godns_subdomain: home
 
 karo_compose_godns_dns_api_token: "" # secret
 ```
+
+??? tip "Create API token for Cloudflare DNS"
+
+    Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
+
+    Select `Create Token` > `Create Custom Token`.
+
+    - `karo_compose_godns_dns_api_token`
+
+        - Token name: `GoDNS (example.com) - Edit dynamic DNS record`
+        
+        - Permissions: [`Zone`, `DNS`, `Edit`]
+        
+        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
