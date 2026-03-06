@@ -12,3 +12,15 @@ icon: ntfy
 - :simple-docker: [docker.io/binwiederhier/ntfy](https://hub.docker.com/r/binwiederhier/ntfy)
 
 </div>
+
+```yaml
+# ntfy
+
+karo_compose_ntfy_enabled: false
+# karo_compose_ntfy_domain: "ntfy.{{ karo_compose_public_domain }}"
+karo_compose_ntfy_log_level: info # trace, debug, info, warn, error
+
+karo_compose_ntfy_auth_users: "" # docs.ntfy.sh/config/#users-via-the-config
+karo_compose_ntfy_auth_access: "" # docs.ntfy.sh/config/#acl-entries-via-the-config
+karo_compose_ntfy_auth_tokens: "" # docs.ntfy.sh/config/#tokens-via-the-config
+```

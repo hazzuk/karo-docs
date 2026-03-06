@@ -12,3 +12,14 @@ icon: lucide/globe
 - :simple-docker: [docker.io/timothyye/godns](https://hub.docker.com/r/timothyye/godns)
 
 </div>
+
+```yaml
+# godns
+
+karo_compose_godns_enabled: false
+# karo_compose_godns_debug_info_enabled: false
+
+karo_compose_godns_subdomain: home
+
+karo_compose_godns_dns_api_token: "" # secret
+```

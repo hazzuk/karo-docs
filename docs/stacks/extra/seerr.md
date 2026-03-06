@@ -12,3 +12,11 @@ icon: seerr
 - :simple-docker: [docker.io/fallenbagel/jellyseerr](https://hub.docker.com/r/fallenbagel/jellyseerr)
 
 </div>
+
+```yaml
+# seerr
+
+karo_compose_seerr_enabled: false
+# karo_compose_seerr_domain: "seerr.{{ karo_compose_private_domain }}"
+karo_compose_seerr_log_level: info # debug, info, warn, error
+```

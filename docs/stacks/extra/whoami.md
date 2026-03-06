@@ -12,3 +12,10 @@ icon: lucide/file-question-mark
 - :simple-docker: [docker.io/traefik/whoami](https://hub.docker.com/r/traefik/whoami)
 
 </div>
+
+```yaml
+# whoami
+
+karo_compose_whoami_enabled: false
+# karo_compose_whoami_domain: "whoami.{{ karo_compose_private_domain }}"
+```

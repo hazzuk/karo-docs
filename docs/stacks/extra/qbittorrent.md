@@ -14,6 +14,17 @@ icon: qbittorrent
 
 </div>
 
+```yaml
+# qbittorrent
+
+karo_compose_qbittorrent_enabled: false
+# karo_compose_qbittorrent_domain: "qbittorrent.{{ karo_compose_private_domain }}"
+
+karo_compose_qbittorrent_downloads_path: "" # e.g. /media/drive1/data/torrents
+
+karo_compose_qbittorrent_webui_enabled: true
+```
+
 ## qui
 
 > qBittorrent web UI
@@ -24,3 +35,15 @@ icon: qbittorrent
 - :lucide-container: [ghcr.io/autobrr/qui](https://ghcr.io/autobrr/qui)
 
 </div>
+
+```yaml
+# qbittorrent qui
+
+# karo_compose_qbittorrent_qui_domain: "qui.{{ karo_compose_private_domain }}"
+karo_compose_qbittorrent_qui_log_level: info # trace, debug, info, warn, error
+
+karo_compose_qbittorrent_qui_session_secret: "" # secret (`openssl rand -hex 16`)
+
+karo_compose_qbittorrent_qui_oidc_client_id: ""
+karo_compose_qbittorrent_qui_oidc_client_secret: ""
+```
