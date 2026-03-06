@@ -29,6 +29,30 @@ karo_compose_traefik_acme_zone_api_token: "" # secret
 karo_compose_traefik_acme_dns_api_token: "" # secret
 ```
 
+??? tip "Create API tokens for Cloudflare DNS"
+
+    > Guide based on the [Lego library docs](https://go-acme.github.io/lego/dns/cloudflare/index.html#api-tokens).
+
+    Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
+
+    Select `Create Token` > `Create Custom Token`. Create tokens for both variables:
+
+    1. `karo_compose_traefik_acme_zone_api_token`
+
+        - Token name: `Traefik (example.com) - Resolve domain names to Zone IDs`
+        
+        - Permissions: [`Zone`, `Zone`, `Read`]
+        
+        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+
+    2. `karo_compose_traefik_acme_dns_api_token`
+
+        - Token name: `Traefik (example.com) - Edit DNS for DNS-01 challenges`
+
+        - Permissions: [`Zone`, `DNS`, `Edit`]
+
+        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+
 ## Tinyauth
 
 > Authentication middleware (forward auth)
