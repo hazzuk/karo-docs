@@ -29,6 +29,23 @@ karo_compose_traefik_acme_zone_api_token: "" # secret
 karo_compose_traefik_acme_dns_api_token: "" # secret
 ```
 
+??? abstract "Traefik notes"
+
+    - The first time you run Traefik, you should keep ACME staging enabled. Once you've verified that your setup is correct, disable it to request valid TLS certificates. This is to avoid [Let's Encrypt rate limits](https://letsencrypt.org/docs/rate-limits/).
+
+    - It's recommended to disable the Traefik dashboard when your server is exposed publicly.
+
+    - Traefik is set to use TLS 1.3. Meaning cipher suites are not configurable, and all supported cipher suites are considered safe (see https://golang.org/doc/go1.12#tls_1_3).
+    
+    - Traefik creates a docker network named `frontend`. Other stacks that have a frontend web UI can use this network to route traffic through Traefik.
+    
+    - The `frontend` network uses an internal static IPv4 address, `172.18.0.254`. This is done to resolve external addresses internally. E.g. In Tinyauth, we want requests to the public Pocket ID OIDC domain to instead point directly at Traefik:
+
+        ```yaml
+        extra_hosts:
+        - "{{ karo_compose_oidc_domain }}:172.18.0.254"
+        ```
+
 ??? tip "Create API tokens for Cloudflare DNS"
 
     > Guide based on the [Lego library docs](https://go-acme.github.io/lego/dns/cloudflare/index.html#api-tokens).
