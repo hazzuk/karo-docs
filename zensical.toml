@@ -61,7 +61,7 @@ nav = [
         "usage/just.md",
     ] },
     { "Contributing" = [
-        "contributing/index.md",
+        "contributing/docs.md",
     ] },
 ]
 

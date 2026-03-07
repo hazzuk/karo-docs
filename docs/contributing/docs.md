@@ -1,13 +1,12 @@
+---
+icon: lucide/notebook-pen
+---
 
-# Contributing
+# Documentation
 
-A full guide for new contributions will come later. For now, this section contains useful notes for existing maintainers.
+## Icons
 
-## Documentation
-
-### Icons
-
-#### Generic
+### Generic
 
 The docs primarily uses `lucide`.  
 Zensical also provides other [icon sources](https://zensical.org/docs/authoring/icons-emojis/):
@@ -17,7 +16,7 @@ Zensical also provides other [icon sources](https://zensical.org/docs/authoring/
 - `octicons`
 - `simple`
 
-#### Custom
+### Custom
 
 For [custom icons](https://zensical.org/docs/setup/logo-and-icons/#additional-icons) (i.e. Stacks), the docs uses the `./overrides/.icons/` directory.  
 This contains **dark** `svg` icons sourced from:
