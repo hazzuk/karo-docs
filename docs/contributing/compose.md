@@ -4,11 +4,17 @@ icon: lucide/form
 
 # Compose examples
 
+The karo-stack was built after years of manually self-hosting Docker compose files.  Lessons learnt from creating so many different stacks has helped shape the following three principles:
+
+- **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity. Preferring long-form syntax, and absolute paths. To create more clearly and safely defined stacks.
+
+- **Precise** - Every line in the compose file must have a purpose. Not keeping definitions just because the original stack author included them. And any non-standard definitions should be explained in more detail.
+
+- **Standardised** - Stacks must follow a consistent ordering and structure of definitions. Reducing potential errors, and making work across different stacks much more seamless.
+
 ## Example stack
 
-Compose template files are expected to follow a standardised order of definitions:
-
-(Also see the [Docker compose file reference for services](https://docs.docker.com/reference/compose-file/services/))
+Also see the Docker compose reference guides for [services](https://docs.docker.com/reference/compose-file/services/), [networks](https://docs.docker.com/reference/compose-file/networks/), [volumes](https://docs.docker.com/reference/compose-file/volumes/) and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
 ```yaml+jinja title="roles/karo-compose/templates/foobar/compose.yml.j2"
 # SPDX-FileCopyrightText: <year> <file author>
