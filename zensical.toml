@@ -238,9 +238,9 @@ toggle.name = "Switch to system preference"
 [project.theme.icon]
 logo = "karo"
 
-[[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://github.com/hazzuk/karo-stack"
+# [[project.extra.social]]
+# icon = "fontawesome/brands/github"
+# link = "https://github.com/hazzuk/karo-stack"
 
 # page status symbols
 [project.extra.status]
