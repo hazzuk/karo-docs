@@ -47,4 +47,8 @@ homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 
 This file will store your public SSH authentication key.
 
+```sh
+micro /srv/stack/inventory/key.txt
+```
+
 > e.g. `ssh-ed25519 AAAAC3NqnC1bZEIl2...`
