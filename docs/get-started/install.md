@@ -47,7 +47,10 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
     > e.g. `https://pastebin.com/raw/aBcdEf` or `192.168.0.123:8000`
 
-1. Select the disk to partition
+1. Select a language
+1. Select your location
+1. Select a keymap to use
+1. Select the disk to partition (when multiple storage devices are connected)
 
     !!! danger
     
@@ -69,7 +72,9 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
         `ssh -A` Allows for forwarding connections to your password manager's ssh-agent.
 
-2. When prompted, change your password (default is `changelater`)
+1. When prompted, change your user's password (default is `changelater`)
+
+1. SSH again after updating your password
 
 ??? tip "Restoring a previous karo-stack server"
 
