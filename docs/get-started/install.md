@@ -64,6 +64,8 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
 ## Login with SSH
 
+1. Open a terminal on your desktop computer (i.e. Powershell on Windows)
+
 1. Connect to the server using SSH
 
     > e.g. `ssh -A karo@192.168.0.142` or `ssh -A karo@int.example.com`

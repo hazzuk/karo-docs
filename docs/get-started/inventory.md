@@ -34,7 +34,7 @@ As we'll be running Ansible on the server itself, you can simply copy the follow
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 ```
 
-!!! example "Dev note"
+??? example "Development note"
 
     For remote connections, use the following configuration:
     
