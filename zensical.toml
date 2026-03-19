@@ -22,6 +22,7 @@ nav = [
         "get-started/requirements.md",
         "get-started/intro.md",
         { "Preparation" = [
+            "get-started/dns.md",
             "get-started/ssh.md",
         ] },
         { "Installation" = [

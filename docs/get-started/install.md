@@ -68,7 +68,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
 1. Connect to the server using SSH
 
-    > e.g. `ssh -A karo@192.168.0.142` or `ssh -A karo@int.example.com`
+    > e.g. `ssh -A karo@int.example.com` or `ssh -A karo@192.168.0.142`
 
     !!! info
 

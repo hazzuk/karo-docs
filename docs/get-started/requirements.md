@@ -9,7 +9,7 @@ You'll need the following before starting:
 - Home server hardware
 - Desktop or laptop to configure the server
 - Bootable USB drive
-- Registered domain (ideally using [Cloudflare's DNS](https://developers.cloudflare.com/dns/nameservers/update-nameservers/))
+- Registered domain
 - GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
 - Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
 
