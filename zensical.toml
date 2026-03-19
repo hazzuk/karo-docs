@@ -18,28 +18,29 @@ repo_url = "https://github.com/hazzuk/karo-stack"
 
 nav = [
     "index.md",
-    { "Get started" = [
-        "get-started/requirements.md",
-        "get-started/intro.md",
+    { "Guide" = [
+        "guide/requirements.md",
+        "guide/intro.md",
         { "Preparation" = [
-            "get-started/dns.md",
-            "get-started/ssh.md",
+            "guide/prepare/dns.md",
+            "guide/prepare/ssh.md",
         ] },
         { "Installation" = [
-            "get-started/preseed.md",
-            "get-started/install.md"
+            "guide/debian/preseed.md",
+            "guide/debian/install.md"
         ] },
         { "Configuration" = [
-            "get-started/repos.md",
-            "get-started/inventory.md",
-            "get-started/vault.md",
+            "guide/configure/repos.md",
+            "guide/configure/inventory.md",
+            "guide/configure/vault.md",
         ] },
         { "Setup" = [
-            "get-started/ansible.md",
-            "get-started/git.md",
+            "guide/setup/ansible.md",
+            "guide/setup/git.md",
         ] },
     ] },
     { "Stacks" = [
+        "stacks/compose.md",
         { "Core" = [
             "stacks/core/traefik.md",
             "stacks/core/pocket-id.md",
