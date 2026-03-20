@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 hazzuk
+# SPDX-FileCopyrightText: 2025 - 2026 hazzuk
 #
 # SPDX-License-Identifier: AGPL-3.0-only
 
@@ -15,6 +15,14 @@ serve:
 build:
     uv run zensical build
 
+latest := shell("curl -s https://api.github.com/repos/zensical/zensical/releases/latest | jq -r .name")  
+
+[confirm("proceed? (y/N)")]  
+_confirm:
+    @echo
+
 # Upgrade Zensical
-upgrade version:
+upgrade version=latest:
+    @echo "info: upgrading zensical to version {{version}}" 
+    @just _confirm
     uv lock --upgrade-package zensical=={{version}}
