@@ -25,6 +25,8 @@ git push
 
 !!! note
 
+    Make sure you've configured your git email, name and signing key inside [your Ansible vault](../configure/vault/#create-your-vault). And have also ran the Ansible playbook using `just setup-server`, to configure git on the system.
+
     If you've set up everything correctly, your desktop's password manager might prompt you when running specific git commands. This is because it's trying to use your SSH signing key to sign your git commits.
 
 !!! tip
