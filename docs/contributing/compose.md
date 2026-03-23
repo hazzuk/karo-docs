@@ -84,6 +84,19 @@ secrets:
     environment: karo_compose_foobar_token
 ```
 
+!!! tip "Port mappings"
+
+    Its unlikely you'll need to map any ports. As most stacks only use web traffic (ports 80 & 443), which will always handled by the reverse proxy. However, there may be times when new port mappings are required.
+
+    Use the following short syntax for port mappings:
+
+    ``` { .yaml .no-copy }
+    ports:
+      - HOST:CONTAINER/PROTOCOL
+    ```
+
+    Ensure you **always specify the protocol**. And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.
+
 ## Example defaults
 
 Any new variables must be added to the karo-compose defaults file.
