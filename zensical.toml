@@ -61,6 +61,7 @@ nav = [
     ] },
     { "Usage" = [
         "usage/just.md",
+        "usage/linux.md",
     ] },
     { "Contributing" = [
         "contributing/stacks.md",
