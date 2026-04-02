@@ -53,17 +53,23 @@ One important change needs to be made to your preseed file. Which is adding your
 
     ### Setup
 
+    Clone your personal karo-stack fork and private inventory repo:
+
     ```sh
-    # clone your personal karo-stack fork
-    git clone git@github.com:<username>/karo-stack.git
+    # GIT_USERNAME=username
+
+    git clone git@github.com:${GIT_USERNAME}/karo-stack.git
     cd karo-stack
 
-    # clone your private inventory repo
-    git clone git@github.com:<username>/inventory.git
+    git clone git@github.com:${GIT_USERNAME}/inventory.git
     cd inventory
+    ```
 
-    # (if required) add/update your public ssh key inside your inventory repo
+    And if required, add/update your public SSH key inside your inventory repo:
+
+    ```sh
     micro key.txt
+    
     git add key.txt
     git commit -m "add public ssh key for preseed"
     git push

@@ -83,9 +83,11 @@ With the preseed file setup, Debian can now be installed onto your home server h
     If you've previously created your `karo-stack` and `inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
 
     ```sh
-    git clone git@github.com:<username>/karo-stack.git /srv/stack
-    git clone git@github.com:<username>/inventory.git /srv/stack/inventory
+    # GIT_USERNAME=username
 
+    git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/stack
+    git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/stack/inventory
+    
     cd /srv/stack
     just setup-password
     ```
