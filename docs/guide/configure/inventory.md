@@ -8,7 +8,7 @@ The [inventory](https://docs.ansible.com/projects/ansible/latest/inventory_guide
 
 Your `inventory` repo will eventually look something like this:
 
-```toml
+``` { .toml .no-copy }
 inventory/
 ├── hosts.ini # directs Ansible to the target host (e.g. localhost)
 ├── host_vars/

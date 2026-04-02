@@ -85,7 +85,7 @@ less /srv/stack/inventory/host_vars/homeserver/vault.yml
 
 You should see something similar to this:
 
-```
+``` { .yaml .no-copy }
 $ANSIBLE_VAULT;1.1;AES256
 65383464383963393464643461633...
 ```

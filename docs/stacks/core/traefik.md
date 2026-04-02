@@ -41,7 +41,7 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
     
     - The `frontend` network uses an internal static IPv4 address, `172.18.0.254`. This is done to resolve external addresses internally. E.g. In Tinyauth, we want requests to the public Pocket ID OIDC domain to instead point directly at Traefik:
 
-        ```yaml+jinja
+        ``` { .yaml+jinja .no-copy }
         extra_hosts:
         - "{{ karo_compose_oidc_domain }}:172.18.0.254"
         ```
