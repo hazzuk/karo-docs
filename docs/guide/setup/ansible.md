@@ -22,6 +22,10 @@ just setup-server
 
 ## Run compose setup
 
+!!! warning
+
+    Do not run this command now unless you've previously configured your stacks. Instead, run this after consulting the **Stacks** section of the documentation.
+
 This command will deploy any Docker compose stacks the user has enabled. By default, it will setup **all** enabled stacks. Alternatively, you can provide the name of one stack, e.g. `traefik`.
 
 ```sh
