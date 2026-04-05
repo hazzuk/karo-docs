@@ -38,6 +38,9 @@ nav = [
             "guide/setup/ansible.md",
             "guide/setup/git.md",
         ] },
+        { "Advanced" = [
+            "guide/advanced/proxy.md",
+        ] }, 
     ] },
     { "Stacks" = [
         "stacks/compose.md",
@@ -271,6 +274,9 @@ pygments_lang_class = true
 
 # content tabs
 [project.markdown_extensions.pymdownx.superfences] # nest code/content blocks
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
 [project.markdown_extensions.pymdownx.tabbed] # content tabs
 alternate_style = true
 
