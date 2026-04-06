@@ -17,7 +17,7 @@ openssl rand -hex 48
 Once you've saved the password, you'll also need to write it to a file on the system. So that Ansible can use it when encrypting/decrypting your vault.
 
 ```sh
-cd /srv/stack
+cd /srv/karo
 just setup-password
 ```
 
@@ -80,7 +80,7 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 After you quit the text editor, the vault is returned to its encrypted state. You can see this first-hand, by trying to read the file without Ansible:
 
 ```sh
-less /srv/stack/inventory/host_vars/homeserver/vault.yml
+less /srv/karo/inventory/host_vars/homeserver/vault.yml
 ```
 
 You should see something similar to this:

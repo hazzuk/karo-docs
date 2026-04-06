@@ -85,10 +85,10 @@ With the preseed file setup, Debian can now be installed onto your home server h
     ```sh
     # GIT_USERNAME=username
 
-    git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/stack
-    git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/stack/inventory
+    git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
+    git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
     
-    cd /srv/stack
+    cd /srv/karo
     just setup-password
     ```
     

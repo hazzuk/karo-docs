@@ -46,6 +46,6 @@ Connected to your server via SSH, run the following commands to clone your two r
 ```sh
 # GIT_USERNAME=username
 
-git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/stack
-git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/stack/inventory
+git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
+git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
 ```

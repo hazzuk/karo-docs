@@ -24,7 +24,7 @@ For now, create the first two files.
 This config is used to tell the automation tool Ansible which host to target. 
 
 ```sh
-micro /srv/stack/inventory/hosts.ini
+micro /srv/karo/inventory/hosts.ini
 ```
 
 As we'll be running Ansible on the server itself, you can simply copy the following:
@@ -48,7 +48,7 @@ homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 This file will store your public SSH authentication key.
 
 ```sh
-micro /srv/stack/inventory/key.txt
+micro /srv/karo/inventory/key.txt
 ```
 
 > e.g. `ssh-ed25519 AAAAC3NqnC1bZEIl2...`

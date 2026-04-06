@@ -80,7 +80,7 @@ usermod -aG sudo karo
 
 ```sh
 # create karo directories
-install -d -m 0775 -o karo -g karo /srv/stack
+install -d -m 0775 -o karo -g karo /srv/karo
 install -d -m 0775 -o karo -g karo /home/karo/.ssh
 ```
 
@@ -113,10 +113,10 @@ Clone your repos:
 ```sh
 # GIT_USERNAME=username
 
-git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/stack
-git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/stack/inventory
+git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
+git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
 
-cd /srv/stack
+cd /srv/karo
 ```
 
 ### Ansible vault 
@@ -184,7 +184,7 @@ karo_compose_pocketid_enabled: false
 
 Update your inventory's `hosts.ini` file to include the VPS as a new host:
 
-```ini title="/srv/stack/inventory/hosts.ini"
+```ini title="/srv/karo/inventory/hosts.ini"
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 proxyserver ansible_host=localhost ansible_connection=local ansible_user=karo
@@ -217,7 +217,7 @@ just setup-compose
 Commit your changes:
 
 ```sh
-cd /srv/stack/inventory
+cd /srv/karo/inventory
 
 git add *
 git commit -m "update inventory files"
