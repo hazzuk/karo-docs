@@ -17,7 +17,7 @@ The playbook is separated into roles (`karo-compose`, `karo-docker`, `karo-git`,
 This command will enable the nftables firewall, make minor system changes, tighten SSH security, adjust the git configuration, and install rootless Docker with the `dockeruser`.
 
 ```sh
-just setup-server
+just setup-server homeserver
 ```
 
 ## Run compose setup

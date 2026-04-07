@@ -28,7 +28,7 @@ just preseed-server
 Run Ansible to provision the Debian server.
 
 ```sh
-just setup-server
+just setup-server $hostname
 ```
 
 ### Docker
