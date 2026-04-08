@@ -40,13 +40,13 @@ just setup-server $hostname
 Run Ansible to deploy Docker compose stacks.
 
 ```sh
-just setup-compose $stack
+just setup-compose $hostname --stack $stack
 ```
 
 Run Ansible to down Docker compose stacks.
 
 ```sh
-just down-compose $stack
+just down-compose $hostname --stack $stack
 ```
 
 ### Ansible vault

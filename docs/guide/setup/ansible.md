@@ -29,5 +29,5 @@ just setup-server homeserver
 This command will deploy any Docker compose stacks the user has enabled. By default, it will setup **all** enabled stacks. Alternatively, you can provide the name of one stack, e.g. `traefik`.
 
 ```sh
-just setup-compose
+just setup-compose homeserver
 ```

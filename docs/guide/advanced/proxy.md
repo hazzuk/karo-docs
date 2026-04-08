@@ -209,7 +209,7 @@ ssh -A -p 4444 karo@public.example.com
 Deploy the proxy stack:
 
 ```sh
-just setup-compose
+just setup-compose proxyserver -s proxy
 ```
 
 ### Git changes
