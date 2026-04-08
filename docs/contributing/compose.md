@@ -16,17 +16,18 @@ The karo-stack was built after years of manually self-hosting Docker compose fil
 
 Also see the Docker compose reference guides for [services](https://docs.docker.com/reference/compose-file/services/), [networks](https://docs.docker.com/reference/compose-file/networks/), [volumes](https://docs.docker.com/reference/compose-file/volumes/) and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
-```yaml+jinja title="roles/karo-compose/templates/foobar/compose.yml.j2"
+```yaml+jinja title="roles/karo-compose/templates/extra/foobar/compose.yml.j2"
 # SPDX-FileCopyrightText: <year> <file author>
 #
 # SPDX-License-Identifier: AGPL-3.0-only
+
+# https://docs.karolabs.dev/stacks/extra/foobar
 
 ---
 name: foobar
 services:
 
   foobar:
-    # https://docs.karolabs.dev/stacks/extra/foobar
     image: {{ karo_compose_foobar_image }}:{{ karo_compose_foobar_version }}
     container_name: foobar
     restart: {{ karo_compose_restart_policy }}
@@ -46,7 +47,7 @@ services:
       - frontend
     volumes:
       - type: bind
-        source: /srv/docker/foobar/config.json
+        source: /srv/docker/extra/foobar/config.json
         target: /app/config.json
         read_only: true
       - type: volume
@@ -105,7 +106,7 @@ Any new variables must be added to the karo-compose defaults file.
 
     - Each stack is first grouped by core or extra, then ordered alphabetically.
 
-    - You'll also need to add the stack name to `karo_compose_stacks_list`, again ordered alphabetically.
+    - You'll also need to add the stack name to `karo_compose_stacks`, this defines its relative startup order.
 
 ```yaml+jinja title="roles/karo-compose/defaults/main.yml"
 # foobar
