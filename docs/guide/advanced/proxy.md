@@ -61,7 +61,7 @@ Most VPS providers will simply create a pre-configured Debian server for you. As
 Connect via SSH as the `root` user:
 
 ```sh
-ssh -A -p 22 root@public.example.com
+ssh root@public.example.com
 ```
 
 Run the following commands to replicate the preseed process:
@@ -96,30 +96,21 @@ apt -y install chrony openssh-server ansible acl python3-debian \
 ```
 
 ```sh
-# switch users
+# finish manual setup
 exit
 ```
 
-### Repositories
-
-Connect again as the new `karo` user:
-
-```sh
-ssh -A -p 22 karo@public.example.com
-```
-
-Clone your repos:
-
-```sh
-# GIT_USERNAME=username
-
-git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
-git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
-
-cd /srv/karo
-```
-
 ### Ansible vault 
+
+!!! info "Continuing setup on your homeserver"
+
+    From this point onwards, setup of the VPS should be handled via Ansible on your homeserver.
+
+Connect via SSH to your **homeserver**:
+
+```sh
+ssh -A karo@int.example.com
+```
 
 Generate a new unique password (save inside your password manager):
 
@@ -184,10 +175,14 @@ karo_compose_pocketid_enabled: false
 
 Update your inventory's `hosts.ini` file to include the VPS as a new host:
 
+```sh
+micro /srv/karo/inventory/hosts.ini
+```
+
 ```ini title="/srv/karo/inventory/hosts.ini"
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
-proxyserver ansible_host=localhost ansible_connection=local ansible_user=karo
+proxyserver ansible_host=public.example.com:22 ansible_connection=ssh ansible_user=karo
 ```
 
 Configure the VPS:
@@ -196,14 +191,14 @@ Configure the VPS:
 just setup-server proxyserver
 ```
 
-Connect again using the new SSH port:
+Adjust your `hosts.ini` file to use the new SSH port:
 
 ```sh
-exit
+micro /srv/karo/inventory/hosts.ini
 ```
 
-```sh
-ssh -A -p 4444 karo@public.example.com
+``` { .ini .no-copy }
+ansible_host=public.example.com:4444
 ```
 
 Deploy the proxy stack:
