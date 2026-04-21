@@ -15,23 +15,24 @@ You'll need to rent a small VPS, ideally one geographically close to you. Then a
 ```mermaid
 flowchart LR
   subgraph Internet
-    User
+    User@{ shape: stadium }
   end
 
-  subgraph proxyserver
+  subgraph proxyserver ["VPS (proxyserver)"]
     HAProxy
     CrowdSec
-    Gluetun1[Gluetun]
   end
 
-  subgraph proxyclient
-    Gluetun2[Gluetun]
+  subgraph homeserver ["Homeserver (proxyclient)"]
+    Traefik
   end
 
-  User -. https .- HAProxy
+  User e1@===|HTTPS| HAProxy
   HAProxy --- CrowdSec
-  CrowdSec --- Gluetun1
-  Gluetun1 -. wireguard .-  Gluetun2
+  HAProxy e2@-..-|WireGuard| Traefik
+
+  e1@{ animation: fast }
+  e2@{ animation: slow }
 ```
 
 There are three parts to the proxy stack:
@@ -40,7 +41,7 @@ There are three parts to the proxy stack:
 
 - **CrowdSec** - A crowdsourced web application firewall. Detects and blocks malicious traffic.
 
-- **Gluetun** - A WireGuard VPN client. Securely tunnels traffic between the VPS and server.
+- **WireGuard** - A VPN protocol. Securely tunnels traffic between the VPS and homeserver.
 
 This page outlines the steps required to setup a VPS as a `proxyserver` with the karo-stack.
 
