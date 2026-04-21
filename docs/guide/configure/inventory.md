@@ -40,7 +40,7 @@ homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
     
     ```ini
     [server]
-    homeserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
+    homeserver ansible_host=192.168.122.142 ansible_port=22 ansible_connection=ssh ansible_user=karo
     ```
 
 ### `key.txt`

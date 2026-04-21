@@ -182,7 +182,7 @@ micro /srv/karo/inventory/hosts.ini
 ```ini title="/srv/karo/inventory/hosts.ini"
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
-proxyserver ansible_host=public.example.com:22 ansible_connection=ssh ansible_user=karo
+proxyserver ansible_host=public.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo
 ```
 
 Configure the VPS:
@@ -198,7 +198,7 @@ micro /srv/karo/inventory/hosts.ini
 ```
 
 ``` { .ini .no-copy }
-ansible_host=public.example.com:4444
+ansible_port=4444
 ```
 
 Deploy the proxy stack:
