@@ -18,6 +18,7 @@ icon: glance
 
 karo_compose_glance_enabled: false
 # karo_compose_glance_domain: "glance.{{ karo_compose_root_domain }}"
+# karo_compose_glance_forward_auth_enabled: true
 
 karo_compose_glance_config_raw: |
   # glance config

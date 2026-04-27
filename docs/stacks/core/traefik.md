@@ -18,6 +18,7 @@ icon: traefik
 
 # karo_compose_traefik_enabled: true
 # karo_compose_traefik_dashboard_domain: "traefik.{{ karo_compose_root_domain }}"
+# karo_compose_traefik_dashboard_forward_auth_enabled: true
 karo_compose_traefik_log_level: debug # trace, debug, info, warn, error, fatal, panic
 
 karo_compose_traefik_dashboard_enabled: true

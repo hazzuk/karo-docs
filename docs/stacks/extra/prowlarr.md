@@ -18,4 +18,5 @@ icon: prowlarr
 
 karo_compose_prowlarr_enabled: false
 # karo_compose_prowlarr_domain: "prowlarr.{{ karo_compose_root_domain }}"
+# karo_compose_prowlarr_forward_auth_enabled: true
 ```
