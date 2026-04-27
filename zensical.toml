@@ -56,6 +56,7 @@ nav = [
             "stacks/extra/jellyfin.md",
             "stacks/extra/ntfy.md",
             "stacks/extra/prowlarr.md",
+            "stacks/extra/proxy.md",
             "stacks/extra/qbittorrent.md",
             "stacks/extra/radarr.md",
             "stacks/extra/seerr.md",
