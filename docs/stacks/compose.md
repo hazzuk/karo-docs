@@ -33,6 +33,6 @@ The project doesn't yet support user-defined stacks via Ansible. However, you ca
 
 To do this, you'll need to SSH in as the dockeruser.
 
-> e.g. `ssh dockeruser@int.example.com` or `ssh dockeruser@192.168.0.142`
+> e.g. `ssh dockeruser@homeserver.example.com` or `ssh dockeruser@192.168.0.142`
 
 Afterwards, you're free to create Docker compose stacks manually. It's recommended you place these files under `/srv/docker/adhoc`.

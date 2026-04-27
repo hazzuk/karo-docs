@@ -48,10 +48,10 @@ This page outlines the steps required to setup a VPS as a `proxyserver` with the
 ## DNS records
 
 Your VPS will likely have a static IPv4 address, so you won't need to use a dynamic DNS service. Instead, simply create a DNS A record, with the name being your chosen `<public subdomain>`, targetting the `<public vps ipv4>`.
+| Type | Name          | Target              | Comment              |
+| ---- | ------------- | ------------------- | -------------------- |
+| A    | `proxyserver` | `<vps public ipv4>` | vps - public traffic |
 
-| Type | Name     | Target              | Comment                |
-| ---- | -------- | ------------------- | ---------------------- |
-| A    | `public` | `<public vps ipv4>` | `public address (vps)` |
 
 ## VPS setup
 
@@ -62,7 +62,7 @@ Most VPS providers will simply create a pre-configured Debian server for you. As
 Connect via SSH as the `root` user:
 
 ```sh
-ssh root@public.example.com
+ssh root@proxyserver.example.com
 ```
 
 Run the following commands to replicate the preseed process:
@@ -110,7 +110,7 @@ exit
 Connect via SSH to your **homeserver**:
 
 ```sh
-ssh -A karo@int.example.com
+ssh -A karo@homeserver.example.com
 ```
 
 Generate a new unique password (save inside your password manager):
@@ -182,7 +182,7 @@ micro /srv/karo/inventory/hosts.ini
 ```ini title="/srv/karo/inventory/hosts.ini"
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
-proxyserver ansible_host=public.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo
+proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo
 ```
 
 Configure the VPS:
