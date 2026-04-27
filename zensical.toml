@@ -39,6 +39,7 @@ nav = [
             "guide/setup/git.md",
         ] },
         { "Advanced" = [
+            "guide/advanced/access.md",
             "guide/advanced/proxy.md",
         ] }, 
     ] },

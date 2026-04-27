@@ -47,11 +47,17 @@ This page outlines the steps required to setup a VPS as a `proxyserver` with the
 
 ## DNS records
 
-Your VPS will likely have a static IPv4 address, so you won't need to use a dynamic DNS service. Instead, simply create a DNS A record, with the name being your chosen `<public subdomain>`, targetting the `<public vps ipv4>`.
+Your VPS will likely have a static IPv4 address, so you won't need to use a dynamic DNS service. Instead, simply create a DNS `A` record targetting the `<vps public ipv4>`.
+
 | Type | Name          | Target              | Comment              |
 | ---- | ------------- | ------------------- | -------------------- |
 | A    | `proxyserver` | `<vps public ipv4>` | vps - public traffic |
 
+!!! tip
+
+    If you're using an internal server DNS, it's important to also add this same record there as well. (Otherwise you can't use the hostname `proxyserver.example.com` in the following SSH commands. As your internal DNS would incorrectly resolve this as your homeserver's internal IP address.)
+
+Any services you've previously exposed publicly (e.g. `CNAME` `jellyfin` `dyndns.example.com`), should instead now be targeted at `proxyserver.example.com`. And ports `80` and `443` should be closed on your router.
 
 ## VPS setup
 
