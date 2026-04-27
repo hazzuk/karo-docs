@@ -25,6 +25,6 @@ karo_compose_gluetun_wireguard_config_raw: | # secret
   # wireguard config
 ```
 
-??? tip "Wireguard config"
+??? tip "WireGuard config"
 
     Your VPN provider should be able to provide you with a `wireguard.conf` file.
