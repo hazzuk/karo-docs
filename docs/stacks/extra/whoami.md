@@ -17,5 +17,5 @@ icon: lucide/file-question-mark
 # whoami
 
 karo_compose_whoami_enabled: false
-# karo_compose_whoami_domain: "whoami.{{ karo_compose_private_domain }}"
+# karo_compose_whoami_domain: "whoami.{{ karo_compose_root_domain }}"
 ```

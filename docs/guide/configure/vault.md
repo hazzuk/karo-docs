@@ -67,8 +67,7 @@ karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..."
 
 # karo-compose
 
-karo_compose_public_domain: example.com
-karo_compose_private_domain: int.example.com
+karo_compose_root_domain: example.com
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 

@@ -17,7 +17,7 @@ icon: sonarr
 # sonarr
 
 karo_compose_sonarr_enabled: false
-# karo_compose_sonarr_domain: "sonarr.{{ karo_compose_private_domain }}"
+# karo_compose_sonarr_domain: "sonarr.{{ karo_compose_root_domain }}"
 
 karo_compose_sonarr_data_path: "" # e.g. /media/drive1/data
 ```

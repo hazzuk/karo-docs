@@ -18,7 +18,7 @@ icon: qbittorrent
 # qbittorrent
 
 karo_compose_qbittorrent_enabled: false
-# karo_compose_qbittorrent_domain: "qbittorrent.{{ karo_compose_private_domain }}"
+# karo_compose_qbittorrent_domain: "qbittorrent.{{ karo_compose_root_domain }}"
 
 karo_compose_qbittorrent_downloads_path: "" # e.g. /media/drive1/data/torrents
 
@@ -39,7 +39,7 @@ karo_compose_qbittorrent_webui_enabled: true
 ```yaml
 # qbittorrent qui
 
-# karo_compose_qbittorrent_qui_domain: "qui.{{ karo_compose_private_domain }}"
+# karo_compose_qbittorrent_qui_domain: "qui.{{ karo_compose_root_domain }}"
 karo_compose_qbittorrent_qui_log_level: info # trace, debug, info, warn, error
 
 karo_compose_qbittorrent_qui_session_secret: "" # secret (`openssl rand -hex 16`)

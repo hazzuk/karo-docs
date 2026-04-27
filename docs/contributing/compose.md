@@ -114,7 +114,7 @@ Any new variables must be added to the karo-compose defaults file.
 karo_compose_foobar_enabled: false
 karo_compose_foobar_image: docker.io/foobarorg/foobar
 karo_compose_foobar_version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f2475937ab
-karo_compose_foobar_domain: "foobar.{{ karo_compose_private_domain }}"
+karo_compose_foobar_domain: "foobar.{{ karo_compose_root_domain }}"
 karo_compose_foobar_log_level: info # debug, info, warn, error
 
 karo_compose_foobar_token: "" # secret

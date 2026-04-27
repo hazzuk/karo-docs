@@ -17,7 +17,7 @@ icon: radarr
 # radarr
 
 karo_compose_radarr_enabled: false
-# karo_compose_radarr_domain: "radarr.{{ karo_compose_private_domain }}"
+# karo_compose_radarr_domain: "radarr.{{ karo_compose_root_domain }}"
 
 karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 ```

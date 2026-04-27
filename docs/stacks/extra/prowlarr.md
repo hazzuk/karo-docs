@@ -17,5 +17,5 @@ icon: prowlarr
 # prowlarr
 
 karo_compose_prowlarr_enabled: false
-# karo_compose_prowlarr_domain: "prowlarr.{{ karo_compose_private_domain }}"
+# karo_compose_prowlarr_domain: "prowlarr.{{ karo_compose_root_domain }}"
 ```

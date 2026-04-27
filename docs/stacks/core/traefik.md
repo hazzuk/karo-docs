@@ -17,7 +17,7 @@ icon: traefik
 # traefik
 
 # karo_compose_traefik_enabled: true
-# karo_compose_traefik_dashboard_domain: "traefik.{{ karo_compose_private_domain }}"
+# karo_compose_traefik_dashboard_domain: "traefik.{{ karo_compose_root_domain }}"
 karo_compose_traefik_log_level: debug # trace, debug, info, warn, error, fatal, panic
 
 karo_compose_traefik_dashboard_enabled: true
@@ -84,7 +84,7 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
 ```yaml
 # traefik tinyauth
 
-# karo_compose_traefik_tinyauth_domain: "tinyauth.{{ karo_compose_public_domain }}"
+# karo_compose_traefik_tinyauth_domain: "tinyauth.{{ karo_compose_root_domain }}"
 karo_compose_traefik_tinyauth_log_level: info # trace, debug, info, warn, error, fatal, panic
 
 karo_compose_traefik_tinyauth_oidc_client_id: ""

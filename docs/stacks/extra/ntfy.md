@@ -17,7 +17,7 @@ icon: ntfy
 # ntfy
 
 karo_compose_ntfy_enabled: false
-# karo_compose_ntfy_domain: "ntfy.{{ karo_compose_public_domain }}"
+# karo_compose_ntfy_domain: "ntfy.{{ karo_compose_root_domain }}"
 karo_compose_ntfy_log_level: info # trace, debug, info, warn, error
 
 karo_compose_ntfy_auth_users: "" # docs.ntfy.sh/config/#users-via-the-config

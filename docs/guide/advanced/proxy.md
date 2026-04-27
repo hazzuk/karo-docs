@@ -157,8 +157,7 @@ karo_ssh_port: 4444
 
 # karo-compose
 
-karo_compose_public_domain: example.com
-karo_compose_private_domain: int.example.com
+karo_compose_root_domain: example.com
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
