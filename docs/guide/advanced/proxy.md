@@ -2,11 +2,14 @@
 icon: lucide/waypoints
 ---
 
-# VPS Proxy
+# VPS proxy
 
-It is critical to consider the security of exposing services to the public internet. The easiest method to expose services is simply opening ports on your router. However, this then discloses your home network's public IP address. Alternatively, you can avoid opening ports by using a VPN. This way you connect directly to the server, and traffic is tunnelled when accessing services. But this can be cumbersome and difficult for end-users to correctly utilise.
+!!! warning
+    This guide is incomplete and the setup is still experimental. Everything is subject to change without notice.
 
-The karo-stack's solution to this issue actually involves a mix of both approaches. You'll open ports, but on a rented VPS (Virtual Private Server) instead of your home network. And your new VPS will then be directly connected to the server over a VPN.
+It is critical to consider the security of exposing services to the public internet. The easiest method to expose services is simply opening ports on your router. However, this makes your home network more vulnerable. And you'll have to disclose your network's public IP address. Alternatively, you can avoid opening ports by using a VPN. This way you connect directly to the server, and traffic is tunnelled when accessing services. But this can be cumbersome, and difficult for end-users to correctly utilise.
+
+The karo-stack's solution to this issue actually involves a mix of both approaches. You'll open ports, but on a rented VPS (Virtual Private Server) instead of your home network. And your new VPS will then be directly connected to your server over a VPN connection. With this setup, inbound public traffic will be sanitised on the VPS first, before being tunnelled on towards your server.
 
 ### Proxy stack
 
@@ -43,7 +46,7 @@ There are three parts to the proxy stack:
 
 - **WireGuard** - A VPN protocol. Securely tunnels traffic between the VPS and homeserver.
 
-This page outlines the steps required to setup a VPS as a `proxyserver` with the karo-stack.
+This page outlines the steps required to setup a VPS for use as a `proxyserver` with the karo-stack.
 
 ## DNS records
 
@@ -61,7 +64,7 @@ Any services you've previously exposed publicly (e.g. `CNAME` `jellyfin` `dyndns
 
 ## VPS setup
 
-Most VPS providers will simply create a pre-configured Debian server for you. As such, if you can't self-install Debian (and use the preseed file). Then you'll need to configure your new Debian VPS manually. Creating the correct environment for the Ansible playbook to run in.
+Most VPS providers will simply create a pre-configured Debian server for you. As such, if you can't self-install Debian (and use the preseed file). Then you'll need to configure your new Debian VPS manually. And create the correct environment for the Ansible playbook to run in.
 
 ### Debian post-install
 
@@ -99,7 +102,7 @@ install -m 0644 -o karo -g karo /root/.ssh/authorized_keys /home/karo/.ssh
 ```sh
 # install packages
 apt -y install chrony openssh-server ansible acl python3-debian \
-    just parted rsync micro git curl wget btop tree man-db
+    just parted rsync micro git curl wget btop tree man-db wireguard
 ```
 
 ```sh
@@ -119,13 +122,7 @@ Connect via SSH to your **homeserver**:
 ssh -A karo@homeserver.example.com
 ```
 
-Generate a new unique password (save inside your password manager):
-
-```sh
-openssl rand -hex 48
-```
-
-Set the new password for Ansible to use:
+Use your existing vault password for Ansible:
 
 ```sh
 just setup-password
@@ -185,37 +182,27 @@ Update your inventory's `hosts.ini` file to include the VPS as a new host:
 micro /srv/karo/inventory/hosts.ini
 ```
 
-```ini title="/srv/karo/inventory/hosts.ini"
+```ini title="/srv/karo/inventory/hosts.ini" hl_lines="3"
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo
 ```
 
-Configure the VPS:
+Run the playbook for the VPS:
 
 ```sh
 just setup-server proxyserver
 ```
 
-Adjust your `hosts.ini` file to use the new SSH port:
+Afterwards, adjust your `hosts.ini` file to use the new SSH port `#!ini ansible_port=4444`:
 
 ```sh
 micro /srv/karo/inventory/hosts.ini
 ```
 
-``` { .ini .no-copy }
-ansible_port=4444
-```
-
-Deploy the proxy stack:
-
-```sh
-just setup-compose proxyserver -s proxy
-```
-
 ### Git changes
 
-Commit your changes:
+Commit your new changes:
 
 ```sh
 cd /srv/karo/inventory
@@ -225,8 +212,14 @@ git commit -m "update inventory files"
 git push
 ```
 
-## Server proxy setup
+## Stack setup
 
-You'll also need to run the proxy stack on your server. Which will simply run an instance of Gluetun to tunnel traffic from your VPS.
+After having successfully setup your VPS, you're now ready to run the proxy stack. You can read all the necessary details about the stack's configuration on its [dedicated page](../../stacks/extra/proxy/).
 
-The stack should be run as a client on your server. You can see details about the stack's setup on its [dedicated page](../../stacks/extra/proxy/).
+!!! tip
+
+    Once you've correctly configured your vault, you can deploy the proxy stack with the following command:
+
+    ```sh
+    just setup-compose proxyserver -s proxy
+    ```
