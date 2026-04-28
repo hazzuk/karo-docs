@@ -10,7 +10,7 @@ If you want services to be accessible externally, the easiest method is to expos
 
     Alternatively, for better security (or if you're behind CGNAT) you can avoid opening ports and exposing your home network's public IPv4 address. Instead, it's strongly recommended to rent a small VPS. Where this second server will proxy sanitised external traffic on towards your server.
 
-    Read the [VPS proxy](../proxy/) guide for how to configure this method.
+    Read the [VPS proxy](../advanced/proxy/) guide for how to configure this method.
 
 ## Public IP address
 
