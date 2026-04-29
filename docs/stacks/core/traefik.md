@@ -30,7 +30,7 @@ karo_compose_traefik_acme_zone_api_token: "" # secret
 karo_compose_traefik_acme_dns_api_token: "" # secret
 ```
 
-??? abstract "Traefik notes"
+??? abstract "Notes - Traefik setup"
 
     - The first time you run Traefik, you should keep ACME staging enabled. Once you've verified that your setup is correct, disable it to request valid TLS certificates. This is to avoid [Let's Encrypt rate limits](https://letsencrypt.org/docs/rate-limits/).
 
@@ -47,9 +47,9 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
         - "{{ karo_compose_oidc_domain }}:172.18.0.254"
         ```
 
-??? tip "Create API tokens for Cloudflare DNS"
+??? tip "Guide - Create API tokens for Cloudflare DNS"
 
-    > Guide based on the [Lego library docs](https://go-acme.github.io/lego/dns/cloudflare/index.html#api-tokens).
+    > Based on the [Lego library docs](https://go-acme.github.io/lego/dns/cloudflare/index.html#api-tokens).
 
     Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
 

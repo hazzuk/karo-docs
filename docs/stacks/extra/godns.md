@@ -24,7 +24,7 @@ karo_compose_godns_subdomain: home
 karo_compose_godns_dns_api_token: "" # secret
 ```
 
-??? tip "Create API token for Cloudflare DNS"
+??? tip "Guide - Create an API token for Cloudflare DNS"
 
     Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
 

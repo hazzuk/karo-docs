@@ -42,7 +42,7 @@ karo_compose_proxy_haproxy_config_raw: |
   # haproxy config
 ```
 
-??? example "HAProxy config example"
+??? example "Example - HAProxy config"
 
     Simple setup where traffic is routed to your server if the request's SNI hostname matches your domain name.
 
