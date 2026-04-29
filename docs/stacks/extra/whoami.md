@@ -20,3 +20,7 @@ karo_compose_whoami_enabled: false
 # karo_compose_whoami_domain: "whoami.{{ karo_compose_root_domain }}"
 # karo_compose_whoami_forward_auth_enabled: false
 ```
+
+??? note "Links"
+
+    - [Releases](https://github.com/traefik/whoami/releases)

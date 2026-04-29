@@ -27,3 +27,8 @@ karo_compose_pocketid_log_level: info # debug, info, warn, error
 
 karo_compose_pocketid_encryption_key: "" # secret (`openssl rand -base64 32`)
 ```
+
+??? note "Links"
+
+    - [Documentation](https://pocket-id.org/docs/introduction)
+    - [Releases](https://github.com/pocket-id/pocket-id/releases)

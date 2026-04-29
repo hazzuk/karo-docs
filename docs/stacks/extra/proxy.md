@@ -66,3 +66,8 @@ karo_compose_proxy_haproxy_config_raw: |
         mode tcp
         server wg {{ karo_compose_proxy_client_wireguard_ipv4 }}:443 send-proxy-v2 check
     ```
+
+??? note "Links"
+
+    - [Latest versions](https://www.haproxy.org/)
+    - [Breaking changes](https://github.com/haproxy/wiki/wiki/breaking-changes)

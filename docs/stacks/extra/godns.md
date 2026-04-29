@@ -37,3 +37,7 @@ karo_compose_godns_dns_api_token: "" # secret
         - Permissions: [`Zone`, `DNS`, `Edit`]
         
         - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+
+??? note "Links"
+
+    - [Releases](https://github.com/timothyye/godns/releases)

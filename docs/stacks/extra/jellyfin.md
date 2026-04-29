@@ -22,3 +22,8 @@ karo_compose_jellyfin_enabled: false
 karo_compose_jellyfin_movies_media_path: "" # e.g. /media/drive1/data/media/movies
 karo_compose_jellyfin_series_media_path: "" # e.g. /media/drive1/data/media/series
 ```
+
+??? note "Links"
+
+    - [Documentation](https://jellyfin.org/docs/)
+    - [Releases](https://github.com/jellyfin/jellyfin/releases)

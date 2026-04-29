@@ -25,6 +25,11 @@ karo_compose_qbittorrent_downloads_path: "" # e.g. /media/drive1/data/torrents
 karo_compose_qbittorrent_webui_enabled: true
 ```
 
+??? note "Links"
+
+    - [qBittorrent wiki](https://github.com/qbittorrent/qbittorrent/wiki/)
+    - [Latest versions](https://www.qbittorrent.org/news)
+
 ## qui
 
 > qBittorrent web UI
@@ -47,3 +52,8 @@ karo_compose_qbittorrent_qui_session_secret: "" # secret (`openssl rand -hex 16`
 karo_compose_qbittorrent_qui_oidc_client_id: ""
 karo_compose_qbittorrent_qui_oidc_client_secret: ""
 ```
+
+??? note "Links"
+
+    - [Documentation](https://getqui.com/docs/intro)
+    - [Releases](https://github.com/autobrr/qui/releases)

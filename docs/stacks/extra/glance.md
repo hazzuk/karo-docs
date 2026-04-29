@@ -27,3 +27,7 @@ karo_compose_glance_config_raw: |
 ??? example "Example - Glance config"
     
     See the [Glance documentation](https://github.com/glanceapp/glance/blob/main/docs/configuration.md#preconfigured-page) regarding `glance.yml`.
+
+??? note "Links"
+
+    - [Releases](https://github.com/glanceapp/glance/releases)

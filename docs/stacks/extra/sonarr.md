@@ -22,3 +22,8 @@ karo_compose_sonarr_enabled: false
 
 karo_compose_sonarr_data_path: "" # e.g. /media/drive1/data
 ```
+
+??? note "Links"
+
+    - [Documentation](https://wiki.servarr.com/sonarr)
+    - [Releases](https://github.com/sonarr/sonarr/releases)

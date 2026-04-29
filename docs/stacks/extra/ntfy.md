@@ -24,3 +24,8 @@ karo_compose_ntfy_auth_users: "" # docs.ntfy.sh/config/#users-via-the-config
 karo_compose_ntfy_auth_access: "" # docs.ntfy.sh/config/#acl-entries-via-the-config
 karo_compose_ntfy_auth_tokens: "" # docs.ntfy.sh/config/#tokens-via-the-config
 ```
+
+??? note "Links"
+
+    - [Documentation](https://docs.ntfy.sh/)
+    - [Releases](https://github.com/binwiederhier/ntfy/releases)

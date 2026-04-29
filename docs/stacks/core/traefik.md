@@ -71,6 +71,13 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
 
         - Zone Resources: [`Include`, `Specific zone`, `example.com`]
 
+??? note "Links"
+
+    - [Documentation](https://doc.traefik.io/traefik/)
+    - [Releases](https://github.com/traefik/traefik/releases)
+    - [Migration guides](https://doc.traefik.io/traefik/migrate/v3/)
+    - [Deprecation notices](https://doc.traefik.io/traefik/v3.7/deprecation/releases/)
+
 ## Tinyauth
 
 > Authentication middleware (forward auth)
@@ -92,6 +99,11 @@ karo_compose_traefik_tinyauth_oidc_client_id: ""
 karo_compose_traefik_tinyauth_oidc_client_secret: "" # secret
 ```
 
+??? note "Links"
+
+    - [Documentation](https://tinyauth.app/docs/getting-started/)
+    - [Releases](https://github.com/tinyauthapp/tinyauth/releases)
+
 ## CetusGuard
 
 > Docker socket proxy
@@ -108,3 +120,7 @@ karo_compose_traefik_tinyauth_oidc_client_secret: "" # secret
 
 karo_compose_traefik_cetusguard_log_level: 7 # 0-7 (min to max verbosity)
 ```
+
+??? note "Links"
+
+    - [Releases](https://github.com/hectorm/cetusguard/releases)
