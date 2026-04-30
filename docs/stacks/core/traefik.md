@@ -84,8 +84,8 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
 
 <div class="grid cards" markdown>
 
-- :simple-github: [steveiliop56/tinyauth](https://github.com/steveiliop56/tinyauth)
-- :lucide-container: [ghcr.io/steveiliop56/tinyauth](https://github.com/steveiliop56/tinyauth/pkgs/container/tinyauth)
+- :simple-github: [tinyauthapp/tinyauth](https://github.com/tinyauthapp/tinyauth)
+- :lucide-container: [ghcr.io/tinyauthapp/tinyauth](https://ghcr.io/tinyauthapp/tinyauth)
 
 </div>
 
