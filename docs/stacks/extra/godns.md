@@ -19,7 +19,7 @@ icon: lucide/globe
 karo_compose_godns_enabled: false
 # karo_compose_godns_debug_info_enabled: false
 
-karo_compose_godns_subdomain: home
+karo_compose_godns_subdomain: dyndns
 
 karo_compose_godns_dns_api_token: "" # secret
 ```
