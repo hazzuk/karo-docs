@@ -125,13 +125,13 @@ ssh -A karo@homeserver.example.com
 Use your existing vault password for Ansible:
 
 ```sh
-just setup-password
+just password
 ```
 
 Create and edit a new vault named `proxyserver`:
 
 ```sh
-just setup-vault proxyserver
+just vault proxyserver
 ```
 
 ```yaml
@@ -191,7 +191,7 @@ proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connect
 Run the playbook for the VPS:
 
 ```sh
-just setup-server proxyserver
+just install proxyserver
 ```
 
 Afterwards, adjust your `hosts.ini` file to use the new SSH port `#!ini ansible_port=4444`:
@@ -221,5 +221,5 @@ After having successfully setup your VPS, you're now ready to run the proxy stac
     Once you've correctly configured your vault, you can deploy the proxy stack with the following command:
 
     ```sh
-    just setup-compose proxyserver -s proxy
+    just compose up proxyserver -s proxy
     ```

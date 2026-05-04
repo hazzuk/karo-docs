@@ -80,7 +80,7 @@ One important change needs to be made to your preseed file. Which is adding your
     After setup, simply run the following justfile recipe:
 
     ```sh
-    just preseed-server
+    just preseed server
     ```
     When later prompted for the preseed file's URL, use the IP address of the host and port 8000:
 

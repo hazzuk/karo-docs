@@ -10,14 +10,14 @@ The playbook is separated into roles (`karo-compose`, `karo-docker`, `karo-git`,
 
 !!! tip
 
-    Remember to run `just setup-vault` if you want to change any configuration.
+    Remember to run `just vault homeserver` if you want to change any configuration.
 
 ## Run server setup
 
 This command will enable the nftables firewall, make minor system changes, tighten SSH security, adjust the git configuration, and install rootless Docker with the `dockeruser`.
 
 ```sh
-just setup-server homeserver
+just install homeserver
 ```
 
 ## Run compose setup
@@ -29,5 +29,5 @@ just setup-server homeserver
 This command will deploy any Docker compose stacks the user has enabled. By default, it will setup **all** enabled stacks. Alternatively, you can provide the name of one stack, e.g. `traefik`.
 
 ```sh
-just setup-compose homeserver
+just compose up homeserver
 ```

@@ -89,7 +89,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
     git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
     
     cd /srv/karo
-    just setup-password
+    just password
     ```
     
     After this, you can skip the Configuration section and go straight to [Setup](ansible/).

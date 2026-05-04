@@ -18,7 +18,7 @@ Once you've saved the password, you'll also need to write it to a file on the sy
 
 ```sh
 cd /srv/karo
-just setup-password
+just password
 ```
 
 !!! question "Isn't writing the password to a plaintext file insecure?"
@@ -32,7 +32,7 @@ just setup-password
 With the password setup, it's time to create your vault. You can use the following command to both create and edit your vault:
 
 ```sh
-just setup-vault homeserver
+just vault homeserver
 ```
 
 Copy the example below into your `vault.yml` file, then edit any values that require changes.

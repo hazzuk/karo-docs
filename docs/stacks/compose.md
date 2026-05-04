@@ -4,7 +4,7 @@ icon: simple/docker
 
 # Compose
 
-After successfully running `just setup-server`, you can start deploying Docker compose stacks.
+After successfully running `just install homeserver`, you can start deploying Docker compose stacks.
 
 Stacks provided by the project are grouped into two categories.
 
@@ -13,7 +13,7 @@ Stacks provided by the project are grouped into two categories.
 
 To setup a new stack, you'll need to edit your Ansible vault with the stack's relevant configuration. Use the provided example config for each service in a stack, changing the values where needed.
 
-Then run [`just setup-compose`](../usage/just/#docker) with the name of the stack you've just configured.
+Then run [`just compose up homeserver`](../usage/just/#compose), optionally with the name of the stack you've configured.
 
 !!! tip
 
