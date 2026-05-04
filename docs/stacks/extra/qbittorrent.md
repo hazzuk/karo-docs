@@ -50,7 +50,7 @@ karo_compose_qbittorrent_qui_log_level: info # trace, debug, info, warn, error
 karo_compose_qbittorrent_qui_session_secret: "" # secret (`openssl rand -hex 16`)
 
 karo_compose_qbittorrent_qui_oidc_client_id: ""
-karo_compose_qbittorrent_qui_oidc_client_secret: ""
+karo_compose_qbittorrent_qui_oidc_client_secret: "" # secret
 ```
 
 ??? note "Links"
