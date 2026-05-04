@@ -46,8 +46,8 @@ nav = [
     { "Stacks" = [
         "stacks/compose.md",
         { "Core" = [
-            "stacks/core/traefik.md",
             "stacks/core/pocket-id.md",
+            "stacks/core/traefik.md",
         ] },
         { "Extra" = [
             "stacks/extra/glance.md",
