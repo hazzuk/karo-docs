@@ -59,17 +59,17 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
 
         - Token name: `Traefik (example.com) - Resolve domain names to Zone IDs`
         
-        - Permissions: [`Zone`, `Zone`, `Read`]
+        - Permissions: (`Zone`, `Zone`, `Read`)
         
-        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+        - Zone Resources: (`Include`, `Specific zone`, `example.com`)
 
     2. `karo_compose_traefik_acme_dns_api_token`
 
         - Token name: `Traefik (example.com) - Edit DNS for DNS-01 challenges`
 
-        - Permissions: [`Zone`, `DNS`, `Edit`]
+        - Permissions: (`Zone`, `DNS`, `Edit`)
 
-        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+        - Zone Resources: (`Include`, `Specific zone`, `example.com`)
 
 ??? note "Links"
 

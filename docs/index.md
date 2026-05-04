@@ -32,8 +32,6 @@ This is why the karo-stack exists, built to follow four intrinsic principals:
 
     Starting with an automated installation of Debian. The server configuration tracked in git. Sensitive information encrypted inside a vault. Tasks are orchestrated using Ansible with idempotent behaviour. And self-hosted Docker stacks run as a rootless user.
 
-    *[idempotent]: An action which, when performed multiple times, has no further effect on its subject after the first time it is performed.
-
 ## Quick start
 
 1. Host your Debian preseed file

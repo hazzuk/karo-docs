@@ -34,9 +34,9 @@ karo_compose_godns_dns_api_token: "" # secret
 
         - Token name: `GoDNS (example.com) - Edit dynamic DNS record`
         
-        - Permissions: [`Zone`, `DNS`, `Edit`]
+        - Permissions: (`Zone`, `DNS`, `Edit`)
         
-        - Zone Resources: [`Include`, `Specific zone`, `example.com`]
+        - Zone Resources: (`Include`, `Specific zone`, `example.com`)
 
 ??? note "Links"
 

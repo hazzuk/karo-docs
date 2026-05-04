@@ -1,0 +1,1 @@
+*[idempotent]: An action which, when performed multiple times, has no further effect on its subject after the first time it is performed.

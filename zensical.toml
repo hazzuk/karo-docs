@@ -273,6 +273,7 @@ line_spans = "__span"
 pygments_lang_class = true
 [project.markdown_extensions.pymdownx.inlinehilite] # in-line syntax highlighting
 [project.markdown_extensions.pymdownx.snippets] # embed external files
+auto_append = ["includes/abbreviations.md"]
 
 # content tabs
 [project.markdown_extensions.pymdownx.superfences] # nest code/content blocks
