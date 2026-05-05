@@ -4,7 +4,7 @@ icon: simple/docker
 
 # Compose
 
-After successfully running `just install homeserver`, you can start deploying Docker compose stacks.
+After running `just install homeserver`, you can start deploying Docker compose stacks.
 
 Stacks provided by the project are grouped into two categories.
 
@@ -31,7 +31,7 @@ Then run [`just compose up homeserver`](../usage/just/#compose), optionally with
 
 The project doesn't yet support user-defined stacks via Ansible. However, you can still create your own Docker `compose.yml` files directly on the server and run them manually.
 
-To do this, you'll need to SSH in as the dockeruser.
+To do this, you'll need to SSH in as the `dockeruser`.
 
 > e.g. `ssh dockeruser@homeserver.example.com` or `ssh dockeruser@192.168.0.142`
 
