@@ -92,4 +92,4 @@ With the preseed file setup, Debian can now be installed onto your home server h
     just password
     ```
     
-    After this, you can skip the Configuration section and go straight to [Setup](ansible/).
+    After this, you can skip the Configuration section and go straight to [Setup](../setup/ansible/).
