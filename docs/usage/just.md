@@ -4,62 +4,122 @@ icon: lucide/file-terminal
 
 # just
 
-The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands. Commands are called recipes, which are stored in a file called `justfile`. `just` can be invoked from any subdirectory, not just the repository's root directory, which contains the `justfile`.
+The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands. Each `just` command is called a recipe, these recipes help simplify common commands you'll need to run when using the project.
 
-You can type `just` or `just help` to see a list of available recipes.
+!!! example
 
+    We've taken the main Ansible playbook command:
 
-## Available recipes
+    > `ansible-playbook run.yml --tags setup --limit "homeserver"`
 
-### Debian installation
+    And have simplified running it with a recipe instead:
 
-An optional way to host the Debian `preseed.cfg` file, for use over a local network.
+    > `just install homeserver` (so running this actually runs the command above)
 
-```sh
-just preseed-server
+The `just` command can be invoked from any subdirectory. And you can type `just` to see a full list of available recipes:
+
+```{ .sh .no-copy }
+> just
+
+Available recipes:
+  - preseed platform='server'              # Host preseed.cfg
+  - install hostname=''                    # Setup a system
+  - compose action hostname='' stack='all' # Deploy/remove stacks
+  - vault hostname                         # Manage a vault
+  - password                               # Set password
+  - wireguard                              # Generate key pair
 ```
 
-!!! note
+## Debian installation
 
-    This is the only recipe that is intended to be used before the Debian server has been installed. You would run this command from another computer with port `8000` open. Clone your repositories and use a `Bash` terminal. Make sure you and have `git`, `just` and `python` installed on your system. See [this guide](../get-started/preseed/#automatic-setup-advanced).
+### `preseed`
 
-### Server setup
+An optional preseed method, running a Python webserver to host the Debian `preseed.cfg` file. Making it accessible for use over a local network.
 
-Run Ansible to provision the Debian server.
+!!! example "Examples"
 
-```sh
-just setup-server $hostname
-```
+    ```{ .sh .no-copy }
+    # starts a python webserver to host 'debian/server/d-i/trixie/preseed.cfg'
+    just preseed server
+    ```
 
-### Docker
+    ```{ .sh .no-copy }
+    # starts a python webserver to host 'debian/desktop/d-i/trixie/preseed.cfg'
+    just preseed desktop
+    ```
 
-!!! tip
+    !!! note "When to use this recipe"
 
-    By default, `$stack` is set to 'all'. Alternatively, you can provide the name of one stack, e.g. `traefik`.
+        For use by advanced users, or when testing changes to the preseed file. See [this guide](../guide/debian/preseed/#automatic-setup-advanced) for details.
 
-Run Ansible to deploy Docker compose stacks.
+## System setup
 
-```sh
-just setup-compose $hostname --stack $stack
-```
+### `install`
 
-Run Ansible to down Docker compose stacks.
+Run Ansible to configure the core components of your system.
 
-```sh
-just down-compose $hostname --stack $stack
-```
+!!! example "Examples"
 
-### Ansible vault
+    ```{ .sh .no-copy }
+    # runs the main ansible roles to setup 'homeserver'
+    just install homeserver
+    ```
 
-Manage an Ansible vault.
+    ```{ .sh .no-copy }
+    # runs the main ansible roles to setup 'proxyserver'
+    just install proxyserver
+    ```
 
-```sh
-just setup-vault $hostname
-```
+### `compose`
 
-Edit the Ansible vault password file.
+Run Ansible to deploy or remove Docker compose stacks.
 
-```sh
-just setup-password
-```
+!!! example "Examples"
 
+    ```{ .sh .no-copy }
+    # setup on 'homeserver' all enabled stacks
+    just compose up homeserver
+    ```
+
+    ```{ .sh .no-copy }
+    # setup on 'homeserver' the 'traefik' stack (if enabled)
+    just compose up homeserver -s traefik
+    ```
+
+    ```{ .sh .no-copy }
+    # remove on 'homeserver' all enabled stacks
+    just compose down homeserver
+    ```
+
+    ```{ .sh .no-copy }
+    # remove on 'proxyserver' the 'proxy' stack (if enabled)
+    just compose down proxyserver -s proxy
+    ```
+
+    !!! note "Stack data"
+
+        Using `just compose down` is the same as `docker compose down`, meaning stack data will persist.
+
+## Ansible vault
+
+### `vault`
+
+Create a new Ansible vault file, or edit an existing one.
+
+!!! example
+
+    ```{ .sh .no-copy }
+    # create or edit an ansible vault inside 'inventory/host_vars/homeserver/vault.yml' 
+    just vault homeserver
+    ```
+
+### `password`
+
+Create the temporary Ansible vault password file, or edit the existing one.
+
+!!! example
+
+    ```{ .sh .no-copy }
+    # create or edit the ansible vault password file inside '/run/user/1000/karo-stack/vault_pass'
+    just password
+    ```
