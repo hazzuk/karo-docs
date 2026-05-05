@@ -59,3 +59,8 @@ git switch main
 git merge upstream/main
 git push origin main
 ```
+
+## Next steps
+
+Having installed, configured and setup your server. The recommended next step is to look at running your Docker stacks. See the [stacks](../../stacks/compose/) section for more details.
+
