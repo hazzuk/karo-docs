@@ -1,3 +1,6 @@
 .md-typeset .admonition.example {
     background-color: #4d2ab11a;
 }
+.md-typeset .admonition.example, .md-typeset details.example {
+    background-color: #4d2ab11a;
+}
