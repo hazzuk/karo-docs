@@ -102,7 +102,7 @@ secrets:
 
 Any new variables must be added to the karo-compose defaults file.
 
-!!! info
+!!! info "Defaults file organisation"
 
     - Each stack is first grouped by core or extra, then ordered alphabetically.
 

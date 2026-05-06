@@ -56,7 +56,7 @@ Your VPS will likely have a static IPv4 address, so you won't need to use a dyna
 | ---- | ------------- | ------------------- | -------------------- |
 | A    | `proxyserver` | `<vps public ipv4>` | vps - public traffic |
 
-!!! tip
+!!! tip "Internal DNS"
 
     If you're using an internal server DNS, it's important to also add this same record there as well. (Otherwise you can't use the hostname `proxyserver.example.com` in the following SSH commands. As your internal DNS would incorrectly resolve this as your homeserver's internal IP address.)
 
@@ -216,7 +216,7 @@ git push
 
 After having successfully setup your VPS, you're now ready to run the proxy stack. You can read all the necessary details about the stack's configuration on its [dedicated page](../../stacks/extra/proxy/).
 
-!!! tip
+!!! tip "Running the stack"
 
     Once you've correctly configured your vault, you can deploy the proxy stack with the following command:
 

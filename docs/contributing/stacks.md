@@ -12,7 +12,7 @@ The project happily welcomes new contributions for Docker compose stacks from us
 
 Stacks are often 'needs driven', meaning first we look at what's needed, e.g. a reverse proxy. Then we look at services that can best implement the need, e.g. Caddy, Nginx, Traefik, etc.
 
-!!! tip
+!!! tip "Finding new services"
 
     The site [selfh.st/apps](https://selfh.st/apps/), is a great resource for finding self-hosted services.
 

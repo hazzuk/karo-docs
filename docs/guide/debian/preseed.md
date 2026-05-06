@@ -10,10 +10,6 @@ The [preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/
 
 The easiest way for the Debian installer to access your preseed file is by hosting it via a webserver. Either with a computer on your local network, or a site like `pastebin.com`.
 
-!!! note
-
-    Debian provides [alternative preseeding methods](https://www.debian.org/releases/stable/amd64/apbs01.en.html#preseed-methods), but they won't be covered due to their complexity.
-
 One important change needs to be made to your preseed file. Which is adding your public SSH key. From this, the Debian installer will be able to automatically insert your key, into the SSH `authorized_keys` file on the server. Making first time authentication over SSH fast and secure.
 
 === "Manual setup"
@@ -26,7 +22,7 @@ One important change needs to be made to your preseed file. Which is adding your
     
     1. Upload the modified file to a text storage site (e.g. [pastebin.com](https://pastebin.com/))
 
-        !!! tip
+        !!! tip "Optional paste settings"
 
             - Set the paste exposure to unlisted, with a paste expiration date.
             - Don't set a password.

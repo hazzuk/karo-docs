@@ -23,13 +23,13 @@ git commit -m "add ansible vault file"
 git push
 ```
 
-!!! note
+??? info "Git setup"
 
     Make sure you've configured your git email, name and signing key inside [your Ansible vault](../configure/vault/#create-your-vault). And have also ran the Ansible playbook using `just install homeserver`, to configure git on the system.
 
     If you've set up everything correctly, your desktop's password manager might prompt you when running specific git commands. This is because it's trying to use your SSH signing key to sign your git commits.
 
-!!! tip
+??? tip "Future commits"
 
     It's important to keep your remote GitHub repo up to date with any changes you make on your server. In future, you can keep things simple by doing a more generalised commit like this:
 
@@ -63,4 +63,3 @@ git push origin main
 ## Next steps
 
 Having installed, configured and setup your server. The recommended next step is to look at running your Docker stacks. See the [stacks](../../stacks/compose/) section for more details.
-

@@ -6,7 +6,7 @@ icon: lucide/file-terminal
 
 The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands. Each `just` command is called a recipe, these recipes help simplify common commands you'll need to run when using the project.
 
-!!! example
+??? example "Original command vs just recipe"
 
     We've taken the main Ansible playbook command:
 
@@ -36,7 +36,7 @@ Available recipes:
 
 An optional preseed method, running a Python webserver to host the Debian `preseed.cfg` file. Making it accessible for use over a local network.
 
-!!! example "Examples"
+!!! example "Recipe examples"
 
     ```{ .sh .no-copy }
     # starts a python webserver to host 'debian/server/d-i/trixie/preseed.cfg'
@@ -58,7 +58,7 @@ An optional preseed method, running a Python webserver to host the Debian `prese
 
 Run Ansible to configure the core components of your system.
 
-!!! example "Examples"
+!!! example "Recipe examples"
 
     ```{ .sh .no-copy }
     # runs the main ansible roles to setup 'homeserver'
@@ -74,7 +74,7 @@ Run Ansible to configure the core components of your system.
 
 Run Ansible to deploy or remove Docker compose stacks.
 
-!!! example "Examples"
+!!! example "Recipe examples"
 
     ```{ .sh .no-copy }
     # setup on 'homeserver' all enabled stacks
@@ -106,7 +106,7 @@ Run Ansible to deploy or remove Docker compose stacks.
 
 Create a new Ansible vault file, or edit an existing one.
 
-!!! example
+!!! example "Recipe example"
 
     ```{ .sh .no-copy }
     # create or edit an ansible vault inside 'inventory/host_vars/homeserver/vault.yml' 
@@ -117,7 +117,7 @@ Create a new Ansible vault file, or edit an existing one.
 
 Create the temporary Ansible vault password file, or edit the existing one.
 
-!!! example
+!!! example "Recipe example"
 
     ```{ .sh .no-copy }
     # create or edit the ansible vault password file inside '/run/user/1000/karo-stack/vault_pass'

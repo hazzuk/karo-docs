@@ -32,11 +32,11 @@ It's highly recommended to have a basic understanding of the following topics:
 - 2 CPU cores
 - x86_64/amd64 processor
 
-!!! note
+??? info "ARM CPU support"
 
     While there is no reason an arm64/aarch64 processor won't work, it's not an architecture that is tested against. So your mileage may vary. If you encounter any issues, please don't hesitate to raise a GitHub issue.
 
-!!! warning
+??? warning "Ryzen 3000 CPU's (or older)"
 
     If you are using an AMD Zen 2 (Ryzen 3000) processor or older, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). To fix this, a kernel parameter needs to be added via the GRUB boot loader.
 

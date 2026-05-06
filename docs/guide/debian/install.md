@@ -58,7 +58,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
 1. Wait for the installer to finish and the system to reboot into Debian
 
-    !!! question "The installer showed an error"
+    ??? question "If the installer shows an error"
 
         If you receive an error at the end of the installer process, it's likely that you've incorrectly or forgotten to change the authorized SSH key in the preseed file's late command. The easiest solution is to fix the preseed file and run the Debian installer again.
 
@@ -70,7 +70,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
     > e.g. `ssh -A karo@homeserver.example.com` or `ssh -A karo@192.168.0.142`
 
-    !!! info
+    !!! info "Authentication forwarding"
 
         `ssh -A` Allows for forwarding connections to your password manager's ssh-agent.
 

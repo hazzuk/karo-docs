@@ -10,7 +10,7 @@ Once you've installed Debian onto your server, you're now ready to setup the two
 
 ## GitHub account
 
-!!! question "I haven't used git before"
+??? question "First time using git"
 
     While git does have a lot of features, and in some situations can become somewhat complex. For what the karo-stack needs, using git will be relatively straight forward. Simply follow the the commands shown, and you should get everything configured correctly.
 
@@ -30,7 +30,7 @@ For the karo-stack to work, you'll need to create two new git repos:
 
 The fork will be your version of the karo-stack codebase. Whereas `inventory` will be a much smaller private repo, which will only contain your personalised configuration. Storing your configuration using git is a huge convenience. As it makes restoring your setup after a hardware failure or a move to a new system simple. Additionally, you'll get the full history of any changes you commit. So you can always revert back to a previous version if something stops working.
 
-!!! tip
+??? tip "Disable GitHub features"
 
     For repositories on GitHub, you can safely disable the following unwanted features:
 

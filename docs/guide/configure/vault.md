@@ -21,7 +21,7 @@ cd /srv/karo
 just password
 ```
 
-!!! question "Isn't writing the password to a plaintext file insecure?"
+??? question "Isn't writing the password to a plaintext file insecure?"
 
     The alternative approach would be Ansible prompting for the password each time you want to edit your vault. But seeing as you often need to edit the vault multiple times a session, this quickly becomes frustrating.
     
@@ -37,7 +37,7 @@ just vault homeserver
 
 Copy the example below into your `vault.yml` file, then edit any values that require changes.
 
-!!! tip
+!!! tip "Terminal copy and paste"
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 

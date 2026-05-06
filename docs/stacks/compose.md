@@ -15,7 +15,7 @@ To setup a new stack, you'll need to edit your Ansible vault with the stack's re
 
 Then run [`just compose up homeserver`](../usage/just/#compose), optionally with the name of the stack you've configured.
 
-!!! tip
+??? tip "Post-setup steps"
 
     After successfully configuring a new stack, remember the following:
     
