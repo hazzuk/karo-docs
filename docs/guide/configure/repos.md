@@ -14,7 +14,7 @@ Once you've installed Debian onto your server, you're now ready to setup the two
 
     While git does have a lot of features, and in some situations can become somewhat complex. For what the karo-stack needs, using git will be relatively straight forward. Simply follow the the commands shown, and you should get everything configured correctly.
 
-First, you'll need a [GitHub.com](https://github.com/signup) account to store your git repositories.
+You'll need a [GitHub.com](https://github.com/signup) account to store your git repositories.
 
 Alternatively, you can also use any other git forge like [Codeberg.org](https://codeberg.org/). Which is a non-profit, community-led effort that also provides git hosting (but this guide assumes you're using GitHub).
 
