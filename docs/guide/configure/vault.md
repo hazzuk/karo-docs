@@ -41,7 +41,7 @@ Copy the example below into your `vault.yml` file, then edit any values that req
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 
-```yaml
+```yaml+jinja title="/srv/karo/inventory/host_vars/homeserver/vault.yml"
 # homeserver
 #
 # CONFIDENTIAL
@@ -73,7 +73,6 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
 # add stack variables here
 # ...
-
 ```
 
 ## Encrypted state

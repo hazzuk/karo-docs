@@ -29,18 +29,18 @@ micro /srv/karo/inventory/hosts.ini
 
 As we'll be running Ansible on the server itself, you can simply copy the following:
 
-```ini
-[server]
-homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
-```
+=== "Standard setup"
 
-??? example "Development note"
-
-    For remote connections, use the following configuration:
-    
-    ```ini
+    ```ini title="/srv/karo/inventory/hosts.ini"
     [server]
-    homeserver ansible_host=192.168.122.142 ansible_port=22 ansible_connection=ssh ansible_user=karo
+    homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
+    ```
+
+=== "Remote setup (development)"
+    
+    ```ini title="/srv/karo/inventory/hosts.ini"
+    [server]
+    testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
     ```
 
 ### :lucide-file-key: `key.txt`
