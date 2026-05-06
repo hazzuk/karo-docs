@@ -8,13 +8,13 @@ The karo-stack uses [just](https://github.com/casey/just), a tool to run project
 
 ??? example "Original command vs just recipe"
 
-    We've taken the main Ansible playbook command:
+    We meed to run the main Ansible playbook command:
 
     > `ansible-playbook run.yml --tags setup --limit "homeserver"`
 
-    And have simplified running it with a recipe instead:
+    But have simplified it with a `just` recipe:
 
-    > `just install homeserver` (so running this actually runs the command above)
+    > `just install homeserver` (so running this actually runs the command shown above for you)
 
 The `just` command can be invoked from any subdirectory. And you can type `just` to see a full list of available recipes:
 

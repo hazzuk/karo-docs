@@ -25,7 +25,7 @@ just password
 
     The alternative approach would be Ansible prompting for the password each time you want to edit your vault. But seeing as you often need to edit the vault multiple times a session, this quickly becomes frustrating.
     
-    This is why we store the password inside a file that Ansible can read directly. Which of course is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor (micro) explicitly has backups disabled when handling this file. And third, the file itself is only stored in system memory, on a tmpfs filesystem.
+    This is why we temporarily store the password inside a file that Ansible can read directly. Which on paper is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor `micro` explicitly has backups disabled when handling this file. And third, the file itself is only stored in system memory, on a tmpfs filesystem.
 
 ## Create your vault
 
@@ -76,13 +76,15 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
 ```
 
+## Encrypted state
+
 After you quit the text editor, the vault is returned to its encrypted state. You can see this first-hand, by trying to read the file without Ansible:
 
 ```sh
 less /srv/karo/inventory/host_vars/homeserver/vault.yml
 ```
 
-You should see something similar to this:
+You should see a long output similar to this:
 
 ``` { .yaml .no-copy }
 $ANSIBLE_VAULT;1.1;AES256

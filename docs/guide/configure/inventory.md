@@ -19,7 +19,7 @@ inventory/
 
 For now, create the first two files.
 
-### `hosts.ini`
+### :lucide-file-box: `hosts.ini`
 
 This config is used to tell the automation tool Ansible which host to target. 
 
@@ -43,7 +43,7 @@ homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
     homeserver ansible_host=192.168.122.142 ansible_port=22 ansible_connection=ssh ansible_user=karo
     ```
 
-### `key.txt`
+### :lucide-file-key: `key.txt`
 
 This file will store your public SSH authentication key.
 

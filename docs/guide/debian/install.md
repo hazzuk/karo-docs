@@ -54,7 +54,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
     !!! danger
     
-        ALL DATA ON THE DISK WILL BE ERASED
+        All data on the disk selected will be erased!
 
 1. Wait for the installer to finish and the system to reboot into Debian
 
@@ -72,7 +72,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
     !!! info "Authentication forwarding"
 
-        `ssh -A` Allows for forwarding connections to your password manager's ssh-agent.
+        Using `ssh -A` allows for forwarding connections from your password manager's ssh-agent.
 
 1. When prompted, change your user's password (default is `changelater`)
 

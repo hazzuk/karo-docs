@@ -6,7 +6,7 @@ icon: lucide/clipboard-check
 
 You'll need the following before starting:
 
-- Home server hardware
+- Your home server hardware
 - Desktop or laptop to configure the server
 - Bootable USB drive
 - Registered domain
@@ -34,11 +34,11 @@ It's highly recommended to have a basic understanding of the following topics:
 
 ??? info "ARM CPU support"
 
-    While there is no reason an arm64/aarch64 processor won't work, it's not an architecture that is tested against. So your mileage may vary. If you encounter any issues, please don't hesitate to raise a GitHub issue.
+    While there is no reason an ARM64/AArch64 processor won't work, it's not an architecture that is tested with. So your mileage may vary. If you encounter any issues, please don't hesitate to raise a [GitHub issue](https://github.com/hazzuk/karo-stack/issues/new/choose).
 
 ??? warning "Ryzen 3000 CPU's (or older)"
 
-    If you are using an AMD Zen 2 (Ryzen 3000) processor or older, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). To fix this, a kernel parameter needs to be added via the GRUB boot loader.
+    If you are using an AMD Zen 1 or Zen 2 processor, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). After installing Debian, you can fix this by adding a kernel parameter via the GRUB boot loader:
 
     ``` { .sh .no-copy }
     sudo micro /etc/default/grub
