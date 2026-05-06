@@ -73,6 +73,7 @@ nav = [
     { "Contributing" = [
         "contributing/stacks.md",
         "contributing/compose.md",
+        "contributing/secrets.md",
         "contributing/docs.md",
     ] },
 ]
