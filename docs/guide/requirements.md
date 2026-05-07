@@ -40,7 +40,7 @@ It's highly recommended to have a basic understanding of the following topics:
 
     If you are using an AMD Zen 1 or Zen 2 processor, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). After installing Debian, you can fix this by adding a kernel parameter via the GRUB boot loader:
 
-    ``` { .sh .no-copy }
+    ```sh { .no-copy }
     sudo micro /etc/default/grub
     # edit the file to include the following:
     # GRUB_CMDLINE_LINUX_DEFAULT="quiet processor.max_cstate=1"

@@ -16,7 +16,7 @@ The karo-stack was built after years of manually self-hosting Docker compose fil
 
 Also see the Docker compose reference guides for [services](https://docs.docker.com/reference/compose-file/services/), [networks](https://docs.docker.com/reference/compose-file/networks/), [volumes](https://docs.docker.com/reference/compose-file/volumes/) and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
-```yaml+jinja title="roles/karo-compose/templates/extra/foobar/compose.yml.j2"
+```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: <year> <file author>
 #
 # SPDX-License-Identifier: AGPL-3.0-only
@@ -108,7 +108,7 @@ Any new variables must be added to the karo-compose defaults file.
 
     - You'll also need to add the stack name to `karo_compose_stacks`, this defines its relative startup order.
 
-```yaml+jinja title="roles/karo-compose/defaults/main.yml"
+```yaml+jinja { title="roles/karo-compose/defaults/main.yml" }
 # foobar
 
 karo_compose_foobar_enabled: false

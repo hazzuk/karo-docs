@@ -41,7 +41,7 @@ Copy the example below into your `vault.yml` file, then edit any values that req
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 
-```yaml+jinja title="/srv/karo/inventory/host_vars/homeserver/vault.yml"
+```yaml+jinja { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
 # homeserver
 #
 # CONFIDENTIAL
@@ -85,7 +85,7 @@ less /srv/karo/inventory/host_vars/homeserver/vault.yml
 
 You should see a long output similar to this:
 
-``` { .yaml .no-copy }
+```yaml { .no-copy }
 $ANSIBLE_VAULT;1.1;AES256
 65383464383963393464643461633...
 ```

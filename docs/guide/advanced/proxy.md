@@ -134,7 +134,7 @@ Create and edit a new vault named `proxyserver`:
 just vault proxyserver
 ```
 
-```yaml
+```yaml { title="/srv/karo/inventory/host_vars/proxyserver/vault.yml" }
 # proxyserver
 #
 # CONFIDENTIAL
@@ -182,7 +182,7 @@ Update your inventory's `hosts.ini` file to include the VPS as a new host:
 micro /srv/karo/inventory/hosts.ini
 ```
 
-```ini title="/srv/karo/inventory/hosts.ini" hl_lines="3"
+```ini { title="/srv/karo/inventory/hosts.ini" hl_lines="3" }
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo

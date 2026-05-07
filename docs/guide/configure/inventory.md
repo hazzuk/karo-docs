@@ -8,7 +8,7 @@ The [inventory](https://docs.ansible.com/projects/ansible/latest/inventory_guide
 
 Your `inventory` repo will eventually look something like this:
 
-``` { .toml .no-copy }
+```toml { .no-copy }
 inventory/
 ├── hosts.ini # directs Ansible to the target host (e.g. localhost)
 ├── host_vars/
@@ -31,14 +31,14 @@ As we'll be running Ansible on the server itself, you can simply copy the follow
 
 === "Standard setup"
 
-    ```ini title="/srv/karo/inventory/hosts.ini"
+    ```ini { title="/srv/karo/inventory/hosts.ini" }
     [server]
     homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
     ```
 
 === "Remote setup (development)"
     
-    ```ini title="/srv/karo/inventory/hosts.ini"
+    ```ini { title="/srv/karo/inventory/hosts.ini" }
     [server]
     testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
     ```
