@@ -91,9 +91,9 @@ secrets:
 
     Use the following short syntax for port mappings:
 
-    ``` { .yaml .no-copy }
+    ```html { .no-copy }
     ports:
-      - HOST:CONTAINER/PROTOCOL
+      - <HOST>:<CONTAINER>/<PROTOCOL>
     ```
 
     Ensure you **always specify the protocol**. And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.
