@@ -1,5 +1,5 @@
 ---
-icon: lucide/rotate-ccw-key
+icon: lucide/square-asterisk
 ---
 
 # Handling secrets
