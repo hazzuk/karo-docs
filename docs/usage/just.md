@@ -16,7 +16,7 @@ The karo-stack uses [just](https://github.com/casey/just), a tool to run project
 
     > `just install homeserver` (so running this actually runs the command shown above for you)
 
-The `just` command can be invoked from any subdirectory. And you can type `just` to see a full list of available recipes:
+The `just` recipes can be invoked from any subdirectory. And you can type `just` to see a full list of available recipes:
 
 ```{ .sh .no-copy }
 > just

@@ -29,7 +29,7 @@ just password
 
 ## Create your vault
 
-With the password setup, it's time to create your vault. You can use the following command to both create and edit your vault:
+With the password setup, it's time to create and edit your vault:
 
 ```sh
 just vault homeserver

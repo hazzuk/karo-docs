@@ -37,7 +37,7 @@ One important change needs to be made to your preseed file. Which is adding your
 
         You'll need to have previously setup your private `inventory` git repo. As instructed in a later section of the karo-stack documentation. If this doesn't sound familiar, then please follow the manual setup guide for the preseed file.
 
-    The karo-stack has a `justfile` recipe, which fully automates dynamically adding your public SSH key to the preseed file, then serving it via a local webserver. This method was primarily intended for rapid testing of the Debian installer during the karo-stack's development. But can equally be used by anyone with the right setup.
+    The karo-stack has a `just` recipe, which fully automates dynamically adding your public SSH key to the preseed file, then serving it via a local webserver. This method was primarily intended for rapid testing of the Debian installer during the karo-stack's development. But can equally be used by anyone with the right setup.
 
     !!! abstract "Requirements"
 
@@ -73,11 +73,12 @@ One important change needs to be made to your preseed file. Which is adding your
 
     ### Run
 
-    After setup, simply run the following justfile recipe:
+    After setup, simply run the following:
 
     ```sh
     just preseed server
     ```
+
     When later prompted for the preseed file's URL, use the IP address of the host and port 8000:
 
     > e.g. `192.168.0.123:8000`

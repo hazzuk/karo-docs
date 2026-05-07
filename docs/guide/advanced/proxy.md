@@ -218,7 +218,7 @@ After having successfully setup your VPS, you're now ready to run the proxy stac
 
 !!! tip "Running the stack"
 
-    Once you've correctly configured your vault, you can deploy the proxy stack with the following command:
+    Once you've correctly configured your vault, you can deploy the proxy stack:
 
     ```sh
     just compose up proxyserver -s proxy

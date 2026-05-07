@@ -24,7 +24,7 @@ Having installed Debian, and configured both your `karo-stack` and `inventory` r
 
 The playbook is separated into different Ansible roles (`karo-system`, `karo-nftables`, `karo-ssh`, `karo-git`, `karo-docker`, `karo-compose`). Each of which is responsible for configuring a specific part of the system.
 
-These roles are mostly run together in different [grouped tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml). For now, you should run the server setup roles with the following `just` recipe:
+These roles are mostly run together in different [grouped tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml). For now, you should run the server setup roles with the following:
 
 ```sh
 just install homeserver
