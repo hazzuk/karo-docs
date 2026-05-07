@@ -58,14 +58,28 @@ karo_compose_foobar_version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5
 
 Updates are performed manually and software needs to be reviewed for any important changes.
 
-- Follow the [list of stacks](http://localhost:8000/stacks/core/pocket-id/) provided by the docs.
+!!! tip "Test environment"
 
-- Under each service, visit the `Releases` link (and any other applicable links).
+    It's highly recommended to setup the karo-stack inside a test environment (virtual machine or second server). And avoid testing new updates in your live environment, unless you've made backups of your stacks.
 
-- Review each subsequent release made since the current defined version.
+1. Follow the [list of stacks](http://localhost:8000/stacks/core/pocket-id/) provided by the docs.
 
-- Note any breaking changes or features the karo-stack might want to directly utilise.
+1. Under each service, visit the `Releases` link (and any other applicable links).
 
-- Update the Ansible variable for image version.
+    - Review each subsequent release made since the current defined version.
 
-- Make any additional changes required to the compose file or configs.
+    - Note any breaking changes or features the karo-stack might want to directly utilise.
+
+1. Select the most recent stable version of the software (stability is preferred over new releases).
+
+    - Update the image version in `roles/karo-compose/defaults/main.yml`.
+
+1. Where possible, temporarily adjust log levels to be more verbose.
+
+1. With the previous version of the stack running, down it and deploy the new version.
+
+1. Test the software and review the container logs (`docker logs foobar -f`).
+
+1. Make any additional changes required to the compose file or configs, then test again.
+
+See [this Pull Request](https://github.com/hazzuk/karo-stack/pull/64/commits) for an example of the changes that might be required when updating stacks.
