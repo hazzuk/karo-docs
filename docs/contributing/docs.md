@@ -4,6 +4,10 @@ icon: lucide/notebook-pen
 
 # Documentation
 
+!!! info "Zensical documentation"
+
+    A full authoring guide for writing markdown pages with Zensical can be [found here](https://zensical.org/docs/authoring/markdown/).
+
 ## Icons
 
 ### Generic
