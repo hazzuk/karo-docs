@@ -30,5 +30,5 @@ karo_compose_pocketid_encryption_key: "" # secret (`openssl rand -base64 32`)
 
 ??? note "Links"
 
-    - [Documentation](https://pocket-id.org/docs/introduction)
-    - [Releases](https://github.com/pocket-id/pocket-id/releases)
+    - :lucide-bookmark: [Documentation](https://pocket-id.org/docs/introduction)
+    - :lucide-tag: [Releases](https://github.com/pocket-id/pocket-id/releases)

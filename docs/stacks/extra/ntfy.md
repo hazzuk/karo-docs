@@ -27,5 +27,5 @@ karo_compose_ntfy_auth_tokens: "" # docs.ntfy.sh/config/#tokens-via-the-config
 
 ??? note "Links"
 
-    - [Documentation](https://docs.ntfy.sh/)
-    - [Releases](https://github.com/binwiederhier/ntfy/releases)
+    - :lucide-bookmark: [Documentation](https://docs.ntfy.sh/)
+    - :lucide-tag: [Releases](https://github.com/binwiederhier/ntfy/releases)

@@ -29,5 +29,5 @@ karo_compose_seerr_log_level: info # debug, info, warn, error
 
 ??? note "Links"
 
-    - [Documentation](https://docs.seerr.dev/)
-    - [Releases](https://github.com/seerr-team/seerr/releases)
+    - :lucide-bookmark: [Documentation](https://docs.seerr.dev/)
+    - :lucide-tag: [Releases](https://github.com/seerr-team/seerr/releases)

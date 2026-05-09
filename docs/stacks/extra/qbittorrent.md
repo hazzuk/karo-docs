@@ -27,8 +27,8 @@ karo_compose_qbittorrent_webui_enabled: true
 
 ??? note "Links"
 
-    - [qBittorrent wiki](https://github.com/qbittorrent/qbittorrent/wiki/)
-    - [Latest versions](https://www.qbittorrent.org/news)
+    - :lucide-bookmark: [qBittorrent wiki](https://github.com/qbittorrent/qbittorrent/wiki/)
+    - :lucide-tag: [Latest versions](https://www.qbittorrent.org/news)
 
 ## qui
 
@@ -55,5 +55,5 @@ karo_compose_qbittorrent_qui_oidc_client_secret: "" # secret
 
 ??? note "Links"
 
-    - [Documentation](https://getqui.com/docs/intro)
-    - [Releases](https://github.com/autobrr/qui/releases)
+    - :lucide-bookmark: [Documentation](https://getqui.com/docs/intro)
+    - :lucide-tag: [Releases](https://github.com/autobrr/qui/releases)

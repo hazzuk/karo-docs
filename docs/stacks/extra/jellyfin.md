@@ -25,5 +25,5 @@ karo_compose_jellyfin_series_media_path: "" # e.g. /media/drive1/data/media/seri
 
 ??? note "Links"
 
-    - [Documentation](https://jellyfin.org/docs/)
-    - [Releases](https://github.com/jellyfin/jellyfin/releases)
+    - :lucide-bookmark: [Documentation](https://jellyfin.org/docs/)
+    - :lucide-tag: [Releases](https://github.com/jellyfin/jellyfin/releases)

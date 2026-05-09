@@ -23,5 +23,5 @@ karo_compose_prowlarr_enabled: false
 
 ??? note "Links"
 
-    - [Documentation](https://wiki.servarr.com/prowlarr)
-    - [Releases](https://github.com/prowlarr/prowlarr/releases)
+    - :lucide-bookmark: [Documentation](https://wiki.servarr.com/prowlarr)
+    - :lucide-tag: [Releases](https://github.com/prowlarr/prowlarr/releases)

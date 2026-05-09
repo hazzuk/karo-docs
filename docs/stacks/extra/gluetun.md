@@ -31,5 +31,5 @@ karo_compose_gluetun_wireguard_config_raw: | # secret
 
 ??? note "Links"
 
-    - [Documentation](https://github.com/qdm12/gluetun-wiki)
-    - [Releases](https://github.com/qdm12/gluetun/releases)
+    - :lucide-bookmark: [Documentation](https://github.com/qdm12/gluetun-wiki)
+    - :lucide-tag: [Releases](https://github.com/qdm12/gluetun/releases)

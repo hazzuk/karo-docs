@@ -40,4 +40,4 @@ karo_compose_godns_dns_api_token: "" # secret
 
 ??? note "Links"
 
-    - [Releases](https://github.com/timothyye/godns/releases)
+    - :lucide-tag: [Releases](https://github.com/timothyye/godns/releases)

@@ -23,4 +23,4 @@ karo_compose_whoami_enabled: false
 
 ??? note "Links"
 
-    - [Releases](https://github.com/traefik/whoami/releases)
+    - :lucide-tag: [Releases](https://github.com/traefik/whoami/releases)

@@ -69,5 +69,5 @@ karo_compose_proxy_haproxy_config_raw: |
 
 ??? note "Links"
 
-    - [Latest versions](https://www.haproxy.org/)
-    - [Breaking changes](https://github.com/haproxy/wiki/wiki/breaking-changes)
+    - :lucide-tag: [Latest versions](https://www.haproxy.org/)
+    - :lucide-zap: [Breaking changes](https://github.com/haproxy/wiki/wiki/breaking-changes)

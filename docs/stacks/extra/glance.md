@@ -30,4 +30,4 @@ karo_compose_glance_config_raw: |
 
 ??? note "Links"
 
-    - [Releases](https://github.com/glanceapp/glance/releases)
+    - :lucide-tag: [Releases](https://github.com/glanceapp/glance/releases)

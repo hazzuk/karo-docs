@@ -25,5 +25,5 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 
 ??? note "Links"
 
-    - [Documentation](https://wiki.servarr.com/radarr)
-    - [Releases](https://github.com/radarr/radarr/releases)
+    - :lucide-bookmark: [Documentation](https://wiki.servarr.com/radarr)
+    - :lucide-tag: [Releases](https://github.com/radarr/radarr/releases)
