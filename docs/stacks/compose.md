@@ -27,6 +27,12 @@ Then run [`just compose up homeserver`](../usage/just/#compose), optionally with
 
         > See [Git changes](../guide/setup/git/).
 
+!!! info "Software usage"
+
+    Please note, the documentation does not cover how to use the stacks provided. Instead, only focusing on the required steps and configuration needed to setup the software successfully.
+
+    For more guidance on a stack's usage, please see the documentation links provided under each service.
+
 ## Custom stacks 
 
 The project doesn't yet support user-defined stacks via Ansible. However, you can still create your own Docker `compose.yml` files directly on the server and run them manually.
