@@ -21,6 +21,47 @@ karo_compose_prowlarr_enabled: false
 # karo_compose_prowlarr_forward_auth_enabled: true
 ```
 
+??? abstract "Notes - Prowlarr settings"
+
+    !!! info "Show advanced"
+        To configure all necessary settings, enable 'Show Advanced'.
+
+    === "Indexers"
+
+        - Add an indexer proxy (optional)
+
+            > Some indexers may require you to use a socks5 proxy or FlareSolverr to function correctly.
+
+    === "Apps"
+
+        - Add a Radarr application
+            - API key: `#!ini <radarr api key>`
+
+        - Add a Sonarr application
+            - API key: `#!ini <sonarr api key>`
+
+    === "Tags"
+
+        - Add an indexer proxy tag (e.g. "socks5") (optional)
+
+            > Add this if you previously setup an indexer proxy.
+
+    === "General"
+
+        - Host
+            - Application URL: `https://prowlarr.example.com:443/`
+
+        - Security
+            - Authentication: `external`
+
+                > When forward auth is enabled, you'll want to [configure authentication as external](https://wiki.servarr.com/en/radarr/faq#authentication-method).
+
+        - Logging
+            - Log level: `info`
+
+        - Analytics
+            - Send anonymous usage data: `false`
+
 ??? note "Links"
 
     - :lucide-bookmark: [Documentation](https://wiki.servarr.com/prowlarr)
