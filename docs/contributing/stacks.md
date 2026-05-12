@@ -26,11 +26,13 @@ Please keep in mind that the inclusions of any new stacks is at the sole discret
 
 - [x] **Mature** - Actively maintained for multiple years with consistent releases.
 
-- [x] **Simple** - Setup, maintenance and usage is straightforward.
+- [x] **Simple** - Setup, maintenance, and usage is straightforward.
 
 - [x] **Lightweight** - Install footprint is small, and memory usage is minimal.
 
 - [x] **Performant** - Uses a fast, memory-safe, compiled language like Go, C# or Rust.
+
+- [x] **Lean** — Avoids unnecessary features, following separation-of-concerns principles.
 
 - [x] **Declarative** - Fully configurable through Docker compose or Ansible.
 
