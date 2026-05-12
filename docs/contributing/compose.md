@@ -85,7 +85,7 @@ secrets:
     environment: karo_compose_foobar_token
 ```
 
-!!! tip "Port mappings"
+??? info "Port mappings"
 
     Its unlikely you'll need to map any ports. As most stacks only use web traffic (ports 80 & 443), which will always handled by the reverse proxy. However, there may be times when new port mappings are required.
 
@@ -97,6 +97,17 @@ secrets:
     ```
 
     Ensure you **always specify the protocol**. And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.
+
+??? info "UID 1000"
+
+    Unlike rootful Docker, when a rootless Docker container uses UID 1000, it's not using the host user 1000 (karo). Instead, the user running the Docker daemon (dockeruser) has been assigned a [subordinate user ID range](https://docs.docker.com/engine/security/userns-remap/) (dockeruser:165536:65536). So user 1000 for the container is one of these unprivileged subordinate users.
+    
+    ```sh { .no-copy }
+    $ stat /home/dockeruser/.local/share/docker/volumes/pocketid_data/_data
+    Access: (0755/drwxr-xr-x)  Uid: (166535/ UNKNOWN)   Gid: (166535/ UNKNOWN)
+    ```
+
+    Sometimes we need the UID of files created by a container to match that of the host  user. Setting the UID to 0 will achieve this effect. As UID 0 is mapped to the UID of the host user running the rootless daemon.
 
 ## Example defaults
 
