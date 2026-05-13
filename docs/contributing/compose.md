@@ -85,6 +85,14 @@ secrets:
     environment: karo_compose_foobar_token
 ```
 
+??? info "Naming conventions"
+
+    - Volume names: `<container name>_<volume use>` (e.g. foobar_data, foobar_cache)
+
+    - Network names: `<network use>_<container name>` (e.g. frontend_foobar, backend_foobar, egress_foobar)
+
+    - Use lowercase letters and underscores only.
+
 ??? info "Port mappings"
 
     Its unlikely you'll need to map any ports. As most stacks only use web traffic (ports 80 & 443), which will always handled by the reverse proxy. However, there may be times when new port mappings are required.
