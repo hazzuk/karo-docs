@@ -10,19 +10,19 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
 
 1. For users, there is no difference between declaring a secret versus a normal value. For both, they simply add the variable to their encrypted vault file:
 
-    ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="5" .no-copy }
+    ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="5-6" .no-copy }
     # foobar
     karo_compose_foobar_enabled: true
     karo_compose_foobar_log_level: info # debug, info, warn, error
 
-    karo_compose_foobar_token: "5684663697847272" # secret
+    karo_compose_foobar_secrets:
+      foobar_api_token: "xP5SDH57+zn4hR804VFN#p=="
     ```
 
 1. When `just compose up homeserver -s foobar` is run, Ansible creates a temporary environment variable. This env var is only used by the [`up.yml`](https://github.com/hazzuk/karo-stack/blob/main/roles/karo-compose/tasks/up.yml) task. And its name is the same as the Ansible variable it derives its value from.
 
     ```yaml+jinja { title="roles/karo-compose/tasks/up.yml" hl_lines="3-4" .no-copy }
     - name: Up compose stack
-      no_log: true
       environment:
         karo_compose_foobar_token: "{{ karo_compose_foobar_token if stack == 'foobar' else '' }}"
       community.docker.docker_compose_v2:
@@ -38,13 +38,13 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
     foobar:
       container_name: foobar
       environment:
-        - FOOBAR_APP_TOKEN_FILE=/run/secrets/karo_compose_foobar_token
+        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
       secrets:
-        - karo_compose_foobar_token
+        - foobar_api_token
 
     secrets:
-      karo_compose_foobar_token:
-        environment: karo_compose_foobar_token
+      foobar_api_token:
+        file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
 1. With a Docker secret created, the service `foobar` explicitly inherits it. This definition will create a file inside the container itself, containing the secret.
@@ -56,13 +56,13 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
     foobar:
       container_name: foobar
       environment:
-        - FOOBAR_APP_TOKEN_FILE=/run/secrets/karo_compose_foobar_token
+        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
       secrets:
-        - karo_compose_foobar_token
+        - foobar_api_token
 
     secrets:
-      karo_compose_foobar_token:
-        environment: karo_compose_foobar_token
+      foobar_api_token:
+        file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
 1. Finally, the secret is used by the service by pointing an environment variable to the Docker secret file created inside the container.
@@ -78,13 +78,13 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
     foobar:
       container_name: foobar
       environment:
-        - FOOBAR_APP_TOKEN_FILE=/run/secrets/karo_compose_foobar_token
+        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
       secrets:
-        - karo_compose_foobar_token
+        - foobar_api_token
 
     secrets:
-      karo_compose_foobar_token:
-        environment: karo_compose_foobar_token
+      foobar_api_token:
+        file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
 ??? abstract "Summary of a secrets states"
