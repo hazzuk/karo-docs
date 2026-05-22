@@ -141,6 +141,10 @@ just vault proxyserver
 
 ---
 
+# ansible
+
+ansible_become_password: "" # system password
+
 # karo-git
 
 karo_git_user_email: git@example.com
@@ -171,7 +175,6 @@ karo_compose_traefik_enabled: false
 # pocketid
 
 karo_compose_pocketid_enabled: false
-
 ```
 
 ### Ansible playbook

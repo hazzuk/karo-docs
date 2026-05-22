@@ -120,6 +120,6 @@ Create the temporary Ansible vault password file, or edit the existing one.
 !!! example "Recipe example"
 
     ```sh { .no-copy }
-    # create or edit the ansible vault password file inside '/run/user/1000/karo-stack/vault_pass'
+    # create or edit the ansible vault password file inside '/run/user/1000/karo/ansible/vault_pass'
     just password
     ```

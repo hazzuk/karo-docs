@@ -41,12 +41,16 @@ Copy the example below into your `vault.yml` file, then edit any values that req
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 
-```yaml+jinja { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
+```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
 # homeserver
 #
 # CONFIDENTIAL
 
 ---
+
+# ansible
+
+ansible_become_password: "" # system password
 
 # karo-git
 
