@@ -21,7 +21,8 @@ karo_compose_godns_enabled: false
 
 karo_compose_godns_subdomain: dyndns
 
-karo_compose_godns_dns_api_token: "" # secret
+karo_compose_godns_secrets:
+  godns_dns_api_token: ""
 ```
 
 ??? tip "Guide - Create an API token for Cloudflare DNS"

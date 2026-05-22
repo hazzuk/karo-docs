@@ -26,8 +26,11 @@ karo_compose_traefik_dashboard_enabled: true
 karo_compose_traefik_acme_staging_enabled: true
 
 karo_compose_traefik_acme_email: cert@example.com
-karo_compose_traefik_acme_zone_api_token: "" # secret
-karo_compose_traefik_acme_dns_api_token: "" # secret
+
+karo_compose_traefik_secrets:
+  traefik_acme_zone_api_token: ""
+  traefik_acme_dns_api_token: ""
+  tinyauth_oidc_client_secret: ""
 ```
 
 ??? abstract "Notes - Traefik setup"
@@ -96,7 +99,6 @@ karo_compose_traefik_acme_dns_api_token: "" # secret
 karo_compose_traefik_tinyauth_log_level: info # trace, debug, info, warn, error, fatal, panic
 
 karo_compose_traefik_tinyauth_oidc_client_id: ""
-karo_compose_traefik_tinyauth_oidc_client_secret: "" # secret
 ```
 
 ??? note "Links"

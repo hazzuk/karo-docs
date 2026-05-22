@@ -23,6 +23,10 @@ karo_compose_qbittorrent_enabled: false
 karo_compose_qbittorrent_downloads_path: "" # e.g. /media/drive1/data/torrents
 
 karo_compose_qbittorrent_webui_enabled: true
+
+karo_compose_qbittorrent_secrets:
+  qui_session_secret: "" # `openssl rand -hex 16`
+  qui_oidc_client_secret: ""
 ```
 
 ??? abstract "Notes - qBittorrent setup"
@@ -87,10 +91,7 @@ karo_compose_qbittorrent_webui_enabled: true
 # karo_compose_qbittorrent_qui_domain: "qui.{{ karo_compose_root_domain }}"
 karo_compose_qbittorrent_qui_log_level: info # trace, debug, info, warn, error
 
-karo_compose_qbittorrent_qui_session_secret: "" # secret (`openssl rand -hex 16`)
-
 karo_compose_qbittorrent_qui_oidc_client_id: ""
-karo_compose_qbittorrent_qui_oidc_client_secret: "" # secret
 ```
 
 ??? abstract "Notes - qui setup"

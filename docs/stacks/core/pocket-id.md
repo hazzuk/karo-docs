@@ -25,7 +25,9 @@ icon: pocket-id
 # karo_compose_pocketid_enabled: true
 karo_compose_pocketid_log_level: info # debug, info, warn, error
 
-karo_compose_pocketid_encryption_key: "" # secret (`openssl rand -base64 32`)
+karo_compose_pocketid_secrets:
+  pocketid_encryption_key: "" # `openssl rand -base64 32`
+  pocketid_maxmind_license_key: ""
 ```
 
 ??? note "Links"

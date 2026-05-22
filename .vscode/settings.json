@@ -33,6 +33,7 @@
         "justfile",
         "karo",
         "keymap",
+        "maxmind",
         "netinst",
         "nftables",
         "nodev",
