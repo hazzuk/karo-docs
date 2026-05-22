@@ -64,9 +64,9 @@ services:
     environment:
       - LOG_LEVEL={{ karo_compose_foobar_log_level }}
       - TZ={{ karo_compose_timezone }}
-      - FOOBAR_APP_TOKEN_FILE=/run/secrets/karo_compose_foobar_token
+      - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
     secrets:
-      - karo_compose_foobar_token
+      - foobar_api_token
 
 networks:
   egress_foobar:
@@ -81,8 +81,8 @@ volumes:
     name: foobar_data
 
 secrets:
-  karo_compose_foobar_token:
-    environment: karo_compose_foobar_token
+  foobar_api_token:
+    file: /run/user/1001/karo/compose/foobar_api_token
 ```
 
 ??? info "Naming conventions"
@@ -136,5 +136,6 @@ karo_compose_foobar_version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5
 karo_compose_foobar_domain: "foobar.{{ karo_compose_root_domain }}"
 karo_compose_foobar_log_level: info # debug, info, warn, error
 
-karo_compose_foobar_token: "" # secret
+karo_compose_foobar_secrets:
+  foobar_api_token: ""
 ```
