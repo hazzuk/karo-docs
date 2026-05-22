@@ -8,7 +8,7 @@ help:
 
 # Preview as you write
 serve:
-    @echo "info: 'Ctrl + C' to exit"
+    @echo "press 'Ctrl + C' to exit"
     -uv run zensical serve
 
 # Build the site
@@ -23,6 +23,6 @@ _confirm:
 
 # Upgrade Zensical
 upgrade version=latest:
-    @echo "info: upgrading zensical to version {{version}}" 
+    @echo "upgrading zensical to version {{version}}" 
     @just _confirm
     uv lock --upgrade-package zensical=={{version}}
