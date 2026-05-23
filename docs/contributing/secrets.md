@@ -4,11 +4,11 @@ icon: lucide/square-asterisk
 
 # Handling secrets
 
-Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, passwords, etc). This data should not be stored unencrypted in a Docker compose file. Instead, the data should be injected into a stacks container upon its creation. This can be done by using [Docker secrets](https://docs.docker.com/reference/compose-file/secrets/).
+Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, passwords, etc). This data should not be stored unencrypted inside a Docker compose file. Instead, the data should be injected into a container during its creation. This can be done by using [Docker secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
-## Example secret lifecycle
+## Secrets lifecycle
 
-1. For users, there is no difference between declaring a secret versus a normal value. For both, they simply add the variable to their encrypted vault file:
+1. For users, there is practically no difference between declaring a secret versus declaring a normal value. Both are forms of plaintext variables, added to an encrypted Ansible vault file:
 
     ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="5-6" .no-copy }
     # foobar
@@ -19,17 +19,9 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
       foobar_api_token: "xP5SDH57+zn4hR804VFN#p=="
     ```
 
-1. When `just compose up homeserver -s foobar` is run, Ansible creates a temporary environment variable. This env var is only used by the [`up.yml`](https://github.com/hazzuk/karo-stack/blob/main/roles/karo-compose/tasks/up.yml) task. And its name is the same as the Ansible variable it derives its value from.
+1. When `just compose up` is run, Ansible creates a temporary file with the value of the secret. This file is named after its secret (e.g. `/run/user/1001/karo/compose/foobar_api_token`), and is only used by the karo-compose [`up.yml`](https://github.com/hazzuk/karo-stack/blob/main/roles/karo-compose/tasks/up.yml) task.
 
-    ```yaml+jinja { title="roles/karo-compose/tasks/up.yml" hl_lines="3-4" .no-copy }
-    - name: Up compose stack
-      environment:
-        karo_compose_foobar_token: "{{ karo_compose_foobar_token if stack == 'foobar' else '' }}"
-      community.docker.docker_compose_v2:
-        state: present # docker compose up
-    ```
-
-1. The stack is now created, and the top-level secrets definition in the compose file creates a new Docker secret. Its value is set based on the environment variable of the same name, which was created when the `up.yml` task started.
+1. The stack is now created, and the top-level secrets definition inside the compose file defines a new Docker secret. Its value is set based on the contents of the secrets file created a few moments ago on the host's filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" .no-copy }
     name: foobar
@@ -47,7 +39,7 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
         file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
-1. With a Docker secret created, the service `foobar` explicitly inherits it. This definition will create a file inside the container itself, containing the secret.
+1. Having defined a Docker secret, a service can explicitly inherit it. Adding the secret to the service means Docker will create a similar secrets file inside the container. These secrets files are found at `/run/secrets` in the container's filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" .no-copy }
     name: foobar
@@ -65,11 +57,11 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
         file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
-1. Finally, the secret is used by the service by pointing an environment variable to the Docker secret file created inside the container.
+1. Finally, the secret can be used by the service. This is normally done by setting an environment variable to the path of the secret's file created inside the container (not the host's secret file).
 
     !!! info "Service support for Docker secrets"
 
-        The service must support setting an environment variables value based on the contents of a file.
+        The service must support setting an environment variable or config value to the contents of a file.
 
     ```yaml+jinja { roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" .no-copy }
     name: foobar
@@ -87,22 +79,14 @@ Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, p
         file: /run/user/1001/karo/compose/foobar_api_token
     ```
 
-??? abstract "Summary of a secrets states"
+!!! abstract "Summary of a secrets lifecycle"
 
     1. Ansible variable (stored inside an encrypted Ansible vault)
 
-    1. Host environment variable (ephemeral to the `up.yml` Ansible task)
+    1. Host secret file (created for temporary use in the `up.yml` Ansible task)
 
-    1. Docker secret (used by the Docker compose definition)
+    1. Docker secret (defined by the Docker compose file)
 
-    1. Container file (stored in tmpfs)
+    1. Container secret file (found inside the container at `/run/secrets`)
 
-    1. Service environment variable (set by the value inside the secrets file)
-
-## Adding secrets to stacks
-
-See [this commit](https://github.com/hazzuk/karo-stack/commit/47ea6b3cd0a6e952ff6fff7a1fc6d9e587c327a0#diff-5c71659cadf1a925421ffc81fee8c83d76ce9b2eca961862da22c143cf6ed8cd) for an example of where a standard variable became a secret.
-
-- Ansible variables that are handled as secrets [should be commented](https://github.com/hazzuk/karo-stack/commit/b073033651262ec1eef0114fbe6b73ead28152ff) with `# secret`.
-
-- Use `no_log: true` on any Ansible task that handles a secret.
+    1. Service environment variable (uses the value inside the container's secret file)
