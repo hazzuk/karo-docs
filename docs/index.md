@@ -30,7 +30,7 @@ This is why the karo-stack exists, built to follow four intrinsic principals:
 
     The karo-stack enables users to reliably and efficiently deploy a personalised self‑hosted homeserver.
 
-    Starting with an automated installation of Debian. The server configuration tracked in git. Sensitive information encrypted inside a vault. Tasks are orchestrated using Ansible with idempotent behaviour. And self-hosted Docker stacks run as a rootless user.
+    Starting with an automated installation of Debian. The server configuration tracked in git. Sensitive information encrypted inside a vault. Tasks are orchestrated using [Ansible](https://docs.ansible.com/projects/ansible/latest/getting_started/introduction.html) with idempotent behaviour. And self-hosted Docker stacks run as a rootless user.
 
 ## Quick start
 
