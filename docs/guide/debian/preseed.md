@@ -35,7 +35,7 @@ One important change needs to be made to your preseed file. Which is adding your
 
     !!! info
 
-        You'll need to have previously setup your private `inventory` git repo. As instructed in a later section of the karo-stack documentation. If this doesn't sound familiar, then please follow the manual setup guide for the preseed file.
+        You'll need to have previously setup your private `karo-inventory` git repo. As instructed in a later section of the karo-stack documentation. If this doesn't sound familiar, then please follow the manual setup guide for the preseed file.
 
     The karo-stack has a `just` recipe, which fully automates dynamically adding your public SSH key to the preseed file, then serving it via a local webserver. This method was primarily intended for rapid testing of the Debian installer during the karo-stack's development. But can equally be used by anyone with the right setup.
 
@@ -57,7 +57,7 @@ One important change needs to be made to your preseed file. Which is adding your
     git clone git@github.com:${GIT_USERNAME}/karo-stack.git
     cd karo-stack
 
-    git clone git@github.com:${GIT_USERNAME}/inventory.git
+    git clone git@github.com:${GIT_USERNAME}/karo-inventory.git
     cd inventory
     ```
 

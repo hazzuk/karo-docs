@@ -80,13 +80,13 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
 ??? tip "Restoring a previous karo-stack server"
 
-    If you've previously created your `karo-stack` and `inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
+    If you've previously created your `karo-stack` and `karo-inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
 
     ```sh
     # GIT_USERNAME=username
 
     git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
-    git clone git@github.com:${GIT_USERNAME}/inventory.git /srv/karo/inventory
+    git clone git@github.com:${GIT_USERNAME}/karo-inventory.git /srv/karo/inventory
     
     cd /srv/karo
     just password

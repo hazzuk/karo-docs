@@ -4,7 +4,7 @@ icon: lucide/cog
 
 # Ansible playbook
 
-Having installed Debian, and configured both your `karo-stack` and `inventory` repos. It is now time to run the Ansible playbook.
+Having installed Debian, and configured both your `karo-stack` and `karo-inventory` repos. It is now time to run the Ansible playbook.
 
 ??? tip "Restoring a previous karo-stack server"
 

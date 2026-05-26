@@ -6,7 +6,7 @@ icon: lucide/backpack
 
 The [inventory](https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html) repo is placed inside the karo-stack as a subdirectory to help configure Ansible. This allows the karo-stack codebase to remain unchanged. While tracking all your personal configuration separately, inside a dedicated private repository.
 
-Your `inventory` repo will eventually look something like this:
+Your inventory repo will eventually look something like this:
 
 ```toml { .no-copy }
 inventory/
