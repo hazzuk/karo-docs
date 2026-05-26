@@ -35,6 +35,12 @@ With the password setup, use the following command to both create and edit your 
 just vault homeserver
 ```
 
+??? question "What is the `just` command?"
+
+    The karo-stack uses just, a tool to run project-specific commands.
+
+    For more information on using these commands, see the documentation's [just usage](../../usage/just/) page.
+
 Copy the example below into your `vault.yml` file, then edit any values that require changes.
 
 !!! info "Commented lines"
