@@ -37,6 +37,10 @@ just vault homeserver
 
 Copy the example below into your `vault.yml` file, then edit any values that require changes.
 
+!!! info "Commented lines"
+
+    Commented out variables indicate additional configuration you can change, but are completely optional.
+
 !!! tip "Terminal copy and paste"
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
