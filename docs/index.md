@@ -5,7 +5,7 @@ icon: lucide/house
 
 # karo-stack
 
-**An open-source toolkit to create a declarative Linux homeserver.**
+**An open-source toolkit for creating a declarative Linux homeserver.**
 
 [![GitHub Release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag&cacheSeconds=7200)](https://github.com/hazzuk/karo-stack/releases)
 [![License](https://img.shields.io/github/license/hazzuk/karo-stack.svg?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
@@ -19,7 +19,7 @@ The karo-stack was created to provide a middle ground for managing a self-hosted
 
 The first often becomes problematic when maintaining everything long-term. Whereas the second is likely overkill for the needs of most users.
 
-This is why the karo-stack exists, built to follow four intrinsic principals:
+This is why the karo-stack exists, built to a philosophy of four intrinsic principals:
 
 - **Declarative**
 - **Unambiguous**
@@ -34,9 +34,12 @@ This is why the karo-stack exists, built to follow four intrinsic principals:
 
 ## Quick start
 
-1. Host your Debian preseed file
-1. Install Debian on your server
-1. Setup the karo-stack repo
+1. Install Debian with a preseed file
+1. Setup the karo-stack git repo
+1. Run the Ansible playbook
+1. Start your Docker stacks
+
+Read the [requirements page](/guide/requirements/).
 
 ## License
 

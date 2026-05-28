@@ -6,8 +6,8 @@ icon: lucide/clipboard-check
 
 You'll need the following before starting:
 
-- Your home server hardware
-- Desktop or laptop to configure the server
+- Homeserver hardware
+- Computer to configure the server
 - Bootable USB drive
 - Registered domain
 - GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
@@ -15,7 +15,7 @@ You'll need the following before starting:
 
 ## Recommended knowledge
 
-It's highly recommended to have a basic understanding of the following topics:
+It is recommended to have a rudimentary understanding of the following topics:
 
 - Linux command-line
 - DNS records
@@ -26,7 +26,7 @@ It's highly recommended to have a basic understanding of the following topics:
 - Port forwarding
 - TLS certificates
 
-## Suggested hardware
+## Suggested server hardware
 
 - 4 GB of RAM
 - 2 CPU cores
