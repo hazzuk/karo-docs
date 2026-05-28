@@ -19,5 +19,3 @@ An important distinction compared to most self-hosted setups, is that the karo-s
 By default, the Docker daemon would normally run as root. But this is considered a bad practice when running third party containers. And while unlikely, a malicious container could potentially exploit a privilege escalation vulnerability, and take control of parts of the host system.
 
 Running Docker rootless is just one example of where the karo-stack has tried to consider security and the principle of least privilege. It's also why you won't see a karo-stack ISO file to download. As it's much safer for users to download a trusted and well-maintained Debian ISO file directly from Debian.org. Then applying the karo-stack's configuration via the preseed file and Ansible playbook, with code that's easily auditable.
-
-*[principle of least privilege]: Only grant each user, process, or system the minimum access rights and permissions necessary to perform its required tasks, reducing risk of accidental or malicious misuse.
