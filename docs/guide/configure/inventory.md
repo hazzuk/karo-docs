@@ -48,7 +48,5 @@ As we'll be running Ansible on the server itself, you can simply copy the follow
 This file will store your public SSH authentication key.
 
 ```sh
-micro /srv/karo/inventory/key.txt
+cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
 ```
-
-> e.g. `ssh-ed25519 AAAAC3NqnC1bZEIl2...`
