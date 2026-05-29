@@ -11,7 +11,7 @@ icon: lucide/house
 [![License](https://img.shields.io/github/license/hazzuk/karo-stack.svg?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
 [![GitHub repo size](https://img.shields.io/github/repo-size/hazzuk/karo-stack?cacheSeconds=604800)](https://github.com/hazzuk/karo-stack)
 
-:pocket-id: :traefik: :glance: :gluetun: :jellyfin: :ntfy: :prowlarr: :radarr: :seerr: :sonarr:
+:debian: :git: :ansible: :docker:
 
 ## About
 
