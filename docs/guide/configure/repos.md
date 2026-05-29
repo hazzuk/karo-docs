@@ -34,10 +34,11 @@ The fork will be your version of the karo-stack codebase. Whereas karo-inventory
 
     For repositories on GitHub, you can safely disable the following unwanted features:
 
-    1. On the repo's main page, click the top right :lucide-cog: cog icon.
-    1. Disable `Releases`, `Packages` and `Deployments`
-    1. Next, go to the repo's `⚙️ Settings` tab
-    1. Under the `Features` section, disable `Issues` and `Projects`
+    1. Go to the repo's '⚙️ Settings' tab
+        - Under 'Features', disable `Issues` and `Projects`
+    1. Go to the repo's '<> Code' tab
+        - To the right of 'About', click the :lucide-cog: cog icon
+        - Disable `Releases`, `Packages` and `Deployments`
 
 ## Clone the repos
 
