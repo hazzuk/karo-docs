@@ -24,6 +24,7 @@ For now, create the first two files.
 This config is used to tell the automation tool Ansible which host to target. 
 
 ```sh
+# create ansible hosts file
 micro /srv/karo/inventory/hosts.ini
 ```
 
@@ -48,5 +49,6 @@ As we'll be running Ansible on the server itself, you can simply copy the follow
 This file will store your public SSH authentication key.
 
 ```sh
+# create public ssh key file
 cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
 ```

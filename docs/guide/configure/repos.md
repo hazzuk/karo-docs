@@ -44,6 +44,9 @@ The fork will be your version of the karo-stack codebase. Whereas karo-inventory
 
 Connected to your server via SSH, run the following commands to clone your two repos locally:
 
+!!! info "Copying commands"
+
+    You can copy and paste commands as shown (including comments). Always read the commands you use. And where required, substitute placeholder values (e.g. change `username` to your personal username).
 
 --8<-- "snippets.md:terminal_paste"
 

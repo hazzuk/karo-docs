@@ -11,6 +11,7 @@ Configuration of the Ansible playbook is primarily done through variables. As th
 Before creating the vault, we'll need a strong password to encrypt it with. Use the following command to generate a 96 character password, and save the output to your password manager.
 
 ```sh
+# generate vault password
 openssl rand -hex 48
 ```
 
@@ -32,6 +33,7 @@ just password
 With the password setup, use the following command to both create and edit your vault:
 
 ```sh
+# create ansible vault
 just vault homeserver
 ```
 

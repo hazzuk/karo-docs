@@ -27,6 +27,7 @@ The playbook is separated into different Ansible roles (`karo-system`, `karo-nft
 These roles are mostly run together in different [grouped tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml). For now, you should run the server setup roles with the following:
 
 ```sh
+# run ansible playbook
 just install homeserver
 ```
 
