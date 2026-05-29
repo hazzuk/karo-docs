@@ -49,17 +49,9 @@ One important change needs to be made to your preseed file. Which is adding your
 
     ### Setup
 
-    Clone your personal karo-stack fork and private inventory repo:
+    Clone your personal karo-stack fork and private inventory repo (adjust paths accordingly):
 
-    ```sh
-    # GIT_USERNAME=username
-
-    git clone git@github.com:${GIT_USERNAME}/karo-stack.git
-    cd karo-stack
-
-    git clone git@github.com:${GIT_USERNAME}/karo-inventory.git
-    cd inventory
-    ```
+    --8<-- "snippets.md:git_clone"
 
     And if required, add/update your public SSH key inside your inventory repo:
 

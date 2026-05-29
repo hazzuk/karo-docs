@@ -47,9 +47,7 @@ Copy the example below into your `vault.yml` file, then edit any values that req
 
     Commented out variables indicate additional configuration you can change, but are completely optional.
 
-!!! tip "Terminal copy and paste"
-
-    Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
+--8<-- "snippets.md:terminal_paste"
 
 ```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
 # homeserver

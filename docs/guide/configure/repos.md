@@ -43,9 +43,7 @@ The fork will be your version of the karo-stack codebase. Whereas karo-inventory
 
 Connected to your server via SSH, run the following commands to clone your two repos locally:
 
-```sh
-# GIT_USERNAME=username
 
-git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
-git clone git@github.com:${GIT_USERNAME}/karo-inventory.git /srv/karo/inventory
-```
+--8<-- "snippets.md:terminal_paste"
+
+--8<-- "snippets.md:git_clone"

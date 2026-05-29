@@ -82,14 +82,11 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
     If you've previously created your `karo-stack` and `karo-inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
 
-    ```sh
-    # GIT_USERNAME=username
+    --8<-- "snippets.md:git_clone"
 
-    git clone git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
-    git clone git@github.com:${GIT_USERNAME}/karo-inventory.git /srv/karo/inventory
-    
+    ```sh
+    # enter vault password
     cd /srv/karo
     just password
     ```
-    
     After this, you can skip the Configuration section and go straight to [Setup](../setup/ansible/).
