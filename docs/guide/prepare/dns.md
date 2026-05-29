@@ -4,7 +4,7 @@ icon: lucide/globe
 
 # DNS records
 
-You'll need a domain name to access the services you want to run. For which, you can use any registrar to acquire your domain. However for the easiest experience, it is recommended to then use [Cloudflare DNS](https://developers.cloudflare.com/dns/nameservers/update-nameservers/) as the domain's authoritative DNS provider.
+You'll need a domain name to access the services you want to run. For which, you can use any registrar to acquire your domain. Though for the easiest experience, it's recommended to still use [Cloudflare DNS](https://developers.cloudflare.com/dns/nameservers/update-nameservers/) as the domain's authoritative DNS provider.
 
 !!! abstract "Static local IP address"
 
@@ -12,9 +12,9 @@ You'll need a domain name to access the services you want to run. For which, you
     
     > You'll likely find this in the UEFI/BIOS, as a sticker on the device, or listed on the retail box of the hardware.
     
-    Then in your router, reserve an unused IPv4 address for the server's MAC address (e.g. `192.168.0.142`).
+    Then in your router, reserve an unused IPv4 address (e.g. `192.168.0.142`) for the server's MAC address.
 
-You should set the following DNS record for your domain:
+You should set the following public DNS record for your domain:
 
 | Type | Name | Target                | Comment                |
 | ---- | ---- | --------------------- | ---------------------- |
@@ -25,4 +25,4 @@ You should set the following DNS record for your domain:
     - The Cloudflare proxy status should always be set to `DNS only`.
     - The TTL should always be left as `Auto`.
 
-Later on, after you've finished configuring your server, and your services are running successfully. You can read the advanced guides on configuring [external access](../advanced/access.md), and creating a [VPS proxy](../advanced/proxy/) to securely route external traffic.
+After you've finished installing your server, and your services are running successfully. You can read the advanced guides on configuring [external access](../advanced/access.md), and creating a [VPS proxy](../advanced/proxy/) to securely route external traffic.

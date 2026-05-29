@@ -4,7 +4,7 @@ icon: lucide/server
 
 # Server install
 
-With the preseed file setup, Debian can now be installed onto your home server hardware.
+With the preseed file setup, Debian can now be installed onto your server hardware.
 
 ## Debian ISO
 
@@ -22,13 +22,13 @@ With the preseed file setup, Debian can now be installed onto your home server h
 
         - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-cd/) `debian-1.0.0-amd64-netinst.iso.torrent`
 
-1. Install [Ventoy](https://www.ventoy.net/en/index.html) onto a 8GB+ USB 3.0 storage device
+1. Install [Ventoy](https://www.ventoy.net/en/index.html) onto an 8 GB+ USB drive
 
 1. Move the Debian ISO file to the Ventoy directory on your removable device
 
-1. Safely remove the USB storage device
+1. Safely remove the USB drive
 
-1. Boot into the Ventoy USB on your home server
+1. Boot into the Ventoy USB on your server
 
 1. Select the Debian ISO file
 
@@ -45,7 +45,7 @@ With the preseed file setup, Debian can now be installed onto your home server h
 1. Select `... Automated install`
 1. When prompted for the preconfiguration file, enter the URL of your the preseed file
 
-    > e.g. `https://pastebin.com/raw/aBcdEf` or `192.168.0.123:8000`
+    > e.g. `https://pastebin.com/raw/aBcdEf` or `192.168.0.76:8000`
 
 1. Select a language
 1. Select your location
@@ -89,4 +89,5 @@ With the preseed file setup, Debian can now be installed onto your home server h
     cd /srv/karo
     just password
     ```
-    After this, you can skip the Configuration section and go straight to [Setup](../setup/ansible/).
+
+    After this, you can skip the 'Configuration' section and go straight to [Setup](../setup/ansible/).

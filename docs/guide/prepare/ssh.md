@@ -4,7 +4,7 @@ icon: lucide/key-round
 
 # SSH keys
 
-SSH (Secure Shell Protocol) is a network protocol used to cryptographically communicate over an unsecured network. Our primary use of SSH will be to securely connect and authenticate with the Debian server.
+SSH (Secure Shell Protocol) is a network protocol used to cryptographically communicate over an unsecured network. Its main use will be to securely connect to and authenticate with the server.
 
 ??? question "How does SSH work?"
 
@@ -16,6 +16,6 @@ The easy and secure way to store SSH keys is inside a password manager. Ideally 
 
 !!! info "Key types"
 
-    Generating Ed25519 keys is preferred, over using RSA or ECDSA.
+    Generating Ed25519 keys is preferred over using RSA or ECDSA.
 
-Setup your password manager to act as an SSH agent on your desktop computer. Then generate your SSH key pairs. It is best to have at least two key pairs, one for authentication and ideally a second pair for signing (we'll use this with git later on).
+Setup your password manager to act as an SSH agent on your desktop computer. Then generate your SSH key pairs. It is best to have at least two key pairs, one for authentication and ideally a second pair for signing (used later on with git).

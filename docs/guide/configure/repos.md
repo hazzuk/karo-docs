@@ -4,9 +4,9 @@ icon: lucide/book-copy
 
 # Repositories
 
-For security, the karo-stack's code repository doesn't automatically deploy itself onto your server during the preseed. Instead, control of what runs on a users server is left to the user.
+For security, the karo-stack's code repository doesn't automatically clone itself onto your server during the preseed. Instead, control of what runs on a users server is left to the user.
 
-Once you've installed Debian onto your server, you're now ready to setup the two required git repositories needed to run the karo-stack.
+After installing Debian, you'll need to create the two git repositories required to run the karo-stack.
 
 ## GitHub account
 

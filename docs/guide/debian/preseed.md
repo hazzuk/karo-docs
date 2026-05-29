@@ -8,9 +8,9 @@ The [preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/
 
 ## Hosting the file
 
-The easiest way for the Debian installer to access your preseed file is by hosting it via a webserver. Either with a computer on your local network, or with a site like `pastebin.com`.
+The easiest way for the Debian installer to access your preseed file is by hosting it via a webserver. Either with a computer on your local network, or with a site like pastebin.com.
 
-One important change needs to be made to your preseed file. Which is adding your public SSH key. From this, the Debian installer will be able to automatically insert your key, into the SSH `authorized_keys` file on the server. Making first time authentication over SSH easy and secure.
+One important change needs to be made to your preseed file beforehand, which is adding your public SSH key. The Debian installer will automatically insert your public key into the server's SSH `authorized_keys` file. Making first time authentication over SSH easy and secure.
 
 === "Manual setup"
 
@@ -47,7 +47,7 @@ One important change needs to be made to your preseed file. Which is adding your
         - Python
         - [just](https://just.systems/man/en/packages.html)
 
-    ### Setup
+    ### Local setup
 
     Clone your personal karo-stack fork and private inventory repo (adjust paths accordingly):
 
@@ -73,6 +73,6 @@ One important change needs to be made to your preseed file. Which is adding your
 
     When later prompted for the preseed file's URL, use the IP address of the host and port 8000:
 
-    > e.g. `192.168.0.123:8000`
+    > e.g. `192.168.0.76:8000`
 
-    Both the default protocol (`http`) and default path of the file (`/d-i/trixie/./preseed.cfg`) are assumed by the Debian installer, when the URL doesn't include them.
+    Both the default protocol (`http://`) and default path of the file (`/d-i/trixie/./preseed.cfg`) are assumed by the Debian installer, when the URL doesn't include them.

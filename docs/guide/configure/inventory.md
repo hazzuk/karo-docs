@@ -4,7 +4,7 @@ icon: lucide/backpack
 
 # Inventory files
 
-The [inventory](https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html) repo is placed inside the karo-stack as a subdirectory to help configure Ansible. This allows the karo-stack codebase to remain unchanged. While tracking all your personal configuration separately, inside a dedicated private repository.
+The [inventory](https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html) repo is placed inside the karo-stack as a subdirectory, and is used to configure what Ansible does. This allows the karo-stack codebase to remain unchanged. While tracking all your personal configuration separately, inside a dedicated private repository.
 
 Your inventory repo will eventually look something like this:
 
@@ -28,16 +28,16 @@ This config is used to tell the automation tool Ansible which host to target.
 micro /srv/karo/inventory/hosts.ini
 ```
 
-As we'll be running Ansible on the server itself, you can simply copy the following:
+As we'll be running Ansible on the server itself, simply copy the following localhost configuration:
 
-=== "Standard setup"
+=== "Local setup"
 
     ```ini { title="/srv/karo/inventory/hosts.ini" }
     [server]
     homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
     ```
 
-=== "Remote setup (development)"
+=== "Remote setup (advanced)"
     
     ```ini { title="/srv/karo/inventory/hosts.ini" }
     [server]
