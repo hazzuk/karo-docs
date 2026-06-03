@@ -83,17 +83,18 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 # stacks
 ```
 
-## Encrypted state
+??? success "Encrypted state"
 
-After you quit the text editor, the vault is returned to its encrypted state. You can see this first-hand, by attempting to read the contents of your vault file without Ansible:
+    After quitting the text editor, the new data is written to the vault file in an encrypted state. You can see this first-hand, by attempting to read the contents of your vault without Ansible.
 
-```sh
-less /srv/karo/inventory/host_vars/homeserver/vault.yml
-```
+    ```sh
+    # check vault encryption
+    less /srv/karo/inventory/host_vars/homeserver/vault.yml
+    ```
 
-You should see a long output similar to this:
+    You should see a long encrypted output similar to this:
 
-```yaml { .no-copy }
-$ANSIBLE_VAULT;1.1;AES256
-6538346438396339346464346163349382...
-```
+    ```yaml { .no-copy }
+    $ANSIBLE_VAULT;1.1;AES256
+    6538346438396339346464346163349382...
+    ```
