@@ -1,3 +1,12 @@
+<!-- commands -->
+
+# --8<-- [start:pipx_install]
+```sh
+# install packages
+pipx install --include-deps ansible rust-just
+```
+# --8<-- [end:pipx_install]
+
 # --8<-- [start:git_clone]
 ```sh
 # set github username
@@ -14,6 +23,16 @@ git clone -b main git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
 git clone git@github.com:${GIT_USERNAME}/karo-inventory.git /srv/karo/inventory
 ```
 # --8<-- [end:git_clone]
+
+# --8<-- [start:just_password]
+```sh
+# set vault password
+cd /srv/karo
+just password
+```
+# --8<-- [end:just_password]
+
+<!-- admonitions -->
 
 # --8<-- [start:terminal_paste]
 !!! tip "Terminal paste"

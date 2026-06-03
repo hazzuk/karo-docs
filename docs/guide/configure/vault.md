@@ -17,10 +17,7 @@ openssl rand -hex 48
 
 Once you've saved the password, you'll also need to write it to a file on the system. This is so that Ansible can access it without prompting, when encrypting and decrypting your vault file.
 
-```sh
-cd /srv/karo
-just password
-```
+--8<-- "snippets.md:just_password"
 
 ??? question "Isn't writing the password to a plaintext file insecure?"
 

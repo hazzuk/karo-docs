@@ -82,12 +82,10 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     If you've previously created your `karo-stack` and `karo-inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
 
+    --8<-- "snippets.md:pipx_install"
+
     --8<-- "snippets.md:git_clone"
 
-    ```sh
-    # enter vault password
-    cd /srv/karo
-    just password
-    ```
+    --8<-- "snippets.md:just_password"
 
     After this, you can skip the 'Configuration' section and go straight to [Setup](../setup/ansible/).

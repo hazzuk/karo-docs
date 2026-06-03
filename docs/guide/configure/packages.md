@@ -6,10 +6,7 @@ Having used the preseed file for Debian's installation, your system only install
 
 To run the karo-stack, you'll need to install both `ansible` and `just`.
 
-```sh
-# install packages
-pipx install --include-deps ansible rust-just
-```
+--8<-- "snippets.md:pipx_install"
 
 ??? question "What is the `just` command?"
 
