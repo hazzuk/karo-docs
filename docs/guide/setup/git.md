@@ -6,7 +6,7 @@ icon: lucide/folder-git-2
 
 ## Commit inventory changes
 
-Having made local changes to your inventory repo, you'll need to commit and push the new files. This way, everything you've done on the server is synced with your private repository on GitHub.
+As you've now made local changes to your `karo-inventory` repo, you'll need to 'commit' and 'push' the changes. This way, everything you've done on the server is synced with your remote copy of the repository on GitHub.
 
 ```sh
 cd /srv/karo/inventory

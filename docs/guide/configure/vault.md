@@ -4,7 +4,7 @@ icon: lucide/file-lock
 
 # Ansible vault
 
-Configuration of the Ansible playbook is primarily done through variables. As these variables often contain sensitive data (e.g. a Cloudflare API token), we use [Ansible vault](https://docs.ansible.com/projects/ansible/latest/cli/ansible-vault.html) to encrypt your host_vars configuration file, aptly named `vault.yml`.
+Configuration of the Ansible playbook is primarily done through variables. And as these variables sometimes contain sensitive data (e.g. a Cloudflare API token), we use [Ansible vault](https://docs.ansible.com/projects/ansible/latest/cli/ansible-vault.html) to encrypt the file storing all your homeserver's configuration. Aptly named `vault.yml`.
 
 ## Password setup
 
@@ -15,7 +15,7 @@ Before creating the vault, we'll need a strong password to encrypt it with. Use 
 openssl rand -hex 48
 ```
 
-Once you've saved the password, you'll also need to write it to a file on the system. So that Ansible can use it when encrypting/decrypting your vault.
+Once you've saved the password, you'll also need to write it to a file on the system. This is so that Ansible can access it without prompting, when encrypting and decrypting your vault file.
 
 ```sh
 cd /srv/karo
@@ -26,7 +26,7 @@ just password
 
     The alternative approach would be Ansible prompting for the password each time you want to edit your vault. But seeing as you often need to edit the vault multiple times a session, this quickly becomes frustrating.
     
-    This is why we temporarily store the password inside a file that Ansible can read directly. Which on paper is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor `micro` explicitly has backups disabled when handling this file. And third, the file itself is only stored in system memory, on a tmpfs filesystem.
+    This is why we temporarily store the password inside a file that Ansible can read directly. Which on paper is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor micro explicitly has backups disabled when handling this file. And third, the file itself is stored on a tmpfs filesystem (in system memory).
 
 ## Create your vault
 
@@ -41,15 +41,19 @@ just vault homeserver
 
     The karo-stack uses just, a tool to run project-specific commands.
 
-    For more information on using these commands, see the documentation's [just usage](../../usage/just/) page.
+    For more information on using commands created for the project, see the documentation's [just usage](../../usage/just/) page.
 
-Copy the example below into your `vault.yml` file, then edit any values that require changes.
+Copy the example below into your vault. Edit any values that require changes.
+
+<div class="grid" markdown>
 
 !!! info "Commented lines"
 
-    Commented out variables indicate additional configuration you can change, but are completely optional.
+    Commented out variables are additional settings that are completely optional.
 
 --8<-- "snippets.md:terminal_paste"
+
+</div>
 
 ```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
 # homeserver
@@ -64,9 +68,9 @@ ansible_become_password: "" # system password
 
 # karo-git
 
-karo_git_user_email: git@example.com
-karo_git_user_name: username
-karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..."
+karo_git_user_email: git@example.com # github email
+karo_git_user_name: username # github username
+karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
 
 # karo-nftables
 
@@ -81,17 +85,16 @@ karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..."
 
 # karo-compose
 
-karo_compose_root_domain: example.com
+karo_compose_root_domain: example.com # registered domain name
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
-# add stack variables here
-# ...
+# stacks
 ```
 
 ## Encrypted state
 
-After you quit the text editor, the vault is returned to its encrypted state. You can see this first-hand, by trying to read the file without Ansible:
+After you quit the text editor, the vault is returned to its encrypted state. You can see this first-hand, by attempting to read the contents of your vault file without Ansible:
 
 ```sh
 less /srv/karo/inventory/host_vars/homeserver/vault.yml
@@ -101,5 +104,5 @@ You should see a long output similar to this:
 
 ```yaml { .no-copy }
 $ANSIBLE_VAULT;1.1;AES256
-65383464383963393464643461633...
+6538346438396339346464346163349382...
 ```

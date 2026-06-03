@@ -18,4 +18,4 @@ The easy and secure way to store SSH keys is inside a password manager. Ideally 
 
     Generating Ed25519 keys is preferred over using RSA or ECDSA.
 
-Setup your password manager to act as an SSH agent on your desktop computer. Then generate your SSH key pairs. It is best to have at least two key pairs, one for authentication and ideally a second pair for signing (used later on with git).
+Setup your password manager to act as an SSH agent on your desktop computer. Then generate your SSH key pairs. You should have at least two key pairs, one for authentication, and a second pair for signing (used later on with git).

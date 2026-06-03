@@ -9,7 +9,7 @@ You'll need the following before starting:
 - Homeserver hardware
 - Computer to configure the server
 - Bootable 8 GB+ USB drive
-- Registered domain
+- Registered domain name
 - GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
 - Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
 

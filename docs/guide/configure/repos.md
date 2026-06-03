@@ -10,7 +10,7 @@ After installing Debian, you'll need to create the two git repositories required
 
 ## GitHub account
 
-??? question "First time using git"
+??? question "First time using git?"
 
     While git does have a lot of features, and in some situations can become somewhat complex. For what the karo-stack needs, using git will be relatively straight forward. Simply follow the the commands shown, and you should get everything configured correctly.
 
