@@ -32,6 +32,7 @@ nav = [
             "guide/debian/install.md"
         ] },
         { "Configuration" = [
+            "guide/configure/packages.md",
             "guide/configure/repos.md",
             "guide/configure/inventory.md",
             "guide/configure/vault.md",
