@@ -78,7 +78,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
 1. SSH again after updating your password
 
-??? tip "Restoring a previous karo-stack server"
+??? tip "Restoring a previous karo-stack setup"
 
     If you've previously created your `karo-stack` and `karo-inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
 
