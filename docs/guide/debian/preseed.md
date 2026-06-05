@@ -20,7 +20,7 @@ One important change needs to be made to your preseed file beforehand, which is 
 
         > e.g. `ssh-ed25519 AAAAC3NqnC1bZEIl2...`
     
-    1. Upload the modified file to a text storage site (e.g. [pastebin.com](https://pastebin.com/))
+    1. Copy and paste the contents of the modified file to a text storage site (e.g. [pastebin.com](https://pastebin.com/))
 
         !!! tip "Optional paste settings"
 
