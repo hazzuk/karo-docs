@@ -6,6 +6,8 @@ Having used the preseed file for Debian's installation, the system only installe
 
 To run the karo-stack, you'll need to install both `ansible` and `just`.
 
+--8<-- "snippets.md:terminal_paste"
+
 --8<-- "snippets.md:pipx_install"
 
 ??? question "What is the `just` command?"

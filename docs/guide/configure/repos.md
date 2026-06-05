@@ -48,6 +48,4 @@ Connected to your server via SSH, run the following commands to clone your two r
 
     You can copy and paste commands as shown (including comments). Always read the commands you use. And where required, substitute placeholder values (e.g. change `username` to your personal username).
 
---8<-- "snippets.md:terminal_paste"
-
 --8<-- "snippets.md:git_clone"
