@@ -41,10 +41,6 @@ nav = [
             "guide/setup/ansible.md",
             "guide/setup/git.md",
         ] },
-        { "Advanced" = [
-            "guide/advanced/access.md",
-            "guide/advanced/proxy.md",
-        ] }, 
     ] },
     { "Stacks" = [
         "stacks/compose.md",
@@ -71,6 +67,10 @@ nav = [
         "usage/just.md",
         # "usage/linux.md",
     ] },
+    { "Advanced" = [
+        "advanced/access.md",
+        "advanced/proxy.md",
+    ] }, 
     { "Contributing" = [
         "contributing/stacks.md",
         "contributing/compose.md",
