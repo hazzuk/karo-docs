@@ -1,8 +1,8 @@
 [project]
 
-site_name = "karo-docs"
+site_name = "karo-stack docs"
 
-site_description = "The karo-stack project wiki."
+site_description = "The karo-stack documentation."
 
 site_author = "hazzuk"
 
