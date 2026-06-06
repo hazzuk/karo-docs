@@ -80,12 +80,6 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
 ??? tip "Restoring a previous karo-stack setup"
 
-    If you've previously created your `karo-stack` and `karo-inventory` repo's, and have configured a vault. Follow these commands to quickly restore your repositories:
-
-    --8<-- "snippets.md:pipx_install"
-
-    --8<-- "snippets.md:git_clone"
-
-    --8<-- "snippets.md:just_password"
-
-    After this, you can skip the 'Configuration' section and go straight to [Setup](../setup/ansible/).
+    If you've previously used the karo-stack, you can immediately proceed with the full remaining setup.
+    
+    Follow the advanced guide [Restore setup](../../advanced/restore.md).
