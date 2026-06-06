@@ -42,6 +42,10 @@ nav = [
             "guide/setup/git.md",
         ] },
     ] },
+    { "Usage" = [
+        "usage/just.md",
+        # "usage/linux.md",
+    ] },
     { "Stacks" = [
         "stacks/compose.md",
         { "Core" = [
@@ -62,10 +66,6 @@ nav = [
             "stacks/extra/sonarr.md",
             "stacks/extra/whoami.md",
         ] },
-    ] },
-    { "Usage" = [
-        "usage/just.md",
-        # "usage/linux.md",
     ] },
     { "Advanced" = [
         "advanced/access.md",
