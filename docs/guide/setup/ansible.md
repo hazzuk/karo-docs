@@ -32,3 +32,11 @@ just install homeserver
 ```
 
 In short, this will enable the nftables firewall, make minor system changes, tighten SSH security, adjust the git configuration, and install rootless Docker for `dockeruser`.
+
+??? question "Why Ansible?"
+
+    The magic of Ansible lies in its declarative nature. Unlike a shell script, the playbook doesn't detail how to perform its tasks. Instead, it specifies the desired state of the system. Which Ansible then determines what actions (if any) are required for the system to reach that state.
+
+    This is what leads to Ansible's idempotent behaviour. And is why Ansible is such a powerful tool for managing a homeserver. Simply put it's very good at knowing when it's doesn't have to anything at all.
+
+    You can safely **try this for yourself** by running `just install homeserver` a second time. As you'll see, rather than repeating every action again. Ansible checks that each part of the system already matches its desired state. And skips anything that doesn't need changing.
