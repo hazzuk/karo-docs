@@ -25,4 +25,4 @@ You should set the following public DNS record for your domain:
     - The Cloudflare proxy status should always be set to `DNS only`.
     - The TTL should always be left as `Auto`.
 
-After you've finished installing your server, and your services are running successfully. You can read the advanced guides on configuring [external access](../advanced/access.md), and creating a [VPS proxy](../advanced/proxy/) to securely route external traffic.
+After you've finished installing your server, and your services are running successfully. You can read the advanced guides on configuring [external access](../../advanced/access.md), and creating a [VPS proxy](../../advanced/proxy/) to securely route external traffic.
