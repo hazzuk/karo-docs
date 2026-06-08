@@ -50,29 +50,35 @@ karo_compose_traefik_secrets:
         - "{{ karo_compose_oidc_domain }}:172.18.0.254"
         ```
 
-??? tip "Guide - Create API tokens for Cloudflare DNS"
+??? tip "Guide - Create Cloudflare API tokens for Traefik"
 
     > Based on the [Lego library docs](https://go-acme.github.io/lego/dns/cloudflare/index.html#api-tokens).
 
-    Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens).
+    --8<-- "snippets.md:cloudflare_token"
 
-    Select `Create Token` > `Create Custom Token`. Create tokens for both variables:
+    === "`karo_compose_traefik_acme_zone_api_token`"
 
-    1. `karo_compose_traefik_acme_zone_api_token`
+        - Token name
 
-        - Token name: `Traefik (example.com) - Resolve domain names to Zone IDs`
-        
-        - Permissions: (`Zone`, `Zone`, `Read`)
-        
-        - Zone Resources: (`Include`, `Specific zone`, `example.com`)
+            ```
+            Traefik (example.com) - Resolve domain names to Zone IDs
+            ```
 
-    2. `karo_compose_traefik_acme_dns_api_token`
+        - Permissions: Zone, Zone, Read
 
-        - Token name: `Traefik (example.com) - Edit DNS for DNS-01 challenges`
+        - Zone Resources: Include, Specific zone, example.com
 
-        - Permissions: (`Zone`, `DNS`, `Edit`)
+    === "`karo_compose_traefik_acme_dns_api_token`"
 
-        - Zone Resources: (`Include`, `Specific zone`, `example.com`)
+        - Token name
+
+            ```
+            Traefik (example.com) - Edit DNS for DNS-01 challenges
+            ```
+
+        - Permissions: Zone, DNS, Edit
+
+        - Zone Resources: Include, Specific zone, example.com
 
 ??? note "Links"
 

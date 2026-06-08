@@ -39,3 +39,11 @@ just password
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 # --8<-- [end:terminal_paste]
+
+<!-- text -->
+
+# --8<-- [start:cloudflare_token]
+1. Visit [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
+
+1. Select 'Create Token' > 'Create Custom Token'
+# --8<-- [end:cloudflare_token]
