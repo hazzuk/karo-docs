@@ -12,10 +12,17 @@ SSH (Secure Shell Protocol) is a network protocol used to cryptographically comm
 
 ## Setup
 
-The easy and secure way to store SSH keys is inside a password manager. Ideally one with a desktop client that supports acting as an SSH Agent (i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how)).
+The easy and secure way to store SSH keys is inside a password manager. Ideally one with a desktop client that supports acting as an SSH Agent.
 
-!!! info "Key types"
+1. Set up your desktop password manager to act as an SSH agent.
 
-    Generating Ed25519 keys is preferred over using RSA or ECDSA.
+    > E.g. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how).
 
-Setup your password manager to act as an SSH agent on your desktop computer. Then generate your SSH key pairs. You should have at least two key pairs, one for authentication, and a second pair for signing (used later on with git).
+1. Generate two SSH key pairs. One used for authentication, and a second pair for signing.
+
+    !!! info "Key types"
+
+        Generating Ed25519 keys is recommended over using RSA or ECDSA.
+
+    - `key1 - auth`
+    - `key2 - signing` (Used later on with git)
