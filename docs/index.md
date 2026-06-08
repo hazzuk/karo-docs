@@ -15,22 +15,20 @@ icon: lucide/house
 
 ## About
 
-The karo-stack was created to provide a middle ground for managing a self-hosted setup. Somewhere between manually installing Docker on a bare bones server. And using an all-encompassing, abstracted solution like Proxmox or Unraid.
-
-The first often becomes problematic when maintaining everything long-term. Whereas the second is likely overkill for the needs of most users.
+The karo-stack aims to provide a middle ground for managing a self-hosted setup. Somewhere between manually installing Docker on a bare bones server. And using an all-encompassing, abstracted solution like Proxmox or Unraid. The first often becomes problematic when maintaining everything long-term. Whereas the second is likely overkill for the needs of most users.
 
 This is why the karo-stack exists, built to a philosophy of four intrinsic principals:
 
-- **Declarative**
-- **Unambiguous**
-- **Secure**
-- **Stable**
+- :lucide-book-text: **Declarative**
+- :lucide-circle-check: **Unambiguous**
+- :lucide-lock-keyhole: **Secure**
+- :lucide-tree-pine: **Stable**
 
 !!! info "TL;DR"
 
     The karo-stack enables users to reliably and efficiently deploy a personalised self‑hosted homeserver.
 
-    Starting with an automated installation of Debian. The server configuration tracked in git. Sensitive information encrypted inside a vault. Tasks are orchestrated using [Ansible](https://docs.ansible.com/projects/ansible/latest/getting_started/introduction.html) with idempotent behaviour. And self-hosted Docker stacks run as a rootless user.
+    Starting with an automated installation of Debian Linux. The server configuration tracked in git. Sensitive information encrypted inside a vault. Tasks are orchestrated using [Ansible](https://docs.ansible.com/projects/ansible/latest/getting_started/introduction.html) with idempotent behaviour. And self-hosted Docker stacks run securely as a rootless user.
 
 ## Quick start
 
