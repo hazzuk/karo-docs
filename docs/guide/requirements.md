@@ -6,12 +6,12 @@ icon: lucide/clipboard-check
 
 You'll need the following before starting:
 
-- Homeserver hardware
-- Computer to configure the server
-- Bootable 8 GB+ USB drive
-- Registered domain name
-- GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
-- Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
+- [ ] Homeserver hardware
+- [ ] Computer to configure the server
+- [ ] Bootable 8 GB+ USB drive
+- [ ] Registered domain name (Cloudflare is preferred, but not required)
+- [ ] GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
+- [ ] Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
 
 ## Recommended knowledge
 
@@ -38,7 +38,7 @@ It is recommended to have a rudimentary understanding of the following topics:
 
 ??? warning "Ryzen 3000 CPU's (or older)"
 
-    If you are using an AMD Zen 1 or Zen 2 processor, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). After installing Debian, you can fix this by adding a kernel parameter via the GRUB boot loader:
+    If you are using an AMD Zen 1 or Zen 2 processor, you might encounter [issues with the processor's power management](https://gist.github.com/dlqqq/876d74d030f80dc899fc58a244b72df0). After installing Debian, you can fix this by adding a kernel parameter via the GRUB boot loader.
 
     ```sh
     sudo micro /etc/default/grub
