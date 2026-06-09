@@ -46,14 +46,21 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 ## Debian installer
 
 1. Select `Advanced options ...`
+
 1. Select `... Automated install`
-1. When prompted for the preconfiguration file, enter the URL of your the preseed file
+
+1. When prompted for the preconfiguration file, enter the URL of your preseed file
 
     > e.g. `https://pastebin.com/raw/aBcdEf` or `192.168.0.76:8000`
 
-1. Select a language
-1. Select your location
-1. Select a keymap to use
+1. Set your localisation preferences
+
+    - Select a language
+
+    - Select your location
+
+    - Select a keymap to use
+
 1. Select the disk to partition (when multiple storage devices are connected)
 
     !!! danger
@@ -79,6 +86,9 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
         Using `ssh -A` allows for forwarding connections from your password manager's ssh-agent.
 
 1. When prompted, change your user's password (default is `changelater`)
+
+    > It's recommended you use a [short passphrase](https://xkcd.com/936/), which is memorable and easy to type out.
+    > e.g. `horsebatterystaple`
 
 1. SSH again after updating your password
 
