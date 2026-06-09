@@ -53,6 +53,10 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     > e.g. `https://pastebin.com/raw/aBcdEf` or `192.168.0.76:8000`
 
+    ??? failure "Handling 'preconfiguration could not be retrieved'"
+
+        If you receive an error after entering the preseed file URL, abort the installation and try again. This usually occurs because the URL was typed incorrectly, or the server's network configuration was misconfigured.
+
 1. Set your localisation preferences
 
     - Select a language
@@ -69,9 +73,17 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
 1. Wait for the installer to finish and the system to reboot into Debian
 
-    ??? question "If the installer shows an error"
+    ??? failure "Handling 'Failed to run preseeded command'"
 
-        If you receive an error at the end of the installer process, it's likely that you've incorrectly or forgotten to change the authorized SSH key in the preseed file's late command. The easiest solution is to fix the preseed file and run the Debian installer again.
+        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](../debian/preseed/?h='find%20and%20replace').
+
+    !!! success
+
+        ```sh { .no-copy }
+        Debian GNU/Linux debian tty1
+
+        debian login:
+        ```
 
 ## Login with SSH
 
@@ -80,6 +92,24 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 1. Connect to the server using SSH
 
     > e.g. `ssh -A karo@homeserver.example.com` or `ssh -A karo@192.168.0.142`
+
+    ??? failure "Handling 'Could not resolve hostname'"
+
+        If you receive an error when connecting, try the following:
+
+        - Ensure you've substituted 'example.com' for your own domain name
+
+            > e.g. `ssh -A karo@homeserver.yourdomain.net`
+
+        - Ping the domain name
+
+            ```sh
+            ping homeserver.example.com
+            ```
+
+        - Check you've correctly configured the domain's [DNS records](../prepare/dns/)
+
+        - Try connecting directly using the server's IPv4 address
 
     !!! info "Authentication forwarding"
 
