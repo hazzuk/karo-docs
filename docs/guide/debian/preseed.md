@@ -4,30 +4,33 @@ icon: lucide/sprout
 
 # Debian preseed
 
-The [preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/d-i/trixie/preseed.cfg) is a list of answers to questions, which a user would normally be prompted to complete by the Debian installer. This automates the majority of the installation, except needing to first provide a URL to your preseed file. Then later, selecting which drive to format as your new system drive (when multiple drives are attached to the system).
+The [preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/d-i/trixie/preseed.cfg) is a list of answers to questions, which a user would normally be prompted to complete by the Debian installer. This automates the majority of the OS's installation.
 
 ## Hosting the file
 
-The easiest way for the Debian installer to access your preseed file is by hosting it via a webserver. Either with a computer on your local network, or with a site like pastebin.com.
+The easiest way for the Debian installer to access your preseed file is by hosting it via a web server. Either with a site like pastebin.com, or a computer on your local network.
 
-One important change needs to be made to your preseed file beforehand, which is adding your public SSH key. The Debian installer will automatically insert your public key into the server's SSH `authorized_keys` file. Making first time authentication over SSH easy and secure.
+One essential change needs to be made to your preseed file beforehand, which is adding your public SSH authentication key. The Debian installer will automatically insert your public key into the server's SSH `authorized_keys` file. Making first time authentication over SSH straightforward.
 
-=== "Manual setup"
+=== "Normal setup"
 
     1. Download the [latest preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/d-i/trixie/preseed.cfg) from the karo-stack GitHub repo
     
-    1. Find and replace `<key>` with your public SSH key
+    1. Find and replace `<key>` with your public SSH authentication key
 
-        > e.g. `ssh-ed25519 AAAAC3NqnC1bZEIl2...`
+        > e.g. `echo 'ssh-ed25519 AAAAC3NqnC1bZEIl2...' \`
     
     1. Copy and paste the contents of the modified file to a text storage site (e.g. [pastebin.com](https://pastebin.com/))
 
-        !!! tip "Optional paste settings"
+        !!! tip "Recommended paste settings"
 
-            - Set the paste exposure to unlisted, with a paste expiration date.
-            - Don't set a password.
+            - Paste Expiration: 1 Day
+            - Paste Exposure: Unlisted
+            - Password: Disabled
 
     1. Note down the URL for the **raw** text file, to later provide the Debian installer
+
+        > e.g. https://pastebin.com/raw/aBcdEf
 
 === "Automatic setup (advanced)"
 
