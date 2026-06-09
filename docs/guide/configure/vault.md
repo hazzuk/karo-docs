@@ -25,6 +25,12 @@ Once you've saved the password, you'll also need to write it to a file on the sy
     
     This is why we temporarily store the password inside a file that Ansible can read directly. Which on paper is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor micro explicitly has backups disabled when handling this file. And third, the file itself is stored on a tmpfs filesystem (in system memory).
 
+??? question "What is the `just` command?"
+
+    The karo-stack uses just, a tool to run project-specific commands.
+
+    For more information on using commands created for the project, see the documentation's [just usage](../../usage/just/) page.
+
 ## Create your vault
 
 With the password setup, use the following command to both create and edit your vault:
