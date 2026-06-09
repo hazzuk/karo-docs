@@ -17,6 +17,8 @@ openssl rand -hex 48
 
 Once you've saved the password, you'll also need to write it to a file on the system. This is so that Ansible can access it without prompting, when encrypting and decrypting your vault file.
 
+The following command will open a text editor for you to set your password.
+
 --8<-- "snippets.md:just_password"
 
 ??? question "Isn't writing the password to a plaintext file insecure?"
@@ -33,7 +35,7 @@ Once you've saved the password, you'll also need to write it to a file on the sy
 
 ## Create your vault
 
-With the password setup, use the following command to both create and edit your vault:
+With the password set, use the following command to both create and edit your vault:
 
 ```sh
 # create ansible vault
@@ -61,11 +63,11 @@ Copy the example below into your vault. Edit any values that require changes.
 
 # ansible
 
-ansible_become_password: "" # system password
+ansible_become_password: "" # karo user root password
 
 # karo-git
 
-karo_git_user_email: git@example.com # github email
+karo_git_user_email: github@example.com # github email
 karo_git_user_name: username # github username
 karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
 
@@ -95,7 +97,7 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
     ```sh
     # check vault encryption
-    less /srv/karo/inventory/host_vars/homeserver/vault.yml
+    micro -readonly true /srv/karo/inventory/host_vars/homeserver/vault.yml
     ```
 
     You should see a long encrypted output similar to this:
