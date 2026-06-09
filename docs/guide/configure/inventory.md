@@ -44,6 +44,10 @@ As we'll be running Ansible on the server itself, simply copy the following loca
     testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
     ```
 
+!!! info "`micro` bindings"
+
+    Use ++alt+g++ when using Micro to see all available keyboard shortcuts.
+
 ### :lucide-file-key: `key.txt`
 
 This file will store your public SSH authentication key.
