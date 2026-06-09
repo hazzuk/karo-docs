@@ -11,9 +11,9 @@ Stacks provided by the project are grouped into two categories.
 - **Core** - For essential services that it's recommended all users run.
 - **Extra** - For optional services that users can pick and choose from.
 
-To setup a new stack, you'll need to edit your Ansible vault with the stack's relevant configuration. Use the provided example config for each service in a stack, changing the values where needed.
+To set up a new stack, edit your Ansible vault, adding the stack's different variables. Use the provided examples configs for each service, changing the values where needed. The order of variables inside your vault is irrelevant, and is down to personal preference.
 
-Then run [`just compose up homeserver`](../usage/just/#compose), optionally with the name of the stack you've configured.
+Then run `just compose up homeserver`, optionally with the [name of the stack](../usage/just/#compose) you've configured.
 
 ??? tip "Post-setup steps"
 
