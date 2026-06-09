@@ -104,7 +104,7 @@ Run Ansible to deploy or remove Docker compose stacks.
 
 ### `vault`
 
-Create a new Ansible vault file, or edit an existing one.
+Create or edit an Ansible vault.
 
 !!! example "Recipe example"
 
@@ -115,7 +115,7 @@ Create a new Ansible vault file, or edit an existing one.
 
 ### `password`
 
-Create the temporary Ansible vault password file, or edit the existing one.
+Create or edit a temporary Ansible vault password file.
 
 !!! example "Recipe example"
 

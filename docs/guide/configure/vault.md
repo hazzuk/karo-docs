@@ -15,7 +15,7 @@ Before creating the vault, we'll need a strong password to encrypt it with. Use 
 openssl rand -hex 48
 ```
 
-Once you've saved the password, you'll also need to write it to a file on the system. This is so that Ansible can access it without prompting, when encrypting and decrypting your vault file.
+Once you've saved the password, you'll also need to write it to a temporary file on the system. This way, Ansible can access it without prompting, when encrypting and decrypting your vault file.
 
 The following command will open a text editor for you to set your password.
 
