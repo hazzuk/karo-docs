@@ -26,7 +26,7 @@ For the karo-stack to work, you'll need to create two new git repos:
 
 - First, fork the [karo-stack repository](https://github.com/hazzuk/karo-stack/fork) to create your own copy
 
-- Second, create a [new private repository](https://github.com/new) named `karo-inventory`
+- Second, create an empty [**private** repository](https://github.com/new) named `karo-inventory`
 
 The fork will be your version of the karo-stack codebase. Whereas karo-inventory will be a much smaller private repo, which will only contain your personalised configuration. Storing your configuration using git is a huge convenience. As it makes restoring your setup after a hardware failure or a move to a new system simple. Additionally, you'll get the full history of any changes you commit. So you can always revert back to a previous version if something stops working.
 
