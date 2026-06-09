@@ -22,22 +22,26 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
         - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-cd/) `debian-1.0.0-amd64-netinst.iso.torrent`
 
-1. Install [Ventoy](https://www.ventoy.net/en/index.html) onto an 8 GB+ USB drive
+1. Create a bootable USB drive with the Debian ISO file
 
-1. Move the Debian ISO file to the Ventoy directory on your removable device
+    ??? abstract "Using Ventoy"
 
-1. Safely remove the USB drive
+        - Install [Ventoy](https://www.ventoy.net/en/index.html) onto an 8 GB+ USB drive
 
-1. Boot into the Ventoy USB on your server
+        - Move the Debian ISO file to the Ventoy directory on your removable device
 
-1. Select the Debian ISO file
+        - Safely remove the USB drive
 
-1. (Optional) Check the ISO file integrity
-    - Select `File checksum`
-    - Select `Calculate sha256sum`
-    - Compare the output of the checksum to the value on the [Debian website](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/SHA256SUMS)
+        - Boot into the Ventoy USB on your server
 
-1. Select `Boot in normal mode`
+        - Select the Debian ISO file
+
+        - (Optional) Check the ISO file integrity
+            - Select `File checksum`
+            - Select `Calculate sha256sum`
+            - Compare the output of the checksum to the value on the [Debian website](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/SHA256SUMS)
+
+        - Select `Boot in normal mode`
 
 ## Debian installer
 
