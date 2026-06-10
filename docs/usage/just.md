@@ -30,28 +30,6 @@ Available recipes:
   - wireguard                              # Generate key pair
 ```
 
-## Debian installation
-
-### `preseed`
-
-An optional preseed method, running a Python webserver to host the Debian `preseed.cfg` file. Making it accessible for use over a local network.
-
-!!! example "Recipe examples"
-
-    ```sh { .no-copy }
-    # starts a python webserver to host 'debian/server/d-i/trixie/preseed.cfg'
-    just preseed server
-    ```
-
-    ```sh { .no-copy }
-    # starts a python webserver to host 'debian/desktop/d-i/trixie/preseed.cfg'
-    just preseed desktop
-    ```
-
-    !!! note "When to use this recipe"
-
-        For use by advanced users, or when testing changes to the preseed file. See [this guide](../guide/debian/preseed/#automatic-setup-advanced) for details.
-
 ## System setup
 
 ### `install`
@@ -123,3 +101,25 @@ Create or edit a temporary Ansible vault password file.
     # create or edit the ansible vault password file inside '/run/user/1000/karo/ansible/vault_pass'
     just password
     ```
+
+## Debian install
+
+### `preseed`
+
+An optional preseed method, running a Python webserver to host the Debian `preseed.cfg` file. Making it accessible for use over a local network.
+
+!!! example "Recipe examples"
+
+    ```sh { .no-copy }
+    # starts a python webserver to host 'debian/server/d-i/trixie/preseed.cfg'
+    just preseed server
+    ```
+
+    ```sh { .no-copy }
+    # starts a python webserver to host 'debian/desktop/d-i/trixie/preseed.cfg'
+    just preseed desktop
+    ```
+
+    !!! note "When to use this recipe"
+
+        For use by advanced users, or when testing changes to the preseed file. See [this guide](../guide/debian/preseed/#automatic-setup-advanced) for details.
