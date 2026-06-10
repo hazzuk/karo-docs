@@ -29,7 +29,7 @@ nav = [
         ] },
         { "Installation" = [
             "guide/debian/preseed.md",
-            "guide/debian/install.md"
+            "guide/debian/install.md",
         ] },
         { "Configuration" = [
             "guide/configure/packages.md",
@@ -70,7 +70,8 @@ nav = [
     { "Advanced" = [
         "advanced/access.md",
         "advanced/proxy.md",
-        "advanced/restore.md"
+        "advanced/storage.md",
+        "advanced/restore.md",
     ] }, 
     { "Contributing" = [
         "contributing/stacks.md",
