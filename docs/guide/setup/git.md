@@ -4,62 +4,52 @@ icon: lucide/folder-git-2
 
 # Git changes
 
-## Commit inventory changes
+## Commit changes
 
-As you've now made local changes to your `karo-inventory` repo, you'll need to 'commit' and 'push' the changes. This way, everything you've done on the server is synced with your remote copy of the repository on GitHub.
+Having made local changes to your `karo-inventory` repo, you'll need to 'commit' and 'push' the new changes. Ensuring your server's configuration is synced with your remote GitHub repository.
 
 ```sh
+# commit inventory changes
 cd /srv/karo/inventory
-
-git add hosts.ini
-git commit -m "add ansible hosts.ini file"
-
-git add key.txt
-git commit -m "add public ssh key file"
-
-git add host_vars
-git commit -m "add ansible vault file"
-
+git add *
+git commit -m "update inventory files"
 git push
 ```
 
-??? info "Git setup"
+??? info "SSH key prompts"
 
-    Make sure you've configured your git email, name and signing key inside [your Ansible vault](../configure/vault/#create-your-vault). And have also ran the Ansible playbook using `just install homeserver`, to configure git on the system.
+    Your desktop password manager might prompt you when running git commands. Using both your SSH signing key, to sign your git commits. And SSH auth key, to authenticate access with your remote repository.
 
-    If you've set up everything correctly, your desktop's password manager might prompt you when running specific git commands. This is because it's trying to use your SSH signing key to sign your git commits.
+You should repeat these commands after making any new substantial changes to your repository. 
 
-??? tip "Future commits"
+## Upgrade your karo-stack
 
-    It's important to keep your remote GitHub repo up to date with any changes you make on your server. In future, you can keep things simple by doing a more generalised commit like this:
-
-    ```sh
-    cd /srv/karo/inventory
-
-    git add *
-    git commit -m "update inventory files"
-    git push
-    ```
-
-## Upgrade the karo-stack
-
-It's recommended to keep your fork of the karo-stack up to date with the original repository. Assuming you've only made changes to files inside your inventory, you can do the following:
+It's recommended to keep your fork of the `karo-stack` repo up to date with the original repository. The following commands assume you've only made changes to files inside your inventory.
 
 !!! warning
 
-    Make sure to read the karo-stack's [release notes](https://github.com/hazzuk/karo-stack/releases) first! And check for any breaking changes before upgrading.
+    Make sure to read the karo-stack's [release notes](https://github.com/hazzuk/karo-stack/releases) first. And check for any breaking changes before upgrading.
+
+    It's also recommended to stop any stack's you're currently running with `just compose down homeserver`.
 
 ```sh
+# download karo-stack updates
 cd /srv/karo
-
 git remote add upstream https://github.com/hazzuk/karo-stack.git
 git fetch upstream
-
 git switch main
+```
+
+```sh
+# upgrade karo-stack repo
 git merge upstream/main
+```
+
+```sh
+# sync remote karo-stack repo
 git push origin main
 ```
 
 ## Next steps
 
-Having installed, configured and setup your server. The recommended next step is to look at running your Docker stacks. See the [stacks](../../stacks/compose/) section for more details.
+Having installed your homeserver. The next step would be to look at running your Docker stacks. See the [stacks](../../stacks/compose/) section for more details.
