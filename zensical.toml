@@ -19,7 +19,9 @@ repo_url = "https://github.com/hazzuk/karo-stack"
 extra_css = ["stylesheets/extra.css"]
 
 nav = [
-    "index.md",
+    { "Home" = [
+        "index.md",
+    ] },
     { "Setup" = [
         "setup/requirements.md",
         "setup/intro.md",
