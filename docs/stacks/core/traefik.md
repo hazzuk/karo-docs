@@ -39,8 +39,9 @@ karo_compose_traefik_secrets:
 
     - It's recommended to disable the Traefik dashboard when your server is exposed publicly.
 
-    - Traefik is set to use TLS 1.3. Meaning cipher suites are not configurable, and all supported cipher suites are considered safe (see https://golang.org/doc/go1.12#tls_1_3).
-    
+    - Traefik is set to use TLS 1.3. Cipher suites are not configurable, all supported ciphers are [considered safe](https://golang.org/doc/go1.12#tls_1_3).
+
+<!--
     - Traefik creates a docker network named `frontend`. Other stacks that have a frontend web UI can use this network to route traffic through Traefik.
     
     - The `frontend` network uses an internal static IPv4 address, `172.18.0.254`. This is done to resolve external addresses internally. E.g. In Tinyauth, we want requests to the public Pocket ID OIDC domain to instead point directly at Traefik:
@@ -49,6 +50,7 @@ karo_compose_traefik_secrets:
         extra_hosts:
         - "{{ karo_compose_oidc_domain }}:172.18.0.254"
         ```
+-->
 
 ??? tip "Guide - Create Cloudflare API tokens for Traefik"
 
