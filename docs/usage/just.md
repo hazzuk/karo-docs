@@ -32,7 +32,7 @@ Available recipes:
 
 ## System setup
 
-### `install`
+### :lucide-monitor-check: `install`
 
 Run Ansible to configure the core components of your system.
 
@@ -48,7 +48,7 @@ Run Ansible to configure the core components of your system.
     just install proxyserver
     ```
 
-### `compose`
+### :lucide-container: `compose`
 
 Run Ansible to deploy or remove Docker compose stacks.
 
@@ -80,7 +80,7 @@ Run Ansible to deploy or remove Docker compose stacks.
 
 ## Ansible vault
 
-### `vault`
+### :lucide-file-lock: `vault`
 
 Create or edit an Ansible vault.
 
@@ -91,7 +91,7 @@ Create or edit an Ansible vault.
     just vault homeserver
     ```
 
-### `password`
+### :lucide-key-square:`password`
 
 Create or edit a temporary Ansible vault password file.
 
@@ -104,7 +104,7 @@ Create or edit a temporary Ansible vault password file.
 
 ## Debian install
 
-### `preseed`
+### :lucide-sprout: `preseed`
 
 An optional preseed method, running a Python webserver to host the Debian `preseed.cfg` file. Making it accessible for use over a local network.
 
