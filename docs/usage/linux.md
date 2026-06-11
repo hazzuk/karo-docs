@@ -159,6 +159,13 @@ The following is a list of essential commands and shortcuts for using a Linux se
     df -h -x tmpfs
     ```
 
+- **Services** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/systemctl/)
+
+    ```sh
+    # show service status
+    sudo systemctl status nftables
+    ```
+
 - **Logs** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/journalctl/)
 
     ```sh
