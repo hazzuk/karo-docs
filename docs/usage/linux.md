@@ -49,6 +49,84 @@ The following is a list of essential commands and shortcuts for using a Linux se
     history
     ```
 
+## Files and directories
+
+- **Change directory**
+
+    ```sh
+    # to specific directory
+    cd /srv/karo/roles
+    ```
+
+    ```sh
+    # to parent directory
+    cd ..
+    ```
+
+    ```sh
+    # to previous directory
+    cd -
+    ```
+
+- **List view**
+
+    ```sh
+    # show directory contents
+    ls -a
+    ```
+
+- **Tree view**
+
+    ```sh
+    # show contents of multiple directories
+    tree -L 2
+    ```
+
+- **Metadata**
+
+    ```sh
+    # show file info
+    stat file.txt
+    ```
+
+- **Create directories**
+
+    ```sh
+    # create directory
+    mkdir newdir
+    ```
+
+    ```sh
+    # create parent directories
+    mkdir -p path/to/newdir
+    ```
+
+- **Move / rename**
+
+    ```sh
+    # move file
+    mv file.txt /path/to/destination/
+    ```
+
+    ```sh
+    # rename file
+    mv oldname.txt newname.txt
+    ```
+
+- **Copy**
+
+    ```sh
+    # copy file
+    cp file.txt /path/to/destination/
+    ```
+
+- **Delete**
+
+    ```sh
+    # remove file
+    rm file.txt
+    ```
+
 ## Text files
 
 - **File viewer**
