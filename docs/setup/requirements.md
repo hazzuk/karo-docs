@@ -17,7 +17,7 @@ You'll need the following before starting:
 
 It is recommended to have a rudimentary understanding of the following topics:
 
-- Linux command-line
+- [Linux command-line](/usage/linux/)
 - DNS records
 - Docker containers
 - IP addresses
