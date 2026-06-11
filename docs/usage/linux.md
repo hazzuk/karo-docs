@@ -213,3 +213,5 @@ The following is a list of essential commands and shortcuts for using a Linux se
 - **Packages** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/apt/)
 
 - **Docker** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/docker/)
+
+- **Shortcuts** [:lucide-sticky-note:](https://github.com/fliptheweb/bash-shortcuts-cheat-sheet)
