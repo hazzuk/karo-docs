@@ -20,26 +20,26 @@ extra_css = ["stylesheets/extra.css"]
 
 nav = [
     "index.md",
-    { "Guide" = [
-        "guide/requirements.md",
-        "guide/intro.md",
+    { "Setup" = [
+        "setup/requirements.md",
+        "setup/intro.md",
         { "Preparation" = [
-            "guide/prepare/dns.md",
-            "guide/prepare/ssh.md",
+            "setup/prepare/dns.md",
+            "setup/prepare/ssh.md",
         ] },
         { "Installation" = [
-            "guide/debian/preseed.md",
-            "guide/debian/install.md",
+            "setup/debian/preseed.md",
+            "setup/debian/install.md",
         ] },
         { "Configuration" = [
-            "guide/configure/packages.md",
-            "guide/configure/repos.md",
-            "guide/configure/inventory.md",
-            "guide/configure/vault.md",
+            "setup/configure/packages.md",
+            "setup/configure/repos.md",
+            "setup/configure/inventory.md",
+            "setup/configure/vault.md",
         ] },
-        { "Setup" = [
-            "guide/setup/ansible.md",
-            "guide/setup/git.md",
+        { "Implementation" = [
+            "setup/implement/ansible.md",
+            "setup/implement/git.md",
         ] },
     ] },
     { "Usage" = [
