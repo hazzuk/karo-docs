@@ -33,7 +33,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
     ssh -A karo@homeserver.example.com
     ```
 
-## Shell
+## Shell session
 
 - **Exit**
 
@@ -51,68 +51,68 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Text files
 
-- **View**
+- **File viewer**
 
     ```sh
-    # view a file
+    # view file
     less file.txt
     ```
 
-- **Edit**
+- **Text editor**
 
     ```sh
-    # edit a file
+    # create/edit file
     micro file.txt
     ```
 
 ## System
 
-- **Monitor**
+- **Monitoring**
 
     ```sh
-    # monitor system resources
+    # view system usage
     btop
     ```
 
 - **Disk Usage**
 
     ```sh
-    # show disk usage by filesystem
+    # show disk usage
     df -h -x tmpfs
     ```
 
 - **Logs**
 
     ```sh
-    # view the system logs
+    # view system logs
     sudo journalctl
     ```
 
 - **Shutdown**
 
-    ```
-    # power off the system
+    ```sh
+    # power off system
     sudo shutdown now
     ```
 
 - **Reboot**
 
-    ```
-    # restart the system
+    ```sh
+    # restart system
     sudo reboot
     ```
 
-## Network
+## Networking
 
 - **Ping**
 
     ```sh
-    # ping a network host
+    # ping network host
     ping example.com
     ```
 
     ```sh
-    # ping an ip address
+    # ping ip address
     ping 192.168.0.1
     ```
 
@@ -121,6 +121,6 @@ The following is a list of essential commands and shortcuts for using a Linux se
 - **Manuals** 
 
     ```sh
-    # show a command manual
-    man mkdir
+    # view command manual
+    man micro
     ```
