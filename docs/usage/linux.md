@@ -26,7 +26,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Remote Access
 
-- **SSH**
+- **SSH** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ssh/)
 
     ```sh
     # connect to a remote server
@@ -51,7 +51,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Files and directories
 
-- **Change directory**
+- **Change directory** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cd/)
 
     ```sh
     # to specific directory
@@ -68,7 +68,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
     cd -
     ```
 
-- **List view**
+- **List view** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ls/)
 
     ```sh
     # show directory contents
@@ -101,7 +101,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
     mkdir -p path/to/newdir
     ```
 
-- **Move / rename**
+- **Move / rename** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/mv/)
 
     ```sh
     # move file
@@ -113,14 +113,14 @@ The following is a list of essential commands and shortcuts for using a Linux se
     mv oldname.txt newname.txt
     ```
 
-- **Copy**
+- **Copy** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cp/)
 
     ```sh
     # copy file
     cp file.txt /path/to/destination/
     ```
 
-- **Delete**
+- **Delete** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/rm/)
 
     ```sh
     # remove file
@@ -129,7 +129,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Text files
 
-- **File viewer**
+- **File viewer** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/less/)
 
     ```sh
     # view file
@@ -152,14 +152,14 @@ The following is a list of essential commands and shortcuts for using a Linux se
     btop
     ```
 
-- **Disk Usage**
+- **Disk Usage** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/df/)
 
     ```sh
     # show disk usage
     df -h -x tmpfs
     ```
 
-- **Logs**
+- **Logs** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/journalctl/)
 
     ```sh
     # view system logs
@@ -182,7 +182,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Networking
 
-- **Ping**
+- **Ping** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ping/)
 
     ```sh
     # ping network host
@@ -194,7 +194,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
     ping 192.168.0.1
     ```
 
-## Help
+## More help
 
 - **Manuals** 
 
@@ -202,3 +202,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
     # view command manual
     man micro
     ```
+
+- **Packages** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/apt/)
+
+- **Docker** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/docker/)
