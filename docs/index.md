@@ -37,7 +37,7 @@ This is why the karo-stack exists, built to a philosophy of four intrinsic princ
 1. Run the Ansible playbook
 1. Start your Docker stacks
 
-Read the [requirements page](/guide/requirements/).
+Read the [requirements page](/setup/requirements/).
 
 ## License
 

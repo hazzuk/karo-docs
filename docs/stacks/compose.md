@@ -25,7 +25,7 @@ Then run `just compose up homeserver`, optionally with the [name of the stack](.
 
     1. Commit any changes made to your Ansible vault.
 
-        > See [Git changes](../guide/setup/git/).
+        > See [Git changes](../setup/implement/git/).
 
 !!! info "Software usage"
 

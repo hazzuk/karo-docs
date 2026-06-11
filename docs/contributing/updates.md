@@ -62,7 +62,7 @@ Updates are performed manually and software needs to be reviewed for any importa
 
     It's highly recommended to setup the karo-stack inside a test environment (virtual machine or second server). And avoid testing new updates in your live environment, unless you've made backups of your stacks.
 
-1. Follow the [list of stacks](http://localhost:8000/stacks/core/pocket-id/) provided by the docs.
+1. Follow the [list of stacks](/stacks/core/pocket-id/) provided by the docs.
 
 1. Under each service, visit the `Releases` link (and any other applicable links).
 

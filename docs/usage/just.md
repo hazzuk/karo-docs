@@ -122,4 +122,4 @@ An optional preseed method, running a Python webserver to host the Debian `prese
 
     !!! note "When to use this recipe"
 
-        For use by advanced users, or when testing changes to the preseed file. See [this guide](../guide/debian/preseed/#automatic-setup-advanced) for details.
+        For use by advanced users, or when testing changes to the preseed file. See [this guide](../setup/debian/preseed/#automatic-setup-advanced) for details.
