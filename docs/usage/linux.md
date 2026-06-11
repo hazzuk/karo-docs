@@ -6,6 +6,13 @@ icon: simple/linux
 
 The following is a list of essential commands and shortcuts for using a Linux server.
 
+!!! info "Note for Windows users"
+
+    File and directory name are case-sensitive on Linux. It's highly recommended to adopt the habit of using lowercase letters for file and directory names.
+
+    - `NewFile.txt` :lucide-circle-x:
+    - `newfile.txt` :lucide-circle-check:
+
 ## Terminal
 
 - **Copy** selected terminal text
