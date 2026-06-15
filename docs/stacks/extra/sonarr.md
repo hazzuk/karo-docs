@@ -23,6 +23,15 @@ karo_compose_sonarr_enabled: false
 karo_compose_sonarr_data_path: "" # e.g. /media/drive1/data
 ```
 
+??? tip "Guide - Sonarr authentication"
+
+    --8<-- "snippets.md:arr_auth"
+
+        ```sh
+        # set sonarr's auth to external
+        sudo sed -i 's/Forms/External/' /home/dockeruser/.local/share/docker/volumes/sonarr_data/_data/config.xml
+        ```
+
 ??? abstract "Notes - Sonarr settings"
 
     !!! info "Show advanced"
@@ -67,11 +76,6 @@ karo_compose_sonarr_data_path: "" # e.g. /media/drive1/data
 
         - Host
             - Application URL: `https://sonarr.example.com:443/`
-
-        - Security
-            - Authentication: `external`
-
-                > When forward auth is enabled, you'll want to [configure authentication as external](https://wiki.servarr.com/en/radarr/faq#authentication-method).
 
         - Logging
             - Log level: `info`

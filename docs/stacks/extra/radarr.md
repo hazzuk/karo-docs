@@ -23,6 +23,15 @@ karo_compose_radarr_enabled: false
 karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 ```
 
+??? tip "Guide - Radarr authentication"
+
+    --8<-- "snippets.md:arr_auth"
+
+        ```sh
+        # set radarr's auth to external
+        sudo sed -i 's/Forms/External/' /home/dockeruser/.local/share/docker/volumes/radarr_data/_data/config.xml
+        ```
+
 ??? abstract "Notes - Radarr settings"
 
     !!! info "Show advanced"
@@ -72,11 +81,6 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 
         - Host
             - Application URL: `https://radarr.example.com:443/`
-
-        - Security
-            - Authentication: `external`
-
-                > When forward auth is enabled, you'll want to [configure authentication as external](https://wiki.servarr.com/en/radarr/faq#authentication-method).
 
         - Logging
             - Log level: `info`

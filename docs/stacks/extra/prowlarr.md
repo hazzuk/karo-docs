@@ -21,6 +21,15 @@ karo_compose_prowlarr_enabled: false
 # karo_compose_prowlarr_forward_auth_enabled: true
 ```
 
+??? tip "Guide - Prowlarr authentication"
+
+    --8<-- "snippets.md:arr_auth"
+
+        ```sh
+        # set prowlarr's auth to external
+        sudo sed -i 's/Forms/External/' /home/dockeruser/.local/share/docker/volumes/prowlarr_data/_data/config.xml
+        ```
+
 ??? abstract "Notes - Prowlarr settings"
 
     !!! info "Show advanced"
@@ -50,11 +59,6 @@ karo_compose_prowlarr_enabled: false
 
         - Host
             - Application URL: `https://prowlarr.example.com:443/`
-
-        - Security
-            - Authentication: `external`
-
-                > When forward auth is enabled, you'll want to [configure authentication as external](https://wiki.servarr.com/en/radarr/faq#authentication-method).
 
         - Logging
             - Log level: `info`
