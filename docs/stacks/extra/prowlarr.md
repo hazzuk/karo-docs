@@ -30,7 +30,7 @@ karo_compose_prowlarr_enabled: false
 
         - Add an indexer proxy (optional)
 
-            > Some indexers may require you to use a socks5 proxy or FlareSolverr to function correctly.
+            > As some indexers may require you to use a socks5 proxy or FlareSolverr to function correctly.
 
     === "Apps"
 
@@ -60,7 +60,7 @@ karo_compose_prowlarr_enabled: false
             - Log level: `info`
 
         - Analytics
-            - Send anonymous usage data: `false`
+            - Send anonymous usage data: `false` (optional)
 
 ??? note "Links"
 

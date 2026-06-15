@@ -30,9 +30,9 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 
     === "Media management"
 
-        - Read [TRaSH Guides - 'Radarr Recommended Naming Scheme'](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/).
+        - Add root folder: `/data/media/movies`
 
-        - Add root folder (e.g. `/data/media/movies`), read [TRaSH Guides - 'File and Folder Structure'](https://trash-guides.info/File-and-Folder-Structure/).
+        - Read [TRaSH Guides - 'Radarr Recommended Naming Scheme'](https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/)
 
     === "Profiles"
 
@@ -40,12 +40,12 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
 
     === "Indexers"
 
-        - Setup indexers in Prowlarr
-
         - Options
             - RSS sync interval: `0` (optional)
 
                 > Set this to disable all automatic release grabbing.
+
+        - (Setup torrent indexers in Prowlarr if you haven't already)
 
     === "Download clients"
 
@@ -57,6 +57,7 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
                 - qBittorrent instance: `main`
 
         - Add qBittorrent download client
+            - Host: `localhost`
             - Port: `7476`
             - URL base: `#!ini /proxy/<qui client proxy radarr api key>`
             - Category: `movies`
@@ -81,7 +82,7 @@ karo_compose_radarr_data_path: "" # e.g. /media/drive1/data
             - Log level: `info`
 
         - Analytics
-            - Send anonymous usage data: `false`
+            - Send anonymous usage data: `false` (optional)
 
 ??? note "Links"
 
