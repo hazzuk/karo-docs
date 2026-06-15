@@ -41,6 +41,8 @@ karo_compose_traefik_secrets:
 
     - Traefik is set to use TLS 1.3. Cipher suites are not configurable, all supported ciphers are [considered safe](https://golang.org/doc/go1.12#tls_1_3).
 
+    - The Traefik dashboard can be useful when setting up other stacks. As you can check 'HTTP Routers' to ensure the availability of other services. 
+
 <!--
     - Traefik creates a docker network named `frontend`. Other stacks that have a frontend web UI can use this network to route traffic through Traefik.
     
