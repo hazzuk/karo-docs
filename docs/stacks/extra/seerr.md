@@ -40,6 +40,9 @@ karo_compose_seerr_log_level: info # debug, info, warn, error
     === "Sync libraries"
 
         - Jellyfin external URL: `https://jellyfin.example.com`
+        - Sync libraries:
+            - Movies: `Enabled`
+            - Series: `Enabled`
 
     === "Radarr server"
 
