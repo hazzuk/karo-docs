@@ -52,6 +52,7 @@ karo_compose_jellyfin_series_media_path: "" # e.g. /media/drive1/data/media/seri
 
         - Allow remote connections to this server: `false`
 
+<!--
 ??? abstract "Notes - Jellyfin SSO"
 
     === "Plugin"
@@ -132,6 +133,7 @@ karo_compose_jellyfin_series_media_path: "" # e.g. /media/drive1/data/media/seri
                 margin-right: 9px;
             }
             ```
+-->
 
 ??? note "Links"
 
