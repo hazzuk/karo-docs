@@ -48,6 +48,11 @@ karo_compose_qbittorrent_secrets:
         - Password: `#!ini <new secure password>` (e.g. `openssl rand -hex 16`)
         - (:lucide-pointer: Press 'Save')
 
+    === "Save path"
+
+        - Go to 'Options' > 'Downloads'
+        - Default save path: `/data/torrents`
+
     === "Reported IP"
 
         - Go to 'Options' > 'Advanced'
