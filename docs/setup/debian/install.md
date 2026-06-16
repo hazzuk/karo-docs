@@ -75,7 +75,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     ??? failure "Handling 'Failed to run preseeded command'"
 
-        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](../debian/preseed/?h='find%20and%20replace').
+        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](preseed.md).
 
     !!! success
 
@@ -107,7 +107,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
             ping homeserver.example.com
             ```
 
-        - Check you've correctly configured the domain's [DNS records](../prepare/dns/)
+        - Check you've correctly configured the domain's [DNS records](../prepare/dns.md)
 
         - Try connecting directly using the server's IPv4 address
 

@@ -14,7 +14,7 @@ You can use this guide to quickly restore your previous setup.
 
 !!! info "Installing Debian"
 
-    You should still follow the normal guide first, from [Requirements](/setup/requirements/) to Installation.
+    You should still follow the normal guide first, from [Requirements](../setup/requirements.md) to Installation.
 
 With Debian installed, follow these commands to quickly restore your setup:
 

@@ -13,7 +13,7 @@ Stacks provided by the project are grouped into two categories.
 
 To set up a new stack, edit your Ansible vault, adding the stack's different variables. Use the provided examples configs for each service, changing the values where needed. The order of variables inside your vault is irrelevant, and is down to personal preference.
 
-Then run `just compose up homeserver`, optionally with the [name of the stack](../usage/just/#compose) you've configured.
+Then run `just compose up homeserver`, optionally with the [name of the stack](../usage/just.md) you've configured.
 
 ??? tip "Post-setup steps"
 
@@ -25,7 +25,7 @@ Then run `just compose up homeserver`, optionally with the [name of the stack](.
 
     1. Commit any changes made to your Ansible vault.
 
-        > See [Git changes](../setup/implement/git/).
+        > See [Git changes](../setup/implement/git.md).
 
 !!! info "Software usage"
 

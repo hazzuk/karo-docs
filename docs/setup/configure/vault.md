@@ -31,7 +31,7 @@ The following command will open a text editor for you to set your password.
 
     The karo-stack uses just, a tool to run project-specific commands.
 
-    For more information on using commands created for the project, see the documentation's [just usage](../../usage/just/) page.
+    For more information on using commands created for the project, see the documentation's [just usage](../../usage/just.md) page.
 
 ## Create your vault
 

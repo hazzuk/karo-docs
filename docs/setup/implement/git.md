@@ -52,4 +52,4 @@ git push origin main
 
 ## Next steps
 
-Having installed your homeserver. The next step would be to look at running your Docker stacks. See the [stacks](../../stacks/compose/) section for more details.
+Having installed your homeserver. The next step would be to look at running your Docker stacks. See the [stacks](../../stacks/compose.md) section for more details.
