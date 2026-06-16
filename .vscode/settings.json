@@ -1,4 +1,7 @@
 {
+    "files.associations": {
+        "*.md": "python-markdown"
+    },
     "cSpell.enabledFileTypes": {
         "*": false,
         "markdown": true
