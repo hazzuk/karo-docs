@@ -91,7 +91,7 @@ Create or edit an Ansible vault.
     just vault homeserver
     ```
 
-### :lucide-key-square:`password`
+### :lucide-key-square: `password`
 
 Create or edit a temporary Ansible vault password file.
 
