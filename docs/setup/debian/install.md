@@ -75,7 +75,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     ??? failure "Handling 'Failed to run preseeded command'"
 
-        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](preseed.md).
+        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](preseed.md#normal-setup).
 
     !!! success
 
