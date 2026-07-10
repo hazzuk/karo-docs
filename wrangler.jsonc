@@ -3,7 +3,7 @@
     "name": "karo-docs",
     "compatibility_date": "2026-02-16",
     "build": {
-        "command": "uv run zensical build --clean"
+        "command": "pip install zensical && zensical build --clean"
     },
     "assets": {
         "directory": "./site"
