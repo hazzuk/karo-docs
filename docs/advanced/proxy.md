@@ -217,7 +217,7 @@ git push
 
 ## Stack setup
 
-After having successfully setup your VPS, you're now ready to run the proxy stack. You can read all the necessary details about the stack's configuration on its [dedicated page](../stacks/extra/proxy.md).
+After having successfully setup your VPS, you're now ready to run the proxy stack. You can read all the necessary details about the stack's configuration on its [dedicated page](https://hazzuk.github.io/karo-custom/compose/hazzuk_extra/proxy/).
 
 !!! tip "Running the stack"
 

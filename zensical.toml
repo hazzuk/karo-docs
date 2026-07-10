@@ -50,24 +50,6 @@ nav = [
     ] },
     { "Stacks" = [
         "stacks/compose.md",
-        { "Core" = [
-            "stacks/core/pocket-id.md",
-            "stacks/core/traefik.md",
-        ] },
-        { "Extra" = [
-            "stacks/extra/glance.md",
-            "stacks/extra/gluetun.md",
-            "stacks/extra/godns.md",
-            "stacks/extra/jellyfin.md",
-            "stacks/extra/ntfy.md",
-            "stacks/extra/prowlarr.md",
-            "stacks/extra/proxy.md",
-            "stacks/extra/qbittorrent.md",
-            "stacks/extra/radarr.md",
-            "stacks/extra/seerr.md",
-            "stacks/extra/sonarr.md",
-            "stacks/extra/whoami.md",
-        ] },
     ] },
     { "Advanced" = [
         "advanced/access.md",
