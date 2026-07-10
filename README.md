@@ -7,14 +7,14 @@
 
 [![Written by Humans, Not by AI](docs/assets/images/written-by-humans-not-by-ai-badge-black.png)](https://notbyai.fyi/)
 
-This project uses [Zensical](https://zensical.org/docs/get-started/) as it's static site generator.
+Made with [Zensical](https://zensical.org/docs/get-started/), a modern static site generator
 
-Zensical is written in Python, which we manage with the [uv](https://docs.astral.sh/uv/) package manager.
+# Local developement
 
 ```sh
-# Preview as you write
-uv run zensical serve
+# Install Zensical
+pipx install zensical
 
-# Build the site
-uv run zensical build
+# Preview the site
+zensical serve
 ```
