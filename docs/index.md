@@ -1,5 +1,6 @@
 ---
 icon: lucide/house
+title: Home
 ---
 
 # karo-stack
