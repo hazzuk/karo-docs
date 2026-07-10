@@ -1,11 +1,8 @@
 [project]
 
 site_name = "karo-stack docs"
-
 site_description = "The karo-stack documentation."
-
 site_author = "hazzuk"
-
 site_url = "https://docs.karolabs.dev/"
 
 copyright = """
@@ -13,10 +10,7 @@ copyright = """
 """
 
 repo_name = "hazzuk/karo-stack"
-
 repo_url = "https://github.com/hazzuk/karo-stack"
-
-extra_css = ["stylesheets/extra.css"]
 
 nav = [
     { "Home" = [
@@ -66,12 +60,12 @@ nav = [
     ] },
 ]
 
+extra_css = ["stylesheets/extra.css"]
+
 [project.theme]
 
 custom_dir = "overrides"
-
 favicon = "assets/favicon.ico"
-
 language = "en"
 
 # https://zensical.org/docs/
@@ -104,6 +98,14 @@ features = [
     #"toc.integrate",
 ]
 
+# custom icon as logo (for light/dark mode svg support)
+[project.theme.icon]
+logo = "karo"
+
+# [project.theme.font]
+# text = "Inter"
+# code = "Jetbrains Mono"
+
 # palette toggle for automatic mode
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
@@ -123,10 +125,6 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
-
-# custom icon as logo (for light/dark mode svg support)
-[project.theme.icon]
-logo = "karo"
 
 # [[project.extra.social]]
 # icon = "fontawesome/brands/github"
