@@ -279,6 +279,8 @@ alternate_style = true
 [project.markdown_extensions.pymdownx.tabbed.slugify]
 object = "pymdownx.slugs.slugify"
 kwds = { case = "lower" }
+[project.markdown_extensions.toc]
+permalink = true
 
 # data tables
 [project.markdown_extensions.tables]
@@ -291,6 +293,7 @@ kwds = { case = "lower" }
 [project.markdown_extensions.pymdownx.mark]
 [project.markdown_extensions.pymdownx.tilde]
 [project.markdown_extensions.pymdownx.keys] # render keyboard keys
+[project.markdown_extensions.pymdownx.betterem]
 
 # icons and emoji
 [project.markdown_extensions.pymdownx.emoji]
