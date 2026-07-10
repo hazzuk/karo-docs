@@ -1,6 +1,5 @@
 # python files
 .cache
-.venv
 
 # build files
 site
