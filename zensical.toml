@@ -5,9 +5,7 @@ site_description = "The karo-stack documentation."
 site_author = "hazzuk"
 site_url = "https://docs.karolabs.dev/"
 
-copyright = """
-&copy; 2026 hazzuk
-"""
+copyright = """&copy; 2026 hazzuk"""
 
 repo_name = "hazzuk/karo-stack"
 repo_url = "https://github.com/hazzuk/karo-stack"
