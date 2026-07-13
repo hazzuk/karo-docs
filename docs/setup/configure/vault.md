@@ -39,6 +39,7 @@ With the password set, use the following command to both create and edit your va
 
 ```sh
 # create ansible vault
+cd /srv/karo
 just vault homeserver
 ```
 

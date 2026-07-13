@@ -12,6 +12,7 @@ You'll need to run the system roles first.
 
 ```sh
 # run ansible system roles
+cd /srv/karo
 just install homeserver
 ```
 
