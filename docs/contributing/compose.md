@@ -21,9 +21,8 @@ Also see the Docker compose reference guides for [services](https://docs.docker.
 #
 # SPDX-License-Identifier: AGPL-3.0-only
 
-# https://docs.karolabs.dev/stacks/extra/foobar
-
 ---
+
 name: foobar
 services:
 
