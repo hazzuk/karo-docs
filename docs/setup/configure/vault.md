@@ -92,7 +92,7 @@ karo_compose_timezone: "Europe/London" # utctime.info/timezone
 # stacks
 ```
 
-??? success "Encrypted state"
+??? success "Check encrypted state"
 
     After quitting the text editor, the new data is written to the vault file in an encrypted state. You can see this first-hand, by attempting to read the contents of your vault without Ansible.
 
