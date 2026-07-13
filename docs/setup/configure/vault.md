@@ -89,6 +89,13 @@ karo_compose_root_domain: example.com # registered domain name
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
+# docker will start stack groups in this order
+# docker will stop stack groups in reverse order
+karo_compose_stack_groups:
+  - hazzuk_core
+  - hazzuk_extra
+  - hazzuk_media
+
 # stacks
 ```
 
