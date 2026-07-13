@@ -31,7 +31,3 @@ With Debian installed, follow these commands to quickly restore your setup:
 ```sh
 just install homeserver
 ```
-
-```sh
-just compose up homeserver
-```
