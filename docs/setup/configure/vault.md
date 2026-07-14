@@ -80,7 +80,7 @@ karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signin
 
 # karo-ssh
 
-# this port will be accepted in nftables
+# this port will automatically be accepted in nftables
 # karo_ssh_port: 22
 
 # karo-compose
