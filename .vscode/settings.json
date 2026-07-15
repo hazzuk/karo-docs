@@ -4,7 +4,8 @@
     },
     "cSpell.enabledFileTypes": {
         "*": false,
-        "markdown": true
+        "markdown": true,
+        "python-markdown": true
     },
     "cSpell.words": [
         "AAAAC",
