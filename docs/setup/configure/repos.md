@@ -4,31 +4,24 @@ icon: lucide/book-copy
 
 # Repositories
 
-For security, the karo-stack's code repository doesn't automatically clone itself onto your server during the preseed. Instead, control of what runs on a users server is left to the user.
-
-You'll need to create the two git repositories required to run the karo-stack.
-
 ## GitHub account
 
 ??? question "First time using git?"
 
     While git does have a lot of features, and in some situations can become somewhat complex. For what the karo-stack needs, using git will be relatively straight forward. Simply follow the the commands shown, and you should get everything configured correctly.
 
-You'll need a [GitHub.com](https://github.com/signup) account to store your git repositories.
+You'll need a [GitHub.com](https://github.com/signup) account to store your private git repository.
 
 Alternatively, you can also use any other git forge like [Codeberg.org](https://codeberg.org/). Which is a non-profit, community-led effort that also provides git hosting (but this guide assumes you're using GitHub).
 
 Once you've created your account. You'll need to add both your public SSH authentication, and signing keys to your [account's SSH keys](https://github.com/settings/keys).
 
-## Repos layout
+## Inventory repo
 
-For the karo-stack to work, you'll need to create two new git repos:
+You'll need to [create an empty private git repo](https://github.com/new) named `karo-inventory`.
+This repository will be used to store your personal configuration for the karo-stack.
 
-- First, fork the [karo-stack repository](https://github.com/hazzuk/karo-stack/fork) to create your own copy
-
-- Second, create an empty [**private** repository](https://github.com/new) named `karo-inventory`
-
-The fork will be your version of the karo-stack codebase. Whereas karo-inventory will be a much smaller private repo, which will only contain your personalised configuration. Storing your configuration using git is a huge convenience. As it makes restoring your setup after a hardware failure or a move to a new system simple. Additionally, you'll get the full history of any changes you commit. So you can always revert back to a previous version if something stops working.
+Storing your configuration using git brings many benefits. Most importatnly, it makes restoring your setup after a hardware failure or a move to a new system much simpler. Additionally, you'll get the full history of any changes you commit. So you can always revert back to a previous version of your configuartion if something goes wrongs.
 
 ??? tip "Disable GitHub features"
 
@@ -42,6 +35,6 @@ The fork will be your version of the karo-stack codebase. Whereas karo-inventory
 
 ## Clone the repos
 
-Connected to your server via SSH, run the following commands to clone your two repos locally. Modifying the first command to include your GitHub username.
+Connected to your server via SSH, run the following commands to clone the required repos locally. Make sure to modify the first command to include your GitHub username.
 
 --8<-- "snippets.md:git_clone"

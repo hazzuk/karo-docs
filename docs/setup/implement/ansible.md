@@ -4,7 +4,7 @@ icon: lucide/cog
 
 # Ansible playbook
 
-Having installed Debian, and setup both your `karo-stack` and `karo-inventory` repos. It is now time to run the Ansible playbook.
+Having installed Debian, cloned the `karo-stack`, and setup your `karo-inventory` repo. It is now time to run the Ansible playbook.
 
 The playbook is separated into different Ansible roles (`karo-system`, `karo-nftables`, `karo-ssh`, `karo-git`, `karo-docker`, `karo-compose`). Each of which is responsible for configuring a specific part of the system. These roles are mostly run together, currently grouped under two [main tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml). One manages Docker stacks, the other manages the remaining system setup.
 

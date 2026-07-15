@@ -52,7 +52,7 @@ One essential change needs to be made to your preseed file beforehand, which is 
 
     ### Local setup
 
-    Clone your personal karo-stack fork and private inventory repo (adjust paths accordingly):
+    Clone the karo-stack and your private inventory repo (adjust paths accordingly):
 
     --8<-- "snippets.md:git_clone"
 

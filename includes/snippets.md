@@ -16,12 +16,12 @@ GIT_USERNAME=username
 ```
 
 ```sh
-# clone karo-stack fork
-git clone -b main git@github.com:${GIT_USERNAME}/karo-stack.git /srv/karo
+# clone the karo-stack
+git clone -b main git@github.com:hazzuk/karo-stack.git /srv/karo
 ```
 
 ```sh
-# clone karo-inventory
+# clone private karo-inventory
 git clone git@github.com:${GIT_USERNAME}/karo-inventory.git /srv/karo/inventory
 ```
 --8<-- [end:git_clone]

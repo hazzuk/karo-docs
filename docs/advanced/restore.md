@@ -6,7 +6,7 @@ icon: lucide/archive-restore
 
 If you've previously... 
 
-- Created your `karo-stack` and `karo-inventory` repo's
+- Created your `karo-inventory` repo
 - Configured your vault
 - Run different Docker stacks
 
