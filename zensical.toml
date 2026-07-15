@@ -39,6 +39,7 @@ nav = [
     { "Usage" = [
         "usage/just.md",
         "usage/linux.md",
+        "usage/updates.md",
     ] },
     { "Stacks" = [
         "stacks/compose.md",
