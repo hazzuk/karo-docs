@@ -24,7 +24,8 @@ You should repeat these commands after making any new substantial changes to you
 
 ## Upgrade your karo-stack
 
-It's recommended to keep your fork of the `karo-stack` repo up to date with the original repository. The following commands assume you've only made changes to files inside your inventory.
+It is recommended to keep the `karo-stack` repo up to date.
+The following commands assume you've only made changes to files inside your `./inventory` or `./custom` directories.
 
 !!! warning
 
@@ -33,21 +34,9 @@ It's recommended to keep your fork of the `karo-stack` repo up to date with the 
     It's also recommended to stop any stack's you're currently running with `just compose down homeserver`.
 
 ```sh
-# download karo-stack updates
+# upgrade karo-stack to latest
 cd /srv/karo
-git remote add upstream https://github.com/hazzuk/karo-stack.git
-git fetch upstream
-git switch main
-```
-
-```sh
-# upgrade karo-stack repo
-git merge upstream/main
-```
-
-```sh
-# sync remote karo-stack repo
-git push origin main
+git pull origin main
 ```
 
 ## Next steps
