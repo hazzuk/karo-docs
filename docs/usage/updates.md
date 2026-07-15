@@ -4,6 +4,22 @@ icon: lucide/arrow-down-to-line
 
 ## Updating from v2 to v3
 
+### Remove your fork
+
+To help simplify the setup process, forking the `karo-stack` repo is no longer the suggested setup method.
+Unless you have a specific need to maintain a fork, it is strongly recommended to switch to the public repo instead.
+
+1. Switch to the public repo
+    ```sh
+    cd /srv/karo
+    git remote remove origin
+    git remote add origin git@github.com:hazzuk/karo-stack.git
+    ```
+
+1. Delete your karo-stack fork on github
+    - Go to `github.com/<username>/karo-stack/settings#danger-zone`
+    - Select 'Delete this repository'
+
 ### karo-custom
 
 Stacks have been moved to a new repository.
