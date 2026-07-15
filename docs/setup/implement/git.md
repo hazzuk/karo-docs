@@ -33,11 +33,26 @@ The following commands assume you've only made changes to files inside your `./i
 
     It's also recommended to stop any stack's you're currently running with `just compose down homeserver`.
 
-```sh
-# upgrade karo-stack to latest
-cd /srv/karo
-git pull origin main
-```
+=== "Latest"
+
+    ```sh
+    # upgrade karo-stack to latest
+    cd /srv/karo
+    git pull origin main
+    ```
+
+=== "Specific version"
+
+    ```bash
+    # set karo-stack version
+    KAROSTACK_VERSION=v3.0.0
+    ```
+    ```sh
+    # checkout karo-stack version
+    cd /srv/karo
+    git fetch origin tag ${KAROSTACK_VERSION}
+    git checkout ${KAROSTACK_VERSION}
+    ```
 
 ## Next steps
 
