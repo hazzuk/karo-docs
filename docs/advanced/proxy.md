@@ -143,13 +143,13 @@ just vault proxyserver
 
 # ansible
 
-ansible_become_password: "" # system password
+ansible_become_password: "" # karo user root password
 
 # karo-git
 
-karo_git_user_email: git@example.com
-karo_git_user_name: username
-karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..."
+karo_git_user_email: git@example.com # github email
+karo_git_user_name: username # github username
+karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
 
 # karo-nftables
 
@@ -164,17 +164,18 @@ karo_ssh_port: 4444
 
 # karo-compose
 
-karo_compose_root_domain: example.com
+karo_compose_root_domain: example.com # registered domain name
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
-# traefik
+# docker will start stack groups in this order
+# docker will stop stack groups in reverse order
+karo_compose_stack_groups:
+  - hazzuk_core
+  - hazzuk_extra
+  - hazzuk_media
 
-karo_compose_traefik_enabled: false
-
-# pocketid
-
-karo_compose_pocketid_enabled: false
+# stacks
 ```
 
 ### Ansible playbook
