@@ -61,7 +61,7 @@ This is an example workflow demonstrating the following:
 
     ```sh { .no-copy }
     # initialise ext4 filesystem
-    # sda1 (partion), not sda (drive)
+    # sda1 (partition), not sda (drive)
     sudo mkfs.ext4 -L drive1 /dev/sda1
     ```
 

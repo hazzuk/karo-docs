@@ -24,7 +24,7 @@ Unless you have a specific need to maintain a fork, it is strongly recommended t
 
 Stacks have been moved to a new repository.
 This is to allow for anyone to create their own custom stacks.
-Because of this, you'll need to setup the offical `karo-custom` repo.
+Because of this, you'll need to setup the official `karo-custom` repo.
 
 1. Down your stacks
     ```sh
@@ -43,7 +43,7 @@ Because of this, you'll need to setup the offical `karo-custom` repo.
     !!! info
     
         Best way to do this is to simply copy the new Ansible vault examples for each stack.
-        Then move your previous values across (be mindful to use the correct identation).
+        Then move your previous values across (be mindful to use the correct indentation).
 
 1. Up your stacks
     ```sh

@@ -9,7 +9,7 @@
 
 Made with [Zensical](https://zensical.org/docs/get-started/), a modern static site generator
 
-# Local developement
+# Local development
 
 ```sh
 # Install Zensical
