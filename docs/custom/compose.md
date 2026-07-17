@@ -4,41 +4,68 @@ icon: simple/docker
 
 # Compose
 
-After running `just install homeserver`, you can start deploying Docker compose stacks.
+The karo-stack was built to better enable users to share Docker compose setups with one another.
+Done by creating a standardised environment (Debian server, rootless Docker, Traefik reverse proxy, karo-stack Ansible playbook).
+This commonality allows users to create compose files that are immediately compatible with any other server running the karo-stack.
 
-Stacks provided by the project are grouped into two categories.
+To setup a new service using Docker, you'd previously have to find and adapt an existing Docker compose file.
+Often one where it includes everything but the kitchen sink.
+And you'd need to add or remove large parts to fit your personal setup.
+Often followed up by a lot of trial and error.
 
-- **Core** - For essential services that it's recommended all users run.
-- **Extra** - For optional services that users can pick and choose from.
+With the karo-stack, it feels much closer to a plug and play style experience.
+Where you can simply add new stacks from different 'karo-custom' repositories.
+Or create your own.
 
-To set up a new stack, edit your Ansible vault, adding the stack's different variables. Use the provided examples configs for each service, changing the values where needed. The order of variables inside your vault is irrelevant, and is down to personal preference.
+## Deploying stacks
 
-Then run `just compose up homeserver`, optionally with the [name of the stack](../usage/just.md#compose) you've configured.
+1. Add the relevant karo-custom repo (e.g. `just custom add example`)
 
-??? tip "Post-setup steps"
+1. Edit your Ansible vault (e.g. `just vault homeserver`)
+
+    - Add **all** available stack groups
+
+        ```yaml { .no-copy hl_lines="4-5" }
+        karo_compose_stack_groups:
+        - hazzuk_core
+        - hazzuk_extra
+        - example_tools
+        - example_dev
+        - hazzuk_media
+        ```
+
+    - Add the desired stack variables
+
+        ```yaml
+        # foobar
+
+        example_tools_foobar_enabled: true
+
+        example_tools_foobar_stack:
+        foobar:
+            domain: "foobar.{{ karo_compose_root_domain }}"
+            forward_auth_enabled: true
+        ```
+
+1. Deploy your newly configured stack(s) (e.g. `just compose up homeserver`)
+
+!!! tip "Post-setup steps"
 
     After successfully configuring a new stack, remember the following:
     
-    1. Lower the logging level of any applicable services. 
-    
-        > By default, log levels are set to be more verbose to assist with initial setup.
+    1. Lower the logging level of services. 
 
     1. Commit any changes made to your Ansible vault.
 
         > See [Git changes](../setup/implement/git.md).
 
-!!! info "Software usage"
+## Manual stacks
 
-    Please note, the documentation does not cover how to use the stacks provided. Instead, only focusing on the required steps and configuration needed to setup the software successfully.
-
-    For more guidance on a stack's usage, please see the documentation links provided under each service.
-
-## Custom stacks 
-
-The project doesn't yet support user-defined stacks via Ansible. However, you can still create your own Docker `compose.yml` files directly on the server and run them manually.
+You can still create Docker `compose.yml` files directly on the server and run them manually.
 
 To do this, you'll need to SSH in as the `dockeruser`.
 
 > e.g. `ssh dockeruser@homeserver.example.com` or `ssh dockeruser@192.168.0.142`
 
-Afterwards, you're free to create Docker compose stacks manually. It's recommended you place these files under `/srv/docker/adhoc`.
+Afterwards, you're free to create Docker compose stacks manually.
+It's recommended you place these files under `/srv/docker/adhoc`.
