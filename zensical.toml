@@ -36,13 +36,13 @@ nav = [
             "setup/implement/git.md",
         ] },
     ] },
+    { "Custom" = [
+        "custom/compose.md",
+    ] },
     { "Usage" = [
         "usage/just.md",
         "usage/linux.md",
         "usage/updates.md",
-    ] },
-    { "Stacks" = [
-        "stacks/compose.md",
     ] },
     { "Advanced" = [
         "advanced/access.md",
