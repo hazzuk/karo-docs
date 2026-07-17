@@ -37,7 +37,9 @@ nav = [
         ] },
     ] },
     { "Custom" = [
-        "custom/karo-custom.md",
+        { "karo-custom" = [
+            "custom/index.md",
+        ] },
         "custom/compose.md",
     ] },
     { "Usage" = [

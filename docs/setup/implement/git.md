@@ -58,4 +58,4 @@ The following commands assume you've only made changes to files inside your `./i
 
 Having finished installing your homeserver, you can now look to deploy Docker compose stacks using karo-custom repos.
 
-See the [Custom](../../custom/karo-custom.md) section for more details.
+See the [Custom](../../custom/index.md) section for more details.
