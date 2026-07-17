@@ -56,4 +56,6 @@ The following commands assume you've only made changes to files inside your `./i
 
 ## Next steps
 
-Having installed your homeserver. The next step would be to look at running your Docker stacks. See the [stacks](../../stacks/compose.md) section for more details.
+Having finished installing your homeserver, you can now look to deploy Docker compose stacks using karo-custom repos.
+
+See the [Custom](../../custom/karo-custom.md) section for more details.
