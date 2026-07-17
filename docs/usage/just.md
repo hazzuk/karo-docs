@@ -4,31 +4,21 @@ icon: lucide/file-terminal
 
 # just
 
-The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands. Each `just` command is called a recipe, these recipes help simplify common commands you'll need to run when using the project.
+The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands.
+Each just command is called a recipe, these recipes help simplify common commands you'll need to run when using the project.
 
-??? example "Original command vs just recipe"
+??? info "Commands vs just recipes"
 
     This is the main Ansible playbook command:
 
-    - `#!sh ansible-playbook run.yml --tags install --limit "homeserver"`
+    - `ansible-playbook run.yml --tags install --limit "homeserver"`
 
-    But the karo-stack uses just to provide a simplified command (similar to an alias):
+    But the karo-stack uses just to provide a simplified way of invoking this command:
 
-    - `#!sh just install homeserver` (Running this actually runs the command shown above)
+    - `just install homeserver` (This recipe runs the command shown above, and additional logic)
 
-The `just` recipes can be invoked from any subdirectory. And you can type `just` to see a full list of available recipes:
-
-```sh { .no-copy }
-> just
-
-Available recipes:
-  - preseed platform='server'              # Host preseed.cfg
-  - install hostname=''                    # Setup a system
-  - compose action hostname='' stack='all' # Deploy/remove stacks
-  - vault hostname                         # Manage a vault
-  - password                               # Set password
-  - wireguard                              # Generate key pair
-```
+Recipes can be invoked from any subdirectory.
+And you can use `just` or `just help` to see a full list of available recipes.
 
 ## System setup
 
