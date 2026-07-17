@@ -92,6 +92,24 @@ Create or edit a temporary Ansible vault password file.
     just password
     ```
 
+## Custom repos
+
+### :lucide-bolt: `custom`
+
+Manage karo-custom repositories.
+
+!!! example "Recipe example"
+
+    ```sh { .no-copy }
+    # add karo-custom repo from github
+    just custom add hazzuk
+    ```
+
+    ```sh { .no-copy }
+    # remove existing karo-custom repo
+    just custom remove hazzuk
+    ```
+
 ## Debian install
 
 ### :lucide-sprout: `preseed`
