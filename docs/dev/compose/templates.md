@@ -4,7 +4,8 @@ icon: lucide/form
 
 # Compose templates
 
-The karo-stack was built after years of manually self-hosting Docker compose files.  Lessons learnt from creating so many different stacks has helped shape the following three principles:
+While Docker compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
+To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:
 
 - **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity. Preferring long-form syntax, and absolute paths. To create more clearly and safely defined stacks.
 
