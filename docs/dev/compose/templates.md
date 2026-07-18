@@ -7,15 +7,24 @@ icon: lucide/form
 While Docker compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
 To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:
 
-- **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity. Preferring long-form syntax, and absolute paths. To create more clearly and safely defined stacks.
+- **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity.
+    Preferring long-form syntax, and absolute paths.
+    To create more clearly and safely defined stacks.
 
-- **Precise** - Every line in the compose file must have a understood purpose. No keeping definitions just because the author of original of the compose file included them. And any non-standard definitions should be explained in more detail.
+- **Precise** - Every line in the compose file must have a understood purpose.
+    No keeping definitions just because the author of original of the compose file included them.
+    And any non-standard definitions should be explained in more detail.
 
-- **Standardised** - Stacks must follow a consistent ordering and structure of definitions. Reducing potential errors, and making work across different stacks much more seamless.
+- **Standardised** - Stacks must follow a consistent ordering and structure of definitions.
+    Reducing potential errors, and making work across different stacks much more seamless.
 
 ## Example stack
 
-Also see the Docker compose reference guides for [services](https://docs.docker.com/reference/compose-file/services/), [networks](https://docs.docker.com/reference/compose-file/networks/), [volumes](https://docs.docker.com/reference/compose-file/volumes/) and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
+Also see the Docker compose reference guides for
+[services](https://docs.docker.com/reference/compose-file/services/),
+[networks](https://docs.docker.com/reference/compose-file/networks/),
+[volumes](https://docs.docker.com/reference/compose-file/volumes/),
+and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
 ```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: <year> <file author>
@@ -97,7 +106,9 @@ secrets:
 
 ??? info "Port mappings"
 
-    Its unlikely you'll need to map any ports. As most stacks only use web traffic (ports 80 & 443), which will always handled by the reverse proxy. However, there may be times when new port mappings are required.
+    Its unlikely you'll need to map any ports.
+    As most stacks only use web traffic (ports 80 & 443), which will always handled by the reverse proxy.
+    However, there may be times when new port mappings are required.
 
     Use the following short syntax for port mappings:
 
@@ -106,15 +117,20 @@ secrets:
       - <HOST>:<CONTAINER>/<PROTOCOL>
     ```
 
-    Ensure you **always specify the protocol**. And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.
+    Ensure you **always specify the protocol**.
+    And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.
 
 ??? info "UID 1000"
 
-    Unlike rootful Docker, when a rootless Docker container uses UID 1000, it's not using the host user 1000 (karo). Instead, the user running the Docker daemon (dockeruser) has been assigned a [subordinate user ID range](https://docs.docker.com/engine/security/userns-remap/) (dockeruser:165536:65536). So user 1000 for the container is one of these unprivileged subordinate users.
+    Unlike rootful Docker, when a rootless Docker container uses UID 1000, it's not using the host user 1000 (karo).
+    Instead, the user running the Docker daemon (dockeruser) has been assigned a [subordinate user ID range](https://docs.docker.com/engine/security/userns-remap/) (dockeruser:165536:65536).
+    So user 1000 for the container is one of these unprivileged subordinate users.
     
     ```sh { .no-copy }
     $ stat /home/dockeruser/.local/share/docker/volumes/pocketid_data/_data
     Access: (0755/drwxr-xr-x)  Uid: (166535/ UNKNOWN)   Gid: (166535/ UNKNOWN)
     ```
 
-    Sometimes we need the UID of files created by a container to match that of the host  user. Setting the UID to 0 will achieve this effect. As UID 0 is mapped to the UID of the host user running the rootless daemon.
+    Sometimes we need the UID of files created by a container to match that of the host  user.
+    Setting the UID to 0 will achieve this effect.
+    As UID 0 is mapped to the UID of the host user running the rootless daemon.
