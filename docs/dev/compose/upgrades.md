@@ -2,11 +2,12 @@
 icon: lucide/circle-fading-arrow-up
 ---
 
-# Stack updates
+# Container upgrades
 
-Software updates for stack's provided by the project should ideally be performed on a regularly occurring basis. And any security updates should always be applied promptly.
+Version upgrades for containers should be performed on a regularly occurring basis.
+And any security updates should always be applied promptly.
 
-Updates are controlled by each services Docker image URI value:
+The container's version is controlled by the Docker image URI value:
 
 === "Format"
 
@@ -32,53 +33,62 @@ Updates are controlled by each services Docker image URI value:
         image: docker.io/foobarorg/foobar:v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f2475937ab
     ```
 
-It's common for both `<registry>` and `@<digest>` to go unused when specifying an image URI. However, for greater clarity and stronger security, both must always be set here.
+It's common for both `<registry>` and `@<digest>` to go unused when specifying an image URI.
+However, for greater clarity and stronger security, both must always be set.
 
 ### Image registry
 
-Providing an image registry avoids ambiguity about the source of the image. And improves security by only pulling the image from the intended registry.
+Providing an image registry avoids ambiguity about the source of the image.
+And improves security by only pulling the image from the intended registry.
 
 We define the registry, along with the project and container in the first variable:
 
 ```yaml { .no-copy }
-karo_compose_foobar_image: docker.io/foobarorg/foobar
+example_group_foobar_stack_defaults:
+  foobar:
+    image: docker.io/foobarorg/foobar # or ghcr.io/foobarorg/foobar
 ```
 
 ### Image digest
 
-The image digest is the most important security mechanism when pulling images. While tags are mutable, where the same tag can be later changed to another image. Digests are immutable, as they are unique and unchangeable. Guaranteeing you'll always pull the exact same image.
+The image digest is the most important security mechanism when pulling images.
+While tags are mutable, meaning the same tag can be later changed to another image.
+Digests are immutable, as they are unique and unchangeable.
+Guaranteeing you'll always pull the exact same image.
 
-While it's not necessary to add a tag when using a digest, it's still helpful to use both. The digest is the cryptographic identifier. Whereas the tag provides human readable version number:
+While it's not necessary to add a tag when using a digest, it's still helpful to use both.
+The digest is the secure cryptographic identifier.
+Whereas the tag provides a human readable version number:
 
 ```yaml { .no-copy }
-karo_compose_foobar_version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f2475937ab
+example_group_foobar_stack_defaults:
+  foobar:
+    version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f247
 ```
 
 ## Updating stacks
 
-Updates are performed manually and software needs to be reviewed for any important changes.
+Version upgrades are performed manually, and the software should always be reviewed for any new important changes.
 
 !!! tip "Test environment"
 
-    It's highly recommended to setup the karo-stack inside a test environment (virtual machine or second server). And avoid testing new updates in your live environment, unless you've made backups of your stacks.
+    It's highly recommended to setup the karo-stack inside a test environment (virtual machine or second server).
+    And avoid testing new updates in your live environment, unless you've made backups of your stacks.
 
-1. Follow the list of stacks.
+For each container...
 
-1. Under each service, visit the `Releases` link (and any other applicable links).
+1. Review each subsequent release made since the current version (note any breaking changes).
+    And select a recent stable version of the software (stability is preferred over new releases).
 
-    - Review each subsequent release made since the current defined version.
+1. Prepare a test environment with the previous version of the stack running (ideally with log levels adjusted to be more verbose).
 
-    - Note any breaking changes or features the karo-stack might want to directly utilise.
+1. Update the image version in the stack's defaults file.
 
-1. Select the most recent stable version of the software (stability is preferred over new releases).
+1. Down and up the stack to test the new version of the software, reviewing the container's logs.
 
-    - Update the image version in `roles/karo-compose/defaults/main.yml`.
-
-1. Where possible, temporarily adjust log levels to be more verbose.
-
-1. With the previous version of the stack running, down it and deploy the new version.
-
-1. Test the software and review the container logs (`docker logs foobar -f`).
+    ```sh
+    docker logs foobar -f
+    ```
 
 1. Make any additional changes required to the compose file or configs, then test again.
 
