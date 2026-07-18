@@ -2,13 +2,13 @@
 icon: lucide/form
 ---
 
-# Compose examples
+# Compose templates
 
 The karo-stack was built after years of manually self-hosting Docker compose files.  Lessons learnt from creating so many different stacks has helped shape the following three principles:
 
 - **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity. Preferring long-form syntax, and absolute paths. To create more clearly and safely defined stacks.
 
-- **Precise** - Every line in the compose file must have a purpose. Not keeping definitions just because the original stack author included them. And any non-standard definitions should be explained in more detail.
+- **Precise** - Every line in the compose file must have a understood purpose. No keeping definitions just because the author of original of the compose file included them. And any non-standard definitions should be explained in more detail.
 
 - **Standardised** - Stacks must follow a consistent ordering and structure of definitions. Reducing potential errors, and making work across different stacks much more seamless.
 
@@ -16,7 +16,7 @@ The karo-stack was built after years of manually self-hosting Docker compose fil
 
 Also see the Docker compose reference guides for [services](https://docs.docker.com/reference/compose-file/services/), [networks](https://docs.docker.com/reference/compose-file/networks/), [volumes](https://docs.docker.com/reference/compose-file/volumes/) and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
-```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" }
+```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: <year> <file author>
 #
 # SPDX-License-Identifier: AGPL-3.0-only
@@ -27,7 +27,7 @@ name: foobar
 services:
 
   foobar:
-    image: {{ karo_compose_foobar_image }}:{{ karo_compose_foobar_version }}
+    image: {{ compose.foobar.image }}:{{ compose.foobar.version }}
     container_name: foobar
     restart: {{ karo_compose_restart_policy }}
     # security
@@ -46,7 +46,7 @@ services:
       - frontend
     volumes:
       - type: bind
-        source: /srv/docker/extra/foobar/config.json
+        source: /srv/docker/example_group/foobar/config.json
         target: /app/config.json
         read_only: true
       - type: volume
@@ -54,14 +54,16 @@ services:
         target: /app/data
     labels:
       - traefik.enable=true
-      - traefik.http.routers.foobar.rule=Host(`{{ karo_compose_foobar_domain }}`)
+      - traefik.http.routers.foobar.rule=Host(`{{ compose.foobar.domain }}`)
       - traefik.http.services.foobar.loadbalancer.server.port=1234
+{% if compose.foobar.forward_auth_enabled %}
       # forward auth
-      # - traefik.http.routers.foobar.middlewares=tinyauth
-      # - tinyauth.apps.foobar.config.domain={{ karo_compose_foobar_domain }}
-      # - tinyauth.apps.foobar.oauth.groups={{ karo_compose_oidc_admin_group }}
+      - traefik.http.routers.foobar.middlewares=tinyauth
+      - tinyauth.apps.foobar.config.domain={{ compose.foobar.domain }}
+      - tinyauth.apps.foobar.oauth.groups={{ karo_compose_oidc_admin_group }}
+{% endif %}
     environment:
-      - LOG_LEVEL={{ karo_compose_foobar_log_level }}
+      - LOG_LEVEL={{ compose.foobar.log_level }}
       - TZ={{ karo_compose_timezone }}
       - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
     secrets:
@@ -115,26 +117,3 @@ secrets:
     ```
 
     Sometimes we need the UID of files created by a container to match that of the host  user. Setting the UID to 0 will achieve this effect. As UID 0 is mapped to the UID of the host user running the rootless daemon.
-
-## Example defaults
-
-Any new variables must be added to the karo-compose defaults file.
-
-!!! info "Defaults file organisation"
-
-    - Each stack is first grouped by core or extra, then ordered alphabetically.
-
-    - You'll also need to add the stack name to `karo_compose_stacks`, this defines its relative startup order.
-
-```yaml+jinja { title="roles/karo-compose/defaults/main.yml" }
-# foobar
-
-karo_compose_foobar_enabled: false
-karo_compose_foobar_image: docker.io/foobarorg/foobar
-karo_compose_foobar_version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f2475937ab
-karo_compose_foobar_domain: "foobar.{{ karo_compose_root_domain }}"
-karo_compose_foobar_log_level: info # debug, info, warn, error
-
-karo_compose_foobar_secrets:
-  foobar_api_token: ""
-```
