@@ -53,12 +53,19 @@ nav = [
         "advanced/storage.md",
         "advanced/restore.md",
     ] }, 
-    { "Contributing" = [
-        "contributing/stacks.md",
-        "contributing/compose.md",
-        "contributing/secrets.md",
-        "contributing/updates.md",
-        "contributing/docs.md",
+    { "Development" = [
+        { "karo-stack" = [
+            "dev/documentation.md",
+        ] },
+        { "karo-custom" = [
+            { "Compose" = [
+                "dev/compose/services.md",
+                "dev/compose/templates.md",
+                "dev/compose/secrets.md",
+                "dev/compose/upgrades.md",
+            ] },
+        ] },
+
     ] },
 ]
 
@@ -82,7 +89,7 @@ features = [
     "content.tabs.link",
     "content.tooltips",
     # "header.autohide",
-    # "navigation.expand",
+    "navigation.expand",
     "navigation.footer",
     "navigation.indexes",
     "navigation.instant",
