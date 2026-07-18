@@ -7,6 +7,8 @@ icon: lucide/circle-fading-arrow-up
 Version upgrades for containers should be performed on a regularly occurring basis.
 And any security updates should always be applied promptly.
 
+## Version format
+
 The container's version is controlled by the Docker image URI value:
 
 === "Format"
