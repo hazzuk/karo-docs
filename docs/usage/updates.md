@@ -20,7 +20,7 @@ Unless you have a specific need to maintain a fork, it is strongly recommended t
     - Go to `github.com/<username>/karo-stack/settings#danger-zone`
     - Select 'Delete this repository'
 
-### karo-custom
+### Use the karo-custom repo
 
 Stacks have been moved to a new repository.
 This is to allow for anyone to create their own custom stacks.
