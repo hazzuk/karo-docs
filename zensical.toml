@@ -60,6 +60,7 @@ nav = [
         { "karo-custom" = [
             { "Compose" = [
                 "dev/compose/services.md",
+                "dev/compose/defaults.md",
                 "dev/compose/templates.md",
                 "dev/compose/secrets.md",
                 "dev/compose/upgrades.md",
