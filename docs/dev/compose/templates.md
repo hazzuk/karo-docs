@@ -29,7 +29,7 @@ and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 ```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: <year> <file author>
 #
-# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-License-Identifier: <license>
 
 ---
 
