@@ -17,12 +17,18 @@ title: Home
 
 The karo-stack aims to provide a middle ground for managing a self-hosted setup. Somewhere between manually installing Docker on a bare bones server. And using an all-encompassing, abstracted solution like Proxmox or Unraid. The first often becomes problematic when maintaining everything long-term. Whereas the second is likely overkill for the needs of most users.
 
-This is why the karo-stack exists, built to a philosophy of four intrinsic principals:
+This is why the karo-stack exists, built to a philosophy of six intrinsic principals:
+
+<div class="grid cards" style="grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));" markdown>
 
 - :lucide-book-text: **Declarative**
 - :lucide-circle-check: **Unambiguous**
 - :lucide-lock-keyhole: **Secure**
+- :lucide-bolt: **Extensible**
 - :lucide-tree-pine: **Stable**
+- :lucide-code-xml: **Open-source**
+
+</div>
 
 !!! info "TL;DR"
 
