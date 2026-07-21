@@ -41,3 +41,18 @@ just password
 
     Use ++ctrl+shift+v++ to paste your clipboard when using the terminal.
 --8<-- [end:terminal_paste]
+
+<!-- text -->
+
+--8<-- [start:custom_compose_filetree]
+karo-custom/
+└── karo-compose/
+    ├── defaults/main/
+    │   └── hazzuk_media/
+    │       ├── main.yml
+    │       └── jellyfin.yml
+    └── templates/
+        └── hazzuk_media/
+            └── jellyfin/
+                └── compose.yml.j2
+--8<-- [end:custom_compose_filetree]

@@ -60,46 +60,19 @@ karo-custom/
 === "Ansible role"
 
     ```toml { title="Extend the karo-compose Ansible role" hl_lines="2" .no-copy }
-    karo-custom/
-    └── karo-compose/
-        ├── defaults/main/
-        │   └── hazzuk_media/
-        │       ├── main.yml
-        │       └── jellyfin.yml
-        └── templates/
-            └── hazzuk_media/
-                └── jellyfin/
-                    └── compose.yml.j2
+    --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Role directories"
 
     ```toml { title="Defaults and templates directories" hl_lines="3 7" .no-copy }
-    karo-custom/
-    └── karo-compose/
-        ├── defaults/main/
-        │   └── hazzuk_media/
-        │       ├── main.yml
-        │       └── jellyfin.yml
-        └── templates/
-            └── hazzuk_media/
-                └── jellyfin/
-                    └── compose.yml.j2
+    --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Stack group directories"
 
     ```toml { title="Stack group directories" hl_lines="4 8" .no-copy }
-    karo-custom/
-    └── karo-compose/
-        ├── defaults/main/
-        │   └── hazzuk_media/
-        │       ├── main.yml
-        │       └── jellyfin.yml
-        └── templates/
-            └── hazzuk_media/
-                └── jellyfin/
-                    └── compose.yml.j2
+    --8<-- "snippets.md:custom_compose_filetree"
     ```
 
     !!! info "Stack group naming"
@@ -111,31 +84,13 @@ karo-custom/
 === "Defaults files"
 
     ```toml { title="Stack group defaults files" hl_lines="5-6" .no-copy }
-    karo-custom/
-    └── karo-compose/
-        ├── defaults/main/
-        │   └── hazzuk_media/
-        │       ├── main.yml
-        │       └── jellyfin.yml
-        └── templates/
-            └── hazzuk_media/
-                └── jellyfin/
-                    └── compose.yml.j2
+    --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Templates"
 
     ```toml { title="Stack group templates" hl_lines="9-10" .no-copy }
-    karo-custom/
-    └── karo-compose/
-        ├── defaults/main/
-        │   └── hazzuk_media/
-        │       ├── main.yml
-        │       └── jellyfin.yml
-        └── templates/
-            └── hazzuk_media/
-                └── jellyfin/
-                    └── compose.yml.j2
+    --8<-- "snippets.md:custom_compose_filetree"
     ```
 
     !!! info "Template files"
