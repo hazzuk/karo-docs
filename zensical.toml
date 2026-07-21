@@ -55,6 +55,7 @@ nav = [
     ] }, 
     { "Development" = [
         { "karo-custom" = [
+            "dev/structure.md",
             { "Compose" = [
                 "dev/compose/services.md",
                 "dev/compose/defaults.md",

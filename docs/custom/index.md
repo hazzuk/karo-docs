@@ -7,22 +7,6 @@ icon: lucide/bolt
 A karo-custom repo is a user created collection of custom functionality, used to extend the capabilities of the karo-stack.
 Its biggest use is for adding new Docker compose stacks.
 
-```toml { title="karo-custom example" .no-copy }
-hazzuk/
-└── karo-compose/ # ansible role to extend
-    ├── defaults/main/
-    │   └── hazzuk_media/
-    │       ├── main.yml # internal variables
-    │       └── jellyfin.yml # default variables
-    └── templates/
-        └── hazzuk_media/
-            └── jellyfin/
-                └── compose.yml.j2 # docker compose template
-```
-
-When you add a karo-custom repo, its contents is symbolically linked to the inside of the karo-stack's Ansible playbook.
-And the files are used dynamically when running relevant commands.
-
 ## Add karo-custom repos
 
 - Add the custom repo (e.g. `just custom add hazzuk`)
