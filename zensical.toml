@@ -54,9 +54,6 @@ nav = [
         "advanced/restore.md",
     ] }, 
     { "Development" = [
-        { "karo-stack" = [
-            "dev/documentation.md",
-        ] },
         { "karo-custom" = [
             { "Compose" = [
                 "dev/compose/services.md",
@@ -66,7 +63,9 @@ nav = [
                 "dev/compose/upgrades.md",
             ] },
         ] },
-
+        { "karo-stack" = [
+            "dev/documentation.md",
+        ] },
     ] },
 ]
 
