@@ -54,3 +54,113 @@ karo-custom/
 - Multiple repos can be added
 
 - Repos use the author's username as their directory name
+
+## karo-compose layout
+
+=== "Ansible role"
+
+    ```toml { title="Extend the karo-compose Ansible role" hl_lines="2" .no-copy }
+    karo-custom/
+    └── karo-compose/
+        ├── defaults/main/
+        │   └── hazzuk_media/
+        │       ├── main.yml
+        │       └── jellyfin.yml
+        └── templates/
+            └── hazzuk_media/
+                └── jellyfin/
+                    └── compose.yml.j2
+    ```
+
+=== "Role directories"
+
+    ```toml { title="Defaults and templates directories" hl_lines="3 7" .no-copy }
+    karo-custom/
+    └── karo-compose/
+        ├── defaults/main/
+        │   └── hazzuk_media/
+        │       ├── main.yml
+        │       └── jellyfin.yml
+        └── templates/
+            └── hazzuk_media/
+                └── jellyfin/
+                    └── compose.yml.j2
+    ```
+
+=== "Stack group directories"
+
+    ```toml { title="Stack group directories" hl_lines="4 8" .no-copy }
+    karo-custom/
+    └── karo-compose/
+        ├── defaults/main/
+        │   └── hazzuk_media/
+        │       ├── main.yml
+        │       └── jellyfin.yml
+        └── templates/
+            └── hazzuk_media/
+                └── jellyfin/
+                    └── compose.yml.j2
+    ```
+
+    !!! info "Stack group naming"
+
+        Stack groups must follow a strict naming convention: `<username>_<scope>`.
+
+        Do **not** use the words `stack(s)`, `compose`, `karo`, or `custom` as the scope name.
+
+=== "Defaults files"
+
+    ```toml { title="Stack group defaults files" hl_lines="5-6" .no-copy }
+    karo-custom/
+    └── karo-compose/
+        ├── defaults/main/
+        │   └── hazzuk_media/
+        │       ├── main.yml
+        │       └── jellyfin.yml
+        └── templates/
+            └── hazzuk_media/
+                └── jellyfin/
+                    └── compose.yml.j2
+    ```
+
+=== "Templates"
+
+    ```toml { title="Stack group templates" hl_lines="9-10" .no-copy }
+    karo-custom/
+    └── karo-compose/
+        ├── defaults/main/
+        │   └── hazzuk_media/
+        │       ├── main.yml
+        │       └── jellyfin.yml
+        └── templates/
+            └── hazzuk_media/
+                └── jellyfin/
+                    └── compose.yml.j2
+    ```
+
+    !!! info "Template files"
+
+        - Template files **must** end with the `.j2` file extension
+
+        - You can create multiple template files for each stack
+
+            === "Templates"
+
+                ```toml { .no-copy }
+                templates/
+                └── hazzuk_extra/
+                    └── godns/
+                        ├── compose.yml.j2
+                        └── config.json.j2
+                ```
+
+            === "Deployed files"
+
+                ```toml { .no-copy }
+                /srv/
+                └── docker/
+                    └── hazzuk_extra/
+                        └── godns/
+                            ├── compose.yml.j2
+                            └── config.json.j2
+                ```
