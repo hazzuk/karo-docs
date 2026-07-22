@@ -72,33 +72,35 @@ Making first time authentication over SSH straightforward.
 
     ### Local setup
 
-    Clone the karo-stack and your private inventory repo (adjust paths accordingly):
+    - Clone the karo-stack and your private inventory repo (adjust paths accordingly):
 
-    --8<-- "snippets.md:git_clone"
+        --8<-- "snippets.md:git_clone"
 
-    And if required, add/update your public SSH key inside your inventory repo:
+    - And if required, add/update your public SSH key inside your inventory repo:
 
-    ```sh
-    micro key.txt
-    
-    git add key.txt
-    git commit -m "add public ssh key for preseed"
-    git push
-    ```
+        ```sh
+        micro key.txt
+        
+        git add key.txt
+        git commit -m "add public ssh key for preseed"
+        git push
+        ```
 
     ### Run
 
-    After setup, simply run the following:
+    - After setup, simply run the following:
 
-    ```sh
-    just preseed server
-    ```
+        ```sh
+        just preseed server
+        ```
 
-    When later prompted for the preseed file's URL,
-    use the IP address of the host and port 8000:
+    !!! tip
 
-    > e.g. `192.168.0.76:8000`
+        When later prompted for the preseed file's URL,
+        use the IP address of the host and port 8000.
 
-    Both the default protocol (`http://`)
-    and default path of the file (`/d-i/trixie/./preseed.cfg`)
-    are assumed by the Debian installer, when the URL doesn't include them.
+        > e.g. `192.168.0.76:8000`
+
+        Both the default protocol (`http://`)
+        and default path of the file (`/d-i/trixie/./preseed.cfg`)
+        are assumed by the Debian installer, when the URL doesn't include them.
