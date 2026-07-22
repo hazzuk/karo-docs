@@ -26,7 +26,7 @@ Ideally one with a desktop client that supports acting as an SSH Agent.
     [Bitwarden](https://bitwarden.com/help/ssh-agent/),
     [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how).
 
-1. Generate two SSH key pairs. One used for authentication, and a second pair for signing.
+1. Generate two SSH key pairs.
 
     !!! info "Key types"
 
