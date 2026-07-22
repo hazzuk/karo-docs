@@ -23,15 +23,18 @@ Alternatively, you can also use any other git forge like
 Which is a non-profit, community-led effort that also provides git hosting
 (but this guide assumes you're using GitHub).
 
-Once you've created your account.
-You'll need to add both your public SSH authentication,
-and signing keys to your [account's SSH keys](https://github.com/settings/keys).
+Once you've created your account, you'll need to add your public SSH keys.
+
+- Add your SSH authentication, and signing keys to your
+    [account's SSH keys](https://github.com/settings/keys)
 
 ## Inventory repo
 
-You'll need to [create an empty private git repo](https://github.com/new)
-named `karo-inventory`.
+Next you'll need to create your inventory repo.
 This repository will be used to store your personal configuration for the karo-stack.
+
+- [Create an empty private git repo](https://github.com/new)
+named `karo-inventory`
 
 ??? question "Why use git?"
 
@@ -48,4 +51,6 @@ Connected to your server via SSH,
 run the following commands to clone the required repos locally.
 Make sure to modify the first command to include your GitHub username.
 
---8<-- "snippets.md:git_clone"
+- Clone the karo-stack and your private karo-inventory repository:
+
+    --8<-- "snippets.md:git_clone"
