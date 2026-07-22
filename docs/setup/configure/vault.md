@@ -13,22 +13,22 @@ Aptly named `vault.yml`.
 ## Password setup
 
 Before creating the vault, we'll need a strong password to encrypt it with.
-Use the following command to generate a 96 character password,
-and save the output to your password manager.
 
-```sh
-# generate vault password
-openssl rand -hex 48
-```
+- Generate a 96 character password (save the output to your password manager):
+
+    ```sh
+    # generate vault password
+    openssl rand -hex 48
+    ```
 
 Once you've saved the password,
-you'll also need to write it to a temporary file on the system.
+you will also need to write it to a temporary file on the system.
 This way, Ansible can access it without prompting,
 when encrypting and decrypting your vault file.
 
-The following command will open a text editor for you to set your password.
+- Set your password on the system (this command will open a text editor):
 
---8<-- "snippets.md:just_password"
+    --8<-- "snippets.md:just_password"
 
 ??? question "Isn't writing the password to a plaintext file insecure?"
 
@@ -54,85 +54,88 @@ The following command will open a text editor for you to set your password.
 
 ## Create your vault
 
-With the password set, use the following command to both create and edit your vault:
+With the password set, you can now create an Ansible vault file encrypted by your password.
 
-```sh
-# create ansible vault
-cd /srv/karo
-just vault homeserver
-```
 
-Copy the example below into your vault. Edit any values that require changes.
-
-<div class="grid" markdown>
-
-!!! info "Commented lines"
-
-    Commented out variables are additional settings that are completely optional.
-
---8<-- "snippets.md:terminal_paste"
-
-</div>
-
-```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
-# homeserver
-#
-# CONFIDENTIAL
-
----
-
-# ansible
-
-ansible_become_password: "" # karo user root password
-
-# karo-git
-
-karo_git_user_email: github@example.com # github email
-karo_git_user_name: username # github username
-karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
-
-# karo-nftables
-
-# ports 80 (tcp) and 443 (tcp/udp) are already accepted
-# karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
-# karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
-
-# karo-ssh
-
-# this port will automatically be accepted in nftables
-# karo_ssh_port: 22
-
-# karo-compose
-
-karo_compose_root_domain: example.com # registered domain name
-
-karo_compose_timezone: "Europe/London" # utctime.info/timezone
-
-# docker will start stack groups in this order
-# docker will stop stack groups in reverse order
-karo_compose_stack_groups:
-  - hazzuk_core
-  - hazzuk_extra
-  - hazzuk_media
-
-# stacks
-```
-
-??? success "Check encrypted state"
-
-    After quitting the text editor,
-    the new data is written to the vault file in an encrypted state.
-    You can see this first-hand,
-    by attempting to read the contents of your vault without Ansible.
+- Create and edit your vault:
 
     ```sh
-    # check vault encryption
-    micro -readonly true /srv/karo/inventory/host_vars/homeserver/vault.yml
+    # create ansible vault
+    cd /srv/karo
+    just vault homeserver
     ```
 
-    You should see a long encrypted output similar to this:
+    (Copy the example below into your vault, and edit any values that require changes)
 
-    ```yaml { .no-copy }
-    $ANSIBLE_VAULT;1.1;AES256
-    6538346438396339346464346163349382...
+    <div class="grid" markdown>
+
+    !!! info "Commented lines"
+
+        Commented out variables are additional settings that are completely optional.
+
+    --8<-- "snippets.md:terminal_paste"
+
+    </div>
+
+    ```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
+    # homeserver
+    #
+    # CONFIDENTIAL
+
+    ---
+
+    # ansible
+
+    ansible_become_password: "" # karo user root password
+
+    # karo-git
+
+    karo_git_user_email: github@example.com # github email
+    karo_git_user_name: username # github username
+    karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public signing key
+
+    # karo-nftables
+
+    # ports 80 (tcp) and 443 (tcp/udp) are already accepted
+    # karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
+    # karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
+
+    # karo-ssh
+
+    # this port will automatically be accepted in nftables
+    # karo_ssh_port: 22
+
+    # karo-compose
+
+    karo_compose_root_domain: example.com # registered domain name
+
+    karo_compose_timezone: "Europe/London" # utctime.info/timezone
+
+    # docker will start stack groups in this order
+    # docker will stop stack groups in reverse order
+    karo_compose_stack_groups:
+    - hazzuk_core
+    - hazzuk_extra
+    - hazzuk_media
+
+    # stacks
     ```
+
+    ??? success "Check encrypted state"
+
+        After quitting the text editor,
+        the new data is written to the vault file in an encrypted state.
+        You can see this first-hand,
+        by attempting to read the contents of your vault without Ansible.
+
+        ```sh
+        # check vault encryption
+        micro -readonly true /srv/karo/inventory/host_vars/homeserver/vault.yml
+        ```
+
+        You should see a long encrypted output similar to this:
+
+        ```yaml { .no-copy }
+        $ANSIBLE_VAULT;1.1;AES256
+        6538346438396339346464346163349382...
+        ```
