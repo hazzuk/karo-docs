@@ -6,7 +6,9 @@ icon: lucide/folder-git-2
 
 ## Commit changes
 
-Having made local changes to your `karo-inventory` repo, you'll need to 'commit' and 'push' the new changes. Ensuring your server's configuration is synced with your remote GitHub repository.
+Having made local changes to your `karo-inventory` repo,
+you'll need to 'commit' and 'push' the new changes.
+Ensuring your server's configuration is synced with your remote GitHub repository.
 
 ```sh
 # commit inventory changes
@@ -18,20 +20,26 @@ git push
 
 ??? info "SSH key prompts"
 
-    Your desktop password manager might prompt you when running git commands. Using both your SSH signing key, to sign your git commits. And SSH auth key, to authenticate access with your remote repository.
+    Your desktop password manager might prompt you when running git commands.
+    Using both your SSH signing key, to sign your git commits.
+    And SSH auth key, to authenticate access with your remote repository.
 
 You should repeat these commands after making any new substantial changes to your repository. 
 
 ## Upgrade your karo-stack
 
 It is recommended to keep the `karo-stack` repo up to date.
-The following commands assume you've only made changes to files inside your `./inventory` or `./custom` directories.
+The following commands assume you've only made changes to files inside your
+`./inventory` or `./custom` directories.
 
 !!! warning
 
-    Make sure to read the karo-stack's [release notes](https://github.com/hazzuk/karo-stack/releases) first. And check for any breaking changes before upgrading.
+    Make sure to read the karo-stack's
+    [release notes](https://github.com/hazzuk/karo-stack/releases)
+    first. And check for any breaking changes before upgrading.
 
-    It's also recommended to stop any stack's you're currently running with `just compose down homeserver`.
+    It's also recommended to stop any stack's you're currently running with
+    `just compose down homeserver`.
 
 === "Latest"
 
@@ -56,6 +64,7 @@ The following commands assume you've only made changes to files inside your `./i
 
 ## Next steps
 
-Having finished installing your homeserver, you can now look to deploy Docker compose stacks using karo-custom repos.
+Having finished installing your homeserver,
+you can now look to deploy Docker compose stacks using karo-custom repos.
 
 See the [Custom](../../custom/index.md) section for more details.

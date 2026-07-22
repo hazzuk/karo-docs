@@ -12,15 +12,19 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     === "Complete ISO (3.7 GB~)"
 
-        - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/) `debian-1.0.0-amd64-DVD-1.iso`
+        - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/)
+            `debian-1.0.0-amd64-DVD-1.iso`
         
-        - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-dvd/) `debian-1.0.0-amd64-DVD-1.iso.torrent`
+        - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-dvd/)
+            `debian-1.0.0-amd64-DVD-1.iso.torrent`
         
     === "Network installer ISO (800 MB~)"
 
-        - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-cd/) `debian-1.0.0-amd64-netinst.iso`
+        - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-cd/)
+            `debian-1.0.0-amd64-netinst.iso`
 
-        - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-cd/) `debian-1.0.0-amd64-netinst.iso.torrent`
+        - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-cd/)
+            `debian-1.0.0-amd64-netinst.iso.torrent`
 
 1. Create a bootable USB drive with the Debian ISO file
 
@@ -39,7 +43,8 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
         - (Optional) Check the ISO file integrity
             - Select `File checksum`
             - Select `Calculate sha256sum`
-            - Compare the output of the checksum to the value on the [Debian website](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/SHA256SUMS)
+            - Compare the output of the checksum to the value on the
+                [Debian website](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/SHA256SUMS)
 
         - Select `Boot in normal mode`
 
@@ -55,7 +60,10 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     ??? failure "Handling 'preconfiguration could not be retrieved'"
 
-        If you receive an error after entering the preseed file URL, abort the installation and try again. This usually occurs because the URL was typed incorrectly, or the server's network configuration was misconfigured.
+        If you receive an error after entering the preseed file URL,
+        abort the installation and try again.
+        This usually occurs because the URL was typed incorrectly,
+        or the server's network configuration was misconfigured.
 
 1. Set your localisation preferences
 
@@ -75,7 +83,10 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     ??? failure "Handling 'Failed to run preseeded command'"
 
-        If you receive an error at the end of the install process, continue, then attempt the full installation again. This often occurs because the pressed file was edited incorrectly when [adding the authorised SSH key](preseed.md#normal-setup).
+        If you receive an error at the end of the install process, continue,
+        then attempt the full installation again.
+        This often occurs because the pressed file was edited incorrectly when
+        [adding the authorised SSH key](preseed.md#normal-setup).
 
     !!! success
 
@@ -117,13 +128,16 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
 1. When prompted, change your user's password (default is `changelater`)
 
-    > It's recommended you use a [short passphrase](https://xkcd.com/936/), which is memorable and easy to type out.
+    > It's recommended you use a [short passphrase](https://xkcd.com/936/),
+    which is memorable and easy to type out.
+
     > e.g. `horsebatterystaple`
 
 1. SSH again after updating your password
 
 ??? tip "Restoring a previous karo-stack setup"
 
-    If you've previously used the karo-stack, you can immediately proceed with the full remaining setup.
+    If you've previously used the karo-stack,
+    you can immediately proceed with the full remaining setup.
     
     Follow the advanced guide [Restore setup](../../advanced/restore.md).

@@ -4,18 +4,27 @@ icon: lucide/file-lock
 
 # Ansible vault
 
-Configuration of the Ansible playbook is primarily done through variables. And as these variables sometimes contain sensitive data (e.g. a Cloudflare API token), we use [Ansible vault](https://docs.ansible.com/projects/ansible/latest/cli/ansible-vault.html) to encrypt the file storing all your homeserver's configuration. Aptly named `vault.yml`.
+Configuration of the Ansible playbook is primarily done through variables.
+And as these variables sometimes contain sensitive data (e.g. a Cloudflare API token),
+we use [Ansible vault](https://docs.ansible.com/projects/ansible/latest/cli/ansible-vault.html)
+to encrypt the file storing all your homeserver's configuration.
+Aptly named `vault.yml`.
 
 ## Password setup
 
-Before creating the vault, we'll need a strong password to encrypt it with. Use the following command to generate a 96 character password, and save the output to your password manager.
+Before creating the vault, we'll need a strong password to encrypt it with.
+Use the following command to generate a 96 character password,
+and save the output to your password manager.
 
 ```sh
 # generate vault password
 openssl rand -hex 48
 ```
 
-Once you've saved the password, you'll also need to write it to a temporary file on the system. This way, Ansible can access it without prompting, when encrypting and decrypting your vault file.
+Once you've saved the password,
+you'll also need to write it to a temporary file on the system.
+This way, Ansible can access it without prompting,
+when encrypting and decrypting your vault file.
 
 The following command will open a text editor for you to set your password.
 
@@ -23,15 +32,25 @@ The following command will open a text editor for you to set your password.
 
 ??? question "Isn't writing the password to a plaintext file insecure?"
 
-    The alternative approach would be Ansible prompting for the password each time you want to edit your vault. But seeing as you often need to edit the vault multiple times a session, this quickly becomes frustrating.
+    The alternative approach would be Ansible prompting
+    for the password each time you want to edit your vault.
+    But seeing as you often need to edit the vault multiple times a session,
+    this quickly becomes frustrating.
     
-    This is why we temporarily store the password inside a file that Ansible can read directly. Which on paper is a less secure method. However, the karo-stack has three mitigations in place to help strengthen its security. First, the file you write to is shredded after every logout. Second, the text editor micro explicitly has backups disabled when handling this file. And third, the file itself is stored on a tmpfs filesystem (in system memory).
+    This is why we temporarily store the password
+    inside a file that Ansible can read directly.
+    Which on paper is a less secure method.
+    However, the karo-stack has three mitigations in place to help strengthen its security.
+    First, the file you write to is shredded after every logout.
+    Second, the text editor micro explicitly has backups disabled when handling this file.
+    And third, the file itself is stored on a tmpfs filesystem (in system memory).
 
 ??? question "What is the `just` command?"
 
     The karo-stack uses just, a tool to run project-specific commands.
 
-    For more information on using commands created for the project, see the documentation's [just usage](../../usage/just.md) page.
+    For more information on using commands created for the project,
+    see the documentation's [just usage](../../usage/just.md) page.
 
 ## Create your vault
 
@@ -101,7 +120,10 @@ karo_compose_stack_groups:
 
 ??? success "Check encrypted state"
 
-    After quitting the text editor, the new data is written to the vault file in an encrypted state. You can see this first-hand, by attempting to read the contents of your vault without Ansible.
+    After quitting the text editor,
+    the new data is written to the vault file in an encrypted state.
+    You can see this first-hand,
+    by attempting to read the contents of your vault without Ansible.
 
     ```sh
     # check vault encryption
