@@ -4,14 +4,16 @@ icon: lucide/info
 
 # Introduction
 
-At its core, the karo-stack is primarily an [Ansible playbook](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_intro.html), intended to run on a Debian Linux operating system.
-Although before Ansible is used, the project also helps to semi-automatically install Debian, using a [Debian preseed](https://wiki.debian.org/DebianInstaller/Preseed) file.
+At its core, the karo-stack is primarily an Ansible playbook, intended to run on a Debian Linux operating system.
+Although before Ansible is used, the project also helps with automating the Debian install process, by way of a Debian preseed file.
 This initial process configures recommended packages and host settings for you, quickly creating a freshly optimised environment, which is almost immediately ready for use.
 
-Git is used to store both the playbook and user's configuration in version control.
-Then running the Ansible playbook further configures the system for you.
-And importantly provisions the setup of Docker as well.
-After which, the playbook can also be used to run Docker containers, based on the user's personal configuration.
+Git is used to manage both the karo-stack and the user's own configuration in version control.
+Then Ansible is run on demand to further configure the system for you.
+Part of which, is the fully automatically setup of Docker.
+
+After setup is complete, users can then start to easily deploy custom Docker compose stacks.
+Done completely through Ansible, and based on the user's personal configuration
 
 ![](../assets/diagrams/karo-stack_architecture_v2.excalidraw.svg#only-light)
 ![](../assets/diagrams/karo-stack_architecture_v2_dark.svg#only-dark)
@@ -32,3 +34,5 @@ As it's much safer for users to download a trusted and well-maintained Debian IS
 Then apply the karo-stack's configuration via the preseed file and playbook, with code that's easily auditable.
 
 *[Ansible playbook]: Playbooks are automation blueprints written in YAML, that Ansible uses to configure your target system.
+
+*[Debian preseed]: Custom preconfiguration file, that automatically provides answers to questions asked during Debian's installation process.
