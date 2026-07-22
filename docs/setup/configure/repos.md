@@ -15,11 +15,11 @@ icon: lucide/book-copy
     Simply follow the the commands shown,
     and you should get everything configured correctly.
 
-You'll need a [GitHub.com account](https://github.com/signup)
+You'll need a [GitHub account](https://github.com/signup)
 to store your private git repository.
 
 Alternatively, you can also use any other git forge like
-[Codeberg.org](https://codeberg.org/).
+[Codeberg](https://codeberg.org/).
 Which is a non-profit, community-led effort that also provides git hosting
 (but this guide assumes you're using GitHub).
 
