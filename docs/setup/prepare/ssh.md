@@ -11,7 +11,7 @@ Its main use will be to securely connect to and authenticate with the server.
 
     You'll create an SSH key pair, which is a form of asymmetric cryptography.
     This means you have both a public and private key.
-    We add the public key to places we want to access (e.g. the server, our GitHub account).
+    You add the public key to places you want to access (e.g. the server, our GitHub account).
     Then when a request for access is made, they use the stored public key to verify a challenge.
     Which only someone with the private key could correctly respond to.
 

@@ -131,6 +131,6 @@ secrets:
     Access: (0755/drwxr-xr-x)  Uid: (166535/ UNKNOWN)   Gid: (166535/ UNKNOWN)
     ```
 
-    Sometimes we need the UID of files created by a container to match that of the host  user.
-    Setting the UID to 0 will achieve this effect.
+    Sometimes you'll need the UID of files created by a container to match that of the host user.
+    Setting the UID to be `0` will achieve this effect.
     As UID 0 is mapped to the UID of the host user running the rootless daemon.

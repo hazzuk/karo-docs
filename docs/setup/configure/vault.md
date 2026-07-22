@@ -12,7 +12,7 @@ Aptly named `vault.yml`.
 
 ## Password setup
 
-Before creating the vault, we'll need a strong password to encrypt it with.
+Before creating the vault, you'll need a strong password to encrypt it with.
 
 - Generate a 96 character password (save the output to your password manager):
 
