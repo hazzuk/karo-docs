@@ -9,13 +9,13 @@ You'll need the following before starting:
 - [ ] Homeserver hardware
 - [ ] Computer to configure the server
 - [ ] Bootable 8 GB+ USB drive
-- [ ] Registered domain name (Cloudflare is preferred, but not required)
-- [ ] GitHub account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
+- [ ] Registered domain name ([Cloudflare](https://www.cloudflare.com/products/registrar/) is preferred, but not required)
+- [ ] [GitHub](https://github.com/) account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
 - [ ] Password manager (ideally with SSH agent support, i.e. [1Password](https://developer.1password.com/docs/ssh/agent), [Bitwarden](https://bitwarden.com/help/ssh-agent/), [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how))
 
 ## Recommended knowledge
 
-It is recommended to have a rudimentary understanding of the following topics:
+Suggested (but not required) to have a basic understanding or awareness of the following topics:
 
 - [Linux command-line](../usage/linux.md)
 - DNS records
@@ -28,13 +28,13 @@ It is recommended to have a rudimentary understanding of the following topics:
 
 ## Suggested server hardware
 
-- 4 GB of RAM
-- 2 CPU cores
-- x86_64/amd64 processor
+- :lucide-memory-stick: 4 GB of RAM
+- :lucide-cpu: 2 CPU cores
+- `x86_64`/`amd64` processor
 
 ??? info "ARM CPU support"
 
-    While there is no reason an ARM64/AArch64 processor won't work, it's not an architecture that is tested with. So your mileage may vary. If you encounter any issues, please don't hesitate to raise a [GitHub issue](https://github.com/hazzuk/karo-stack/issues/new/choose).
+    While there is no reason an `ARM64`/`AArch64` processor won't work, it's not an architecture that is tested with. So your mileage may vary. If you encounter any issues, please don't hesitate to raise a [GitHub issue](https://github.com/hazzuk/karo-stack/issues/new/choose).
 
 ??? warning "Ryzen 3000 CPU's (or older)"
 
