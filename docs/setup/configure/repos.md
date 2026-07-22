@@ -33,12 +33,14 @@ You'll need to [create an empty private git repo](https://github.com/new)
 named `karo-inventory`.
 This repository will be used to store your personal configuration for the karo-stack.
 
-Storing your configuration using git brings many benefits.
-Most importantly, it makes restoring your setup after a hardware failure
-or a move to a new system much simpler.
-Additionally, you'll get the full history of any changes you commit.
-So you can always revert back to a previous version of your configuration
-if something goes wrongs.
+??? question "Why use git?"
+
+    Storing your configuration using git brings many benefits.
+    Most importantly, it makes restoring your setup after a hardware failure
+    or a move to a new system much simpler.
+    Additionally, you'll get the full history of any changes you commit.
+    So you can always revert back to a previous version of your configuration
+    if something goes wrong.
 
 ## Clone the repos
 
