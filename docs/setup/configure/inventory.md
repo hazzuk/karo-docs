@@ -24,6 +24,15 @@ inventory/
 
 For now, create the first two files.
 
+### :lucide-file-key: `key.txt`
+
+This file will store your public SSH authentication key.
+
+```sh
+# create public ssh key file
+cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
+```
+
 ### :lucide-file-box: `hosts.ini`
 
 This config is used to tell the automation tool Ansible which host to target. 
@@ -53,12 +62,3 @@ simply copy the following localhost configuration:
 !!! info "`micro` bindings"
 
     Use ++alt+g++ when using Micro to see all available keyboard shortcuts.
-
-### :lucide-file-key: `key.txt`
-
-This file will store your public SSH authentication key.
-
-```sh
-# create public ssh key file
-cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
-```
