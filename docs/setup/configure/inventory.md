@@ -22,43 +22,43 @@ inventory/
 └── key.txt # contains your public SSH authentication key
 ```
 
-For now, create the first two files.
+For now, create the first two files:
 
-### :lucide-file-key: `key.txt`
+- :lucide-file-key: `key.txt`
 
-This file will store your public SSH authentication key.
+    This file will store your public SSH authentication key.
 
-```sh
-# create public ssh key file
-cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
-```
-
-### :lucide-file-box: `hosts.ini`
-
-This config is used to tell the automation tool Ansible which host to target. 
-
-```sh
-# create ansible hosts file
-micro /srv/karo/inventory/hosts.ini
-```
-
-As we'll be running Ansible on the server itself,
-simply copy the following localhost configuration:
-
-=== "Local setup"
-
-    ```ini { title="/srv/karo/inventory/hosts.ini" }
-    [server]
-    homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
+    ```sh
+    # create public ssh key file
+    cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
     ```
 
-=== "Remote setup (advanced)"
-    
-    ```ini { title="/srv/karo/inventory/hosts.ini" }
-    [server]
-    testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
+- :lucide-file-box: `hosts.ini`
+
+    This config is used to tell the automation tool Ansible which host to target. 
+
+    ```sh
+    # create ansible hosts file
+    micro /srv/karo/inventory/hosts.ini
     ```
 
-!!! info "`micro` bindings"
+    (As your target for Ansible is the server itself,
+    simply copy the following localhost setup)
 
-    Use ++alt+g++ when using Micro to see all available keyboard shortcuts.
+    === "Local setup"
+
+        ```ini { title="/srv/karo/inventory/hosts.ini" }
+        [server]
+        homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
+        ```
+
+    === "Remote setup (advanced)"
+        
+        ```ini { title="/srv/karo/inventory/hosts.ini" }
+        [server]
+        testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
+        ```
+
+    !!! info "`micro` bindings"
+
+        Use ++alt+g++ when using Micro to see all available keyboard shortcuts.
