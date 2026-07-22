@@ -40,16 +40,6 @@ Additionally, you'll get the full history of any changes you commit.
 So you can always revert back to a previous version of your configuration
 if something goes wrongs.
 
-??? tip "Disable GitHub features"
-
-    For repositories on GitHub, you can safely disable the following unwanted features:
-
-    1. Go to the repo's '⚙️ Settings' tab
-        - Under 'Features', disable `Issues` and `Projects`
-    1. Go to the repo's '<> Code' tab
-        - To the right of 'About', click the :lucide-cog: cog icon
-        - Disable `Releases`, `Packages` and `Deployments`
-
 ## Clone the repos
 
 Connected to your server via SSH,
