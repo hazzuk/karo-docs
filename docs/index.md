@@ -18,8 +18,8 @@ title: Home
 The karo-stack aims to provide a middle ground for managing a self-hosted setup.
 Somewhere between manually installing Docker on a bare bones server.
 And using an all-encompassing, abstracted solution like Proxmox or Unraid.
-The first often becomes problematic when maintaining everything long-term.
-Whereas the second is likely overkill for the needs of most users.
+Manual methods often become problematic when maintaining things long-term.
+Whereas the alternative is likely overkill for the needs of most users.
 
 This is why the karo-stack exists, built to a philosophy of six intrinsic principals:
 
@@ -47,12 +47,13 @@ This is why the karo-stack exists, built to a philosophy of six intrinsic princi
     with idempotent behaviour.
     And self-hosted Docker stacks run securely as a rootless user.
 
-## Quick start
+## Setup overview
 
 1. Install Debian with a preseed file
 1. Setup the karo-stack git repo
 1. Run the Ansible playbook
-1. Start your Docker stacks
+1. Add custom provided Docker stacks
+1. Start your configured services
 
 Read the [requirements page](setup/requirements.md).
 
