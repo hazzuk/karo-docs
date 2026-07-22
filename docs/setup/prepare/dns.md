@@ -24,16 +24,16 @@ as the domain's authoritative DNS provider.
     Then in your router, reserve an unused IPv4 address (e.g. `192.168.0.142`)
     for the server's MAC address.
 
-You should set the following public DNS record for your domain:
+- Set the following public DNS record for your domain:
 
-| Type | Name | Target                | Comment                |
-| ---- | ---- | --------------------- | ---------------------- |
-| A    | `*`  | `<server local ipv4>` | server - local traffic |
+    | Type | Name | Target                | Comment                |
+    | ---- | ---- | --------------------- | ---------------------- |
+    | A    | `*`  | `<server local ipv4>` | server - local traffic |
 
-!!! tip "Other DNS values"
+    !!! tip "Other DNS values"
 
-    - The Cloudflare proxy status should always be set to `DNS only`.
-    - The TTL should always be left as `Auto`.
+        - The Cloudflare proxy status should always be set to `DNS only`.
+        - The TTL should always be left as `Auto`.
 
 ??? info "External access"
 
