@@ -15,7 +15,7 @@ These roles are mostly run together, currently grouped under two
 [main tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml).
 One manages Docker stacks, the other manages the remaining system setup.
 
-- Run the playbook's main system configuration roles
+- Run the playbook's main system configuration roles:
 
     ```sh
     # run ansible system roles
