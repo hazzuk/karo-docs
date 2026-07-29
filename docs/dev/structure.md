@@ -69,7 +69,7 @@ karo-custom/
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
-=== "Stack group directories"
+=== "Stack group"
 
     ```toml { title="Stack group directories" hl_lines="4 8" .no-copy }
     --8<-- "snippets.md:custom_compose_filetree"
@@ -81,7 +81,7 @@ karo-custom/
 
         Do **not** use the words `stack(s)`, `compose`, `karo`, or `custom` as the scope name.
 
-=== "Defaults files"
+=== "Defaults"
 
     ```toml { title="Stack group defaults files" hl_lines="5-6" .no-copy }
     --8<-- "snippets.md:custom_compose_filetree"
