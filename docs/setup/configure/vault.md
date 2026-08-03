@@ -14,7 +14,7 @@ Aptly named `vault.yml`.
 
 Before creating the vault, you'll need a strong password to encrypt it with.
 
-- Generate a 96 character password (save the output to your password manager):
+- Generate a 96 character vault password (save the output to your password manager):
 
     ```sh
     # generate vault password
@@ -26,7 +26,7 @@ you will also need to write it to a temporary file on the system.
 This way, Ansible can access it without prompting,
 when encrypting and decrypting your vault file.
 
-- Set your password on the system (this command will open a text editor):
+- Apply your new vault password (this command will open a text editor):
 
     --8<-- "snippets.md:just_password"
 
