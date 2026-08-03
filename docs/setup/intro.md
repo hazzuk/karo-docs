@@ -11,7 +11,7 @@ by way of a Debian preseed file.
 This initial process configures recommended packages and host settings for you,
 quickly creating a freshly optimised environment, which is almost immediately ready for use.
 
-Git is used to manage both the karo-stack and the user's own configuration in version control.
+Git is used to manage both the karo-stack and the user's own configuration with version control.
 Then Ansible is run on demand to further configure the system for you.
 Part of which, is the fully automatically setup of Docker.
 
