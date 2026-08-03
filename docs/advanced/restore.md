@@ -18,13 +18,15 @@ You can use this guide to quickly restore your previous setup.
 
 With Debian installed, follow these commands to quickly restore your setup:
 
+--8<-- "snippets.md:copying_commands"
+
 --8<-- "snippets.md:pipx_install"
 
 --8<-- "snippets.md:git_clone"
 
 --8<-- "snippets.md:just_password"
 
-!!! warning
+!!! info "New updates"
 
     If some time has passed since last running your setup. Then please consult the project's [release notes](https://github.com/hazzuk/karo-stack/releases), and ensure there are no new breaking changes.
 

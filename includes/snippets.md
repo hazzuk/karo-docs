@@ -36,6 +36,16 @@ just password
 
 <!-- admonitions -->
 
+--8<-- [start:copying_commands]
+!!! warning "Copying commands"
+
+    You can copy and paste commands as shown (including comments).
+    Always read the commands you enter.
+    And where required, change any placeholder values shown in angle brackets (e.g. `<username>`).
+
+    Do **not** edit shell parameter expansions (e.g. `#!sh echo ${GIT_USERNAME}`), these are substituted for you.
+--8<-- [end:copying_commands]
+
 --8<-- [start:terminal_paste]
 !!! tip "Terminal paste"
 
