@@ -11,6 +11,8 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
 ## Secrets lifecycle
 
+### Variable to secrets file
+
 1. For users, there no discernable difference between declaring a secret versus declaring a normal value.
     Both are variables declared inside their encrypted Ansible vault.
 
@@ -33,6 +35,8 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     Which is named after the secret, and contains the value originally defined by the user.
 
     > (e.g. `/run/user/1001/karo/compose/foobar_api_token`)
+
+### Docker compose stack
 
 1. The stack is now created, and the top-level secrets definition inside the compose file defines a new Docker secret.
     Its value is set based on the contents of the temporary secrets file created a few moments ago on the host's filesystem.
