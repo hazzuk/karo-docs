@@ -13,10 +13,12 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
 ### Variable to secrets file
 
-1. For users, there no discernable difference between declaring a secret versus declaring a normal value.
+1. For users, there no difference between declaring a sensitive value versus declaring a normal one.
     Both are variables declared inside their encrypted Ansible vault.
 
-    ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="5" .no-copy }
+    ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="7" .no-copy }
+    example_group_foobar_enabled: true
+    
     example_group_foobar_stack:
       foobar:
         domain: "foobar.{{ karo_compose_root_domain }}"
@@ -24,17 +26,21 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         api_token: "xP5SDH57+zn4hR804VFN#p=="
     ```
 
-1. However internally, the stack group explicitly maps the variable declared by the user to a secrets dictionary.
+1. Internally however, if a stack group decides to handle a variable as a Docker secret.
+    It can explicitly define one or more secrets templates.
+    Each template will normally use an individual variable declared by the user,
+    which later gets replaced with the real value.
 
-    ```yaml+jinja { title="karo-compose/defaults/main/example_group/main.yml" hl_lines="4" .no-copy }
-    example_group_foobar_secrets:
-      foobar_api_token: "{{ example_group_foobar_stack.foobar.api_token }}"
+    ```yaml+jinja { title="karo-compose/templates/example_group/foobar/secrets/foobar_api_token.j2" .no-copy }
+    {{ compose.foobar.api_token }}
     ```
 
-1. When `just compose up` is run, Ansible creates a temporary file on the server.
-    Which is named after the secret, and contains the value originally defined by the user.
+1. When `just compose up` is run, the Ansible playbook renders each secrets template.
+    These new files only exists temporarily, stored in a tmpfs filesystem (in system memory).
 
-    > (e.g. `/run/user/1001/karo/compose/foobar_api_token`)
+    ```yaml+jinja { title="/run/user/1001/karo-compose/example_group/foobar/foobar_api_token" .no-copy }
+    xP5SDH57+zn4hR804VFN#p==
+    ```
 
 ### Docker compose stack
 
