@@ -70,5 +70,5 @@ foobar:
 
 secrets:
   foobar_api_token:
-    file: /run/user/1001/karo/compose/foobar_api_token
+    file: {{ karo_compose_secrets_path }}/foobar_api_token
 --8<-- [end:compose_secrets_example]

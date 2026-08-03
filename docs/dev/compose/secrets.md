@@ -41,6 +41,11 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     --8<-- "snippets.md:compose_secrets_example"
     ```
 
+    !!! info "Secrets file path"
+
+        The path to the templated secrets file is defined per stack.
+        And the variable `karo_compose_secrets_path` is updated dynamically for use in the compose template.
+
 1. Having defined a Docker secret, the service must explicitly inherit it.
     Adding the secret to the service means Docker will create a similar secrets file inside the container (similar to a bind mount).
     These secrets files are found at `/run/secrets` inside the container's filesystem.
