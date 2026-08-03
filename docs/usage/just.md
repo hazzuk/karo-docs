@@ -4,7 +4,7 @@ icon: lucide/file-terminal
 
 # just
 
-The karo-stack uses [just](https://github.com/casey/just), a tool to run project-specific commands.
+The karo-stack uses [just](https://just.systems/man/en/), a tool to run project-specific commands.
 Each just command is called a recipe, these recipes help simplify common commands you'll need to run when using the project.
 
 ??? info "Commands vs just recipes"
@@ -18,7 +18,8 @@ Each just command is called a recipe, these recipes help simplify common command
     - `just install homeserver` (This recipe runs the command shown above, and additional logic)
 
 Recipes can be invoked from any subdirectory.
-And you can use `just` or `just help` to see a full list of available recipes.
+They run irrespective of your current working directory.
+And you can use `just help` to see a full list of available recipes.
 
 ## System setup
 
