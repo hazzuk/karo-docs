@@ -64,17 +64,3 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     ```yaml+jinja { roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" .no-copy }
     --8<-- "snippets.md:compose_secrets_example"
     ```
-
-!!! abstract "Summary of a secrets lifecycle"
-
-    1. User variable (stored inside an encrypted Ansible vault)
-
-    1. Internal variable (mapping the user defined secret)
-
-    1. Host secret file (created for temporary use in the `up.yml` Ansible task)
-
-    1. Docker secret (defined by the Docker compose file)
-
-    1. Container secret file (found inside the container at `/run/secrets`)
-
-    1. Service environment variable (uses the value inside the container's secret file)
