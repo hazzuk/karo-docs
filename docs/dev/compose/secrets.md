@@ -38,19 +38,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     Its value is set based on the contents of the temporary secrets file created a few moments ago on the host's filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" .no-copy }
-    name: foobar
-    services:
-
-    foobar:
-      container_name: foobar
-      environment:
-        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
-      secrets:
-        - foobar_api_token
-
-    secrets:
-      foobar_api_token:
-        file: /run/user/1001/karo/compose/foobar_api_token
+    --8<-- "snippets.md:compose_secrets_example"
     ```
 
 1. Having defined a Docker secret, the service must explicitly inherit it.
@@ -58,19 +46,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     These secrets files are found at `/run/secrets` inside the container's filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" .no-copy }
-    name: foobar
-    services:
-
-    foobar:
-      container_name: foobar
-      environment:
-        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
-      secrets:
-        - foobar_api_token
-
-    secrets:
-      foobar_api_token:
-        file: /run/user/1001/karo/compose/foobar_api_token
+    --8<-- "snippets.md:compose_secrets_example"
     ```
 
 1. The secret can finally be used by the service.
@@ -81,19 +57,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         The service must support setting an environment variable or config value to the contents of a file.
 
     ```yaml+jinja { roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" .no-copy }
-    name: foobar
-    services:
-
-    foobar:
-      container_name: foobar
-      environment:
-        - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
-      secrets:
-        - foobar_api_token
-
-    secrets:
-      foobar_api_token:
-        file: /run/user/1001/karo/compose/foobar_api_token
+    --8<-- "snippets.md:compose_secrets_example"
     ```
 
 !!! abstract "Summary of a secrets lifecycle"
