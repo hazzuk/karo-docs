@@ -141,28 +141,28 @@ just vault proxyserver
 
 ---
 
-# ansible
+# [ansible]
 
 ansible_become_password: "" # karo user root password
 
-# karo-git
+# [karo-git]
 
 karo_git_user_email: git@example.com # github email
 karo_git_user_name: username # github username
 karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
 
-# karo-nftables
+# [karo-nftables]
 
 # ports 80 (tcp) and 443 (tcp/udp) are already accepted
 # karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
 # karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
 
-# karo-ssh
+# [karo-ssh]
 
 # this port will be accepted in nftables
 karo_ssh_port: 4444
 
-# karo-compose
+# [karo-compose]
 
 karo_compose_root_domain: example.com # registered domain name
 
@@ -176,6 +176,7 @@ karo_compose_stack_groups:
   - hazzuk_media
 
 # stacks
+# ---
 ```
 
 ### Ansible playbook
