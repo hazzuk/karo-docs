@@ -2,7 +2,7 @@
 icon: lucide/folder-tree
 ---
 
-# Repo structure
+# Custom repo structure
 
 karo-custom repositories are meant to extend the karo-stack beyond what users can configure solely using their vault.
 And to also provide a way for users to easily share new capabilities. 

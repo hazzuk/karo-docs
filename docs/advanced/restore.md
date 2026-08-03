@@ -2,7 +2,7 @@
 icon: lucide/archive-restore
 ---
 
-# Restore setup
+# Restore setup configuration
 
 If you've previously... 
 
