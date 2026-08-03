@@ -33,8 +33,12 @@ Once you've created your account, you'll need to add your public SSH keys.
 Next you'll need to create your inventory repo.
 This repository will be used to store your personal configuration for the karo-stack.
 
-- [Create an empty private git repo](https://github.com/new)
+- [Create a new private git repo](https://github.com/new)
 named `karo-inventory`
+
+    - Visibility: Private
+    - Readme: (Optional)
+    - And no .gitignore, and no license
 
 ??? question "Why use git?"
 
