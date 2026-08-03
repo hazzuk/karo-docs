@@ -12,7 +12,7 @@ pipx install --include-deps ansible rust-just
 --8<-- [start:git_clone]
 ```sh
 # set github username variable
-GIT_USERNAME=username
+GIT_USERNAME=<username>
 ```
 
 ```sh
