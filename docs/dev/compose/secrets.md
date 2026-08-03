@@ -5,7 +5,7 @@ icon: lucide/square-asterisk
 # Handling secrets
 
 Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, passwords, etc).
-This data should not be stored in plain text inside a Docker compose file.
+This data should not be stored inside a Docker compose file, in plain text.
 Instead, the data should be passed into a container during its creation.
 This is done by using [Docker secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
@@ -44,8 +44,11 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
 ### Docker compose stack
 
-1. The stack is now created, and the top-level secrets definition inside the compose file defines a new Docker secret.
-    Its value is set based on the contents of the temporary secrets file created a few moments ago on the host's filesystem.
+1. The compose template is also rendered.
+    The [top-level secrets definition](https://docs.docker.com/reference/compose-file/secrets/#:~:text=The%20top%2Dlevel%20secrets%20declaration)
+    inside the compose file defines a new Docker secret.
+    Its value is set based on the contents of the templated secrets file,
+    rendered a few moments ago on the host filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" .no-copy }
     --8<-- "snippets.md:compose_secrets_example"
@@ -57,7 +60,8 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         And the variable `karo_compose_secrets_path` is updated dynamically for use in the compose template.
 
 1. Having defined a Docker secret, the service must explicitly inherit it.
-    Adding the secret to the service means Docker will create a similar secrets file inside the container (similar to a bind mount).
+    Adding the Docker secret to the service means Docker will create the secrets file inside the container
+    (this similar to a bind mount).
     These secrets files are found at `/run/secrets` inside the container's filesystem.
 
     ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" .no-copy }
@@ -65,11 +69,12 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     ```
 
 1. The secret can finally be used by the service.
-    This is normally done with an environment variable, pointing to the path of the secrets file created inside the container.
+    This is normally done with an environment variable,
+    pointing to the path of the secrets file created inside the container.
 
     !!! warning "Service support for Docker secrets"
 
-        The service must support setting an environment variable or config value to the contents of a file.
+        The service used must support setting an environment variable or config value to the contents of a file.
 
     ```yaml+jinja { roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" .no-copy }
     --8<-- "snippets.md:compose_secrets_example"
