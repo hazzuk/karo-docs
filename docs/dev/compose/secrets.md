@@ -32,7 +32,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     which later gets replaced with the real value.
 
     ```yaml+jinja { title="karo-compose/templates/example_group/foobar/secrets/foobar_api_token.j2" .no-copy }
-    {{ compose.foobar.api_token }}
+    {{ stack_vars.foobar.api_token }}
     ```
 
 1. When `just compose up` is run, the Ansible playbook renders each secrets template.

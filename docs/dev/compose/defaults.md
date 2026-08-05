@@ -58,12 +58,12 @@ Instead, one will take
 As such, the dictionary variable defined for a stack in the defaults file **must** be appended with the phrase `_defaults`.
 This allows for a dictionary defined by the user, and the dictionary in the defaults file to be combined by the Ansible playbook.
 
-The resulting variable of the combined dictionaries is named `compose`.
+The resulting variable of the combined dictionaries is named `stack_vars`.
 
 !!! example
 
     Simplified depiction of how this works inside the playbook:
 
     ```py { .no-copy }
-    compose = example_group_foobar_stack_defaults | combine(example_group_foobar_stack)
+    stack_vars = example_group_foobar_stack_defaults | combine(example_group_foobar_stack)
     ```

@@ -37,7 +37,7 @@ name: foobar
 services:
 
   foobar:
-    image: {{ compose.foobar.image }}:{{ compose.foobar.version }}
+    image: {{ stack_vars.foobar.image }}:{{ stack_vars.foobar.version }}
     container_name: foobar
     restart: {{ karo_compose_restart_policy }}
     # security
@@ -64,16 +64,16 @@ services:
         target: /app/data
     labels:
       - traefik.enable=true
-      - traefik.http.routers.foobar.rule=Host(`{{ compose.foobar.domain }}`)
+      - traefik.http.routers.foobar.rule=Host(`{{ stack_vars.foobar.domain }}`)
       - traefik.http.services.foobar.loadbalancer.server.port=1234
-{% if compose.foobar.forward_auth_enabled %}
+{% if stack_vars.foobar.forward_auth_enabled %}
       # forward auth
       - traefik.http.routers.foobar.middlewares=tinyauth
-      - tinyauth.apps.foobar.config.domain={{ compose.foobar.domain }}
+      - tinyauth.apps.foobar.config.domain={{ stack_vars.foobar.domain }}
       - tinyauth.apps.foobar.oauth.groups={{ karo_compose_oidc_admin_group }}
 {% endif %}
     environment:
-      - LOG_LEVEL={{ compose.foobar.log_level }}
+      - LOG_LEVEL={{ stack_vars.foobar.log_level }}
       - TZ={{ karo_compose_timezone }}
       - FOOBAR_API_TOKEN_FILE=/run/secrets/foobar_api_token
     secrets:
