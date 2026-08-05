@@ -21,6 +21,13 @@ The Debian installer will automatically insert your public key
 into the server's SSH `authorized_keys` file.
 Making first time authentication over SSH straightforward.
 
+??? info "Automatic partitioning"
+
+    The preseed file will automatically format the storage device you select.
+    Creating a partition which spans the entire drive.
+    If you want a more specific setup,
+    you can remove the 'partitioning' section from the preseed file.
+
 === "Normal setup"
 
     1. Download the
