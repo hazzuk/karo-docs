@@ -102,7 +102,9 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
 1. Connect to the server using SSH
 
-    > e.g. `ssh -A karo@homeserver.example.com` or `ssh -A karo@192.168.0.142`
+    > e.g. `ssh -A karo@homeserver.example.com`
+    
+    > Your domain `homeserver.example.com`, should resolve to your server's local IPv4 address.
 
     ??? failure "Handling 'Could not resolve hostname'"
 
@@ -121,6 +123,8 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
         - Check you've correctly configured the domain's [DNS records](../prepare/dns.md)
 
         - Try connecting directly using the server's IPv4 address
+
+            > e.g. `ssh -A karo@192.168.0.142`
 
     !!! info "Authentication forwarding"
 
