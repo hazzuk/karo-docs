@@ -64,7 +64,6 @@ Instead, one will take
 
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));" markdown>
 
-
     ```yaml { title="Defaults dict" .no-copy }
     test:
       stuff:
@@ -93,7 +92,6 @@ Instead, one will take
     The preference is for the inventory dictionary to take precedence.
 
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));" markdown>
-
 
     ```yaml { title="Defaults dict" .no-copy }
     test_defaults:
@@ -131,4 +129,3 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
     ```
 
     The defaults dictionary is combined with the user's dictionary (the latter takes precedence).
-

@@ -56,7 +56,6 @@ when encrypting and decrypting your vault file.
 
 With the password set, you can now create an Ansible vault file encrypted by your password.
 
-
 - Create and edit your vault:
 
     ```sh
