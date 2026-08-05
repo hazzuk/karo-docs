@@ -78,14 +78,16 @@ karo-custom/
 
     !!! info "Stack group naming"
 
-        Stack groups must follow a strict naming convention, `<username>_<scope>`.
+        - There must always be at least one stack group.
 
-        Do **not** use the following words as the scope name:
+        - Stack groups must follow a strict naming convention `<username>_<scope>`.
 
-        - [Ansible role names](https://github.com/hazzuk/karo-stack/tree/main/roles) (e.g. `compose` or `system`)
-        - `stack` or `stacks`
-        - `custom`
-        - `karo`
+        - Do **not** use any of the following words for the scope name:
+
+            - [Ansible role names](https://github.com/hazzuk/karo-stack/tree/main/roles) (e.g. `compose` or `system`)
+            - `stack` or `stacks`
+            - `custom`
+            - `karo`
 
 === "Defaults"
 
