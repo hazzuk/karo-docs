@@ -12,6 +12,12 @@ If you've previously...
 
 You can use this guide to quickly restore your previous setup.
 
+Note that this guide only aims to restore your karo-stack configuration.
+It does not restore Docker volumes, personal data,
+or any previous system changes you might have made.
+
+## Restore steps
+
 !!! info "Installing Debian"
 
     You should still follow the normal guide first, from [Requirements](../setup/requirements.md) to Installation.
