@@ -21,10 +21,11 @@ And the files are used dynamically when running relevant commands.
 ```toml { title="karo-custom example" .no-copy }
 karo-custom/
 ├── karo-compose/ # ansible role to extend
-│   ├── defaults/main/
-│   │   └── hazzuk_media/
-│   │       ├── main.yml # internal variables
-│   │       └── jellyfin.yml # default variables
+│   ├── defaults/
+│   │   └── main/
+│   │       └── hazzuk_media/
+│   │           ├── main.yml # internal variables
+│   │           └── jellyfin.yml # default variables
 │   └── templates/
 │       └── hazzuk_media/
 │           └── jellyfin/
