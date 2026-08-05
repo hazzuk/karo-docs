@@ -15,6 +15,8 @@ These roles are mostly run together, currently grouped under two
 [main tasks](https://github.com/hazzuk/karo-stack/blob/main/run.yml).
 One manages Docker stacks, the other manages the remaining system setup.
 
+## System roles
+
 - Run the playbook's main system configuration roles:
 
     ```sh
@@ -45,9 +47,11 @@ and install rootless Docker for `dockeruser`.
     Ansible checks that each part of the system already matches its desired state.
     And skips anything that doesn't need changing.
 
-## Next steps
+## Compose role
 
-Having finished installing your homeserver,
-you can now look to deploy Docker compose stacks using karo-custom repos.
+Having finished installing your new system, and configuring your initial karo-stack setup.
+You can now look to deploy Docker compose stacks.
+
+Management of official, personal or third-party stacks is done through using karo-custom repos.
 
 See the [Custom](../../custom/index.md) section for more details.
