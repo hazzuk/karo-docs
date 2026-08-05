@@ -31,7 +31,7 @@ Because of this, you'll need to setup the official `karo-custom` repo.
     just compose down homeserver
     ```
 
-1. [Upgrade the karo-stack](../setup/implement/git.md#upgrade-your-karo-stack)
+1. [Upgrade the karo-stack](git.md#upgrade-your-karo-stack)
 
 1. [Add the official karo-custom repo](https://hazzuk.github.io/karo-custom/)
 

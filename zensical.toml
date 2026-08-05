@@ -33,7 +33,6 @@ nav = [
         ] },
         { "Implementation" = [
             "setup/implement/ansible.md",
-            "setup/implement/git.md",
         ] },
     ] },
     { "Custom" = [
@@ -45,6 +44,7 @@ nav = [
     { "Usage" = [
         "usage/just.md",
         "usage/linux.md",
+        "usage/git.md",
         "usage/updates.md",
     ] },
     { "Advanced" = [
