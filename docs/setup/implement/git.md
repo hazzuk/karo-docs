@@ -61,10 +61,3 @@ The following commands assume you've only made changes to files inside your
     git fetch origin tag ${KAROSTACK_VERSION}
     git checkout ${KAROSTACK_VERSION}
     ```
-
-## Next steps
-
-Having finished installing your homeserver,
-you can now look to deploy Docker compose stacks using karo-custom repos.
-
-See the [Custom](../../custom/index.md) section for more details.

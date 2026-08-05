@@ -44,3 +44,10 @@ and install rootless Docker for `dockeruser`.
     As you'll see, rather than repeating every action again.
     Ansible checks that each part of the system already matches its desired state.
     And skips anything that doesn't need changing.
+
+## Next steps
+
+Having finished installing your homeserver,
+you can now look to deploy Docker compose stacks using karo-custom repos.
+
+See the [Custom](../../custom/index.md) section for more details.
