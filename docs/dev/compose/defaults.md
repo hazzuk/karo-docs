@@ -30,9 +30,11 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
 
 - `foobar.yml` Stack variables, for users to override.
 
-    !!! info
+    !!! info "Stack variables"
 
         All variables created for a stack need to be added to the stack's defaults file.
+
+        Common variables include `image`, `version`, `domain` and `log_level`.
 
     ```yaml+jinja { title="karo-compose/defaults/main/example_group/foobar.yml" .no-copy }
     example_group_foobar_enabled: false
