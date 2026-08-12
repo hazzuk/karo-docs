@@ -46,7 +46,8 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
         domain: "foobar.{{ karo_compose_root_domain }}"
         log_level: info # debug, info, warn, error
         forward_auth_enabled: false
-        api_token: ""
+        secrets:
+          api_token: ""
     ```
 
 ## Variable precedence
