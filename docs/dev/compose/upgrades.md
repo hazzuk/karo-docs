@@ -24,7 +24,7 @@ The container's version is controlled by the Docker image URI value:
     ```yaml+jinja { title="compose.yml.j2" .no-copy }
     services:
       foobar:
-        image: {{ karo_compose_foobar_image }}:{{ karo_compose_foobar_version }}
+        image: {{ stack_vars.foobar.image }}:{{ stack_vars.foobar.version }}
     ```
 
 === "Result"
