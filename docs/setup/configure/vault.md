@@ -113,7 +113,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
     # docker will start stack groups in this order
     # docker will stop stack groups in reverse order
     # karo_compose_stack_groups:
-    # - example_group
+    #   - example_group
 
     # stacks
     # ---

@@ -27,11 +27,11 @@ Or create your own.
 
         ```yaml { .no-copy hl_lines="4-5" }
         karo_compose_stack_groups:
-        - hazzuk_core
-        - hazzuk_extra
-        - example_tools
-        - example_dev
-        - hazzuk_media
+          - hazzuk_core
+          - hazzuk_extra
+          - example_tools
+          - example_dev
+          - hazzuk_media
         ```
 
     - Add the desired stack variables
@@ -43,8 +43,8 @@ Or create your own.
 
         example_tools_foobar_stack:
         foobar:
-            domain: "foobar.{{ karo_compose_root_domain }}"
-            forward_auth_enabled: true
+          domain: "foobar.{{ karo_compose_root_domain }}"
+          forward_auth_enabled: true
         ```
 
 1. Deploy your newly configured stack(s) (e.g. `just compose up homeserver`)
