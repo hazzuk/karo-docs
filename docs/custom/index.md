@@ -10,7 +10,7 @@ Its only current use is for adding Docker compose stacks.
 
 ## Add karo-custom repos
 
-- Add the custom repo (e.g. `just custom add hazzuk`)
+- Get the custom repo (e.g. `just custom get hazzuk`)
 - Add documented variables to your Ansible vault (e.g. `just vault homeserver`)
 
 !!! note "Official karo-custom repo"

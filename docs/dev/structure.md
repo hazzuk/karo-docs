@@ -46,7 +46,7 @@ karo-custom/
 
 1. [Create a new public GitHub repo](https://github.com/new) named `karo-custom`.
 
-1. Either clone your new repo using git, or run `just custom add <GITHUB USERNAME>`.
+1. Either clone your new repo using git, or run `just custom get <GITHUB USERNAME>`.
 
 ### Repo location
 

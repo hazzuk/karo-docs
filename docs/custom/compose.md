@@ -19,7 +19,7 @@ Or create your own.
 
 ## Deploying stacks
 
-1. Add the relevant karo-custom repo (e.g. `just custom add example`)
+1. Get the relevant karo-custom repo (e.g. `just custom get example`)
 
 1. Edit your Ansible vault (e.g. `just vault homeserver`)
 

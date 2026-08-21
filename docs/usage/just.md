@@ -97,13 +97,13 @@ Create or edit a temporary Ansible vault password file.
 
 ### :lucide-bolt: `custom`
 
-Manage karo-custom repositories.
+Get or remove karo-custom repositories.
 
 !!! example "Recipe example"
 
     ```sh { .no-copy }
-    # add karo-custom repo from github
-    just custom add hazzuk
+    # get karo-custom repo from github
+    just custom get hazzuk
     ```
 
     ```sh { .no-copy }
