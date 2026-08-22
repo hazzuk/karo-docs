@@ -27,7 +27,7 @@ Also see the Docker compose reference guides for
 and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
 ```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
-# SPDX-FileCopyrightText: <year> <file author>
+# SPDX-FileCopyrightText: © <year> <author>
 #
 # SPDX-License-Identifier: <license>
 
