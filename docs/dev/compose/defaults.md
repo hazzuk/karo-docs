@@ -52,6 +52,16 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
 
 ## Variable precedence
 
+Stack dictionary variables are declared twice:
+
+- In the defaults file, with a `_defaults` suffix (e.g. `example_group_foobar_stack_defaults`)
+- In the inventory's Ansible vault file (e.g. `example_group_foobar_stack`)
+
+Ansible merges these together, so that user values override default values.
+The resulting variable of the combined dictionaries is named `stack_vars`.
+
+### Extended explanation
+
 Unlike simple variables (e.g. `name: value`),
 [dictionary variables](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html#dictionary-variables)
 aren't combined when two of the same name exist between the defaults file and user's inventory.
