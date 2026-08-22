@@ -16,7 +16,7 @@ And to also provide a way for users to easily share new capabilities.
     if you'd like to suggest other ways karo-custom repos could be utilised.
 
 The contents of each karo-custom repo is symbolically linked to the inside of the karo-stack's Ansible playbook.
-And the files are used dynamically when running relevant commands.
+Allowing for files to be used natively when running relevant commands.
 
 ```toml { title="karo-custom example" .no-copy }
 karo-custom/
@@ -46,7 +46,9 @@ karo-custom/
 
 1. [Create a new public GitHub repo](https://github.com/new) named `karo-custom`.
 
-1. Either clone your new repo using git, or run `just custom get <GITHUB USERNAME>`.
+1. Clone your new repo:
+    - To your PC, cloning it manually using git
+    - And/or to your karo-stack setup `just custom get <GITHUB USERNAME>`
 
 ### Repo location
 
