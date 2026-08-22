@@ -132,13 +132,3 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
     This allows for a dictionary defined by the user, and the dictionary in the defaults file to be combined by the Ansible playbook.
 
     The resulting variable of the combined dictionaries is named `stack_vars`.
-
-    !!! example
-
-        Simplified depiction of how this is done inside the playbook:
-
-        ```py { .no-copy }
-        stack_vars = example_group_foobar_stack_defaults | combine(example_group_foobar_stack)
-        ```
-
-        The defaults dictionary is combined with the user's dictionary (the latter takes precedence).
