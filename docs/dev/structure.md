@@ -7,7 +7,7 @@ icon: lucide/folder-tree
 karo-custom repositories are meant to extend the karo-stack beyond what users can configure solely using their vault.
 And to also provide a way for users to easily share new capabilities. 
 
-!!! info
+!!! info "Custom capabilities"
 
     Currently, karo-custom repos only support extending the karo-compose role with custom stacks.
 
@@ -36,7 +36,7 @@ karo-custom/
 
 ## Creating your karo-custom repo
 
-!!! danger
+!!! danger "File structure"
 
     karo-custom repos must follow a very specific naming scheme and file structure.
 
@@ -56,7 +56,7 @@ karo-custom/
 
 - Repos use the author's username as their directory name
 
-## karo-compose layout
+## Example layout
 
 === "Ansible role"
 
