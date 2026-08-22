@@ -42,6 +42,12 @@ karo-custom/
 
     You can use [the official repo](https://github.com/hazzuk/karo-custom) as an example.
 
+!!! tip "karo-cli"
+
+    To help you quickly generate the required structure,
+    and lint your custom repo.
+    You can use the [karo-cli](https://github.com/hazzuk/karo-cli) tool.
+
 ### Repo creation
 
 1. [Create a new public GitHub repo](https://github.com/new) named `karo-custom`.
