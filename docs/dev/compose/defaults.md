@@ -5,21 +5,23 @@ icon: lucide/variable
 # Compose defaults
 
 Compose files for the karo-stack are created as
-[Ansible templates](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_templating.html),
-these are processed by the Jinja templating language.
-Templates are helpful as they can utilise variables, which get replaced with their values when the template is deployed.
+[Ansible templates](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_templating.html).
+Templates are helpful as they can utilise variables,
+which get replaced with their values when the template is deployed.
+This removes the need for users to modify any compose file directly.
+Instead, users simply define variables inside their vault,
+which later become a part of the rendered template.
 
-This removes the need for users to modify compose files.
-Instead, users simply define variables inside their vault, which later get passed into the template.
-
-However, users aren't expected to define every possible variable, and they also need to know the variable names to use.
-Hence, a defaults file, which contains all available variables, with default values to be overridden when needed.
+However, users aren't expected to define every possible variable,
+and they also need to know the variable names to use.
+Hence a defaults file, which contains all available variables,
+with default values to be overridden where needed.
 
 ## Defaults files
 
 To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create two defaults files.
 
-- `main.yml` Internal variables, primarily the deployment order for stacks.
+- `main.yml` (internal variables, primarily for the deployment order of stacks)
 
     ```yaml+jinja { title="karo-compose/defaults/main/example_group/main.yml" .no-copy }
     # docker will start stacks in this order
@@ -28,7 +30,7 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
       - foobar
     ```
 
-- `foobar.yml` Stack variables, for users to override.
+- `foobar.yml` (stack variables, for users to override)
 
     !!! info "Stack variables"
 
