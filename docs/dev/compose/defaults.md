@@ -66,9 +66,10 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
     [dictionary variables](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html#dictionary-variables)
     aren't combined when two of the same name exist between the defaults file and user's inventory.
     Instead, one will take
-    [precedence](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
+    [precedence](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable),
+    replacing the other.
 
-    === "Two dictionaries, same name"
+    === "Two dictionaries (same name)"
 
         When there are two dictionaries defined with the same name
         (e.g. one in a defaults file, another by the user),
@@ -98,11 +99,11 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
 
         </div>
 
-    === "Two dictionaries, different names, manually combined"
+    === "Two dictionaries (different names, manually combined)"
 
         Uniquely named dictionaries ensures neither is overwritten.
-        Both can be manually combined to create a new merged dictionary.
-        The preference is for the inventory dictionary to take precedence.
+        Both can then be manually merged to create a new combined dictionary.
+        Here, the preference is for the inventory dictionary to take precedence.
 
         <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));" markdown>
 
@@ -128,7 +129,13 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
 
         </div>
 
-    As such, the dictionary variable defined for a stack in the defaults file **must** be appended with the phrase `_defaults`.
-    This allows for a dictionary defined by the user, and the dictionary in the defaults file to be combined by the Ansible playbook.
+    ---
 
+    As such, any stack dictionary variable defined in a
+    defaults file **must** be appended with the phrase `_defaults`.
+    This allows for two dictionaries to be defined.
+    One by the user, and another by the defaults.
+    
+    They're later found and merged by the Ansible playbook.
     The resulting variable of the combined dictionaries is named `stack_vars`.
+    Which can be used inside any templates file (e.g. `compose.yml.j2`).
