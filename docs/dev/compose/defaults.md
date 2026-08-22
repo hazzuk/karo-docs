@@ -24,7 +24,7 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
     ```yaml+jinja { title="karo-compose/defaults/main/example_group/main.yml" .no-copy }
     # docker will start stacks in this order
     # docker will stop stacks in reverse order
-    example_group:
+    example_group_stacks:
       - foobar
     ```
 
