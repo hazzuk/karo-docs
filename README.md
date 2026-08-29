@@ -18,3 +18,7 @@ pipx install zensical
 # Preview the site
 zensical serve
 ```
+
+## Copyright & License
+
+Copyright © hazzuk. Licensed AGPL-3.0-only.
