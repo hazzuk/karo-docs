@@ -9,12 +9,13 @@
 
 [![Written by Humans, Not by AI](docs/assets/images/written-by-humans-not-by-ai-badge-black.png)](https://notbyai.fyi/)
 
-Made with [Zensical](https://zensical.org/docs/get-started/), a modern static site generator.
 </div>
 
 ---
 
 # Local development
+
+Uses [Zensical](https://zensical.org/docs/get-started/), a modern static site generator.
 
 ```sh
 # Install Zensical
