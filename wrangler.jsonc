@@ -2,6 +2,7 @@
     "$schema": "./node_modules/wrangler/config-schema.json",
     "name": "karo-docs",
     "compatibility_date": "2026-08-30",
+    "send_metrics": false,
     "build": {
         "command": "pip install zensical && zensical build --clean"
     },
