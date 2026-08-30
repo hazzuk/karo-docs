@@ -57,7 +57,3 @@ This is why the karo-stack exists, built to a philosophy of six intrinsic princi
 5. Start your configured services
 
 Read the [requirements page](setup/requirements.md).
-
-## License
-
-The karo-stack is licensed AGPL-3.0-only.
