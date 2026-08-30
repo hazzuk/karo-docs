@@ -78,7 +78,7 @@ Create or edit an Ansible vault.
 !!! example "Recipe example"
 
     ```sh { .no-copy }
-    # create or edit an ansible vault inside 'inventory/host_vars/homeserver/vault.yml' 
+    # create or edit an ansible vault inside 'inventory/host_vars/homeserver/vault.yml'
     just vault homeserver
     ```
 

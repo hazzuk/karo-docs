@@ -52,7 +52,7 @@ nav = [
         "advanced/proxy.md",
         "advanced/storage.md",
         "advanced/restore.md",
-    ] }, 
+    ] },
     { "Development" = [
         { "karo-custom" = [
             "dev/structure.md",

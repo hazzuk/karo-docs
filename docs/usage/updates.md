@@ -41,7 +41,7 @@ Because of this, you'll need to setup the official `karo-custom` repo.
     ```
 
     !!! info
-    
+
         Best way to do this is to simply copy the new Ansible vault examples for each stack.
         Then move your previous values across (be mindful to use the correct indentation).
 

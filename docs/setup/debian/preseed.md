@@ -33,11 +33,11 @@ Making first time authentication over SSH straightforward.
     1. Download the
         [latest preseed file](https://github.com/hazzuk/karo-stack/blob/main/debian/server/d-i/trixie/preseed.cfg)
         from the karo-stack GitHub repo
-    
+
     1. Find and replace `<key>` with your public SSH authentication key
 
         > e.g. `echo 'ssh-ed25519 AAAAC3NqnC1bZEIl2...' \`
-    
+
     1. Copy and paste the contents of the modified file to a text storage site
         (e.g. [pastebin.com](https://pastebin.com/))
 
@@ -87,7 +87,7 @@ Making first time authentication over SSH straightforward.
 
         ```sh
         micro key.txt
-        
+
         git add key.txt
         git commit -m "add public ssh key for preseed"
         git push

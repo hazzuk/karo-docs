@@ -36,7 +36,7 @@ when encrypting and decrypting your vault file.
     for the password each time you want to edit your vault.
     But seeing as you often need to edit the vault multiple times a session,
     this quickly becomes frustrating.
-    
+
     This is why we temporarily store the password
     inside a file that Ansible can read directly.
     Which on paper is a less secure method.

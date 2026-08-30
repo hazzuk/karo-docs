@@ -35,7 +35,7 @@ For now, create the first two files:
 
 - :lucide-file-box: `hosts.ini`
 
-    This config is used to tell the automation tool Ansible which host to target. 
+    This config is used to tell the automation tool Ansible which host to target.
 
     ```sh
     # create ansible hosts file
@@ -53,7 +53,7 @@ For now, create the first two files:
         ```
 
     === "Remote setup (advanced)"
-        
+
         ```ini { title="/srv/karo/inventory/hosts.ini" }
         [server]
         testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo

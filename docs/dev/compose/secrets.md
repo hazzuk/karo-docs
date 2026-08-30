@@ -19,7 +19,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
     ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="7-8" .no-copy }
     example_group_foobar_enabled: true
-    
+
     example_group_foobar_stack:
       foobar:
         domain: "foobar.{{ karo_compose_root_domain }}"

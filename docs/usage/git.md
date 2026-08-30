@@ -24,7 +24,7 @@ git push
     Using both your SSH signing key, to sign your git commits.
     And SSH auth key, to authenticate access with your remote repository.
 
-You should repeat these commands after making any new substantial changes to your repository. 
+You should repeat these commands after making any new substantial changes to your repository.
 
 ## Upgrade your karo-stack
 

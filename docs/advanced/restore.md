@@ -4,7 +4,7 @@ icon: lucide/archive-restore
 
 # Restore setup configuration
 
-If you've previously... 
+If you've previously...
 
 - Created your `karo-inventory` repo
 - Configured your vault

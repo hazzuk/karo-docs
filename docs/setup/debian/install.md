@@ -14,10 +14,10 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
         - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-dvd/)
             `debian-1.0.0-amd64-DVD-1.iso`
-        
+
         - [Bittorrent file](https://cdimage.debian.org/images/release/current/amd64/bt-dvd/)
             `debian-1.0.0-amd64-DVD-1.iso.torrent`
-        
+
     === "Network installer ISO (800 MB~)"
 
         - [Direct download](https://cdimage.debian.org/images/release/current/amd64/iso-cd/)
@@ -76,7 +76,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 1. Select the disk to partition (when multiple storage devices are connected)
 
     !!! danger
-    
+
         All data on the disk selected will be erased!
 
 1. Wait for the installer to finish and the system to reboot into Debian
@@ -103,7 +103,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 1. Connect to the server using SSH
 
     > e.g. `ssh -A karo@homeserver.example.com`
-    
+
     > Your domain `homeserver.example.com`, should resolve to your server's local IPv4 address.
 
     ??? failure "Handling 'Could not resolve hostname'"
@@ -143,5 +143,5 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     If you've previously used the karo-stack,
     you can immediately proceed with the full remaining setup.
-    
+
     Follow the advanced guide [Restore setup](../../advanced/restore.md).

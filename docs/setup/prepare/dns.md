@@ -17,10 +17,10 @@ as the domain's authoritative DNS provider.
     Assuming you've not disabled DHCP on your network.
     You'll need the [MAC address](https://en.wikipedia.org/wiki/MAC_address)
     of the network interface on your server's motherboard or network card.
-    
+
     > You'll likely find this in the UEFI/BIOS, as a sticker on the device,
     or listed on the retail box of the hardware.
-    
+
     Then in your router, reserve an unused IPv4 address (e.g. `192.168.0.142`)
     for the server's MAC address.
 

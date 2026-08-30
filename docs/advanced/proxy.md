@@ -110,7 +110,7 @@ apt -y install acl btop chrony curl git man-db micro \
 exit
 ```
 
-### Ansible vault 
+### Ansible vault
 
 !!! info "Continuing setup on your homeserver"
 

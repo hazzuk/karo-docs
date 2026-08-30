@@ -137,7 +137,7 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
     defaults file **must** be appended with the phrase `_defaults`.
     This allows for two dictionaries to be defined.
     One by the user, and another by the defaults.
-    
+
     They're later found and merged by the Ansible playbook.
     The resulting variable of the combined dictionaries is named `stack_vars`.
     Which can be used inside any templates file (e.g. `compose.yml.j2`).

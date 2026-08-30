@@ -125,7 +125,7 @@ secrets:
     Unlike rootful Docker, when a rootless Docker container uses UID 1000, it's not using the host user 1000 (karo).
     Instead, the user running the Docker daemon (dockeruser) has been assigned a [subordinate user ID range](https://docs.docker.com/engine/security/userns-remap/) (dockeruser:165536:65536).
     So user 1000 for the container is one of these unprivileged subordinate users.
-    
+
     ```sh { .no-copy }
     $ stat /home/dockeruser/.local/share/docker/volumes/pocketid_data/_data
     Access: (0755/drwxr-xr-x)  Uid: (166535/ UNKNOWN)   Gid: (166535/ UNKNOWN)

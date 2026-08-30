@@ -210,7 +210,7 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## More help
 
-- **Manuals** 
+- **Manuals**
 
     ```sh
     # view command manual
