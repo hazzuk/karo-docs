@@ -7,6 +7,8 @@ icon: lucide/form
 While Docker compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
 To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:
 
+<!-- editorconfig-checker-disable -->
+
 - **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity.
   Preferring long-form syntax, and absolute paths.
   To create more clearly and safely defined stacks.
@@ -17,6 +19,8 @@ To avoid these issues, and to better facilitate collaboration and maintenance, t
 
 - **Standardised** - Stacks must follow a consistent ordering and structure of definitions.
   Reducing potential errors, and making work across different stacks much more seamless.
+
+<!-- editorconfig-checker-enable -->
 
 ## Example stack
 
