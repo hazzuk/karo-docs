@@ -7,8 +7,8 @@ title: Home
 
 **An open-source toolkit for creating a declarative Linux homeserver**
 
-[![GitHub Release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag&cacheSeconds=7200)](https://github.com/hazzuk/karo-stack/releases)
-[![License](https://img.shields.io/badge/license-AGPL--3.0-orange)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag&cacheSeconds=7200)](https://github.com/hazzuk/karo-stack/releases)
+[![License](https://img.shields.io/badge/license-AGPL--3.0-B461B3)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
 
 :debian: :git: :ansible: :docker:
 
