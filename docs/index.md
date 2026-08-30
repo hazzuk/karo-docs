@@ -12,6 +12,8 @@ title: Home
 
 :debian: :git: :ansible: :docker:
 
+---
+
 ## About
 
 The karo-stack aims to provide a middle ground for managing a self-hosted setup.
