@@ -1,18 +1,18 @@
 {
-    "$schema": "./node_modules/wrangler/config-schema.json",
-    "name": "karo-docs",
-    "compatibility_date": "2026-08-30",
-    "send_metrics": false,
-    "build": {
-        "command": "pip install zensical && zensical build --clean"
-    },
-    "assets": {
-        "directory": "./site"
-    },
-    "routes": [
-        {
-            "pattern": "docs.karolabs.dev",
-            "custom_domain": true
-        }
-    ]
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "karo-docs",
+  "compatibility_date": "2026-08-30",
+  "send_metrics": false,
+  "build": {
+    "command": "pip install zensical && zensical build --clean"
+  },
+  "assets": {
+    "directory": "./site"
+  },
+  "routes": [
+    {
+      "pattern": "docs.karolabs.dev",
+      "custom_domain": true
+    }
+  ]
 }

@@ -21,6 +21,8 @@ with default values to be overridden where needed.
 
 To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create two defaults files.
 
+<!-- editorconfig-checker-disable -->
+
 - `main.yml` (internal variables, primarily for the deployment order of stacks)
 
     ```yaml+jinja { title="karo-compose/defaults/main/example_group/main.yml" .no-copy }
@@ -52,6 +54,8 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
           api_token: ""
     ```
 
+<!-- editorconfig-checker-enable -->
+
 ## Variable precedence
 
 Stack dictionary variables are declared twice:
@@ -79,6 +83,8 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
         Instead, it's all or nothing, one automatically takes precedence.
 
         <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));" markdown>
+
+        <!-- editorconfig-checker-disable -->
 
         ```yaml { title="Defaults dict" .no-copy }
         test:
@@ -128,6 +134,8 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
             one: "1"
             two: "222"
         ```
+
+        <!-- editorconfig-checker-enable -->
 
         </div>
 

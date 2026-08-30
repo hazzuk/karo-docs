@@ -1,13 +1,13 @@
 {
-    // zensical
-    "files.associations": {
-        "*.md": "python-markdown",
-    },
-    // cspell
-    "cSpell.enabled": true,
-    "cSpell.enabledFileTypes": {
-        "*": false,
-        "markdown": true,
-        "python-markdown": true,
-    },
+  // zensical
+  "files.associations": {
+    "*.md": "python-markdown",
+  },
+  // cspell
+  "cSpell.enabled": true,
+  "cSpell.enabledFileTypes": {
+    "*": false,
+    "markdown": true,
+    "python-markdown": true,
+  },
 }

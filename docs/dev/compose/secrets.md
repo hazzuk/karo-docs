@@ -17,6 +17,8 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     Both are variables declared inside their encrypted Ansible vault.
     Though secrets are always defined under a nested dictionary named `secrets`.
 
+    <!-- editorconfig-checker-disable -->
+
     ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="7-8" .no-copy }
     example_group_foobar_enabled: true
 
@@ -27,6 +29,8 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         secrets:
           api_token: "xP5SDH57+zn4hR804VFN#p=="
     ```
+
+    <!-- editorconfig-checker-enable -->
 
 1. When `just compose up` is run, the Ansible playbook creates a file for each secret.
     These new files only exist temporarily, and are stored within a tmpfs filesystem (in system memory).

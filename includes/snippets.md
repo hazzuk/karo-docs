@@ -67,6 +67,8 @@ karo-custom/
                 └── compose.yml.j2
 --8<-- [end:custom_compose_filetree]
 
+<!-- editorconfig-checker-disable -->
+
 --8<-- [start:compose_secrets_example]
 name: foobar
 services:
@@ -82,3 +84,5 @@ secrets:
   foobar_api_token:
     file: {{ karo_compose_secrets_path }}/foobar_api_token
 --8<-- [end:compose_secrets_example]
+
+<!-- editorconfig-checker-enable -->

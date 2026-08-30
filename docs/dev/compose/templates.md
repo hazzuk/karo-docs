@@ -26,6 +26,8 @@ Also see the Docker compose reference guides for
 [volumes](https://docs.docker.com/reference/compose-file/volumes/),
 and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
+<!-- editorconfig-checker-disable -->
+
 ```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: © <year> <author>
 #
@@ -96,6 +98,8 @@ secrets:
     file: {{ karo_compose_secrets_path }}/foobar_api_token
 ```
 
+<!-- editorconfig-checker-enable -->
+
 ??? info "Naming conventions"
 
     - Volume names: `<container name>_<volume use>` (e.g. foobar_data, foobar_cache)
@@ -112,10 +116,14 @@ secrets:
 
     Use the following short syntax for port mappings:
 
+    <!-- editorconfig-checker-disable -->
+
     ```html { .no-copy }
     ports:
       - <HOST>:<CONTAINER>/<PROTOCOL>
     ```
+
+    <!-- editorconfig-checker-enable -->
 
     Ensure you **always specify the protocol**.
     And for stacks that need both UDP and TCP traffic on the same port, you'll need to map the same port twice for both protocols.

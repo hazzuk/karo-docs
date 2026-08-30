@@ -25,6 +25,8 @@ Or create your own.
 
     - Add **all** available stack groups
 
+        <!-- editorconfig-checker-disable -->
+
         ```yaml { .no-copy hl_lines="4-5" }
         karo_compose_stack_groups:
           - hazzuk_core
@@ -46,6 +48,8 @@ Or create your own.
           domain: "foobar.{{ karo_compose_root_domain }}"
           forward_auth_enabled: true
         ```
+
+        <!-- editorconfig-checker-enable -->
 
 1. Deploy your newly configured stack(s) (e.g. `just compose up homeserver`)
 

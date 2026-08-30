@@ -15,6 +15,8 @@ The karo-stack's solution to this issue actually involves a mix of both approach
 
 You'll need to rent a small VPS, ideally one geographically close to you. Then after installing Debian and setting up the karo-stack on the VPS. You'll deploy the project's custom `proxy` stack.
 
+<!-- editorconfig-checker-disable -->
+
 ```mermaid
 flowchart LR
   subgraph Internet
@@ -37,6 +39,8 @@ flowchart LR
   e1@{ animation: fast }
   e2@{ animation: slow }
 ```
+
+<!-- editorconfig-checker-enable -->
 
 There are three parts to the proxy stack:
 
@@ -134,6 +138,8 @@ Create and edit a new vault named `proxyserver`:
 just vault proxyserver
 ```
 
+<!-- editorconfig-checker-disable -->
+
 ```yaml { title="/srv/karo/inventory/host_vars/proxyserver/vault.yml" }
 # proxyserver
 #
@@ -178,6 +184,8 @@ karo_compose_stack_groups:
 # stacks
 # ---
 ```
+
+<!-- editorconfig-checker-enable -->
 
 ### Ansible playbook
 
