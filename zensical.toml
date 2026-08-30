@@ -1,5 +1,4 @@
 [project]
-
 site_name = "karo-stack docs"
 site_description = "The karo-stack documentation."
 site_author = "hazzuk"
@@ -73,7 +72,6 @@ nav = [
 extra_css = ["stylesheets/extra.css"]
 
 [project.theme]
-
 custom_dir = "overrides"
 favicon = "assets/favicon.ico"
 language = "en"
@@ -81,11 +79,11 @@ language = "en"
 # https://zensical.org/docs/
 features = [
   "announce.dismiss",
-  #"content.action.edit",
-  #"content.action.view",
+  # "content.action.edit",
+  # "content.action.view",
   "content.code.annotate",
   "content.code.copy",
-  #"content.code.select",
+  # "content.code.select",
   "content.footnote.tooltips",
   "content.tabs.link",
   "content.tooltips",
@@ -95,17 +93,17 @@ features = [
   "navigation.indexes",
   "navigation.instant",
   "navigation.instant.prefetch",
-  #"navigation.instant.progress",
+  # "navigation.instant.progress",
   "navigation.path",
-  #"navigation.prune",
+  # "navigation.prune",
   "navigation.sections",
   "navigation.tabs",
-  #"navigation.tabs.sticky",
+  # "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
   # "toc.follow",
-  #"toc.integrate",
+  # "toc.integrate",
 ]
 
 # custom icon as logo (for light/dark mode svg support)
@@ -147,64 +145,62 @@ new = "Recently added"
 # extensions
 # https://zensical.org/docs/authoring/markdown/
 
-# html
-[project.markdown_extensions.attr_list] # add html/css to markdown lines
-[project.markdown_extensions.md_in_html] # write markdown inbetween html
-[project.markdown_extensions.pymdownx.blocks.caption] # add captions markdown blocks
+[project.markdown_extensions.attr_list]  # add html/css to markdown lines
 
-# call-outs (admonitions)
-[project.markdown_extensions.admonition]
-[project.markdown_extensions.pymdownx.details] # improved call-outs
+[project.markdown_extensions.md_in_html]  # write markdown inbetween html
 
-# code blocks
-[project.markdown_extensions.pymdownx.highlight] # syntax highlighting
+[project.markdown_extensions.pymdownx.blocks.caption]  # add captions markdown blocks
+
+[project.markdown_extensions.pymdownx.details]  # improved call-outs
+
+[project.markdown_extensions.pymdownx.highlight]  # syntax highlighting
 anchor_linenums = true
 line_spans = "__span"
 pygments_lang_class = true
-[project.markdown_extensions.pymdownx.inlinehilite] # in-line syntax highlighting
-[project.markdown_extensions.pymdownx.snippets] # embed external files
+
+[project.markdown_extensions.pymdownx.inlinehilite]  # in-line syntax highlighting
+
+[project.markdown_extensions.pymdownx.snippets]  # embed external files
 base_path = ["includes"]
 auto_append = ["abbreviations.md"]
 
-# content tabs
-[project.markdown_extensions.pymdownx.superfences] # nest code/content blocks
-custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
-]
-[project.markdown_extensions.pymdownx.tabbed] # content tabs
+[project.markdown_extensions.pymdownx.superfences]  # nest code/content blocks
+custom_fences = [{ name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }]
+
+[project.markdown_extensions.pymdownx.tabbed]  # content tabs
 alternate_style = true
 
-# anchor links
-[project.markdown_extensions.pymdownx.tabbed.slugify]
+[project.markdown_extensions.pymdownx.tabbed.slugify]  # anchor links
 object = "pymdownx.slugs.slugify"
 kwds = { case = "lower" }
-[project.markdown_extensions.toc]
-permalink = true
 
-# data tables
-[project.markdown_extensions.tables]
+[project.markdown_extensions.pymdownx.caret]  # formatting text
 
-# footnotes
-[project.markdown_extensions.footnotes]
-
-# formatting text
-[project.markdown_extensions.pymdownx.caret]
 [project.markdown_extensions.pymdownx.mark]
+
 [project.markdown_extensions.pymdownx.tilde]
-[project.markdown_extensions.pymdownx.keys] # render keyboard keys
+
+[project.markdown_extensions.pymdownx.keys]  # render keyboard keys
+
 [project.markdown_extensions.pymdownx.betterem]
 
-# icons and emoji
-[project.markdown_extensions.pymdownx.emoji]
+[project.markdown_extensions.pymdownx.emoji]  # icons and emoji
 emoji_index = "zensical.extensions.emoji.twemoji"
 emoji_generator = "zensical.extensions.emoji.to_svg"
 # custom icons directory
 options.custom_icons = ["overrides/.icons"]
 
-# lists
-[project.markdown_extensions.pymdownx.tasklist]
+[project.markdown_extensions.pymdownx.tasklist]  # lists
 custom_checkbox = true
 clickable_checkbox = true
 
-# tooltip abbreviations
-[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]  # call-outs (admonitions)
+
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.tables]  # data tables
+
+[project.markdown_extensions.footnotes]  # footnotes
+
+[project.markdown_extensions.abbr]  # tooltip abbreviations
