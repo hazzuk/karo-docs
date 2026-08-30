@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: © 2026 hazzuk
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
 icon: lucide/form
 ---
 
@@ -31,6 +35,8 @@ Also see the Docker compose reference guides for
 and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
 <!-- editorconfig-checker-disable -->
+
+<!-- REUSE-IgnoreStart -->
 
 ``` yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: © <year> <author>
@@ -101,6 +107,8 @@ secrets:
   foobar_api_token:
     file: {{ karo_compose_secrets_path }}/foobar_api_token
 ```
+
+<!-- REUSE-IgnoreEnd -->
 
 <!-- editorconfig-checker-enable -->
 
