@@ -10,7 +10,7 @@ title: Home
 [![Latest release](https://img.shields.io/github/v/release/hazzuk/karo-stack?display_name=tag&cacheSeconds=7200)](https://github.com/hazzuk/karo-stack/releases)
 [![License](https://img.shields.io/badge/license-AGPL--3.0-B461B3)](https://github.com/hazzuk/karo-stack/blob/main/LICENSE)
 
-:debian: :git: :ansible: :docker:
+:simple-debian: :simple-git: :simple-ansible: :simple-docker:
 
 ---
 
