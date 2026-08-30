@@ -13,13 +13,13 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
 ### Variable to secrets file
 
-1. For users, there is no functional difference between declaring a sensitive value, versus declaring a normal one.
+1.  For users, there is no functional difference between declaring a sensitive value, versus declaring a normal one.
     Both are variables declared inside their encrypted Ansible vault.
     Though secrets are always defined under a nested dictionary named `secrets`.
 
     <!-- editorconfig-checker-disable -->
 
-    ```yaml+jinja { title="inventory/host_vars/homeserver/vault.yml" hl_lines="7-8" .no-copy }
+    ``` yaml+jinja { .no-copy title="inventory/host_vars/homeserver/vault.yml" hl_lines="7-8" }
     example_group_foobar_enabled: true
 
     example_group_foobar_stack:
@@ -32,22 +32,22 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
     <!-- editorconfig-checker-enable -->
 
-1. When `just compose up` is run, the Ansible playbook creates a file for each secret.
+2.  When `just compose up` is run, the Ansible playbook creates a file for each secret.
     These new files only exist temporarily, and are stored within a tmpfs filesystem (in system memory).
     When ready, the Ansible playbook always removes the files, even if a task fails.
 
-    ```yaml+jinja { title="/run/user/1001/karo-compose/example_group/foobar/foobar_api_token" .no-copy }
+    ``` yaml+jinja { .no-copy title="/run/user/1001/karo-compose/example_group/foobar/foobar_api_token" }
     xP5SDH57+zn4hR804VFN#p==
     ```
 
 ### Docker compose stack
 
-1. The compose template is rendered, and
+1.  The compose template is rendered, and
     the [top-level secrets definition](https://docs.docker.com/reference/compose-file/secrets/#:~:text=The%20top%2Dlevel%20secrets%20declaration)
     inside the compose file defines a new Docker secret.
     Its value is set based on the contents of a secrets file.
 
-    ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" .no-copy }
+    ``` yaml+jinja { .no-copy title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" }
     --8<-- "snippets.md:compose_secrets_example"
     ```
 
@@ -56,16 +56,16 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         The path to the secrets file is defined per stack.
         And the variable `karo_compose_secrets_path` is updated dynamically for use in the compose template.
 
-1. Having defined a Docker secret, the service must explicitly inherit it.
+2.  Having defined a Docker secret, the service must explicitly inherit it.
     Adding the Docker secret to the service means Docker will create the secrets file inside the container
     (this similar to a bind mount).
     These secrets files are found at `/run/secrets` inside the container's filesystem.
 
-    ```yaml+jinja { title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" .no-copy }
+    ``` yaml+jinja { .no-copy title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" }
     --8<-- "snippets.md:compose_secrets_example"
     ```
 
-1. The secret can finally be used by the service.
+3.  The secret can finally be used by the service.
     This is normally done with an environment variable,
     pointing to the path of the secrets file created inside the container.
 
@@ -73,6 +73,6 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
         The service used must support setting an environment variable or config value to the contents of a file.
 
-    ```yaml+jinja { roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" .no-copy }
+    ``` yaml+jinja { .no-copy roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" }
     --8<-- "snippets.md:compose_secrets_example"
     ```

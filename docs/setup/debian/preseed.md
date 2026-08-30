@@ -85,7 +85,7 @@ Making first time authentication over SSH straightforward.
 
     - And if required, add/update your public SSH key inside your inventory repo:
 
-        ```sh
+        ``` sh
         micro key.txt
 
         git add key.txt
@@ -97,7 +97,7 @@ Making first time authentication over SSH straightforward.
 
     - After setup, simply run the following:
 
-        ```sh
+        ``` sh
         just preseed server
         ```
 

@@ -23,16 +23,16 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
 
 <!-- editorconfig-checker-disable -->
 
-- `main.yml` (internal variables, primarily for the deployment order of stacks)
+-   `main.yml` (internal variables, primarily for the deployment order of stacks)
 
-    ```yaml+jinja { title="karo-compose/defaults/main/example_group/main.yml" .no-copy }
+    ``` yaml+jinja { .no-copy title="karo-compose/defaults/main/example_group/main.yml" }
     # docker will start stacks in this order
     # docker will stop stacks in reverse order
     example_group_stacks:
       - foobar
     ```
 
-- `foobar.yml` (stack variables, for users to override)
+-   `foobar.yml` (stack variables, for users to override)
 
     !!! info "Stack variables"
 
@@ -40,7 +40,7 @@ To add a stack (e.g. 'foobar') to your karo-custom repo, you'd need to create tw
 
         Common variables include `image`, `version`, `domain` and `log_level`.
 
-    ```yaml+jinja { title="karo-compose/defaults/main/example_group/foobar.yml" .no-copy }
+    ``` yaml+jinja { .no-copy title="karo-compose/defaults/main/example_group/foobar.yml" }
     example_group_foobar_enabled: false
 
     example_group_foobar_stack_defaults:
@@ -86,20 +86,20 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
 
         <!-- editorconfig-checker-disable -->
 
-        ```yaml { title="Defaults dict" .no-copy }
+        ``` yaml { .no-copy title="Defaults dict" }
         test:
           stuff:
             one: "1"
             two: "2"
         ```
 
-        ```yaml { title="Inventory dict" .no-copy }
+        ``` yaml { .no-copy title="Inventory dict" }
         test:
           stuff:
             two: "222"
         ```
 
-        ```yaml { title="Resulting dict" .no-copy }
+        ``` yaml { .no-copy title="Resulting dict" }
         test:
           stuff:
             two: "222"
@@ -115,20 +115,20 @@ The resulting variable of the combined dictionaries is named `stack_vars`.
 
         <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));" markdown>
 
-        ```yaml { title="Defaults dict" .no-copy }
+        ``` yaml { .no-copy title="Defaults dict" }
         test_defaults:
           stuff:
             one: "1"
             two: "2"
         ```
 
-        ```yaml { title="Inventory dict" .no-copy }
+        ``` yaml { .no-copy title="Inventory dict" }
         test:
           stuff:
             two: "222"
         ```
 
-        ```yaml { title="Combined dict" .no-copy }
+        ``` yaml { .no-copy title="Combined dict" }
         test_new:
           stuff:
             one: "1"

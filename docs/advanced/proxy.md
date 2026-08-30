@@ -5,6 +5,7 @@ icon: lucide/waypoints
 # VPS proxy
 
 !!! warning
+
     This guide is incomplete and the setup is still experimental. Everything is subject to change without notice.
 
 It is critical to consider the security of exposing services to the public internet. The easiest method to expose services is simply opening ports on your router. However, this makes your home network more vulnerable. And you'll have to disclose your network's public IP address. Alternatively, you can avoid opening ports by using a VPN. This way you connect directly to the server, and traffic is tunnelled when accessing services. But this can be cumbersome, and difficult for end-users to correctly utilise.
@@ -17,7 +18,7 @@ You'll need to rent a small VPS, ideally one geographically close to you. Then a
 
 <!-- editorconfig-checker-disable -->
 
-```mermaid
+``` mermaid
 flowchart LR
   subgraph Internet
     User@{ shape: stadium }
@@ -74,42 +75,42 @@ Most VPS providers will simply create a pre-configured Debian server for you. As
 
 Connect via SSH as the `root` user:
 
-```sh
+``` sh
 ssh root@proxyserver.example.com
 ```
 
 Run the following commands to replicate the preseed process:
 
-```sh
+``` sh
 # apply updates
 apt update
 apt upgrade
 ```
 
-```sh
+``` sh
 # create karo user
 adduser --comment "" karo
 usermod -aG sudo karo
 ```
 
-```sh
+``` sh
 # create karo directories
 install -d -m 0775 -o karo -g karo /srv/karo
 install -d -m 0775 -o karo -g karo /home/karo/.ssh
 ```
 
-```sh
+``` sh
 # create karo authorized_keys
 install -m 0644 -o karo -g karo /root/.ssh/authorized_keys /home/karo/.ssh
 ```
 
-```sh
+``` sh
 # install packages
 apt -y install acl btop chrony curl git man-db micro \
     openssh-server parted pipx rsync tree wget wireguard
 ```
 
-```sh
+``` sh
 # finish manual setup
 exit
 ```
@@ -122,25 +123,25 @@ exit
 
 Connect via SSH to your **homeserver**:
 
-```sh
+``` sh
 ssh -A karo@homeserver.example.com
 ```
 
 Use your existing vault password for Ansible:
 
-```sh
+``` sh
 just password
 ```
 
 Create and edit a new vault named `proxyserver`:
 
-```sh
+``` sh
 just vault proxyserver
 ```
 
 <!-- editorconfig-checker-disable -->
 
-```yaml { title="/srv/karo/inventory/host_vars/proxyserver/vault.yml" }
+``` yaml { title="/srv/karo/inventory/host_vars/proxyserver/vault.yml" }
 # proxyserver
 #
 # CONFIDENTIAL
@@ -191,11 +192,11 @@ karo_compose_stack_groups:
 
 Update your inventory's `hosts.ini` file to include the VPS as a new host:
 
-```sh
+``` sh
 micro /srv/karo/inventory/hosts.ini
 ```
 
-```ini { title="/srv/karo/inventory/hosts.ini" hl_lines="3" }
+``` ini { title="/srv/karo/inventory/hosts.ini" hl_lines="3" }
 [server]
 homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
 proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connection=ssh ansible_user=karo
@@ -203,13 +204,13 @@ proxyserver ansible_host=proxyserver.example.com ansible_port=22 ansible_connect
 
 Run the playbook for the VPS:
 
-```sh
+``` sh
 just install proxyserver
 ```
 
 Afterwards, adjust your `hosts.ini` file to use the new SSH port `#!ini ansible_port=4444`:
 
-```sh
+``` sh
 micro /srv/karo/inventory/hosts.ini
 ```
 
@@ -217,7 +218,7 @@ micro /srv/karo/inventory/hosts.ini
 
 Commit your new changes:
 
-```sh
+``` sh
 cd /srv/karo/inventory
 
 git add *
@@ -233,6 +234,6 @@ After having successfully setup your VPS, you're now ready to run the proxy stac
 
     Once you've correctly configured your vault, you can deploy the proxy stack:
 
-    ```sh
+    ``` sh
     just compose up proxyserver -s proxy
     ```

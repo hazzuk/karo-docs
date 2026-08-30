@@ -14,9 +14,9 @@ Aptly named `vault.yml`.
 
 Before creating the vault, you'll need a strong password to encrypt it with.
 
-- Generate a 96 character vault password (save the output to your password manager):
+-   Generate a 96 character vault password (save the output to your password manager):
 
-    ```sh
+    ``` sh
     # generate vault password
     openssl rand -hex 48
     ```
@@ -26,7 +26,7 @@ you will also need to write it to a temporary file on the system.
 This way, Ansible can access it without prompting,
 when encrypting and decrypting your vault file.
 
-- Apply your new vault password (this command will open a text editor):
+-   Apply your new vault password (this command will open a text editor):
 
     --8<-- "snippets.md:just_password"
 
@@ -56,9 +56,9 @@ when encrypting and decrypting your vault file.
 
 With the password set, you can now create an Ansible vault file encrypted by your password.
 
-- Create and edit your vault:
+-   Create and edit your vault:
 
-    ```sh
+    ``` sh
     # create ansible vault
     cd /srv/karo
     just vault homeserver
@@ -76,7 +76,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
     </div>
 
-    ```yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
+    ``` yaml { title="/srv/karo/inventory/host_vars/homeserver/vault.yml" }
     # homeserver
     #
     # CONFIDENTIAL
@@ -126,14 +126,14 @@ With the password set, you can now create an Ansible vault file encrypted by you
         You can see this first-hand,
         by attempting to read the contents of your vault without Ansible.
 
-        ```sh
+        ``` sh
         # check vault encryption
         micro -readonly true /srv/karo/inventory/host_vars/homeserver/vault.yml
         ```
 
         You should see a long encrypted output similar to this:
 
-        ```yaml { .no-copy }
+        ``` yaml { .no-copy }
         $ANSIBLE_VAULT;1.1;AES256
         6538346438396339346464346163349382...
         ```

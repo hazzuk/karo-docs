@@ -18,7 +18,7 @@ And to also provide a way for users to easily share new capabilities.
 The contents of each karo-custom repo is symbolically linked to the inside of the karo-stack's Ansible playbook.
 Allowing for files to be used natively when running relevant commands.
 
-```toml { title="karo-custom example" .no-copy }
+``` toml { .no-copy title="karo-custom example" }
 karo-custom/
 ├── karo-compose/ # ansible role to extend
 │   ├── defaults/
@@ -68,19 +68,19 @@ karo-custom/
 
 === "Ansible role"
 
-    ```toml { title="Extend the karo-compose Ansible role" hl_lines="2" .no-copy }
+    ``` toml { .no-copy title="Extend the karo-compose Ansible role" hl_lines="2" }
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Role directories"
 
-    ```toml { title="Defaults and templates directories" hl_lines="3 7" .no-copy }
+    ``` toml { .no-copy title="Defaults and templates directories" hl_lines="3 7" }
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Stack group"
 
-    ```toml { title="Stack group directories" hl_lines="4 8" .no-copy }
+    ``` toml { .no-copy title="Stack group directories" hl_lines="4 8" }
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
@@ -99,13 +99,13 @@ karo-custom/
 
 === "Defaults"
 
-    ```toml { title="Stack group defaults files" hl_lines="5-6" .no-copy }
+    ``` toml { .no-copy title="Stack group defaults files" hl_lines="5-6" }
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
 === "Templates"
 
-    ```toml { title="Stack group templates" hl_lines="9-10" .no-copy }
+    ``` toml { .no-copy title="Stack group templates" hl_lines="9-10" }
     --8<-- "snippets.md:custom_compose_filetree"
     ```
 
@@ -117,7 +117,7 @@ karo-custom/
 
             === "Templates"
 
-                ```toml { .no-copy }
+                ``` toml { .no-copy }
                 templates/
                 └── hazzuk_extra/
                     └── godns/
@@ -127,7 +127,7 @@ karo-custom/
 
             === "Deployed files"
 
-                ```toml { .no-copy }
+                ``` toml { .no-copy }
                 /srv/
                 └── docker/
                     └── hazzuk_extra/

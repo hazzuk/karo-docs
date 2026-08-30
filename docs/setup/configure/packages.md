@@ -8,7 +8,7 @@ Plus, a few hand-picked packages for convenience (e.g. `git`, `micro`, `btop`).
 
 But to run the karo-stack, you'll need to install both `ansible` and `just`.
 
-- Install additional packages:
+-   Install additional packages:
 
     --8<-- "snippets.md:copying_commands"
 

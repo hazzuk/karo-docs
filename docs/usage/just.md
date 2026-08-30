@@ -29,12 +29,12 @@ Run Ansible to configure the core components of your system.
 
 !!! example "Recipe examples"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # runs the main ansible roles to setup 'homeserver'
     just install homeserver
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # runs the main ansible roles to setup 'proxyserver'
     just install proxyserver
     ```
@@ -45,22 +45,22 @@ Run Ansible to deploy or remove Docker compose stacks.
 
 !!! example "Recipe examples"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # setup on 'homeserver' all enabled stacks
     just compose up homeserver
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # setup on 'homeserver' the 'traefik' stack (if enabled)
     just compose up homeserver -s traefik
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # remove on 'homeserver' all enabled stacks
     just compose down homeserver
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # remove on 'proxyserver' the 'proxy' stack (if enabled)
     just compose down proxyserver -s proxy
     ```
@@ -77,7 +77,7 @@ Create or edit an Ansible vault.
 
 !!! example "Recipe example"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # create or edit an ansible vault inside 'inventory/host_vars/homeserver/vault.yml'
     just vault homeserver
     ```
@@ -88,7 +88,7 @@ Create or edit a temporary Ansible vault password file.
 
 !!! example "Recipe example"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # create or edit the ansible vault password file inside '/run/user/1000/karo/ansible/vault_pass'
     just password
     ```
@@ -101,12 +101,12 @@ Get or remove karo-custom repositories.
 
 !!! example "Recipe example"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # get karo-custom repo from github
     just custom get hazzuk
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # remove existing karo-custom repo
     just custom remove hazzuk
     ```
@@ -119,12 +119,12 @@ An optional preseed method, running a Python webserver to host the Debian `prese
 
 !!! example "Recipe examples"
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # starts a python webserver to host 'debian/server/d-i/trixie/preseed.cfg'
     just preseed server
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # starts a python webserver to host 'debian/desktop/d-i/trixie/preseed.cfg'
     just preseed desktop
     ```

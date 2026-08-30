@@ -40,59 +40,59 @@ This is an example workflow demonstrating the following:
 
     All data on the targeted disk will be erased!
 
-1. Format the drive
+1.  Format the drive
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # list drives
     sudo parted -l
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # wipe drive partition table
     sudo parted /dev/sda mklabel gpt
     ```
 
-1. Partition the drive
+2.  Partition the drive
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # create new ext4 partition
     sudo parted -a opt /dev/sda mkpart primary ext4 0% 100%
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # initialise ext4 filesystem
     # sda1 (partition), not sda (drive)
     sudo mkfs.ext4 -L drive1 /dev/sda1
     ```
 
-3. Mount the partition
+3.  Mount the partition
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # find partition uuid
     lsblk --fs
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # create mountpoint
     sudo mkdir /media/drive1
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # edit fstab
     sudo micro /etc/fstab
     ```
 
-    ```ini { title="/etc/fstab" .no-copy }
+    ``` ini { .no-copy title="/etc/fstab" }
     UUID=86b13cc7-tn2m... /media/drive1 ext4 defaults,nofail 0 2
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # mount fstab entries
     sudo mount -a
     sudo systemctl daemon-reload
     ```
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     # list partitions and sizes
     df -h -x tmpfs
     ```

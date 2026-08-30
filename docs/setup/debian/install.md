@@ -90,7 +90,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
     !!! success
 
-        ```sh { .no-copy }
+        ``` sh { .no-copy }
         Debian GNU/Linux debian tty1
 
         debian login:
@@ -116,7 +116,7 @@ With the preseed file setup, Debian can now be installed onto your server hardwa
 
         - Ping the domain name
 
-            ```sh
+            ``` sh
             ping homeserver.example.com
             ```
 

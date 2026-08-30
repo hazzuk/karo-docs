@@ -32,7 +32,7 @@ New files need to be manually edited to include the following attribute:
 
 (Added after the `xmlns` attribute)
 
-```c
+``` c
 fill="currentColor"
 ```
 

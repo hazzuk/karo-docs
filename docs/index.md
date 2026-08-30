@@ -50,10 +50,10 @@ This is why the karo-stack exists, built to a philosophy of six intrinsic princi
 ## Setup overview
 
 1. Install Debian with a preseed file
-1. Setup the karo-stack git repo
-1. Run the Ansible playbook
-1. Add custom provided Docker stacks
-1. Start your configured services
+2. Setup the karo-stack git repo
+3. Run the Ansible playbook
+4. Add custom provided Docker stacks
+5. Start your configured services
 
 Read the [requirements page](setup/requirements.md).
 

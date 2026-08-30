@@ -27,7 +27,7 @@ Or create your own.
 
         <!-- editorconfig-checker-disable -->
 
-        ```yaml { .no-copy hl_lines="4-5" }
+        ``` yaml { .no-copy hl_lines="4-5" }
         karo_compose_stack_groups:
           - hazzuk_core
           - hazzuk_extra
@@ -38,7 +38,7 @@ Or create your own.
 
     - Add the desired stack variables
 
-        ```yaml
+        ``` yaml
         # foobar
 
         example_tools_foobar_enabled: true

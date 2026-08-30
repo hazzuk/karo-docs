@@ -20,13 +20,13 @@ Its main use will be to securely connect to and authenticate with the server.
 The easy and secure way to store SSH keys is inside a password manager.
 Ideally one with a desktop client that supports acting as an SSH Agent.
 
-1. Set up your desktop password manager to act as an SSH agent.
+1.  Set up your desktop password manager to act as an SSH agent.
 
     > e.g. [1Password](https://developer.1password.com/docs/ssh/agent),
     [Bitwarden](https://bitwarden.com/help/ssh-agent/),
     [KeePassXC](https://keepassxc.org/docs/#faq-ssh-agent-how).
 
-1. Generate two SSH key pairs.
+2.  Generate two SSH key pairs.
 
     !!! info "Key types"
 

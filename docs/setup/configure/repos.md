@@ -26,15 +26,15 @@ Which is a non-profit, community-led effort that also provides git hosting
 Once you've created your account, you'll need to add your public SSH keys.
 
 - Add your SSH authentication, and signing keys to your
-    [account's SSH keys](https://github.com/settings/keys)
+  [account's SSH keys](https://github.com/settings/keys)
 
 ## Inventory repo
 
 Next you'll need to create your inventory repo.
 This repository will be used to store your personal configuration for the karo-stack.
 
-- [Create a new private git repo](https://github.com/new)
-named `karo-inventory`
+-   [Create a new private git repo](https://github.com/new)
+    named `karo-inventory`
 
     - Visibility: Private
     - Readme: (Optional)
@@ -55,6 +55,6 @@ Connected to your server via SSH,
 run the following commands to clone the required repos locally.
 Make sure to modify the first command to include your GitHub username.
 
-- Clone the karo-stack and your private karo-inventory repository:
+-   Clone the karo-stack and your private karo-inventory repository:
 
     --8<-- "snippets.md:git_clone"

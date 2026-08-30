@@ -8,15 +8,15 @@ While Docker compose files offer considerable flexibility, this can also introdu
 To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:
 
 - **Verbose** - Stacks must be more explicit in their definitions, avoiding ambiguity.
-    Preferring long-form syntax, and absolute paths.
-    To create more clearly and safely defined stacks.
+  Preferring long-form syntax, and absolute paths.
+  To create more clearly and safely defined stacks.
 
 - **Precise** - Every line in the compose file must have a understood purpose.
-    No keeping definitions just because the author of original of the compose file included them.
-    And any non-standard definitions should be explained in more detail.
+  No keeping definitions just because the author of original of the compose file included them.
+  And any non-standard definitions should be explained in more detail.
 
 - **Standardised** - Stacks must follow a consistent ordering and structure of definitions.
-    Reducing potential errors, and making work across different stacks much more seamless.
+  Reducing potential errors, and making work across different stacks much more seamless.
 
 ## Example stack
 
@@ -28,7 +28,7 @@ and [secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
 <!-- editorconfig-checker-disable -->
 
-```yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
+``` yaml+jinja { title="karo-compose/templates/example_group/foobar/compose.yml.j2" }
 # SPDX-FileCopyrightText: © <year> <author>
 #
 # SPDX-License-Identifier: <license>
@@ -118,7 +118,7 @@ secrets:
 
     <!-- editorconfig-checker-disable -->
 
-    ```html { .no-copy }
+    ``` html { .no-copy }
     ports:
       - <HOST>:<CONTAINER>/<PROTOCOL>
     ```
@@ -134,7 +134,7 @@ secrets:
     Instead, the user running the Docker daemon (dockeruser) has been assigned a [subordinate user ID range](https://docs.docker.com/engine/security/userns-remap/) (dockeruser:165536:65536).
     So user 1000 for the container is one of these unprivileged subordinate users.
 
-    ```sh { .no-copy }
+    ``` sh { .no-copy }
     $ stat /home/dockeruser/.local/share/docker/volumes/pocketid_data/_data
     Access: (0755/drwxr-xr-x)  Uid: (166535/ UNKNOWN)   Gid: (166535/ UNKNOWN)
     ```

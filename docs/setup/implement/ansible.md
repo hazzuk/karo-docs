@@ -17,9 +17,9 @@ One manages Docker stacks, the other manages the remaining system setup.
 
 ## System roles
 
-- Run the playbook's main system configuration roles:
+-   Run the playbook's main system configuration roles:
 
-    ```sh
+    ``` sh
     # run ansible system roles
     cd /srv/karo
     just install homeserver

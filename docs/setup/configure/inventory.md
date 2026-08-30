@@ -13,7 +13,7 @@ inside a dedicated private repository.
 
 Your inventory repo will eventually look something like this:
 
-```toml { .no-copy }
+``` toml { .no-copy }
 inventory/
 ├── hosts.ini # directs Ansible to the target host (e.g. localhost)
 ├── host_vars/
@@ -24,20 +24,20 @@ inventory/
 
 For now, create the first two files:
 
-- :lucide-file-key: `key.txt`
+-   :lucide-file-key: `key.txt`
 
     This file will store your public SSH authentication key.
 
-    ```sh
+    ``` sh
     # create public ssh key file
     cp /home/karo/.ssh/authorized_keys /srv/karo/inventory/key.txt
     ```
 
-- :lucide-file-box: `hosts.ini`
+-   :lucide-file-box: `hosts.ini`
 
     This config is used to tell the automation tool Ansible which host to target.
 
-    ```sh
+    ``` sh
     # create ansible hosts file
     micro /srv/karo/inventory/hosts.ini
     ```
@@ -47,14 +47,14 @@ For now, create the first two files:
 
     === "Local setup"
 
-        ```ini { title="/srv/karo/inventory/hosts.ini" }
+        ``` ini { title="/srv/karo/inventory/hosts.ini" }
         [server]
         homeserver ansible_host=localhost ansible_connection=local ansible_user=karo
         ```
 
     === "Remote setup (advanced)"
 
-        ```ini { title="/srv/karo/inventory/hosts.ini" }
+        ``` ini { title="/srv/karo/inventory/hosts.ini" }
         [server]
         testserver ansible_host=192.168.122.142 ansible_connection=ssh ansible_user=karo
         ```

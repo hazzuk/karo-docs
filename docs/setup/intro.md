@@ -20,6 +20,7 @@ Done completely through Ansible, and based on the user's personal configuration
 
 ![](../assets/diagrams/karo-stack_architecture_v2.excalidraw.svg#only-light)
 ![](../assets/diagrams/karo-stack_architecture_v2_dark.svg#only-dark)
+
 /// caption
 Debian host layout
 ///
@@ -41,5 +42,4 @@ Debian host layout
     Then apply the karo-stack's configuration via the preseed file and playbook themselves, with code that's easily auditable.
 
 *[Ansible playbook]: Playbooks are automation blueprints written in YAML, that Ansible uses to configure your target system.
-
 *[Debian preseed]: Custom preconfiguration file, that automatically provides answers to questions asked during Debian's installation process.

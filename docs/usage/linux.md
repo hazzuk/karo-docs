@@ -15,210 +15,210 @@ The following is a list of essential commands and shortcuts for using a Linux se
 
 ## Terminal
 
-- **Copy** selected terminal text
+-   **Copy** selected terminal text
 
     ++ctrl+shift+c++
 
-- **Paste** clipboard into the terminal
+-   **Paste** clipboard into the terminal
 
     ++ctrl+shift+v++
 
-- **Recall** commands from shell history
+-   **Recall** commands from shell history
 
     ++arrow-up++ or ++arrow-down++
 
-- **Autocomplete** file, directory, and command names
+-   **Autocomplete** file, directory, and command names
 
     ++tab++
 
 ## Remote Access
 
-- **SSH** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ssh/)
+-   **SSH** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ssh/)
 
-    ```sh
+    ``` sh
     # connect to a remote server
     ssh -A karo@homeserver.example.com
     ```
 
 ## Shell session
 
-- **Exit**
+-   **Exit**
 
-    ```sh
+    ``` sh
     # close shell session
     exit
     ```
 
-- **History**
+-   **History**
 
-    ```sh
+    ``` sh
     # show previous commands
     history
     ```
 
 ## Files and directories
 
-- **Change directory** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cd/)
+-   **Change directory** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cd/)
 
-    ```sh
+    ``` sh
     # to specific directory
     cd /srv/karo/roles
     ```
 
-    ```sh
+    ``` sh
     # to parent directory
     cd ..
     ```
 
-    ```sh
+    ``` sh
     # to previous directory
     cd -
     ```
 
-- **List view** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ls/)
+-   **List view** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ls/)
 
-    ```sh
+    ``` sh
     # show directory contents
     ls -a
     ```
 
-- **Tree view**
+-   **Tree view**
 
-    ```sh
+    ``` sh
     # show contents of multiple directories
     tree -L 2
     ```
 
-- **Metadata**
+-   **Metadata**
 
-    ```sh
+    ``` sh
     # show file info
     stat file.txt
     ```
 
-- **Create directories**
+-   **Create directories**
 
-    ```sh
+    ``` sh
     # create directory
     mkdir newdir
     ```
 
-    ```sh
+    ``` sh
     # create parent directories
     mkdir -p path/to/newdir
     ```
 
-- **Move / rename** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/mv/)
+-   **Move / rename** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/mv/)
 
-    ```sh
+    ``` sh
     # move file
     mv file.txt /path/to/destination/
     ```
 
-    ```sh
+    ``` sh
     # rename file
     mv oldname.txt newname.txt
     ```
 
-- **Copy** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cp/)
+-   **Copy** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/cp/)
 
-    ```sh
+    ``` sh
     # copy file
     cp file.txt /path/to/destination/
     ```
 
-- **Delete** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/rm/)
+-   **Delete** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/rm/)
 
-    ```sh
+    ``` sh
     # remove file
     rm file.txt
     ```
 
 ## Text files
 
-- **File viewer** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/less/)
+-   **File viewer** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/less/)
 
-    ```sh
+    ``` sh
     # view file
     less file.txt
     ```
 
-- **Text editor**
+-   **Text editor**
 
-    ```sh
+    ``` sh
     # create/edit file
     micro file.txt
     ```
 
 ## System
 
-- **Monitoring**
+-   **Monitoring**
 
-    ```sh
+    ``` sh
     # view system usage
     btop
     ```
 
-- **Disk Usage** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/df/)
+-   **Disk Usage** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/df/)
 
-    ```sh
+    ``` sh
     # show disk usage
     df -h -x tmpfs
     ```
 
-- **Services** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/systemctl/)
+-   **Services** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/systemctl/)
 
-    ```sh
+    ``` sh
     # show service status
     sudo systemctl status nftables
     ```
 
-- **Logs** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/journalctl/)
+-   **Logs** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/journalctl/)
 
-    ```sh
+    ``` sh
     # view system logs
     sudo journalctl
     ```
 
-- **Shutdown**
+-   **Shutdown**
 
-    ```sh
+    ``` sh
     # power off system
     sudo shutdown now
     ```
 
-- **Reboot**
+-   **Reboot**
 
-    ```sh
+    ``` sh
     # restart system
     sudo reboot
     ```
 
 ## Networking
 
-- **Ping** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ping/)
+-   **Ping** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/ping/)
 
-    ```sh
+    ``` sh
     # ping network host
     ping example.com
     ```
 
-    ```sh
+    ``` sh
     # ping ip address
     ping 192.168.0.1
     ```
 
 ## More help
 
-- **Manuals**
+-   **Manuals**
 
-    ```sh
+    ``` sh
     # view command manual
     man micro
     ```
 
-- **Packages** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/apt/)
+-   **Packages** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/apt/)
 
-- **Docker** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/docker/)
+-   **Docker** [:lucide-sticky-note:](https://linuxize.com/cheatsheet/docker/)
 
-- **Shortcuts** [:lucide-sticky-note:](https://github.com/fliptheweb/bash-shortcuts-cheat-sheet)
+-   **Shortcuts** [:lucide-sticky-note:](https://github.com/fliptheweb/bash-shortcuts-cheat-sheet)

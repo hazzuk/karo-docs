@@ -15,7 +15,7 @@ The container's version is controlled by the Docker image URI value:
 
 === "Format"
 
-    ```html { title="compose example" .no-copy }
+    ``` html { .no-copy title="compose example" }
     services:
       foobar:
         image: <registry>/<project>/<container>:<tag>@<digest>
@@ -23,7 +23,7 @@ The container's version is controlled by the Docker image URI value:
 
 === "Template"
 
-    ```yaml+jinja { title="compose.yml.j2" .no-copy }
+    ``` yaml+jinja { .no-copy title="compose.yml.j2" }
     services:
       foobar:
         image: {{ stack_vars.foobar.image }}:{{ stack_vars.foobar.version }}
@@ -31,7 +31,7 @@ The container's version is controlled by the Docker image URI value:
 
 === "Result"
 
-    ```yaml { title="compose.yml" .no-copy }
+    ``` yaml { .no-copy title="compose.yml" }
     services:
       foobar:
         image: docker.io/foobarorg/foobar:v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f2475937ab
@@ -47,7 +47,7 @@ And improves security by only pulling the image from the intended registry.
 
 We define the registry, along with the project and container in the first variable:
 
-```yaml { .no-copy }
+``` yaml { .no-copy }
 example_group_foobar_stack_defaults:
   foobar:
     image: docker.io/foobarorg/foobar # or ghcr.io/foobarorg/foobar
@@ -64,7 +64,7 @@ While it's not necessary to add a tag when using a digest, it's still helpful to
 The digest is the secure cryptographic identifier.
 Whereas the tag provides a human readable version number:
 
-```yaml { .no-copy }
+``` yaml { .no-copy }
 example_group_foobar_stack_defaults:
   foobar:
     version: v1.0.0@sha256:100689790a0a0ea43ca45997e0450bc26aeb5308375b41c84dfc4f247
@@ -83,19 +83,19 @@ Version upgrades are performed manually, and the software should always be revie
 
 For each container...
 
-1. Review each subsequent release made since the current version (note any breaking changes).
+1.  Review each subsequent release made since the current version (note any breaking changes).
     And select a recent stable version of the software (stability is preferred over new releases).
 
-1. Prepare a test environment with the previous version of the stack running (ideally with log levels adjusted to be more verbose).
+2.  Prepare a test environment with the previous version of the stack running (ideally with log levels adjusted to be more verbose).
 
-1. Update the image version in the stack's defaults file.
+3.  Update the image version in the stack's defaults file.
 
-1. Down and up the stack to test the new version of the software, reviewing the container's logs.
+4.  Down and up the stack to test the new version of the software, reviewing the container's logs.
 
-    ```sh
+    ``` sh
     docker logs foobar -f
     ```
 
-1. Make any additional changes required to the compose file or configs, then test again.
+5.  Make any additional changes required to the compose file or configs, then test again.
 
 See [this Pull Request](https://github.com/hazzuk/karo-stack/pull/64/commits) for an example of the changes that might be required when updating stacks.

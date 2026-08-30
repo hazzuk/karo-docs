@@ -10,7 +10,7 @@ Having made local changes to your `karo-inventory` repo,
 you'll need to 'commit' and 'push' the new changes.
 Ensuring your server's configuration is synced with your remote GitHub repository.
 
-```sh
+``` sh
 # commit inventory changes
 cd /srv/karo/inventory
 git add *
@@ -43,7 +43,7 @@ The following commands assume you've only made changes to files inside your
 
 === "Latest"
 
-    ```sh
+    ``` sh
     # upgrade karo-stack to latest
     cd /srv/karo
     git pull origin main
@@ -51,11 +51,12 @@ The following commands assume you've only made changes to files inside your
 
 === "Specific version"
 
-    ```bash
+    ``` bash
     # set karo-stack version
     KAROSTACK_VERSION=v3.0.0
     ```
-    ```sh
+
+    ``` sh
     # checkout karo-stack version
     cd /srv/karo
     git fetch origin tag ${KAROSTACK_VERSION}

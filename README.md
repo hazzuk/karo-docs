@@ -17,7 +17,7 @@
 
 Uses [Zensical](https://zensical.org/docs/get-started/), a modern static site generator.
 
-```sh
+``` sh
 # Install Zensical
 pipx install zensical
 
