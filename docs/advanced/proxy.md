@@ -54,7 +54,7 @@ This page outlines the steps required to setup a VPS for use as a `proxyserver` 
 
 ## DNS records
 
-Your VPS will likely have a static IPv4 address, so you won't need to use a dynamic DNS service. Instead, simply create a DNS `A` record targetting the `<vps public ipv4>`.
+Your VPS will likely have a static IPv4 address, so you won't need to use a dynamic DNS service. Instead, simply create a DNS `A` record targeting the `<vps public ipv4>`.
 
 | Type | Name          | Target              | Comment              |
 | ---- | ------------- | ------------------- | -------------------- |
