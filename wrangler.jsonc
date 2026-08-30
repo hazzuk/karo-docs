@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-only
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "karo-docs",
   "compatibility_date": "2026-08-30",
   "send_metrics": false,
