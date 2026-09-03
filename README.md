@@ -17,7 +17,11 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 </div>
 
-![karo-stack docs](https://hazzuk.github.io/assets/karo-docs/header.png)
+<picture>
+
+<img src="https://hazzuk.github.io/assets/karo-docs/header.png" alt="karo-stack docs">
+
+</picture>
 
 # Local development
 
