@@ -13,6 +13,8 @@ copyright = """&copy; 2026 hazzuk"""
 repo_name = "hazzuk/karo-stack"
 repo_url = "https://github.com/hazzuk/karo-stack"
 
+edit_uri = "https://github.com/hazzuk/karo-docs/tree/main/docs"
+
 nav = [
   { "Home" = [
     "index.md",
@@ -84,7 +86,7 @@ language = "en"
 features = [
   "announce.dismiss",
   # "content.action.edit",
-  # "content.action.view",
+  "content.action.view",
   "content.code.annotate",
   "content.code.copy",
   # "content.code.select",
