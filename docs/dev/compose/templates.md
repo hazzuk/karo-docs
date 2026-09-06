@@ -132,7 +132,7 @@ secrets:
 
     ``` html { .no-copy }
     ports:
-      - <HOST>:<CONTAINER>/<PROTOCOL>
+      - "<HOST>:<CONTAINER>/<PROTOCOL>"
     ```
 
     <!-- editorconfig-checker-enable -->
