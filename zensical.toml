@@ -115,6 +115,7 @@ features = [
 # custom icon as logo (for light/dark mode svg support)
 [project.theme.icon]
 logo = "karo"
+repo = "fontawesome/brands/github"
 
 # [project.theme.font]
 # text = "Inter"
