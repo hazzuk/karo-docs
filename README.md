@@ -10,7 +10,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 **The karo-stack project wiki**
 
-[![License](https://img.shields.io/badge/license-AGPL--3.0-B461B3)](https://github.com/hazzuk/karo-docs/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL--3.0-B461B3)](https://github.com/hazzuk/karo-docs/blob/main/LICENSE)
 [![REUSE status](https://api.reuse.software/badge/github.com/hazzuk/karo-docs)](https://api.reuse.software/info/github.com/hazzuk/karo-docs)
 [![Hits-of-Code](https://hitsofcode.com/github/hazzuk/karo-docs)](https://hitsofcode.com/github/hazzuk/karo-docs/view)
 
