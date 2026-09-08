@@ -73,19 +73,19 @@ karo-custom/
 === "Ansible role"
 
     ``` toml { .no-copy title="Extend the karo-compose Ansible role" hl_lines="2" }
-    --8<-- "snippets.md:custom_compose_filetree"
+    --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
 === "Role directories"
 
     ``` toml { .no-copy title="Defaults and templates directories" hl_lines="3 7" }
-    --8<-- "snippets.md:custom_compose_filetree"
+    --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
 === "Stack group"
 
     ``` toml { .no-copy title="Stack group directories" hl_lines="4 8" }
-    --8<-- "snippets.md:custom_compose_filetree"
+    --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
     !!! info "Stack group naming"
@@ -104,13 +104,13 @@ karo-custom/
 === "Defaults"
 
     ``` toml { .no-copy title="Stack group defaults files" hl_lines="5-6" }
-    --8<-- "snippets.md:custom_compose_filetree"
+    --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
 === "Templates"
 
     ``` toml { .no-copy title="Stack group templates" hl_lines="9-10" }
-    --8<-- "snippets.md:custom_compose_filetree"
+    --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
     !!! info "Template files"

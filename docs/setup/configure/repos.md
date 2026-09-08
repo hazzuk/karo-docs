@@ -65,4 +65,4 @@ Make sure to modify the first command to include your GitHub username.
 
 -   Clone the karo-stack and your private karo-inventory repository:
 
-    --8<-- "snippets.md:git_clone"
+    --8<-- "docs/snippets.md:git_clone"

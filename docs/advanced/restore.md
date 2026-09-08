@@ -28,13 +28,13 @@ or any previous system changes you might have made.
 
 With Debian installed, follow these commands to quickly restore your setup:
 
---8<-- "snippets.md:copying_commands"
+--8<-- "docs/snippets.md:copying_commands"
 
---8<-- "snippets.md:pipx_install"
+--8<-- "docs/snippets.md:pipx_install"
 
---8<-- "snippets.md:git_clone"
+--8<-- "docs/snippets.md:git_clone"
 
---8<-- "snippets.md:just_password"
+--8<-- "docs/snippets.md:just_password"
 
 !!! info "New updates"
 

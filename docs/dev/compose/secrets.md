@@ -52,7 +52,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     Its value is set based on the contents of a secrets file.
 
     ``` yaml+jinja { .no-copy title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="11-13" }
-    --8<-- "snippets.md:compose_secrets_example"
+    --8<-- "docs/snippets.md:compose_secrets_example"
     ```
 
     !!! info "Secrets file path"
@@ -66,7 +66,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     These secrets files are found at `/run/secrets` inside the container's filesystem.
 
     ``` yaml+jinja { .no-copy title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="8-9" }
-    --8<-- "snippets.md:compose_secrets_example"
+    --8<-- "docs/snippets.md:compose_secrets_example"
     ```
 
 3.  The secret can finally be used by the service.
@@ -78,5 +78,5 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
         The service used must support setting an environment variable or config value to the contents of a file.
 
     ``` yaml+jinja { .no-copy roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" }
-    --8<-- "snippets.md:compose_secrets_example"
+    --8<-- "docs/snippets.md:compose_secrets_example"
     ```

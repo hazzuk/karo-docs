@@ -147,8 +147,7 @@ pygments_lang_class = true
 
 # embed external files
 [project.markdown_extensions.pymdownx.snippets]
-base_path = ["includes"]
-auto_append = ["abbreviations.md"]
+auto_append = ["docs/abbreviations.md"]
 
 # nest code/content blocks
 [project.markdown_extensions.pymdownx.superfences]

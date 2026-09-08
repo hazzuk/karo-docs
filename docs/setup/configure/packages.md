@@ -14,8 +14,8 @@ But to run the karo-stack, you'll need to install both `ansible` and `just`.
 
 -   Install additional packages:
 
-    --8<-- "snippets.md:copying_commands"
+    --8<-- "docs/snippets.md:copying_commands"
 
-    --8<-- "snippets.md:terminal_paste"
+    --8<-- "docs/snippets.md:terminal_paste"
 
-    --8<-- "snippets.md:pipx_install"
+    --8<-- "docs/snippets.md:pipx_install"

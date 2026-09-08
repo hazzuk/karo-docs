@@ -32,7 +32,7 @@ when encrypting and decrypting your vault file.
 
 -   Apply your new vault password (this command will open a text editor):
 
-    --8<-- "snippets.md:just_password"
+    --8<-- "docs/snippets.md:just_password"
 
 ??? question "Isn't writing the password to a plaintext file insecure?"
 
@@ -76,7 +76,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
         Commented out variables are additional settings that are completely optional.
 
-    --8<-- "snippets.md:terminal_paste"
+    --8<-- "docs/snippets.md:terminal_paste"
 
     </div>
 

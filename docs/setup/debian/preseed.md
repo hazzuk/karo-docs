@@ -85,7 +85,7 @@ Making first time authentication over SSH straightforward.
 
     - Clone the karo-stack and your private inventory repo (adjust paths accordingly):
 
-        --8<-- "snippets.md:git_clone"
+        --8<-- "docs/snippets.md:git_clone"
 
     - And if required, add/update your public SSH key inside your inventory repo:
 
