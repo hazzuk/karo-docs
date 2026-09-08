@@ -6,6 +6,8 @@
 icon: lucide/arrow-down-to-line
 ---
 
+# Updates
+
 ## Updating from v2 to v3
 
 ### Remove your fork
