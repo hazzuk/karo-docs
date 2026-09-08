@@ -77,6 +77,6 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
 
         The service used must support setting an environment variable or config value to the contents of a file.
 
-    ``` yaml+jinja { .no-copy roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" }
+    ``` yaml+jinja { .no-copy title="roles/karo-compose/templates/extra/foobar/compose.yml.j2" hl_lines="6-7" }
     --8<-- "docs/snippets.md:compose_secrets_example"
     ```
