@@ -16,7 +16,7 @@ icon: lucide/notebook-pen
 
 ### Generic
 
-The docs primarily uses `lucide`.\n
+The docs primarily uses `lucide`.
 Zensical also provides other [icon sources](https://zensical.org/docs/authoring/icons-emojis/):
 
 - `fontawesome` (/brands /regular /solid)
@@ -26,7 +26,8 @@ Zensical also provides other [icon sources](https://zensical.org/docs/authoring/
 
 ### Custom
 
-For [custom icons](https://zensical.org/docs/setup/logo-and-icons/#additional-icons) (i.e. Stacks), the docs uses the `./overrides/.icons/` directory.\n
+For [custom icons](https://zensical.org/docs/setup/logo-and-icons/#additional-icons) (i.e. Stacks), the docs uses the `./overrides/.icons/` directory.
+
 This contains **dark** `svg` icons sourced from:
 
 - [selfh.st/icons](https://selfh.st/icons/)
