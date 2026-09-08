@@ -85,7 +85,6 @@ custom_dir = "overrides"
 favicon = "assets/favicon.ico"
 language = "en"
 
-# https://zensical.org/docs/
 features = [
   "announce.dismiss",
   # "content.action.edit",
@@ -115,26 +114,12 @@ features = [
   # "toc.integrate",
 ]
 
-# custom icon as logo (for light/dark mode svg support)
 [project.theme.icon]
 logo = "karo"
 repo = "fontawesome/brands/github"
 
-# [project.theme.font]
-# text = "Inter"
-# code = "Jetbrains Mono"
-
-# palette for dark mode
 [[project.theme.palette]]
 scheme = "slate"
-
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/hazzuk/karo-stack"
-
-# page status symbols
-[project.extra.status]
-new = "Recently added"
 
 # extensions
 # https://zensical.org/docs/authoring/markdown/
