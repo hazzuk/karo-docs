@@ -82,7 +82,7 @@ extra_css = ["assets/stylesheets/extra.css"]
 
 [project.theme]
 custom_dir = "overrides"
-favicon = "assets/favicon.ico"
+favicon = "assets/images/favicon.ico"
 language = "en"
 
 features = [

@@ -22,7 +22,7 @@ Part of which, is the fully automatically setup of Docker.
 After setup is complete, users can then start to easily deploy custom Docker compose stacks.
 Done completely through Ansible, and based on the user's personal configuration
 
-![](../assets/diagrams/karo-stack_architecture_v2.excalidraw.svg)
+![](../assets/images/karo-stack_architecture_v2.excalidraw.svg)
 
 /// caption
 Debian host layout
