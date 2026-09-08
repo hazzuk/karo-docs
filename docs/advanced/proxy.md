@@ -16,7 +16,7 @@ It is critical to consider the security of exposing services to the public inter
 
 The karo-stack's solution to this issue actually involves a mix of both approaches. You'll open ports, but on a rented VPS (Virtual Private Server) instead of your home network. And your new VPS will then be directly connected to your server over a VPN connection. With this setup, inbound public traffic will be sanitised on the VPS first, before being tunnelled on towards your server.
 
-### Proxy stack
+## Proxy stack
 
 You'll need to rent a small VPS, ideally one geographically close to you. Then after installing Debian and setting up the karo-stack on the VPS. You'll deploy the project's custom `proxy` stack.
 
