@@ -46,7 +46,7 @@ Because of this, you'll need to setup the official `karo-custom` repo.
         Make sure to check the [release notes](https://github.com/hazzuk/karo-custom/releases)
         for the hazzuk/karo-custom repo.
 
-        - hazzuk/karo-custom v1 is fully compatible with the original stacks.
+        - hazzuk/karo-custom v1 is compatible with the original stacks (variable name changes only).
 
         - hazzuk/karo-custom v2 and onwards will have major breaking changes!
 
