@@ -6,7 +6,7 @@
 icon: simple/docker
 ---
 
-# Compose
+# Custom stacks
 
 The karo-stack was built to better enable users to share Docker Compose setups with one another.
 Done by creating a standardised environment (Debian server, rootless Docker, Traefik reverse proxy, karo-stack Ansible playbook).

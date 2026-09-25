@@ -6,7 +6,7 @@
 icon: lucide/square-asterisk
 ---
 
-# Handling secrets
+# Secrets
 
 Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, passwords, etc).
 This data should not be stored inside a Docker Compose file, in plain text.

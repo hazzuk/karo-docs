@@ -6,7 +6,7 @@
 icon: lucide/form
 ---
 
-# Compose templates
+# Templates
 
 While Docker Compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
 To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:

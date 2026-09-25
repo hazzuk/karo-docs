@@ -6,7 +6,7 @@
 icon: lucide/variable
 ---
 
-# Compose defaults
+# Defaults
 
 Compose files for the karo-stack are created as
 [Ansible templates](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_templating.html).
