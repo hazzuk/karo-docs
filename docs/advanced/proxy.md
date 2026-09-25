@@ -156,38 +156,42 @@ just vault proxyserver
 
 ansible_become_password: "" # karo user root password
 
-# [karo-git]
+# [git]
 
 karo_git_user_email: git@example.com # github email
 karo_git_user_name: username # github username
-karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public ssh signing key
+karo_git_user_signingkey: "ssh-ed25519 AAAAC3NqnC1bZEIl2..." # public signing key
 
-# [karo-nftables]
+# [nftables]
 
-# ports 80 (tcp) and 443 (tcp/udp) are already accepted
+## ports 80 (tcp) and 443 (tcp/udp) are already accepted
 # karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
 # karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
 
-# [karo-ssh]
+# [ssh]
 
-# this port will be accepted in nftables
+## this port will be accepted by nftables
 karo_ssh_port: 4444
 
-# [karo-compose]
+# [docker]
+
+karo_docker_login_username: username # docker username
+karo_docker_login_pat: "dckr_pat_..." # docker personal access token
+
+# [compose]
 
 karo_compose_root_domain: example.com # registered domain name
 
 karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
-# docker will start stack groups in this order
-# docker will stop stack groups in reverse order
+## docker will start stack groups in this order
+## docker will stop stack groups in reverse order
 karo_compose_stack_groups:
   - hazzuk_core
   - hazzuk_extra
   - hazzuk_media
 
-# stacks
-# ---
+# [custom]
 ```
 
 <!-- editorconfig-checker-enable -->
