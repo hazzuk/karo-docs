@@ -48,10 +48,10 @@ nav = [
     { "karo-custom" = [
       "custom/index.md",
     ] },
-    { "Using" = [
+    { "Deploy" = [
       "custom/compose.md",
     ] },
-    { "Creating" = [
+    { "Create" = [
       "dev/structure.md",
       "dev/compose/services.md",
       "dev/compose/defaults.md",
