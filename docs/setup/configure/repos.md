@@ -16,9 +16,9 @@ This git repository will be used to store your personal configuration for the ka
 -   [Create a new private git repo](https://github.com/new)
     named `karo-inventory` on GitHub
 
-    - Visibility: Private
+    - Visibility: :lucide-lock: Private
     - Readme: (Optional)
-    - And no .gitignore, and no license
+    - And `No .gitignore`, `No license`
 
 ??? question "Why use git?"
 
