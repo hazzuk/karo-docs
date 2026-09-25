@@ -72,10 +72,13 @@ nav = [
     "usage/git.md",
     "usage/updates.md",
   ] },
-  { "Development" = [
-    { "karo-stack" = [
-      "dev/documentation.md",
+  { "About" = [
+    { "About" = [
+      "about/index.md",
     ] },
+    "about/feedback.md",
+    "about/contributing.md",
+    "about/documentation.md",
   ] },
 ]
 
