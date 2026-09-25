@@ -28,6 +28,7 @@ nav = [
     { "Preparation" = [
       "setup/prepare/dns.md",
       "setup/prepare/ssh.md",
+      "setup/prepare/accounts.md",
     ] },
     { "Installation" = [
       "setup/debian/preseed.md",
