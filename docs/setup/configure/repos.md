@@ -10,11 +10,11 @@ icon: lucide/book-copy
 
 ## Inventory repo
 
-Next you'll need to create your inventory repo.
-This repository will be used to store your personal configuration for the karo-stack.
+You'll need to create your inventory repo.
+This git repository will be used to store your personal configuration for the karo-stack.
 
 -   [Create a new private git repo](https://github.com/new)
-    named `karo-inventory`
+    named `karo-inventory` on GitHub
 
     - Visibility: Private
     - Readme: (Optional)
