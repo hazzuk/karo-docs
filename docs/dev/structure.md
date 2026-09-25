@@ -8,23 +8,14 @@ icon: lucide/folder-tree
 
 # Custom repo structure
 
-karo-custom repositories are meant to extend the karo-stack beyond what users can configure solely using their vault.
-And to also provide a way for users to easily share new capabilities.
-
-!!! info "Custom capabilities"
-
-    Currently, karo-custom repos only support extending the karo-compose role with custom stacks.
-
-    Please create a
-    [GitHub discussion](https://github.com/hazzuk/karo-custom/discussions/new/choose)
-    if you'd like to suggest other ways karo-custom repos could be utilised.
-
+karo-custom repositories are meant to extend the karo-stack,
+and to provide a way for users to easily share new capabilities.
 The contents of each karo-custom repo is symbolically linked to the inside of the karo-stack's Ansible playbook.
 Allowing for files to be used natively when running relevant commands.
 
 ``` toml { .no-copy title="karo-custom example" }
 karo-custom/
-├── karo-compose/ # ansible role to extend
+├── karo-compose/
 │   ├── defaults/
 │   │   └── main/
 │   │       └── hazzuk_media/
