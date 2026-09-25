@@ -65,7 +65,7 @@ Or create your own.
 
     1. Commit any changes made to your Ansible vault.
 
-        > See [Git changes](../usage/git.md).
+        > See [Git changes](../../usage/git.md).
 
 ## Manual stacks
 

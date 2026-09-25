@@ -49,7 +49,7 @@ nav = [
       "custom/index.md",
     ] },
     { "Deploy" = [
-      "custom/compose.md",
+      "custom/deploy/compose.md",
     ] },
     { "Create" = [
       "custom/create/structure.md",
@@ -57,7 +57,9 @@ nav = [
       "custom/create/defaults.md",
       "custom/create/templates.md",
       "custom/create/secrets.md",
-      "custom/create/upgrades.md",
+    ] },
+    { "Maintain" = [
+      "custom/maintain/upgrades.md",
     ] },
   ] },
   { "Advanced" = [
