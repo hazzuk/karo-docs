@@ -50,17 +50,17 @@ nav = [
     ] },
     "custom/compose.md",
   ] },
-  { "Usage" = [
-    "usage/just.md",
-    "usage/linux.md",
-    "usage/git.md",
-    "usage/updates.md",
-  ] },
   { "Advanced" = [
     "advanced/access.md",
     "advanced/proxy.md",
     "advanced/storage.md",
     "advanced/restore.md",
+  ] },
+  { "Usage" = [
+    "usage/just.md",
+    "usage/linux.md",
+    "usage/git.md",
+    "usage/updates.md",
   ] },
   { "Development" = [
     { "karo-custom" = [
