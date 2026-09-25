@@ -16,7 +16,6 @@ You'll need the following before starting:
 - [ ] Computer to configure the server
 - [ ] Bootable 8 GB+ USB drive
 - [ ] Registered domain name ([Cloudflare](https://www.cloudflare.com/products/registrar/) is preferred, but not required)
-- [ ] [GitHub](https://github.com/) account (or similar git forge, i.e. [Codeberg](https://codeberg.org/))
 - [ ] Password manager (ideally with SSH agent support, i.e.
   [1Password](https://developer.1password.com/docs/ssh/agent),
   [Bitwarden](https://bitwarden.com/help/ssh-agent/),
@@ -28,14 +27,14 @@ You'll need the following before starting:
 
 Suggested (but not required) to have a basic understanding or awareness of the following topics:
 
+- [Docker Compose](https://docs.docker.com/compose/intro/compose-application-model/)
 - [Linux command-line](../usage/linux.md)
 - DNS records
-- Docker containers
 - IP addresses
-- Git version control
-- SSH keys
 - Port forwarding
+- Git version control
 - TLS certificates
+- SSH keys
 
 ## Suggested server hardware
 
