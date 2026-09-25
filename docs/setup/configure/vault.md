@@ -108,6 +108,11 @@ With the password set, you can now create an Ansible vault file encrypted by you
     # this port will automatically be accepted by nftables
     # karo_ssh_port: 22
 
+    # [docker]
+
+    karo_docker_login_username: username # docker username
+    karo_docker_login_pat: "dckr_pat_..." # docker personal access token
+
     # [compose]
 
     karo_compose_root_domain: example.com # registered domain name
