@@ -49,7 +49,7 @@ when encrypting and decrypting your vault file.
     Second, the text editor micro explicitly has backups disabled when handling this file.
     And third, the file itself is stored on a tmpfs filesystem (in system memory).
 
-??? question "What is the `just` command?"
+??? question "What's the `just` command?"
 
     The karo-stack uses just, a tool to run project-specific commands.
 
@@ -74,7 +74,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
     !!! info "Commented lines"
 
-        Commented out variables are additional settings that are completely optional.
+        Commented out variables are additional settings that are optional.
 
     --8<-- "docs/snippets.md:terminal_paste"
 
@@ -105,7 +105,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
     # [karo-ssh]
 
-    # this port will automatically be accepted in nftables
+    # this port will automatically be accepted by nftables
     # karo_ssh_port: 22
 
     # [karo-compose]
