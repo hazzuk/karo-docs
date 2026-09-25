@@ -45,7 +45,7 @@ Run Ansible to configure the core components of your system.
 
 ### :lucide-container: `compose`
 
-Run Ansible to deploy or remove Docker compose stacks.
+Run Ansible to deploy or remove custom Docker Compose stacks.
 
 !!! example "Recipe examples"
 

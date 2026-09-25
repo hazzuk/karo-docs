@@ -10,7 +10,7 @@ icon: lucide/bolt
 
 A karo-custom repo is a user created collection of custom functionality,
 used to extend the capabilities of the karo-stack.
-Its primary purpose is for adding Docker compose stacks.
+Its primary purpose is for adding Docker Compose stacks.
 
 ## Use a karo-custom repo
 

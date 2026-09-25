@@ -8,11 +8,11 @@ icon: simple/docker
 
 # Compose
 
-The karo-stack was built to better enable users to share Docker compose setups with one another.
+The karo-stack was built to better enable users to share Docker Compose setups with one another.
 Done by creating a standardised environment (Debian server, rootless Docker, Traefik reverse proxy, karo-stack Ansible playbook).
 This commonality allows users to create compose files that are immediately compatible with any other server running the karo-stack.
 
-To setup a new service using Docker, you'd previously have to find and adapt an existing Docker compose file.
+To setup a new service using Docker, you'd previously have to find and adapt an existing Docker Compose file.
 Often one where it includes everything but the kitchen sink.
 And you'd need to add or remove large parts to fit your personal setup.
 Often followed up by a lot of trial and error.
@@ -75,5 +75,5 @@ To do this, you'll need to SSH in as the `dockeruser`.
 
 > e.g. `ssh dockeruser@homeserver.example.com` or `ssh dockeruser@192.168.0.142`
 
-Afterwards, you're free to create Docker compose stacks manually.
+Afterwards, you're free to create Docker Compose stacks manually.
 It's recommended you place these files under `/srv/docker/adhoc`.

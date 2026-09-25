@@ -30,7 +30,7 @@ List of recommended qualities the project sees as important when assessing new s
 
 - [x] **Lean** — Avoids unnecessary features, following separation-of-concerns principles.
 
-- [x] **Declarative** - Fully configurable through Docker compose or Ansible.
+- [x] **Declarative** - Fully configurable through Docker Compose or Ansible.
 
 - [x] **OIDC** - Implements single sign-on for strong, seamless authentication.
 

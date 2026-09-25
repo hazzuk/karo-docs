@@ -9,7 +9,7 @@ icon: lucide/square-asterisk
 # Handling secrets
 
 Stacks sometimes need to handle sensitive data (e.g. API tokens, OIDC secrets, passwords, etc).
-This data should not be stored inside a Docker compose file, in plain text.
+This data should not be stored inside a Docker Compose file, in plain text.
 Instead, the data should be passed directly into a container during its creation.
 This is done by using [Docker secrets](https://docs.docker.com/reference/compose-file/secrets/).
 
@@ -44,7 +44,7 @@ This is done by using [Docker secrets](https://docs.docker.com/reference/compose
     xP5SDH57+zn4hR804VFN#p==
     ```
 
-### Docker compose stack
+### Docker Compose stack
 
 1.  The compose template is rendered, and
     the [top-level secrets definition](https://docs.docker.com/reference/compose-file/secrets/#:~:text=The%20top%2Dlevel%20secrets%20declaration)

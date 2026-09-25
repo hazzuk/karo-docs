@@ -54,7 +54,7 @@ and install rootless Docker for `dockeruser`.
 ## Compose role
 
 Having finished installing your new system, and configuring your initial karo-stack setup.
-You can now look to deploy Docker compose stacks.
+You can now look to deploy Docker Compose stacks.
 
 Management of official, personal or third-party stacks is done through using karo-custom repos.
 

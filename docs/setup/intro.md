@@ -19,7 +19,7 @@ Git is used to manage both the karo-stack and the user's own configuration with 
 Then Ansible is run on demand to further configure the system for you.
 Part of which, is the fully automatically setup of Docker.
 
-After setup is complete, users can then start to easily deploy custom Docker compose stacks.
+After setup is complete, users can then start to easily deploy custom Docker Compose stacks.
 Done completely through Ansible, and based on the user's personal configuration
 
 ![karo-stack architecture](../assets/images/karo-stack_architecture_v2.excalidraw.svg)

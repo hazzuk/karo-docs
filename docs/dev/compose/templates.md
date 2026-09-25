@@ -8,7 +8,7 @@ icon: lucide/form
 
 # Compose templates
 
-While Docker compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
+While Docker Compose files offer considerable flexibility, this can also introduce ambiguity, confusion, and inconsistency.
 To avoid these issues, and to better facilitate collaboration and maintenance, the following principles should be adhered to:
 
 <!-- editorconfig-checker-disable -->
@@ -28,7 +28,7 @@ To avoid these issues, and to better facilitate collaboration and maintenance, t
 
 ## Example stack
 
-Also see the Docker compose reference guides for
+Also see the Docker Compose reference guides for
 [services](https://docs.docker.com/reference/compose-file/services/),
 [networks](https://docs.docker.com/reference/compose-file/networks/),
 [volumes](https://docs.docker.com/reference/compose-file/volumes/),
