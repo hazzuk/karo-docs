@@ -11,7 +11,7 @@ icon: lucide/folder-tree
 karo-custom repositories are meant to extend the karo-stack,
 and to provide a way for users to easily share new capabilities.
 The contents of each karo-custom repo is symbolically linked to the inside of the karo-stack's Ansible playbook.
-Allowing for files to be used natively when running relevant commands.
+Allowing for custom files to be used when running relevant commands.
 
 ``` toml { .no-copy title="karo-custom example" }
 karo-custom/
@@ -63,7 +63,7 @@ karo-custom/
 
 === "Ansible role"
 
-    ``` toml { .no-copy title="Extend the karo-compose Ansible role" hl_lines="2" }
+    ``` toml { .no-copy title="Extend the Ansible compose role" hl_lines="2" }
     --8<-- "docs/snippets.md:custom_compose_filetree"
     ```
 
