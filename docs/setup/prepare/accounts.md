@@ -26,3 +26,16 @@ Once you've created your account, you'll need to add your public SSH keys.
   [account's SSH keys](https://github.com/settings/keys)
 
 <!-- editorconfig-checker-enable -->
+
+## Docker account
+
+You'll need a [Docker account](https://app.docker.com/signup)
+to download [Docker hardened images](https://www.docker.com/products/hardened-images/)
+used by the karo-stack.
+
+After creating an account, you'll need to generate a PAT (save the output for use later on).
+
+-   Generate a [new personal access token](https://app.docker.com/settings/personal-access-tokens/create)
+    - Access token description: `karo-stack`
+    - Expiration date: `None`
+    - Access permissions: `Repo Public Read-only`
