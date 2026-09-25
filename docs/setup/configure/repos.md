@@ -10,15 +10,6 @@ icon: lucide/book-copy
 
 ## GitHub account
 
-??? question "First time using git?"
-
-    While git does have a lot of features,
-    and in some situations can become somewhat complex.
-    For what the karo-stack needs,
-    using git will be relatively straight forward.
-    Simply follow the the commands shown,
-    and you should get everything configured correctly.
-
 You'll need a [GitHub account](https://github.com/signup)
 to store your private git repository.
 
@@ -56,6 +47,15 @@ This repository will be used to store your personal configuration for the karo-s
     Additionally, you'll get the full history of any changes you commit.
     So you can always revert back to a previous version of your configuration
     if something goes wrong.
+
+??? question "First time using git?"
+
+    While git does have a lot of features,
+    and in some situations can become somewhat complex.
+    For what the karo-stack needs,
+    using git will be relatively straight forward.
+    Simply follow the the commands shown,
+    and you should get everything configured correctly.
 
 ## Clone the repos
 
