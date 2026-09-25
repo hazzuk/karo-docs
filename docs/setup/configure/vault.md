@@ -99,13 +99,13 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
     # [nftables]
 
-    # ports 80 (tcp) and 443 (tcp/udp) are already accepted
+    ## ports 80 (tcp) and 443 (tcp/udp) are already accepted
     # karo_nftables_accepted_tcp_ports: "" # e.g. "53, 465, 587"
     # karo_nftables_accepted_udp_ports: "" # e.g. "7777, 25565"
 
     # [ssh]
 
-    # this port will automatically be accepted by nftables
+    ## this port will automatically be accepted by nftables
     # karo_ssh_port: 22
 
     # [docker]
@@ -119,8 +119,8 @@ With the password set, you can now create an Ansible vault file encrypted by you
 
     karo_compose_timezone: "Europe/London" # utctime.info/timezone
 
-    # docker will start stack groups in this order
-    # docker will stop stack groups in reverse order
+    ## docker will start stack groups in this order
+    ## docker will stop stack groups in reverse order
     # karo_compose_stack_groups:
     #   - example_group
 
