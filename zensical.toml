@@ -59,6 +59,7 @@ nav = [
       "custom/create/secrets.md",
     ] },
     { "Maintain" = [
+      "custom/maintain/image.md",
       "custom/maintain/upgrades.md",
     ] },
   ] },
