@@ -49,7 +49,7 @@ nav = [
       "custom/index.md",
     ] },
     { "Deploy" = [
-      "custom/deploy/compose.md",
+      "custom/deploy/stacks.md",
     ] },
     { "Create" = [
       "custom/create/structure.md",
