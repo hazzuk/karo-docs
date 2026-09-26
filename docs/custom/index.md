@@ -12,9 +12,55 @@ A karo-custom repo is a user created collection of custom Docker Compose stacks.
 
 ## Quick start guide
 
+<!-- editorconfig-checker-disable -->
+
 - Clone the desired custom repo (e.g. `just custom get <username>`)
 
 - Add new variables to your Ansible vault (e.g. `just vault homeserver`)
+
+    === "Format"
+
+        - Custom repo's stack groups
+
+            ``` yaml
+            karo_compose_stack_groups:
+              - <username>_<group>
+              - <username>_<group>
+              - <username>_<group>
+            ```
+
+        - And desired stack variables
+
+            ``` yaml
+            <username>_<group>_<stack>_enabled: false
+
+            <username>_<group>_<stack>_stack:
+              <service>:
+                log_level: info
+            ```
+
+    === "Example"
+
+        - Custom repo's stack groups
+
+            ``` yaml
+            karo_compose_stack_groups:
+              - hazzuk_core
+              - hazzuk_extra
+              - hazzuk_media
+            ```
+
+        - And desired stack variables (truncated example)
+
+            ``` yaml
+            hazzuk_media_qbittorrent_enabled: false
+
+            hazzuk_media_qbittorrent_stack:
+              qui:
+                log_level: info
+            ```
+
+<!-- editorconfig-checker-enable -->
 
 !!! tip "Use the official karo-custom repo"
 
