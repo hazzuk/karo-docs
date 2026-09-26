@@ -10,14 +10,17 @@ icon: lucide/bolt
 
 A karo-custom repo is a user created collection of custom Docker Compose stacks.
 
-## Use a karo-custom repo
+## Quick start guide
 
-- Get the custom repo (e.g. `just custom get hazzuk`)
-- Add documented variables to your Ansible vault (e.g. `just vault homeserver`)
+- Clone the desired custom repo (e.g. `just custom get <username>`)
 
-!!! note "Official karo-custom repo"
+- Add new variables to your Ansible vault (e.g. `just vault homeserver`)
 
-    The core set of compose stacks is no longer included in the main karo-stack repo.
-    Instead, you will need to use the official karo-custom repo: [hazzuk/karo-custom](https://hazzuk.github.io/karo-custom/){:target='_blank'}
+!!! tip "Use the official karo-custom repo"
 
-    Once added, make sure to setup all core stacks first (e.g. Traefik and Pocket-ID).
+    The core set of compose stacks is no longer included in the main karo-stack repository.
+    Instead, you will need to use the official karo-custom repo:
+    [hazzuk/karo-custom](https://hazzuk.github.io/karo-custom/){:target='_blank'}
+
+    Once added, make sure to setup all core stacks first
+    (e.g. Traefik and Pocket-ID).
