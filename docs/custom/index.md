@@ -24,3 +24,9 @@ A karo-custom repo is a user created collection of custom Docker Compose stacks.
 
     Once added, make sure to setup all core stacks first
     (e.g. Traefik and Pocket-ID).
+
+    !!! warning
+
+        Whilst it's not a strict requirement to use the official custom repo,
+        it is strongly recommended (unless you want to build everything yourself).
+        As other custom repos almost always utilise the official core stacks.
