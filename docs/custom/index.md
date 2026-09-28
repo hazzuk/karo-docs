@@ -33,13 +33,13 @@ Or create your own.
 
 <!-- editorconfig-checker-disable -->
 
-- Clone the desired custom repo (e.g. `just custom get <username>`)
+1. Clone the desired custom repo (e.g. `just custom get <username>`)
 
-- Add new variables to your Ansible vault (e.g. `just vault homeserver`)
+2. Edit your Ansible vault (e.g. `just vault homeserver`)
 
     === "Format"
 
-        - Custom repo's stack groups
+        - Add **all** custom repo stack groups
 
             ``` yaml
             karo_compose_stack_groups:
@@ -48,10 +48,10 @@ Or create your own.
               - <username>_<group>
             ```
 
-        - And desired stack variables
+        - Add desired stack variables
 
             ``` yaml
-            <username>_<group>_<stack>_enabled: false
+            <username>_<group>_<stack>_enabled: true
 
             <username>_<group>_<stack>_stack:
               <service>:
@@ -60,7 +60,7 @@ Or create your own.
 
     === "Example"
 
-        - Custom repo's stack groups
+        - Add **all** custom repo stack groups
 
             ``` yaml
             karo_compose_stack_groups:
@@ -69,10 +69,10 @@ Or create your own.
               - hazzuk_media
             ```
 
-        - And desired stack variables (truncated example)
+        - Add desired stack variables _(truncated example)_
 
             ``` yaml
-            hazzuk_media_qbittorrent_enabled: false
+            hazzuk_media_qbittorrent_enabled: true
 
             hazzuk_media_qbittorrent_stack:
               qui:
