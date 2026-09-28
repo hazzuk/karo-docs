@@ -28,18 +28,3 @@ Often followed up by a lot of trial and error.
 With the karo-stack, it feels much closer to a plug and play style experience.
 Where you can simply add new stacks from different 'karo-custom' repositories.
 Or create your own.
-
-!!! tip "Use the official karo-custom repo"
-
-    The core set of compose stacks is no longer included in the main karo-stack repository.
-    Instead, you will need to use the official karo-custom repo:
-    [hazzuk/karo-custom](https://hazzuk.github.io/karo-custom/){:target='_blank'}
-
-    Once added, make sure to setup all core stacks first
-    (e.g. Traefik and Pocket-ID).
-
-    !!! warning
-
-        Whilst it's not a strict requirement to use the official custom repo,
-        it is strongly recommended (unless you want to build everything yourself).
-        As other custom repos almost always utilise the official core stacks.
