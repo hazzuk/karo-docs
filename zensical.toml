@@ -67,6 +67,7 @@ nav = [
     "advanced/access.md",
     "advanced/proxy.md",
     "advanced/storage.md",
+    "advanced/docker.md",
     "advanced/restore.md",
   ] },
   { "Usage" = [

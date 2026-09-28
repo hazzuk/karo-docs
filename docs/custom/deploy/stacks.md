@@ -66,14 +66,3 @@ Or create your own.
     1. Commit any changes made to your Ansible vault.
 
         > See [Git changes](../../usage/git.md).
-
-## Manual stacks
-
-You can still create Docker `compose.yml` files directly on the server and run them manually.
-
-To do this, you'll need to SSH in as the `dockeruser`.
-
-> e.g. `ssh dockeruser@homeserver.example.com` or `ssh dockeruser@192.168.0.142`
-
-Afterwards, you're free to create Docker Compose stacks manually.
-It's recommended you place these files under `/srv/docker/adhoc`.
