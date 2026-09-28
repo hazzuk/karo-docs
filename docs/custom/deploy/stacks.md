@@ -10,18 +10,22 @@ icon: simple/docker
 
 !!! tip "Use the official karo-custom repo"
 
-    The core set of compose stacks is no longer included in the main karo-stack repository.
-    Instead, you will need to use the official karo-custom repo:
+    The project maintains its own karo-custom repo:
     [hazzuk/karo-custom](https://hazzuk.github.io/karo-custom/){:target='_blank'}
 
-    Once added, make sure to setup all core stacks first
-    (e.g. Traefik and Pocket-ID).
+    It provides essential core stacks
+    (a reverse proxy and OIDC provider).
+    Along with a handful of optional extra tools,
+    and other services for a solid media server setup.
 
     !!! warning
 
-        Whilst it's not a strict requirement to use the official custom repo,
-        it is strongly recommended (unless you want to build everything yourself).
-        As other custom repos almost always utilise the official core stacks.
+        Whilst it's not a strict requirement to use the official karo-custom repo,
+        it is **strongly recommended** (unless you want to build everything yourself).
+        As other custom repos will likely utilise the core stacks.
+
+        Once added, make sure to setup both core stacks first
+        (Traefik and Pocket-ID).
 
 ## Quick start guide
 
