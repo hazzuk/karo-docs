@@ -77,14 +77,9 @@ icon: simple/docker
             ```
     <!-- editorconfig-checker-enable -->
 
-1. Deploy your newly configured stack(s) (e.g. `just compose up homeserver`)
+1. Deploy newly configured stacks (e.g. `just compose up homeserver`)
 
-!!! tip "Post-setup steps"
+    ??? tip "Post-deployment steps"
 
-    After successfully configuring a new stack, remember the following:
-
-    1. Lower the logging level of services.
-
-    1. Commit any changes made to your Ansible vault.
-
-        > See [Git changes](../../usage/git.md).
+        Remember to lower logging levels once services are running smoothly.
+        And [commit any changes](../../usage/git.md) made to your Ansible vault.
