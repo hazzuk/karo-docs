@@ -27,16 +27,16 @@ icon: simple/docker
         Once added, make sure to setup both core stacks first
         (Traefik and Pocket-ID).
 
-## Quick start guide
+## Deploy stacks from karo-custom repos
 
-1. Clone the desired custom repo (e.g. `just custom get <username>`)
+1. Clone a karo-custom repo (e.g. `just custom get <username>`)
 
 1. Edit your Ansible vault (e.g. `just vault homeserver`)
 
     <!-- editorconfig-checker-disable -->
     === "Format"
 
-        - Add **all** custom repo stack groups
+        - Add **all** available stack groups
 
             ``` yaml
             karo_compose_stack_groups:
@@ -57,7 +57,7 @@ icon: simple/docker
 
     === "Example"
 
-        - Add **all** custom repo stack groups
+        - Add **all** available stack groups
 
             ``` yaml
             karo_compose_stack_groups:
