@@ -9,7 +9,7 @@ icon: lucide/bolt
 # karo-custom
 
 A karo-custom repo is a user created collection
-of custom Docker Compose stack templates.
+of templates for custom Docker Compose stacks.
 Configurable and deployed like the rest of the karo-stack using Ansible.
 While also designed to be optionally shareable,
 for use by others on their own homeserver.
