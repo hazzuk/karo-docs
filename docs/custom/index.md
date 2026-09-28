@@ -29,58 +29,6 @@ With the karo-stack, it feels much closer to a plug and play style experience.
 Where you can simply add new stacks from different 'karo-custom' repositories.
 Or create your own.
 
-## Quick start guide
-
-<!-- editorconfig-checker-disable -->
-
-1. Clone the desired custom repo (e.g. `just custom get <username>`)
-
-2. Edit your Ansible vault (e.g. `just vault homeserver`)
-
-    === "Format"
-
-        - Add **all** custom repo stack groups
-
-            ``` yaml
-            karo_compose_stack_groups:
-              - <username>_<group>
-              - <username>_<group>
-              - <username>_<group>
-            ```
-
-        - Add desired stack variables
-
-            ``` yaml
-            <username>_<group>_<stack>_enabled: true
-
-            <username>_<group>_<stack>_stack:
-              <service>:
-                log_level: info
-            ```
-
-    === "Example"
-
-        - Add **all** custom repo stack groups
-
-            ``` yaml
-            karo_compose_stack_groups:
-              - hazzuk_core
-              - hazzuk_extra
-              - hazzuk_media
-            ```
-
-        - Add desired stack variables _(truncated example)_
-
-            ``` yaml
-            hazzuk_media_qbittorrent_enabled: true
-
-            hazzuk_media_qbittorrent_stack:
-              qui:
-                log_level: info
-            ```
-
-<!-- editorconfig-checker-enable -->
-
 !!! tip "Use the official karo-custom repo"
 
     The core set of compose stacks is no longer included in the main karo-stack repository.

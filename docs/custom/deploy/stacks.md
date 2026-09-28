@@ -8,39 +8,55 @@ icon: simple/docker
 
 # Custom stacks
 
-## Deploying stacks
+## Quick start guide
 
-1. Get the relevant karo-custom repo (e.g. `just custom get example`)
+1. Clone the desired custom repo (e.g. `just custom get <username>`)
 
 1. Edit your Ansible vault (e.g. `just vault homeserver`)
 
-    - Add **all** available stack groups
+    <!-- editorconfig-checker-disable -->
+    === "Format"
 
-        <!-- editorconfig-checker-disable -->
+        - Add **all** custom repo stack groups
 
-        ``` yaml { .no-copy hl_lines="4-5" }
-        karo_compose_stack_groups:
-          - hazzuk_core
-          - hazzuk_extra
-          - example_tools
-          - example_dev
-          - hazzuk_media
-        ```
+            ``` yaml
+            karo_compose_stack_groups:
+              - <username>_<group>
+              - <username>_<group>
+              - <username>_<group>
+            ```
 
-    - Add the desired stack variables
+        - Add desired stack variables
 
-        ``` yaml
-        # foobar
+            ``` yaml
+            <username>_<group>_<stack>_enabled: true
 
-        example_tools_foobar_enabled: true
+            <username>_<group>_<stack>_stack:
+              <service>:
+                log_level: info
+            ```
 
-        example_tools_foobar_stack:
-        foobar:
-          domain: "foobar.{{ karo_compose_root_domain }}"
-          forward_auth_enabled: true
-        ```
+    === "Example"
 
-        <!-- editorconfig-checker-enable -->
+        - Add **all** custom repo stack groups
+
+            ``` yaml
+            karo_compose_stack_groups:
+              - hazzuk_core
+              - hazzuk_extra
+              - hazzuk_media
+            ```
+
+        - Add desired stack variables _(truncated example)_
+
+            ``` yaml
+            hazzuk_media_qbittorrent_enabled: true
+
+            hazzuk_media_qbittorrent_stack:
+              qui:
+                log_level: info
+            ```
+    <!-- editorconfig-checker-enable -->
 
 1. Deploy your newly configured stack(s) (e.g. `just compose up homeserver`)
 
