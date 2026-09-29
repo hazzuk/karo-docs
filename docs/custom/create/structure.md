@@ -8,8 +8,6 @@ icon: lucide/folder-tree
 
 # Repo structure
 
-karo-custom repositories are meant to extend the karo-stack,
-and to provide a way for users to easily share new capabilities.
 The contents of each karo-custom repo is symbolically linked to the inside of the karo-stack's Ansible playbook.
 Allowing for custom files to be used when running relevant commands.
 
@@ -31,11 +29,10 @@ karo-custom/
 
 ## Creating your karo-custom repo
 
-!!! danger "File structure"
+!!! info "File structure"
 
-    karo-custom repos must follow a very specific naming scheme and file structure.
-
-    You can use [the official repo](https://github.com/hazzuk/karo-custom) as an example.
+    karo-custom repos must follow a very specific structure.
+    Use [the official repo](https://github.com/hazzuk/karo-custom) as an example.
 
 !!! tip "karo-cli"
 
@@ -47,13 +44,13 @@ karo-custom/
 
 1. [Create a new public GitHub repo](https://github.com/new) named `karo-custom`.
 
-1. Clone your new repo:
+1. Clone your new repo (to wherever you want to work on it):
     - To your PC, cloning it manually using git
-    - And/or to your karo-stack setup `just custom get <GITHUB USERNAME>`
+    - To your karo-stack homeserver `just custom get <GITHUB USERNAME>`
 
-### Repo location
+### Repo homeserver location
 
-- Repos are placed inside the `./custom` directory of the karo-stack
+- Repos are placed inside the `/srv/karo/custom` directory of the karo-stack
 
 - Multiple repos can be added
 
