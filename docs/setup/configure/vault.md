@@ -111,7 +111,7 @@ With the password set, you can now create an Ansible vault file encrypted by you
     # [docker]
 
     karo_docker_login_username: username # docker username
-    karo_docker_login_pat: "dckr_pat_..." # docker personal access token
+    karo_docker_login_token: "dckr_pat_..." # docker personal access token
 
     # [compose]
 

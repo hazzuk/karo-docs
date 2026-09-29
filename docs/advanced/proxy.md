@@ -176,7 +176,7 @@ karo_ssh_port: 4444
 # [docker]
 
 karo_docker_login_username: username # docker username
-karo_docker_login_pat: "dckr_pat_..." # docker personal access token
+karo_docker_login_token: "dckr_pat_..." # docker personal access token
 
 # [compose]
 
