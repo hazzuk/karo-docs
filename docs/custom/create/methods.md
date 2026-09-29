@@ -11,11 +11,16 @@ icon: lucide/shapes
 There are multiple possible approaches to deploying
 Docker stacks on a karo-stack homeserver:
 
-- Deploy stacks from an [existing karo-custom repo](../deploy/stacks.md)
+-   **Don't want to create a custom stack?**
+    - Deploy stacks from an [existing karo-custom repo](../deploy/stacks.md)
 
-- Create stacks within your private karo-inventory repo
+-   **Want to create a custom stack and allow others to use it?**
+    - Create stacks inside a new public karo-custom repo
 
-- Create stacks within a new public karo-custom repo
+-   **Want to create a custom stack but keep it private?**
+    - Create stacks within your personal karo-inventory repo
+
+---
 
 This page also discusses the following options:
 
