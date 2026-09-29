@@ -8,11 +8,7 @@ icon: lucide/layers-plus
 
 # Selecting services
 
-!!! tip "Finding new services"
-
-    The site [selfh.st/apps](https://selfh.st/apps/), is a great resource for finding self-hosted services.
-
-List of recommended qualities the project sees as important when assessing new services:
+Important qualities to look for when assessing potential new services:
 
 - [x] **Open-source** - Made freely available under an OSI approved license.
 
@@ -39,3 +35,8 @@ List of recommended qualities the project sees as important when assessing new s
 - [x] **Documented** - Clear and concise documentation for configuration and use.
 
 - [x] **Private** - No telemetry or external data collection.
+
+!!! tip "Finding new services"
+
+    [selfh.st/apps](https://selfh.st/apps/)
+    is a great resource for finding self-hosted services.
