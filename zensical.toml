@@ -52,6 +52,7 @@ nav = [
       "custom/deploy/stacks.md",
     ] },
     { "Create" = [
+      "custom/create/methods.md",
       "custom/create/structure.md",
       "custom/create/services.md",
     ] },
