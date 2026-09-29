@@ -30,3 +30,9 @@ And you'd need to add or remove large parts to fit your personal setup.
 Often followed up by a lot of trial and error.
 Whereas deploying a custom stack from an
 existing karo-custom repo makes setup far easier, and less error prone.
+
+![karo-custom diagram](../assets/images/karo-custom_architecture_v1.excalidraw.svg)
+
+/// caption
+Custom stacks deployment
+///
