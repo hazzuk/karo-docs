@@ -15,28 +15,33 @@ rest of the karo-stack using Ansible.
 While also designed to be shareable,
 for use by others on their own homeserver.
 
-## The problem
+## Overview
+
+### The traditional approach
 
 Docker services are defined by
 [compose files](https://docs.docker.com/compose/intro/compose-application-model),
 which offer a multitude of different configuration options.
-When looking to setup a new service, it's the norm to use the
+When looking to setup a new service, it's the norm to simply use the
 example compose file offered by the application's developer.
-Then make the necessary changes to integrate the stack
-alongside your other services.
+But these files are always written in slightly different ways,
+often without readability or additional security hardening in mind.
 
-And while there is of course a specification that
-defines how compose compose files can be created.
+Because while there is of course a specification that
+sets out how compose compose files _can_ be defined.
 There is no set of guidelines for
-how compose files should be best written.
-Nor an easy way to share a compose setup,
-without requiring others to make their own changes first.
+how compose files _should_ be best written.
 
-The karo-stack aims to alleviate both
-these issues and improve the overall
+Nor is there an easy way to share a compose setup
+without also requiring others to make their own changes.
+Either to the compose file, config files, or to other services
+needed to integrate the stack.
+
+The karo-stack aims to help alleviate
+these common issues and improve the overall
 Docker experience with the use of karo-custom repos.
 
-## Overview
+### A new approach
 
 karo-custom repos were designed to be a complimentary
 system for managing Docker Compose stacks.
@@ -60,8 +65,7 @@ Stack configuration is stored beside
 the rest of the user's karo-stack config,
 inside their encrypted Ansible vault.
 Which Ansible uses along with the
-compose templates to render standard
-compose.yml files, then orchestrates their deployment.
+templates to render (and then deploy) standard compose.yml files.
 
 ![karo-custom diagram](../assets/images/karo-custom_architecture_v1.excalidraw.svg)
 
@@ -69,16 +73,19 @@ compose.yml files, then orchestrates their deployment.
 Custom stacks deployment
 ///
 
-Users can pull from existing karo-custom repos
+Users can pull from pre-existing karo-custom repos
 instead of having to write every stack themselves.
 This helps avoid the burden of maintenance falling
 solely on the shoulders of one individual.
+And what would of been many users creating
+multiples of the same stack, can instead ideally be many
+users working to maintain and improve one custom stack.
 
 Those who wish to write custom stacks can
 rely on a standardised Docker environment,
 along with detailed documentation and helpful tooling.
 All working to ease the setup process,
-while also promoting long-term stability and hardened security.
+while also promoting long-term stability and improved security.
 
 - :lucide-form: Templated compose files
 
