@@ -21,24 +21,27 @@ Zensical also provides other [icon sources](https://zensical.org/docs/authoring/
 
 - `fontawesome` (/brands /regular /solid)
 - `material`
-- `octicons`
+- `octicons` (append 16 or 24)
 - `simple`
 
 ### Custom
 
-For [custom icons](https://zensical.org/docs/setup/logo-and-icons/#additional-icons) (i.e. Stacks), the docs uses the `./overrides/.icons/` directory.
+For [custom icons](https://zensical.org/docs/setup/logo-and-icons/#additional-icons),
+the docs uses the `docs/assets/overrides/.icons/` directory.
 
 This contains **dark** `svg` icons sourced from:
 
 - [selfh.st/icons](https://selfh.st/icons/)
 - [dashboardicons.com/icons](https://dashboardicons.com/icons)
 
-New files need to be manually edited to include the following attribute:
+??? note "Zensical themed icons"
 
-(Added after the `xmlns` attribute)
+    New files should be edited to include the following attribute:
 
-``` c
-fill="currentColor"
-```
+    (Added after the `xmlns` attribute)
 
-This ensures icons work in both light and dark modes.
+    ``` c
+    fill="currentColor"
+    ```
+
+    This ensures icons work in both light and dark modes.
