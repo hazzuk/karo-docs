@@ -19,10 +19,10 @@ Your inventory repo will eventually look something like this:
 
 ``` toml { .no-copy }
 inventory/
-├── hosts.ini # directs Ansible to the target host (e.g. localhost)
 ├── host_vars/
 │   └── homeserver/ # name of your server
 │       └── vault.yml # encrypted Ansible vault, contains almost all your configuration
+├── hosts.ini # directs Ansible to the target host (e.g. localhost)
 └── key.txt # contains your public SSH authentication key
 ```
 
