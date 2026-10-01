@@ -61,16 +61,15 @@ just password
 <!-- text -->
 
 --8<-- [start:custom_compose_filetree]
-karo-custom/
-└── karo-compose/
-    ├── defaults/main/
-    │   └── hazzuk_media/
-    │       ├── main.yml
-    │       └── jellyfin.yml
-    └── templates/
-        └── hazzuk_media/
-            └── jellyfin/
-                └── compose.yml.j2
+karo-compose/
+├── defaults/main/
+│   └── hazzuk_media/
+│       ├── main.yml
+│       └── jellyfin.yml
+└── templates/
+    └── hazzuk_media/
+        └── jellyfin/
+            └── compose.yml.j2
 --8<-- [end:custom_compose_filetree]
 
 <!-- editorconfig-checker-disable -->
