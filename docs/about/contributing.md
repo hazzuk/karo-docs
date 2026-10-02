@@ -18,6 +18,8 @@ The best ways to help the project include the following:
 
 - :lucide-file-plus: [Improving the docs](https://github.com/hazzuk/karo-docs/)
 
+- :lucide-bolt: [Creating a karo-custom repo](../custom/index.md)
+
 - And sharing the project with others
 
 !!! info "Contributing code"
