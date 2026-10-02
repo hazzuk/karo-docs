@@ -8,7 +8,7 @@ icon: lucide/heart-handshake
 
 # Contributing
 
-Thank you for your interest in contributing to the karo-stack!
+Thank you for your interest in contributing to the karo-stack.
 
 The best ways to help the project include the following:
 
