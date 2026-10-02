@@ -83,7 +83,6 @@ nav = [
     { "About" = [
       "about/index.md",
     ] },
-    "about/feedback.md",
     "about/contributing.md",
     "about/documentation.md",
   ] },
