@@ -52,7 +52,9 @@ icon: simple/docker
 
             <username>_<group>_<stack>_stack:
               <service>:
-                log_level: info
+                <variable>: <value>
+              <service>:
+                <variable>: <value>
             ```
 
     === "Example"
@@ -72,6 +74,8 @@ icon: simple/docker
             hazzuk_media_qbittorrent_enabled: true
 
             hazzuk_media_qbittorrent_stack:
+              qbittorrent:
+                webui_enabled: false
               qui:
                 log_level: info
             ```
