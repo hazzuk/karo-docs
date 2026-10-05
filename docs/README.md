@@ -22,7 +22,8 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 ## Local development
 
-Uses [Zensical](https://zensical.org/docs/get-started/), a modern static site generator.
+The documentation uses [Zensical](https://zensical.org/docs/get-started/),
+a modern static site generator.
 
 ``` sh
 # Install Zensical
