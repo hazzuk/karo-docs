@@ -4,6 +4,10 @@ SPDX-FileCopyrightText: © 2026 hazzuk
 SPDX-License-Identifier: AGPL-3.0-only
 -->
 
+> [!IMPORTANT]
+> As of October 2026, this documentation has been merged into the
+> [karo-stack repository](https://github.com/karolabs/karo-stack/tree/dev/docs).
+
 <div align="center" markdown>
 
 # karo-docs
